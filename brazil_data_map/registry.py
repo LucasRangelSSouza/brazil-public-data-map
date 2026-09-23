@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+from datetime import date
 from pathlib import Path
 from typing import Any
 
@@ -12,6 +13,10 @@ REQUIRED_SOURCE_FIELDS = {
     "grain",
     "refresh",
     "public_release_assessment",
+    "accessed_at",
+    "coverage",
+    "join_keys",
+    "terms_note",
 }
 
 
@@ -42,3 +47,9 @@ def validate_registry(registry: dict[str, Any]) -> None:
         seen.add(source_id)
         if not str(source["official_url"]).startswith("https://"):
             raise ValueError(f"source {source_id} must use an HTTPS official URL")
+        try:
+            date.fromisoformat(source["accessed_at"])
+        except (TypeError, ValueError) as error:
+            raise ValueError(f"source {source_id} requires an ISO accessed_at date") from error
+        if not isinstance(source["join_keys"], list) or not source["join_keys"]:
+            raise ValueError(f"source {source_id} requires at least one documented join key")

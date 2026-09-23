@@ -22,6 +22,10 @@ class RegistryTests(unittest.TestCase):
                     "grain": "item",
                     "refresh": "daily",
                     "public_release_assessment": "review",
+                    "accessed_at": "2026-01-01",
+                    "coverage": "example",
+                    "join_keys": ["id"],
+                    "terms_note": "review",
                 },
                 {
                     "id": "pncp",
@@ -30,6 +34,10 @@ class RegistryTests(unittest.TestCase):
                     "grain": "item",
                     "refresh": "daily",
                     "public_release_assessment": "review",
+                    "accessed_at": "2026-01-01",
+                    "coverage": "example",
+                    "join_keys": ["id"],
+                    "terms_note": "review",
                 },
             ],
         }
