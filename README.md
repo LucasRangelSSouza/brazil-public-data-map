@@ -24,6 +24,8 @@ The release gate excludes natural-person and unknown supplier records. It never 
 
 Kaggle is the planned distribution channel for reviewed release artifacts. No Kaggle link or publishing automation appears here until an account exists and a release passes the source, terms, privacy, and manifest gates.
 
+Read the planned release boundary in [docs/dataset-card.md](docs/dataset-card.md).
+
 ## Portability
 
 `dags/pncp_incremental_update.py` is an Airflow template. It has no token, bucket, project ID, or environment connection. A deployer supplies approved connections and local output paths in their own Airflow environment.
