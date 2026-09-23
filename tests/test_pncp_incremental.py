@@ -12,7 +12,13 @@ class PncpIncrementalTests(unittest.TestCase):
             [],
         ]
 
-        raw, trusted, semantic, checkpoint = incremental_snapshot(lambda _: pages.pop(0), "2025-12-31")
+        def fetch(_: str):
+            result = pages.pop(0)
+            if isinstance(result, Exception):
+                raise result
+            return result
+
+        raw, trusted, semantic, checkpoint = incremental_snapshot(fetch, "2025-12-31")
 
         self.assertEqual(len(raw), 3)
         self.assertEqual(trusted, [{"id": "a", "updated_at": "2026-01-02", "value": 3}, {"id": "b", "updated_at": "2026-01-01", "value": 2}])
