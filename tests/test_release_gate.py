@@ -22,6 +22,13 @@ class IdentifierReleaseGateTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "direct identifier"):
             apply_identifier_policy([{"supplier_document": "12.345.678/0001-95", "email": "x@example.org"}])
 
+    def test_procurement_record_without_supplier_identifier_remains_eligible(self) -> None:
+        released, audit = apply_identifier_policy([{"id": "pncp-1", "updated_at": "2026-01-01T00:00:00Z", "item": "paper"}])
+
+        self.assertEqual(released[0]["identifier_classification"], "not_present")
+        self.assertNotIn("golden_organization_id", released[0])
+        self.assertEqual(audit["released_without_supplier_identifier"], 1)
+
 
 if __name__ == "__main__":
     unittest.main()

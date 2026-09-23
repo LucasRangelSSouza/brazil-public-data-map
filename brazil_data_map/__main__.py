@@ -2,10 +2,12 @@ from __future__ import annotations
 
 import argparse
 import json
+from datetime import date
 from pathlib import Path
 
 from .download import download_public_file
 from .pipeline import build_public_release
+from .pncp import fetch_publications
 from .registry import load_registry
 
 
@@ -23,6 +25,12 @@ def main() -> None:
     download_command = commands.add_parser("download", help="download an explicit HTTPS public source file")
     download_command.add_argument("--url", required=True)
     download_command.add_argument("--output", type=Path, required=True)
+    pncp_command = commands.add_parser("fetch-pncp-publications", help="build a local release from a public PNCP publication window")
+    pncp_command.add_argument("--start", required=True, help="ISO-8601 date, for example 2026-09-20")
+    pncp_command.add_argument("--end", required=True, help="ISO-8601 date, for example 2026-09-20")
+    pncp_command.add_argument("--modality-id", type=int, required=True)
+    pncp_command.add_argument("--output", type=Path, required=True)
+    pncp_command.add_argument("--retrieved-at", help="optional ISO-8601 timestamp for a deterministic manifest")
     args = parser.parse_args()
 
     if args.command == "validate-registry":
@@ -34,6 +42,16 @@ def main() -> None:
         print(json.dumps({"status": "passed", "output": str(args.output), "record_counts": result["audit"]["record_counts"]}, indent=2))
     elif args.command == "download":
         print(json.dumps(download_public_file(args.url, args.output), indent=2))
+    elif args.command == "fetch-pncp-publications":
+        records = fetch_publications(date.fromisoformat(args.start), date.fromisoformat(args.end), args.modality_id)
+        result = build_public_release(
+            records,
+            args.output,
+            "pncp",
+            "https://pncp.gov.br/api/consulta/v1/contratacoes/publicacao",
+            retrieved_at=args.retrieved_at,
+        )
+        print(json.dumps({"status": "passed", "output": str(args.output), "record_counts": result["audit"]["record_counts"]}, indent=2))
 
 
 if __name__ == "__main__":

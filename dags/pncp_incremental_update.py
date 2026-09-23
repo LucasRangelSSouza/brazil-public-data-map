@@ -1,8 +1,10 @@
 """Portable Airflow template. Connection IDs and output paths come from the deployer's environment."""
 
+from datetime import date
 from pathlib import Path
 
 from brazil_data_map.pipeline import build_public_release
+from brazil_data_map.pncp import fetch_publications
 
 try:
     from airflow import DAG
@@ -12,13 +14,14 @@ except ImportError:  # The repository must remain importable without Airflow.
     PythonOperator = None
 
 
-def run_incremental_release(records: list[dict], output_root: str) -> None:
-    """Write a reviewed local release candidate after the deployer supplies source records."""
+def run_incremental_release(start: str, end: str, modality_id: int, output_root: str) -> None:
+    """Fetch a bounded PNCP publication window and write a local release candidate."""
+    records = fetch_publications(date.fromisoformat(start), date.fromisoformat(end), modality_id)
     build_public_release(
         records=records,
         output_root=Path(output_root),
         source_id="pncp",
-        source_url="https://www.gov.br/pncp/pt-br/acesso-a-informacao/dados-abertos",
+        source_url="https://pncp.gov.br/api/consulta/v1/contratacoes/publicacao",
     )
 
 

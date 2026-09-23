@@ -13,3 +13,7 @@ The catalog records a source's public entry point and analytical grain. It is no
 ## Source review checklist
 
 Before a release, confirm the current official URL, the applicable terms, the retrieval window, the grain, expected keys, and data fields that must be removed. Do not carry assumptions from an earlier release into a newer source version.
+
+## PNCP publication adapter
+
+The local PNCP adapter calls the documented public publication route, `GET /api/consulta/v1/contratacoes/publicacao`, with a bounded date range, modality code, page, and page size. The [official PNCP manuals](https://www.gov.br/pncp/pt-br/pncp/manuais) remain the authority for route behavior and fields. The adapter normalizes a selected analytical subset, paginates according to the response, and keeps no credential path.

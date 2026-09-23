@@ -54,6 +54,16 @@ The [source catalog](docs/source-catalog.md), [join map](docs/join-map.md), and 
 
 The local command builds raw, trusted, and semantic Parquet layers, `privacy-audit.json`, and `manifest.json` from synthetic records. Pass the same `--retrieved-at` value twice to reproduce the manifest hashes. Git ignores `.local-release`. Delete it after inspection.
 
+To retrieve one bounded PNCP publication window directly from the official public endpoint, provide an explicit date range and a modality code:
+
+```powershell
+python -m brazil_data_map fetch-pncp-publications --start 2026-09-20 --end 2026-09-20 --modality-id 6 --output .local-pncp-release
+```
+
+The command does not publish data. Review the source terms, extraction window, fields, and generated audit before distributing an output.
+
+The repository records a sanitized [successful source-access run](docs/evidence/pncp-publication-run-2026-09-23.md). It documents the command, scope, counts, field set, caption, and limitation without retaining source records.
+
 Open [notebooks/01_local_release_walkthrough.ipynb](notebooks/01_local_release_walkthrough.ipynb) to run the same synthetic path interactively.
 
 ## Testing
