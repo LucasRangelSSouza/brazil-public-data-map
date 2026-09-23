@@ -1,0 +1,24 @@
+schema_version: "1.0"
+scope: public procurement release layers
+classification:
+  organization:
+    input: normalized fourteen-digit supplier document
+    action: remove source document and derive golden_organization_id
+  natural_person:
+    input: normalized eleven-digit supplier document
+    action: exclude record from every public layer
+  unknown:
+    input: any other document form
+    action: exclude record from every public layer
+prohibited_fields:
+  - cpf
+  - email
+  - phone
+  - address
+  - supplier_document
+  - supplier_name
+  - name
+non_claims:
+  - golden_organization_id does not verify identity
+  - golden_organization_id does not establish qualification
+  - golden_organization_id does not establish ownership
