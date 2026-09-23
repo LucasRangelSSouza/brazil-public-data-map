@@ -4,6 +4,7 @@ import argparse
 import json
 from pathlib import Path
 
+from .download import download_public_file
 from .pipeline import build_public_release
 from .registry import load_registry
 
@@ -19,6 +20,9 @@ def main() -> None:
     fixture_command.add_argument("--source-id", default="pncp")
     fixture_command.add_argument("--source-url", default="https://www.gov.br/pncp/pt-br/acesso-a-informacao/dados-abertos")
     fixture_command.add_argument("--retrieved-at", help="optional ISO-8601 timestamp for deterministic fixture builds")
+    download_command = commands.add_parser("download", help="download an explicit HTTPS public source file")
+    download_command.add_argument("--url", required=True)
+    download_command.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
 
     if args.command == "validate-registry":
@@ -28,6 +32,8 @@ def main() -> None:
         records = json.loads(args.input.read_text(encoding="utf-8"))
         result = build_public_release(records, args.output, args.source_id, args.source_url, retrieved_at=args.retrieved_at)
         print(json.dumps({"status": "passed", "output": str(args.output), "record_counts": result["audit"]["record_counts"]}, indent=2))
+    elif args.command == "download":
+        print(json.dumps(download_public_file(args.url, args.output), indent=2))
 
 
 if __name__ == "__main__":
