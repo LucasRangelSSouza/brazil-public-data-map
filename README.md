@@ -29,10 +29,12 @@ The release path writes three Parquet layers, `privacy-audit.json`, and `manifes
 
 ```powershell
 python -m unittest discover -s tests -v
-make check
+.\scripts\check.ps1
 python -m brazil_data_map validate-registry
 python -m brazil_data_map build-fixture-release --output .local-release --retrieved-at 2026-01-03T00:00:00Z
 ```
+
+On macOS and Linux, `make check` runs the same validation sequence.
 
 ## Privacy boundary
 
@@ -62,13 +64,23 @@ python -m brazil_data_map fetch-pncp-publications --start 2026-09-20 --end 2026-
 
 The command does not publish data. Review the source terms, extraction window, fields, and generated audit before distributing an output.
 
+For a resumable historical acquisition, use the checkpointed backfill command. It records each successful `day:modality` window locally, deduplicates repeated source IDs by most recent update timestamp, and writes a new local release candidate. The capture, checkpoint, and release remain ignored by Git.
+
+```powershell
+python -m brazil_data_map backfill-pncp --start 2025-01-01 --end 2025-01-07 --modality-ids 1,6,8 --output .local-pncp-backfill --git-commit (git rev-parse HEAD)
+```
+
+Use small, reviewable ranges first. A completed window is not a distribution approval, and a bounded acquisition must be labeled with its actual coverage.
+
+The full command and review contract are documented in [docs/pncp-backfill.md](docs/pncp-backfill.md).
+
 The repository records a sanitized [successful source-access run](docs/evidence/pncp-publication-run-2026-09-23.md). It documents the command, scope, counts, field set, caption, and limitation without retaining source records.
 
 Open [notebooks/01_local_release_walkthrough.ipynb](notebooks/01_local_release_walkthrough.ipynb) to run the same synthetic path interactively.
 
 ## Testing
 
-`make check` compiles the package, validates the registry, and runs fixture-backed tests. The suite covers retry and pagination behavior, natural-key deduplication, identifier classification, field and value leakage, schema and timestamp validation, layer reconciliation, manifest requirements, notebook validity, and deterministic Parquet release hashes.
+`scripts/check.ps1` (or `make check` on macOS and Linux) compiles the package, validates the registry, validates the distribution profile, and runs fixture-backed tests. The suite covers retry and pagination behavior, resumable window checkpoints, natural-key deduplication, identifier classification, field and value leakage, schema and timestamp validation, layer reconciliation, manifest lineage, notebook validity, and deterministic Parquet release hashes.
 
 ## Articles and case study
 

@@ -12,7 +12,8 @@ This repository maps reproducible releases of Brazilian public education and pro
 - The release pipeline writes raw, trusted, and semantic Parquet layers, a privacy audit, and a manifest from synthetic fixture records.
 - Release manifests require source lineage, file hashes, and a passed privacy gate.
 - The public PNCP publication adapter has fixture-backed pagination and retry tests, plus one sanitized real execution record.
+- The checkpointed PNCP backfill stores completed `day:modality` windows locally, skips them on rerun, and deduplicates source IDs by the latest update timestamp. Its generated release manifest records input and file hashes, row counts, schema version, extractor commit, privacy result, and distribution state.
 
 ## Next verifiable task
 
-Review the repository against the full public-release contract, run the final scope scan and CI, then publish the GitHub repository. Kaggle publication remains blocked until a reviewed historical dataset and distribution account exist.
+Review the repository against the full public-release contract, run the final scope scan and CI, then publish the GitHub repository. Kaggle publication remains blocked until a reviewed historical dataset and distribution decision exist.

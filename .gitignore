@@ -2,6 +2,7 @@ __pycache__/
 *.py[cod]
 .local-release/
 .local-pncp-release/
+.local-pncp-backfill/
 .venv/
 artifacts/
 dist/

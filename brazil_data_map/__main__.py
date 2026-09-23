@@ -6,6 +6,7 @@ from datetime import date
 from pathlib import Path
 
 from .download import download_public_file
+from .backfill import run_backfill
 from .distribution import validate_distribution_profile
 from .pipeline import build_public_release
 from .pncp import fetch_publications
@@ -32,6 +33,13 @@ def main() -> None:
     pncp_command.add_argument("--modality-id", type=int, required=True)
     pncp_command.add_argument("--output", type=Path, required=True)
     pncp_command.add_argument("--retrieved-at", help="optional ISO-8601 timestamp for a deterministic manifest")
+    backfill_command = commands.add_parser("backfill-pncp", help="resume a bounded local PNCP backfill and build a local release candidate")
+    backfill_command.add_argument("--start", required=True, help="ISO-8601 start date")
+    backfill_command.add_argument("--end", required=True, help="ISO-8601 end date")
+    backfill_command.add_argument("--modality-ids", required=True, help="comma-separated positive modality ids, for example 1,6,8")
+    backfill_command.add_argument("--output", type=Path, required=True, help="ignored local output directory")
+    backfill_command.add_argument("--retrieved-at", help="optional ISO-8601 timestamp for the release manifest")
+    backfill_command.add_argument("--git-commit", help="optional source commit recorded in the manifest")
     profile_command = commands.add_parser("validate-distribution-profile", help="validate distribution metadata without publishing")
     profile_command.add_argument("--path", type=Path, default=Path("release_profiles/official_sources.json"))
     args = parser.parse_args()
@@ -55,6 +63,17 @@ def main() -> None:
             retrieved_at=args.retrieved_at,
         )
         print(json.dumps({"status": "passed", "output": str(args.output), "record_counts": result["audit"]["record_counts"]}, indent=2))
+    elif args.command == "backfill-pncp":
+        modality_ids = [int(value) for value in args.modality_ids.split(",") if value.strip()]
+        result = run_backfill(
+            date.fromisoformat(args.start),
+            date.fromisoformat(args.end),
+            modality_ids,
+            args.output,
+            retrieved_at=args.retrieved_at,
+            git_commit=args.git_commit,
+        )
+        print(json.dumps({"status": "passed", **result}, indent=2))
     elif args.command == "validate-distribution-profile":
         profile = json.loads(args.path.read_text(encoding="utf-8"))
         validate_distribution_profile(profile)
