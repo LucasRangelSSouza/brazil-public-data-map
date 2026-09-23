@@ -9,6 +9,7 @@ import pyarrow.parquet as pq
 
 from .audit import audit_release_layers
 from .layers import build_layers, validate_layers
+from .quality import validate_reconciliation
 from .release import build_manifest
 
 
@@ -22,6 +23,7 @@ def build_public_release(
     """Build a locally reviewable release candidate from approved source records."""
     layers = build_layers(records, source_id)
     validate_layers(layers)
+    validate_reconciliation(layers)
     audit = audit_release_layers(layers)
 
     release_files: list[Path] = []

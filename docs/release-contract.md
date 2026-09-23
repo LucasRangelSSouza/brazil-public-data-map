@@ -12,6 +12,8 @@ Each release candidate needs a source registry entry, a recorded retrieval windo
 
 The pipeline builds all three layers from records that pass the identifier policy. Direct supplier documents, names, contacts, addresses, CPF-like values, and email-like values are prohibited in every layer. The audit returns record counts and fails on the first release candidate that contains a prohibited field or value pattern.
 
+The quality gate requires a non-empty `id`, a parseable `updated_at` timestamp, unique identifiers within each released layer, no trusted-layer expansion beyond raw, and equal trusted and semantic layer counts. Source-specific validators may impose stricter rules before a historical release.
+
 The manifest then records the declared package paths, SHA-256 hashes, byte counts, source lineage, and a `privacy_gate` status. It does not discover every file in an output directory, so stale files cannot silently enter a release record. A status other than `passed` prevents manifest validation. A valid manifest proves that the declared package matched this contract at the time it was built; it does not certify legal compliance or data quality.
 
 ## Release evidence

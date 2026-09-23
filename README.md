@@ -56,6 +56,10 @@ The local command builds raw, trusted, and semantic Parquet layers, `privacy-aud
 
 Open [notebooks/01_local_release_walkthrough.ipynb](notebooks/01_local_release_walkthrough.ipynb) to run the same synthetic path interactively.
 
+## Testing
+
+`make check` compiles the package, validates the registry, and runs fixture-backed tests. The suite covers retry and pagination behavior, natural-key deduplication, identifier classification, field and value leakage, schema and timestamp validation, layer reconciliation, manifest requirements, notebook validity, and deterministic Parquet release hashes.
+
 ## Articles and case study
 
 The first article draft, [Public data is not automatically privacy-safe](articles/public-data-is-not-automatically-privacy-safe.md), explains the release gate and links its claims to [evidence](articles/public-data-release-claim-map.md). The follow-up drafts cover [organization linkage limits](docs/articles/golden-organization-id-without-identity-overreach.md) and [policy testing](docs/articles/testing-a-privacy-policy-like-software.md). They remain Markdown review artifacts until manual publication.
