@@ -16,7 +16,7 @@ An executable map of Brazilian public education and procurement sources. The rep
 python -m unittest discover -s tests -v
 make check
 python -m brazil_data_map validate-registry
-python -m brazil_data_map build-fixture-release --output .local-release
+python -m brazil_data_map build-fixture-release --output .local-release --retrieved-at 2026-01-03T00:00:00Z
 ```
 
 ## Privacy boundary
@@ -29,12 +29,15 @@ Kaggle is the planned distribution channel for reviewed release artifacts. No Ka
 
 Read the planned release boundary in [docs/dataset-card.md](docs/dataset-card.md).
 The implementation contract is in [docs/release-contract.md](docs/release-contract.md).
+The [source catalog](docs/source-catalog.md), [join map](docs/join-map.md), and [data dictionary](docs/data-dictionary.md) document the public analytical boundary.
 
 ## Portability
 
 `dags/pncp_incremental_update.py` is an Airflow template. It has no token, bucket, project ID, or environment connection. A deployer supplies approved connections and local output paths in their own Airflow environment.
 
-The local command builds three JSON layers, `privacy-audit.json`, and `manifest.json` from synthetic records. `.local-release` is ignored by Git. Delete it after inspection.
+The local command builds raw, trusted, and semantic Parquet layers, `privacy-audit.json`, and `manifest.json` from synthetic records. Pass the same `--retrieved-at` value twice to reproduce the manifest hashes. `.local-release` is ignored by Git. Delete it after inspection.
+
+Open [notebooks/01_local_release_walkthrough.ipynb](notebooks/01_local_release_walkthrough.ipynb) to run the same synthetic path interactively.
 
 ## License
 

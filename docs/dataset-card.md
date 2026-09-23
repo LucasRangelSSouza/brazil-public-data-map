@@ -6,7 +6,7 @@ This repository provides a synthetic release fixture and portable extraction con
 
 ## Intended content
 
-The future release will contain eligible public procurement records in raw, trusted, and semantic layers. The raw layer preserves eligible source fields and ingestion lineage. The trusted layer keeps the latest record per natural key. The semantic layer exposes documented analysis keys. Document binaries and unnecessary direct identifiers remain out of scope.
+The future release will contain eligible public procurement records in raw, trusted, and semantic Parquet layers. The raw layer preserves eligible source fields and ingestion lineage. The trusted layer keeps the latest record per natural key. The semantic layer exposes documented analysis keys. Document binaries and unnecessary direct identifiers remain out of scope.
 
 ![Public-source release boundary](assets/public-release-boundary.png)
 

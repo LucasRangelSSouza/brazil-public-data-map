@@ -18,6 +18,7 @@ def main() -> None:
     fixture_command.add_argument("--output", type=Path, required=True)
     fixture_command.add_argument("--source-id", default="pncp")
     fixture_command.add_argument("--source-url", default="https://www.gov.br/pncp/pt-br/acesso-a-informacao/dados-abertos")
+    fixture_command.add_argument("--retrieved-at", help="optional ISO-8601 timestamp for deterministic fixture builds")
     args = parser.parse_args()
 
     if args.command == "validate-registry":
@@ -25,7 +26,7 @@ def main() -> None:
         print(json.dumps({"status": "passed", "sources": len(registry["sources"])}, indent=2))
     elif args.command == "build-fixture-release":
         records = json.loads(args.input.read_text(encoding="utf-8"))
-        result = build_public_release(records, args.output, args.source_id, args.source_url)
+        result = build_public_release(records, args.output, args.source_id, args.source_url, retrieved_at=args.retrieved_at)
         print(json.dumps({"status": "passed", "output": str(args.output), "record_counts": result["audit"]["record_counts"]}, indent=2))
 
 

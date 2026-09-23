@@ -3,24 +3,32 @@ from __future__ import annotations
 from datetime import datetime, timezone
 import hashlib
 from pathlib import Path
-from typing import Any
+from typing import Any, Iterable
 
 
 def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def build_manifest(root: Path, source_id: str, source_url: str, approvals: dict[str, str]) -> dict[str, Any]:
-    files = [
+def build_manifest(
+    root: Path,
+    source_id: str,
+    source_url: str,
+    approvals: dict[str, str],
+    retrieved_at: str | None = None,
+    files: Iterable[Path] | None = None,
+) -> dict[str, Any]:
+    release_files = list(files) if files is not None else [path for path in root.rglob("*") if path.is_file()]
+    file_entries = [
         {"path": path.relative_to(root).as_posix(), "sha256": sha256(path), "bytes": path.stat().st_size}
-        for path in sorted(root.rglob("*")) if path.is_file()
+        for path in sorted(release_files)
     ]
     manifest = {
         "schema_version": "1.0",
         "source_id": source_id,
         "source_url": source_url,
-        "retrieved_at": datetime.now(timezone.utc).isoformat(),
-        "files": files,
+        "retrieved_at": retrieved_at or datetime.now(timezone.utc).isoformat(),
+        "files": file_entries,
         **approvals,
     }
     validate_manifest(manifest)
