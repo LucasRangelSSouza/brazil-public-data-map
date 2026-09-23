@@ -7,6 +7,7 @@ An executable map of Brazilian public education and procurement sources. The rep
 - registry of official INEP, FNDE, IBGE, and PNCP sources;
 - organization-only PNCP identifier policy;
 - SHA-256 release manifest with source lineage and privacy approval;
+- registry validation and a layer-wide privacy audit;
 - fixture-first tests that run without private infrastructure.
 
 ## Quick start
@@ -14,6 +15,7 @@ An executable map of Brazilian public education and procurement sources. The rep
 ```powershell
 python -m unittest discover -s tests -v
 make check
+python -m brazil_data_map validate-registry
 ```
 
 ## Privacy boundary
@@ -25,6 +27,7 @@ The release gate excludes natural-person and unknown supplier records. It never 
 Kaggle is the planned distribution channel for reviewed release artifacts. No Kaggle link or publishing automation appears here until an account exists and a release passes the source, terms, privacy, and manifest gates.
 
 Read the planned release boundary in [docs/dataset-card.md](docs/dataset-card.md).
+The implementation contract is in [docs/release-contract.md](docs/release-contract.md).
 
 ## Portability
 

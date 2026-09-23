@@ -3,6 +3,7 @@ from __future__ import annotations
 from copy import deepcopy
 from typing import Any
 
+from .audit import audit_release_layers
 from .privacy import apply_identifier_policy
 
 
@@ -23,3 +24,4 @@ def validate_layers(layers: dict[str, list[dict[str, Any]]]) -> None:
                 raise ValueError(f"direct supplier field in {layer}")
     if any("natural_key" not in record for record in layers["semantic"]):
         raise ValueError("semantic layer requires natural_key")
+    audit_release_layers(layers)
