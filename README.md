@@ -16,6 +16,7 @@ An executable map of Brazilian public education and procurement sources. The rep
 python -m unittest discover -s tests -v
 make check
 python -m brazil_data_map validate-registry
+python -m brazil_data_map build-fixture-release --output .local-release
 ```
 
 ## Privacy boundary
@@ -32,6 +33,8 @@ The implementation contract is in [docs/release-contract.md](docs/release-contra
 ## Portability
 
 `dags/pncp_incremental_update.py` is an Airflow template. It has no token, bucket, project ID, or environment connection. A deployer supplies approved connections and local output paths in their own Airflow environment.
+
+The local command builds three JSON layers, `privacy-audit.json`, and `manifest.json` from synthetic records. `.local-release` is ignored by Git. Delete it after inspection.
 
 ## License
 

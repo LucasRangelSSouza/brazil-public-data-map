@@ -1,1 +1,5 @@
-[{"supplier_document":"12.345.678/0001-95","item":"office paper"},{"supplier_document":"123.456.789-09","item":"personal supplier"},{"supplier_document":"unknown","supplier_name":"must not release"}]
+[
+  {"id": "synthetic-organization-1", "updated_at": "2026-01-02T00:00:00Z", "supplier_document": "12.345.678/0001-95", "item": "office paper"},
+  {"id": "synthetic-natural-person-1", "updated_at": "2026-01-02T00:00:00Z", "supplier_document": "123.456.789-09", "item": "personal supplier"},
+  {"id": "synthetic-unknown-1", "updated_at": "2026-01-02T00:00:00Z", "supplier_document": "unknown", "supplier_name": "must not release"}
+]
