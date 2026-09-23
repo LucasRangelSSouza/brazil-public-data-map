@@ -1,0 +1,9 @@
+{
+  "schema_version": "1.0",
+  "sources": [
+    {"id": "ibge-municipalities", "publisher": "IBGE", "official_url": "https://servicodados.ibge.gov.br/api/docs/localidades", "grain": "municipality", "refresh": "as published", "public_release_assessment": "reference metadata"},
+    {"id": "inep-censo-escolar", "publisher": "INEP", "official_url": "https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/censo-escolar", "grain": "documented aggregate municipality-year", "refresh": "annual", "public_release_assessment": "exclude person-level microdata"},
+    {"id": "fnde-siope", "publisher": "FNDE", "official_url": "https://www.fnde.gov.br/siope/", "grain": "municipality-year", "refresh": "reporting period", "public_release_assessment": "record terms per release"},
+    {"id": "pncp", "publisher": "Portal Nacional de Contratacoes Publicas", "official_url": "https://pncp.gov.br/api/consulta", "grain": "contracting unit/item/date", "refresh": "incremental", "public_release_assessment": "identifier policy required"}
+  ]
+}

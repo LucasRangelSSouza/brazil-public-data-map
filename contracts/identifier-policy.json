@@ -1,0 +1,1 @@
+{"direct_identifier_fields":["cpf","supplier_name","name","email","phone","address"],"organization_identifier_field":"cnpj","natural_person_length":11,"organization_length":14}

@@ -1,0 +1,11 @@
+[project]
+name = "brazil-public-data-map"
+version = "0.1.0"
+requires-python = ">=3.10"
+
+[project.scripts]
+data-map = "brazil_data_map.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["brazil_data_map*"]
+
