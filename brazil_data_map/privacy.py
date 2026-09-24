@@ -7,6 +7,16 @@ from typing import Any
 
 BLOCKING_FIELDS = {"cpf", "email", "phone", "address"}
 EXCLUDED_FIELDS = {"supplier_document", "supplier_name", "name"}
+CPF_LIKE_PATTERN = re.compile(r"(?<!\d)\d{3}[.\s-]?\d{3}[.\s-]?\d{3}[-\s]?\d{2}(?!\d)")
+EMAIL_PATTERN = re.compile(r"\b[^\s@]+@[^\s@]+\.[^\s@]+\b")
+
+
+def redact_direct_identifiers(value: object) -> object:
+    """Remove identifier-shaped content from otherwise useful public free text."""
+    if not isinstance(value, str):
+        return value
+    value = EMAIL_PATTERN.sub("[REDACTED_EMAIL]", value)
+    return CPF_LIKE_PATTERN.sub("[REDACTED_IDENTIFIER]", value)
 
 
 def digits(value: object) -> str:
@@ -31,7 +41,7 @@ def apply_identifier_policy(records: list[dict[str, Any]]) -> tuple[list[dict[st
         if forbidden:
             raise ValueError(f"direct identifier field blocks release: {sorted(forbidden)[0]}")
         if "supplier_document" not in record:
-            sanitized = {key: value for key, value in record.items() if key not in EXCLUDED_FIELDS}
+            sanitized = {key: redact_direct_identifiers(value) for key, value in record.items() if key not in EXCLUDED_FIELDS}
             sanitized["identifier_classification"] = "not_present"
             released.append(sanitized)
             released_without_supplier_identifier += 1
@@ -41,7 +51,7 @@ def apply_identifier_policy(records: list[dict[str, Any]]) -> tuple[list[dict[st
             excluded[classification] += 1
             continue
         normalized = digits(record["supplier_document"])
-        sanitized = {key: value for key, value in record.items() if key not in EXCLUDED_FIELDS}
+        sanitized = {key: redact_direct_identifiers(value) for key, value in record.items() if key not in EXCLUDED_FIELDS}
         sanitized["identifier_classification"] = classification
         sanitized["golden_organization_id"] = hashlib.sha256(f"cnpj:{normalized}".encode()).hexdigest()
         released.append(sanitized)

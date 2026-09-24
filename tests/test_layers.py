@@ -14,6 +14,11 @@ class LayerTests(unittest.TestCase):
         self.assertNotIn("supplier_document", layers["trusted"][0])
         self.assertEqual(layers["semantic"][0]["natural_key"], "a")
 
+    def test_free_text_identifiers_are_redacted_before_release(self) -> None:
+        records = [{"id": "a", "updated_at": "2026-01-02", "item": "contact 123.456.789-09 or person@example.org"}]
+        layers = build_layers(records, "pncp")
+        self.assertEqual(layers["raw"][0]["item"], "contact [REDACTED_IDENTIFIER] or [REDACTED_EMAIL]")
+
 
 if __name__ == "__main__":
     unittest.main()

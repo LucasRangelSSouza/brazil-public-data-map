@@ -10,7 +10,7 @@ Each release candidate needs a source registry entry, a recorded retrieval windo
 
 ## Package gate
 
-The pipeline builds all three layers from records that pass the identifier policy. Direct supplier documents, names, contacts, addresses, CPF-like values, and email-like values are prohibited in every layer. The audit returns record counts and fails on the first release candidate that contains a prohibited field or value pattern.
+The pipeline builds all three layers from records that pass the identifier policy. It removes direct supplier documents, names, contacts, and addresses. It redacts CPF-like and email-like content from retained free text before constructing a layer, then audits every layer for prohibited fields or identifier-like values that remain. The audit returns record counts and fails on the first release candidate that contains a prohibited field or value pattern.
 
 The quality gate requires a non-empty `id`, a parseable `updated_at` timestamp, unique identifiers within each released layer, no trusted-layer expansion beyond raw, and equal trusted and semantic layer counts. Source-specific validators may impose stricter rules before a historical release.
 

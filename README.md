@@ -40,7 +40,7 @@ On macOS and Linux, `make check` runs the same validation sequence.
 
 The release gate excludes natural-person and unknown supplier records. It never preserves a supplier document, name, contact, or address in the released record. Eligible CNPJ records receive a deterministic `golden_organization_id` for linkage only. It is not identity verification or supplier qualification.
 
-[contracts/identifier-policy.yaml](contracts/identifier-policy.yaml) defines the rule. The audit also rejects CPF-like and email-like strings that appear in an otherwise permitted field.
+[contracts/identifier-policy.yaml](contracts/identifier-policy.yaml) defines the rule. Before the audit runs, the release policy redacts CPF-like and email-like content in retained free-text fields; the audit rejects any value that remains.
 
 ## Kaggle policy
 
