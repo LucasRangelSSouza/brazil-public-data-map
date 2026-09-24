@@ -1,5 +1,7 @@
 # Public data is not automatically privacy-safe
 
+**Versioned reference:** [v0.1.0](https://github.com/LucasRangelSSouza/brazil-public-data-map/tree/v0.1.0)
+
 The [PNCP open-data service](https://www.gov.br/pncp/pt-br/acesso-a-informacao/dados-abertos) makes procurement information available for consultation and download without registration, so researchers, journalists, suppliers, and public bodies can work from the same official starting point. A dataset publisher still has to decide which fields serve the stated analysis and which create exposure the analysis does not need.
 
 The question is wider than procurement. INEP's own [microdata guidance](https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados) explains why public releases need privacy controls when detailed records can identify people, including when individual fields look harmless in isolation. A public URL is a starting point for a release decision.
