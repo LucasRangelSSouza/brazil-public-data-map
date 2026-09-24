@@ -1,5 +1,7 @@
 # Brazil public data map
 
+![Social preview for the Brazil public data map](docs/assets/social-preview.png)
+
 An executable map of Brazilian public education and procurement sources. The project turns a source registry and a small synthetic PNCP fixture into reviewable raw, trusted, and semantic Parquet layers. It prioritizes local reproduction. A reader needs no cloud account, credential, large data dump, or private infrastructure.
 
 ![Public-source release boundary](docs/assets/public-release-boundary.png)
