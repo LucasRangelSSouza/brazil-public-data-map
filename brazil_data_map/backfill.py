@@ -79,13 +79,18 @@ def run_backfill(
     checkpoint = _load_json(checkpoint_path, {"completed_windows": []})
     completed = set(checkpoint.get("completed_windows", []))
     fetched_windows = 0
+    failure: RuntimeError | None = None
 
     for day in iter_days(start, end):
         for modality_id in normalized_modalities:
             key = window_key(day, modality_id)
             if key in completed:
                 continue
-            records = fetcher(day, day, modality_id)
+            try:
+                records = fetcher(day, day, modality_id)
+            except RuntimeError as error:
+                failure = error
+                break
             _append_json_lines(capture_path, records)
             completed.add(key)
             checkpoint = {
@@ -95,6 +100,8 @@ def run_backfill(
             }
             checkpoint_path.write_text(json.dumps(checkpoint, indent=2, sort_keys=True) + "\n", encoding="utf-8")
             fetched_windows += 1
+        if failure:
+            break
 
     records = deduplicate_latest(_read_json_lines(capture_path))
     release_root = output_root / "release"
@@ -106,10 +113,13 @@ def run_backfill(
         retrieved_at=retrieved_at,
         git_commit=git_commit,
     )
-    return {
+    summary = {
         "fetched_windows": fetched_windows,
         "completed_windows": len(completed),
         "deduplicated_records": len(records),
         "release_root": str(release_root),
         "audit": result["audit"],
     }
+    if failure:
+        raise RuntimeError(f"backfill stopped after creating a local checkpointed release: {summary}") from failure
+    return summary

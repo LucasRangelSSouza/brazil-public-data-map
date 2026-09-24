@@ -43,6 +43,20 @@ class BackfillTests(unittest.TestCase):
         self.assertEqual(manifest["row_counts"], {"raw": 2, "semantic": 2, "trusted": 2})
         self.assertEqual(len(manifest["source_input_sha256"]), 64)
 
+    def test_partial_failure_still_refreshes_the_checkpointed_release(self) -> None:
+        def fetcher(day: date, _: date, __: int):
+            if day == date(2026, 1, 2):
+                raise RuntimeError("rate limited")
+            return [{"id": "a", "updated_at": "2026-01-01T00:00:00Z", "item": "paper"}]
+
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory)
+            with self.assertRaisesRegex(RuntimeError, "checkpointed release"):
+                run_backfill(date(2026, 1, 1), date(2026, 1, 2), [6], root, fetcher=fetcher)
+            manifest = json.loads((root / "release" / "manifest.json").read_text(encoding="utf-8"))
+
+        self.assertEqual(manifest["row_counts"], {"raw": 1, "semantic": 1, "trusted": 1})
+
 
 if __name__ == "__main__":
     unittest.main()
