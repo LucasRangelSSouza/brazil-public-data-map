@@ -4,6 +4,7 @@ from copy import deepcopy
 from datetime import date
 import json
 from typing import Any, Callable
+import time
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
@@ -40,6 +41,7 @@ def fetch_publications(
     page_size: int = 50,
     retries: int = 2,
     opener: Callable[..., object] = urlopen,
+    sleeper: Callable[[float], None] = time.sleep,
 ) -> list[dict[str, Any]]:
     """Retrieve and normalize a public PNCP publication window without credentials."""
     if end < start:
@@ -66,6 +68,9 @@ def fetch_publications(
             except (HTTPError, URLError, json.JSONDecodeError) as error:
                 if attempt == retries:
                     raise RuntimeError(f"PNCP publication request failed after {retries + 1} attempts for page {page}") from error
+                retry_after = error.headers.get("Retry-After") if isinstance(error, HTTPError) and error.headers else None
+                delay = float(retry_after) if retry_after and retry_after.isdigit() else min(2 ** attempt, 8)
+                sleeper(delay)
 
         page_records = payload.get("data")
         if not isinstance(page_records, list):

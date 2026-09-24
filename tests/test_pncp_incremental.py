@@ -33,6 +33,19 @@ class PncpIncrementalTests(unittest.TestCase):
         self.assertEqual([record["id"] for record in records], ["source-1", "source-2"])
         self.assertEqual(records[0]["contracting_organization_id"], "12345678000195")
         self.assertNotIn("usuarioNome", records[0])
+
+    def test_rate_limit_uses_retry_after_before_retrying(self) -> None:
+        calls = [HTTPError("https://example.test", 429, "rate limit", {"Retry-After": "3"}, None), b'{"data":[],"paginasRestantes":0}']
+        delays = []
+
+        def opener(*_, **__):
+            item = calls.pop(0)
+            if isinstance(item, Exception):
+                raise item
+            return Response(item)
+
+        self.assertEqual(fetch_publications(date(2026, 1, 1), date(2026, 1, 1), 6, page_size=10, opener=opener, sleeper=delays.append), [])
+        self.assertEqual(delays, [3.0])
     def test_pagination_retry_and_natural_key_deduplication_converge(self) -> None:
         pages = [
             [{"id": "a", "updated_at": "2026-01-01", "value": 1}, {"id": "b", "updated_at": "2026-01-01", "value": 2}],
