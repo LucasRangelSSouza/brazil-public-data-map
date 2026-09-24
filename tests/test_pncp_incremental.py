@@ -1,7 +1,7 @@
 import unittest
 from datetime import date
 from io import BytesIO
-from urllib.error import URLError
+from urllib.error import HTTPError, URLError
 
 from brazil_data_map.pncp import fetch_publications, incremental_snapshot
 
