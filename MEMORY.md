@@ -13,6 +13,7 @@ This repository maps reproducible releases of Brazilian public education and pro
 - Release manifests require source lineage, file hashes, and a passed privacy gate.
 - The public PNCP publication adapter has fixture-backed pagination and retry tests, plus one sanitized real execution record.
 - The checkpointed PNCP backfill stores completed `day:modality` windows locally, skips them on rerun, and deduplicates source IDs by the latest update timestamp. Its generated release manifest records input and file hashes, row counts, schema version, extractor commit, privacy result, and distribution state.
+- A sanitized historical-window execution for 2025-01-01 and modality 6 retrieved two records per released layer, passed the privacy audit, and remains explicitly unpublished.
 
 ## Next verifiable task
 

@@ -76,6 +76,8 @@ The full command and review contract are documented in [docs/pncp-backfill.md](d
 
 The repository records a sanitized [successful source-access run](docs/evidence/pncp-publication-run-2026-09-23.md). It documents the command, scope, counts, field set, caption, and limitation without retaining source records.
 
+A separate [historical-window evidence record](docs/evidence/pncp-historical-window-2025-01-01.md) documents the first resumed 2025 checkpoint without retaining source records.
+
 Open [notebooks/01_local_release_walkthrough.ipynb](notebooks/01_local_release_walkthrough.ipynb) to run the same synthetic path interactively.
 
 ## Testing
