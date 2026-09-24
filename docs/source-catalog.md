@@ -10,6 +10,8 @@ The catalog records a source's public entry point and analytical grain. It is no
 | FNDE SIOPE | [SIOPE portal](https://www.fnde.gov.br/siope/) | Municipality-year finance | Record the reporting period and definitions used by the extraction. |
 | PNCP | [PNCP open data](https://www.gov.br/pncp/pt-br/acesso-a-informacao/dados-abertos) | Contracting unit, item, and publication date | Run the identifier policy, privacy audit, and release contract. |
 
+The registry also records separate INEP IDEB and SAEB indicator sources. Their releases require methodology, coverage, aggregation, and redistribution review before they enter a public dataset. The registry does not treat published source availability as a blanket permission to redistribute raw files.
+
 ## Source review checklist
 
 Before a release, confirm the current official URL, the applicable terms, the retrieval window, the grain, expected keys, and data fields that must be removed. Do not carry assumptions from an earlier release into a newer source version.

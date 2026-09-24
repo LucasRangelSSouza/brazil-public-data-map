@@ -9,7 +9,7 @@ from brazil_data_map.registry import load_registry, validate_registry
 class RegistryTests(unittest.TestCase):
     def test_repository_registry_is_valid(self) -> None:
         registry = load_registry(Path("sources/registry.json"))
-        self.assertEqual(len(registry["sources"]), 4)
+        self.assertEqual(len(registry["sources"]), 6)
 
     def test_registry_rejects_duplicate_source_ids_and_non_https_urls(self) -> None:
         registry = {
