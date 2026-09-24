@@ -8,7 +8,7 @@ On 2026-09-24, a local checkpointed capture completed seven public PNCP publicat
 
 The checkpoint recorded seven completed windows. After deterministic source-ID reconciliation, the local release candidate contained 1,979 records in each layer: raw, trusted, and semantic. The privacy audit passed with zero violations, while the manifest recorded schema version 1.1, the extractor commit, the source-input SHA-256 digest, layer file SHA-256 digests, and `distribution_version: not_published`.
 
-The run initially exposed identifier-like strings in two public free-text values. The release gate stopped the build. The extractor policy now redacts CPF-like and email-like content before layer construction, and the regression test proves that the audit remains active after redaction. The rebuilt local release passed the audit.
+The run initially exposed identifier-like strings in two public free-text values, so the release gate stopped the build before it wrote an approved manifest. The extractor policy now redacts CPF-like and email-like content before layer construction, and the regression test proves that the audit remains active after redaction. The rebuilt local release passed the audit.
 
 This evidence file keeps no source records, organization identifiers, payload excerpts, or local capture files.
 
