@@ -9,6 +9,7 @@ import pyarrow as pa
 import pyarrow.parquet as pq
 
 from .audit import audit_release_layers
+from .allowlists import apply_public_allowlist
 from .layers import build_layers, validate_layers
 from .quality import validate_reconciliation
 from .release import build_manifest
@@ -24,7 +25,8 @@ def build_public_release(
     distribution_version: str | None = None,
 ) -> dict[str, Any]:
     """Build a locally reviewable release candidate from approved source records."""
-    layers = build_layers(records, source_id)
+    approved_records = apply_public_allowlist(records, source_id)
+    layers = build_layers(approved_records, source_id)
     validate_layers(layers)
     validate_reconciliation(layers)
     audit = audit_release_layers(layers)
@@ -47,7 +49,7 @@ def build_public_release(
         retrieved_at=retrieved_at,
         files=release_files,
         source_input_sha256=hashlib.sha256(
-            json.dumps(records, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode("utf-8")
+            json.dumps(approved_records, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode("utf-8")
         ).hexdigest(),
         row_counts=audit["record_counts"],
         git_commit=git_commit,

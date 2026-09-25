@@ -10,6 +10,7 @@ This repository maps reproducible releases of Brazilian public education and pro
 - The PNCP identifier gate releases only organization records with a derived golden organization ID.
 - Registry validation requires unique official HTTPS sources.
 - The release pipeline writes raw, trusted, and semantic Parquet layers, a privacy audit, and a manifest from synthetic fixture records.
+- The pipeline now applies a source-specific public field allowlist before it writes any layer; source fields outside the approved list cannot enter a release artifact.
 - Release manifests require source lineage, file hashes, and a passed privacy gate.
 - The public PNCP publication adapter has fixture-backed pagination and retry tests, plus one sanitized real execution record.
 - The checkpointed PNCP backfill stores completed `day:modality` windows locally, skips them on rerun, and deduplicates source IDs by the latest update timestamp. Its generated release manifest records input and file hashes, row counts, schema version, extractor commit, privacy result, and distribution state.
@@ -17,4 +18,4 @@ This repository maps reproducible releases of Brazilian public education and pro
 
 ## Next verifiable task
 
-Review the repository against the full public-release contract, run the final scope scan and CI, then publish the GitHub repository. Kaggle publication remains blocked until a reviewed historical dataset and distribution decision exist.
+Extend the allowlists and contracts with the final reviewed SIOPE and PNCP release schemas, then build and independently verify the first Kaggle candidates. Kaggle publication remains blocked until a reviewed historical dataset and distribution decision exist.

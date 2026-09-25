@@ -37,3 +37,12 @@ class PublicReleasePipelineTests(unittest.TestCase):
             second = build_public_release(records, Path(second_directory), "pncp", "https://www.gov.br/pncp/pt-br/acesso-a-informacao/dados-abertos", "2026-01-03T00:00:00Z")
 
         self.assertEqual(first["manifest"], second["manifest"])
+
+    def test_pipeline_excludes_unapproved_source_fields_before_writing(self) -> None:
+        records = [{"id": "a", "updated_at": "2026-01-02", "item": "paper", "internal_note": "do not release"}]
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory)
+            build_public_release(records, root, "pncp", "https://pncp.gov.br/api/consulta")
+            raw = pq.read_table(root / "raw" / "records.parquet").to_pylist()
+
+        self.assertNotIn("internal_note", raw[0])
