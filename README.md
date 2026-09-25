@@ -46,7 +46,14 @@ The release gate excludes natural-person and unknown supplier records. It never 
 
 ## Kaggle policy
 
-Kaggle distributes reviewed release artifacts. The first PNCP release is available at [Brazil PNCP Procurement History: January 2025](https://www.kaggle.com/datasets/lucasrangelss/brazil-pncp-procurement-history). It passed the source, field-minimization, privacy, deterministic-build, manifest, and clean-download checks recorded in the release evidence.
+Kaggle distributes reviewed release artifacts. Two versions are public, and each passed the source, field-minimization, privacy, deterministic-build, manifest, and clean-download checks in its release evidence:
+
+| Dataset | Version | Coverage | Evidence |
+|---|---|---|---|
+| [Brazil PNCP Procurement History: January 2025](https://www.kaggle.com/datasets/lucasrangelss/brazil-pncp-procurement-history) | 1 | PNCP notices 2025-01-01 to 2025-01-07, modality 6, 1,979 rows | [record](docs/evidence/pncp-kaggle-release-v1.md) |
+| [Brazil Education Data Lake: SIOPE 2019-2023](https://www.kaggle.com/datasets/lucasrangelss/brazil-education-data-lake) | 1 | SIOPE municipal declarations 2019-2023 with IBGE codes, 27,830 rows | [record](docs/evidence/education-kaggle-release-v1.md) |
+
+The education release is built with `capture-siope` and `build-education-release`; see the [education dataset card](docs/education-dataset-card.md).
 
 Read the planned release boundary in [docs/dataset-card.md](docs/dataset-card.md).
 The implementation contract is in [docs/release-contract.md](docs/release-contract.md).

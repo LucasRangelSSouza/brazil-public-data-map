@@ -2,7 +2,7 @@
 
 ## Status
 
-Version 1 is a candidate for Kaggle slug `lucasrangelss/brazil-education-data-lake`. The link is added here only after the published version passes clean-download verification.
+Kaggle hosts version 1 as [Brazil Education Data Lake: SIOPE 2019-2023](https://www.kaggle.com/datasets/lucasrangelss/brazil-education-data-lake): 27,830 municipality-year records for 2019 through 2023. The [release evidence](evidence/education-kaggle-release-v1.md) records the manifest hash and the clean-download check.
 
 ## Content
 
