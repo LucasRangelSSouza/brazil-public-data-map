@@ -76,6 +76,12 @@ Use small, reviewable ranges first. A completed window is not a distribution app
 
 The full command and review contract are documented in [docs/pncp-backfill.md](docs/pncp-backfill.md).
 
+When a reviewer retains a bounded capture locally, rebuild it with the current release controls before distribution. The capture path remains local and Git-ignored; the command writes a new candidate rather than modifying the capture.
+
+```powershell
+python -m brazil_data_map rebuild-pncp-capture --input .local-pncp-backfill\normalized-source-capture.jsonl --output .local-pncp-rebuilt\release --retrieved-at 2026-09-24T11:19:40.003138+00:00 --git-commit (git rev-parse HEAD)
+```
+
 The repository records a sanitized [successful source-access run](docs/evidence/pncp-publication-run-2026-09-23.md). It documents the command, scope, counts, field set, caption, and limitation without retaining source records.
 
 A separate [historical-window evidence record](docs/evidence/pncp-historical-window-2025-01-01.md) documents the first resumed 2025 checkpoint without retaining source records.

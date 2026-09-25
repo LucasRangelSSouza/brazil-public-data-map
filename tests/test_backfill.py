@@ -4,7 +4,7 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from brazil_data_map.backfill import deduplicate_latest, run_backfill
+from brazil_data_map.backfill import deduplicate_latest, rebuild_capture_release, run_backfill
 
 
 class BackfillTests(unittest.TestCase):
@@ -56,6 +56,22 @@ class BackfillTests(unittest.TestCase):
             manifest = json.loads((root / "release" / "manifest.json").read_text(encoding="utf-8"))
 
         self.assertEqual(manifest["row_counts"], {"raw": 1, "semantic": 1, "trusted": 1})
+
+    def test_rebuilds_a_capture_with_current_release_controls(self) -> None:
+        records = [
+            {"id": "a", "updated_at": "2026-01-01T00:00:00Z", "item": "older", "internal_note": "exclude"},
+            {"id": "a", "updated_at": "2026-01-02T00:00:00Z", "item": "latest", "internal_note": "exclude"},
+            {"id": "b", "updated_at": "2026-01-01T00:00:00Z", "item": "paper"},
+        ]
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory)
+            capture = root / "capture.jsonl"
+            capture.write_text("\n".join(json.dumps(record) for record in records) + "\n", encoding="utf-8")
+            result = rebuild_capture_release(capture, root / "release", retrieved_at="2026-01-03T00:00:00Z", git_commit="abc123")
+
+        self.assertEqual(result["deduplicated_records"], 2)
+        self.assertEqual(result["manifest"]["row_counts"], {"raw": 2, "semantic": 2, "trusted": 2})
+        self.assertEqual(result["manifest"]["git_commit"], "abc123")
 
 
 if __name__ == "__main__":

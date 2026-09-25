@@ -52,6 +52,38 @@ def _read_json_lines(path: Path) -> list[dict[str, Any]]:
     return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
 
 
+def rebuild_capture_release(
+    capture_path: Path,
+    output_root: Path,
+    *,
+    retrieved_at: str | None = None,
+    git_commit: str | None = None,
+) -> dict[str, Any]:
+    """Rebuild a PNCP candidate from a locally retained public-source capture.
+
+    The capture is intentionally outside version control. This path lets a release
+    owner apply the current allowlist and privacy controls without re-querying an
+    already bounded public-source window.
+    """
+    records = deduplicate_latest(_read_json_lines(capture_path))
+    if not records:
+        raise ValueError("capture must contain at least one JSONL record")
+    result = build_public_release(
+        records,
+        output_root,
+        "pncp",
+        "https://pncp.gov.br/api/consulta/v1/contratacoes/publicacao",
+        retrieved_at=retrieved_at,
+        git_commit=git_commit,
+    )
+    return {
+        "deduplicated_records": len(records),
+        "output_root": str(output_root),
+        "audit": result["audit"],
+        "manifest": result["manifest"],
+    }
+
+
 def run_backfill(
     start: date,
     end: date,

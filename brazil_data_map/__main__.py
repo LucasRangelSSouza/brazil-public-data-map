@@ -6,7 +6,7 @@ from datetime import date
 from pathlib import Path
 
 from .download import download_public_file
-from .backfill import run_backfill
+from .backfill import rebuild_capture_release, run_backfill
 from .distribution import validate_distribution_profile
 from .pipeline import build_public_release
 from .pncp import fetch_publications
@@ -40,6 +40,11 @@ def main() -> None:
     backfill_command.add_argument("--output", type=Path, required=True, help="ignored local output directory")
     backfill_command.add_argument("--retrieved-at", help="optional ISO-8601 timestamp for the release manifest")
     backfill_command.add_argument("--git-commit", help="optional source commit recorded in the manifest")
+    rebuild_command = commands.add_parser("rebuild-pncp-capture", help="rebuild a local PNCP candidate from an ignored JSONL capture")
+    rebuild_command.add_argument("--input", type=Path, required=True, help="local normalized PNCP JSONL capture")
+    rebuild_command.add_argument("--output", type=Path, required=True, help="candidate output directory")
+    rebuild_command.add_argument("--retrieved-at", required=True, help="original capture timestamp for a deterministic manifest")
+    rebuild_command.add_argument("--git-commit", required=True, help="source commit recorded in the manifest")
     profile_command = commands.add_parser("validate-distribution-profile", help="validate distribution metadata without publishing")
     profile_command.add_argument("--path", type=Path, default=Path("release_profiles/official_sources.json"))
     args = parser.parse_args()
@@ -74,6 +79,14 @@ def main() -> None:
             git_commit=args.git_commit,
         )
         print(json.dumps({"status": "passed", **result}, indent=2))
+    elif args.command == "rebuild-pncp-capture":
+        result = rebuild_capture_release(
+            args.input,
+            args.output,
+            retrieved_at=args.retrieved_at,
+            git_commit=args.git_commit,
+        )
+        print(json.dumps({"status": "passed", "output": str(args.output), "record_counts": result["audit"]["record_counts"]}, indent=2))
     elif args.command == "validate-distribution-profile":
         profile = json.loads(args.path.read_text(encoding="utf-8"))
         validate_distribution_profile(profile)
