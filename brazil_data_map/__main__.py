@@ -11,6 +11,7 @@ from .distribution import validate_distribution_profile
 from .pipeline import build_public_release
 from .pncp import fetch_publications
 from .registry import load_registry
+from .siope import SIOPE_ODATA_URL, build_records as build_siope_records, capture as capture_siope
 
 
 def main() -> None:
@@ -45,6 +46,15 @@ def main() -> None:
     rebuild_command.add_argument("--output", type=Path, required=True, help="candidate output directory")
     rebuild_command.add_argument("--retrieved-at", required=True, help="original capture timestamp for a deterministic manifest")
     rebuild_command.add_argument("--git-commit", required=True, help="source commit recorded in the manifest")
+    siope_capture = commands.add_parser("capture-siope", help="capture annual SIOPE municipality declarations and the IBGE reference")
+    siope_capture.add_argument("--start-year", type=int, required=True)
+    siope_capture.add_argument("--end-year", type=int, required=True)
+    siope_capture.add_argument("--output", type=Path, required=True, help="ignored local capture directory; reruns skip completed state-years")
+    education_command = commands.add_parser("build-education-release", help="build the education release candidate from a local SIOPE capture")
+    education_command.add_argument("--capture", type=Path, required=True)
+    education_command.add_argument("--output", type=Path, required=True)
+    education_command.add_argument("--retrieved-at", required=True, help="capture timestamp for a deterministic manifest")
+    education_command.add_argument("--git-commit", required=True)
     profile_command = commands.add_parser("validate-distribution-profile", help="validate distribution metadata without publishing")
     profile_command.add_argument("--path", type=Path, default=Path("release_profiles/official_sources.json"))
     args = parser.parse_args()
@@ -85,6 +95,15 @@ def main() -> None:
             args.output,
             retrieved_at=args.retrieved_at,
             git_commit=args.git_commit,
+        )
+        print(json.dumps({"status": "passed", "output": str(args.output), "record_counts": result["audit"]["record_counts"]}, indent=2))
+    elif args.command == "capture-siope":
+        print(json.dumps(capture_siope(range(args.start_year, args.end_year + 1), args.output), indent=2))
+    elif args.command == "build-education-release":
+        records = build_siope_records(args.capture)
+        result = build_public_release(
+            records, args.output, "fnde-siope", SIOPE_ODATA_URL,
+            retrieved_at=args.retrieved_at, git_commit=args.git_commit,
         )
         print(json.dumps({"status": "passed", "output": str(args.output), "record_counts": result["audit"]["record_counts"]}, indent=2))
     elif args.command == "validate-distribution-profile":
