@@ -16,7 +16,8 @@ This repository maps reproducible releases of Brazilian public education and pro
 - The checkpointed PNCP backfill stores completed `day:modality` windows locally, skips them on rerun, and deduplicates source IDs by the latest update timestamp. Its generated release manifest records input and file hashes, row counts, schema version, extractor commit, privacy result, and distribution state.
 - A sanitized historical-window execution for 2025-01-01 and modality 6 retrieved two records per released layer, passed the privacy audit, and remains explicitly unpublished.
 - A capture-rebuild command reapplies the current PNCP allowlist and privacy controls to an ignored, bounded public-source JSONL capture before a candidate can be reviewed for distribution.
+- Kaggle version 1 of `lucasrangelss/brazil-pncp-procurement-history` is public. Its 2025-01-01 through 2025-01-07 modality-6 coverage has 1,979 rows per layer; two builds produced identical manifests and a clean download matched every declared hash.
 
 ## Next verifiable task
 
-Build and independently verify the first reviewed PNCP Kaggle candidate from a bounded direct-source capture. Keep the education release blocked until a direct SIOPE aggregate extraction and its source-specific review are complete.
+Resolve the pinned PNCP Kaggle release in the recommender, then build the education release from a direct SIOPE aggregate extraction and its source-specific review.

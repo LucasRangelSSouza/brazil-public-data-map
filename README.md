@@ -46,7 +46,7 @@ The release gate excludes natural-person and unknown supplier records. It never 
 
 ## Kaggle policy
 
-Kaggle is the planned distribution channel for reviewed release artifacts. No Kaggle link or publishing automation appears here until an account exists and a release passes the source, terms, privacy, and manifest gates.
+Kaggle distributes reviewed release artifacts. The first PNCP release is available at [Brazil PNCP Procurement History: January 2025](https://www.kaggle.com/datasets/lucasrangelss/brazil-pncp-procurement-history). It passed the source, field-minimization, privacy, deterministic-build, manifest, and clean-download checks recorded in the release evidence.
 
 Read the planned release boundary in [docs/dataset-card.md](docs/dataset-card.md).
 The implementation contract is in [docs/release-contract.md](docs/release-contract.md).
@@ -98,7 +98,7 @@ The first article draft, [Public data is not automatically privacy-safe](article
 
 ## Limitations
 
-The current repository does not contain a historical dataset, live extractor credentials, a source-terms conclusion, or a public distribution link. It does not certify legal compliance. A real release must complete source-specific retrieval, terms review, schema review, privacy audit, and reviewer approval before distribution.
+The PNCP version is a bounded seven-day, modality-6 window. It is not a complete historical archive, a legal certification, or a procurement recommendation system. The education dataset remains pending because its direct SIOPE aggregate extraction and source-specific review are not complete. Every later release must complete source-specific retrieval, terms review, schema review, privacy audit, deterministic-build comparison, and reviewer approval.
 
 ## License
 

@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
-  "distribution_status": "pending",
+  "distribution_status": "mixed",
   "layers": ["raw", "trusted", "semantic"],
   "sources": ["ibge-municipalities", "inep-censo-escolar", "fnde-siope", "pncp"],
   "datasets": [
-    {"intended_slug": "brazil-education-data-lake", "release_approval": null},
-    {"intended_slug": "brazil-pncp-procurement-history", "release_approval": null}
+    {"intended_slug": "brazil-education-data-lake", "distribution_status": "pending", "release_approval": null},
+    {"intended_slug": "brazil-pncp-procurement-history", "distribution_status": "ready", "published_slug": "lucasrangelss/brazil-pncp-procurement-history", "version": 1, "review_approval": "docs/evidence/pncp-kaggle-release-v1.md", "manifest_sha256": "9301e83840fc575b841bcce31cff19a6b72bd37528a88fdee4b50c2fddb20c66"}
   ]
 }
