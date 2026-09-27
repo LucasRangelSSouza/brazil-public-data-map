@@ -13,6 +13,8 @@ from typing import Iterable
 from xml.etree import ElementTree as ET
 import zipfile
 
+import pyarrow.parquet as pq
+
 SHEET_NAME = "1.2"
 CODE_COLUMN = "D"
 TOTAL_COLUMN = "E"
@@ -98,3 +100,24 @@ def extract_enrollment_rows(workbook_path: Path, year: int = 2023, captured_at: 
     if len({record["id"] for record in result}) != len(result):
         raise ValueError("worksheet 1.2 contains duplicate municipality codes")
     return result
+
+
+def enrich_siope_records(base_semantic_path: Path, censo_jsonl_path: Path) -> tuple[list[dict[str, object]], dict[str, int]]:
+    """Join approved Censo totals to matching municipality-year SIOPE records."""
+    base = pq.read_table(base_semantic_path).to_pylist()
+    censo = [__import__("json").loads(line) for line in censo_jsonl_path.read_text(encoding="utf-8").splitlines() if line]
+    by_id = {str(record["id"]): record for record in censo}
+    result: list[dict[str, object]] = []
+    matched = 0
+    for record in base:
+        item = {key: value for key, value in record.items() if key not in {"source_id", "natural_key", "identifier_classification"}}
+        if item["year"] == 2023:
+            addition = by_id.get(str(item["id"]))
+            if addition is None:
+                raise ValueError(f"SIOPE municipality-year has no approved Censo aggregate: {item['id']}")
+            item["basic_education_enrollment_total"] = addition["basic_education_enrollment_total"]
+            item["censo_source_table"] = addition["source_table"]
+            item["censo_source_year"] = addition["source_year"]
+            matched += 1
+        result.append(item)
+    return result, {"base_records": len(base), "matched_2023_records": matched, "unmatched_censo_records": len(set(by_id) - {str(row['id']) for row in base})}

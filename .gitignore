@@ -9,3 +9,4 @@ dist/
 *.egg-info/
 .local-siope*/
 .local-censo/
+.local-education-v1/

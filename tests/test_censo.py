@@ -5,7 +5,10 @@ import tempfile
 import unittest
 import zipfile
 
-from brazil_data_map.censo import extract_enrollment_rows
+import pyarrow as pa
+import pyarrow.parquet as pq
+
+from brazil_data_map.censo import enrich_siope_records, extract_enrollment_rows
 
 
 def workbook(path: Path, code: str = "1100015", total: str = "4985", title: str = "Numero de Matriculas da Educacao Basica segundo o Municipio") -> None:
@@ -49,3 +52,19 @@ class CensoTests(unittest.TestCase):
         workbook(self.path, title="Other table")
         with self.assertRaisesRegex(ValueError, "approved 2023 aggregate layout"):
             extract_enrollment_rows(self.path, captured_at="2026-09-27T00:00:00Z")
+
+    def test_enrichment_requires_every_siope_2023_key_and_reports_extras(self):
+        base = self.path.with_name("base.parquet")
+        censo = self.path.with_name("censo.jsonl")
+        pq.write_table(pa.Table.from_pylist([
+            {"id": "1100015-2023", "year": 2023, "municipality_code": "1100015", "updated_at": "2026-01-01T00:00:00Z"},
+            {"id": "1100015-2022", "year": 2022, "municipality_code": "1100015", "updated_at": "2025-01-01T00:00:00Z"},
+        ]), base)
+        censo.write_text('{"id":"1100015-2023","basic_education_enrollment_total":4985,"source_table":"1.2","source_year":2023}\n{"id":"9999999-2023","basic_education_enrollment_total":1,"source_table":"1.2","source_year":2023}\n', encoding="utf-8")
+        records, report = enrich_siope_records(base, censo)
+        self.assertEqual(records[0]["basic_education_enrollment_total"], 4985)
+        self.assertNotIn("basic_education_enrollment_total", records[1])
+        self.assertEqual(report, {"base_records": 2, "matched_2023_records": 1, "unmatched_censo_records": 1})
+        censo.write_text('', encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "has no approved Censo aggregate"):
+            enrich_siope_records(base, censo)

@@ -18,6 +18,13 @@ PUBLIC_FIELDS: dict[str, frozenset[str]] = {
         "mde_minimum_share_pct", "fundeb_remuneration_share_pct", "fundeb_unspent_share_pct",
         "education_share_of_total_expenditure_pct", "investment_per_basic_education_student",
     }),
+    "fnde-siope-censo": frozenset({
+        "id", "updated_at", "year", "municipality_code", "municipality_name", "state_code",
+        "population", "total_revenue_realized", "total_expenditure_paid",
+        "mde_minimum_share_pct", "fundeb_remuneration_share_pct", "fundeb_unspent_share_pct",
+        "education_share_of_total_expenditure_pct", "investment_per_basic_education_student",
+        "basic_education_enrollment_total", "censo_source_table", "censo_source_year",
+    }),
 }
 
 
