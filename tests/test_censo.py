@@ -63,7 +63,7 @@ class CensoTests(unittest.TestCase):
         censo.write_text('{"id":"1100015-2023","basic_education_enrollment_total":4985,"source_table":"1.2","source_year":2023}\n{"id":"9999999-2023","basic_education_enrollment_total":1,"source_table":"1.2","source_year":2023}\n', encoding="utf-8")
         records, report = enrich_siope_records(base, censo)
         self.assertEqual(records[0]["basic_education_enrollment_total"], 4985)
-        self.assertNotIn("basic_education_enrollment_total", records[1])
+        self.assertIsNone(records[1]["basic_education_enrollment_total"])
         self.assertEqual(report, {"base_records": 2, "matched_2023_records": 1, "unmatched_censo_records": 1})
         censo.write_text('', encoding="utf-8")
         with self.assertRaisesRegex(ValueError, "has no approved Censo aggregate"):

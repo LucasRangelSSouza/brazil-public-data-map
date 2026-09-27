@@ -111,6 +111,9 @@ def enrich_siope_records(base_semantic_path: Path, censo_jsonl_path: Path) -> tu
     matched = 0
     for record in base:
         item = {key: value for key, value in record.items() if key not in {"source_id", "natural_key", "identifier_classification"}}
+        item["basic_education_enrollment_total"] = None
+        item["censo_source_table"] = None
+        item["censo_source_year"] = None
         if item["year"] == 2023:
             addition = by_id.get(str(item["id"]))
             if addition is None:
