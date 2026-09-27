@@ -105,7 +105,7 @@ The first article draft, [Public data is not automatically privacy-safe](article
 
 ## Limitations
 
-The PNCP version is a bounded seven-day, modality-6 window. It is not a complete historical archive, a legal certification, or a procurement recommendation system. The education dataset remains pending because its direct SIOPE aggregate extraction and source-specific review are not complete. Every later release must complete source-specific retrieval, terms review, schema review, privacy audit, deterministic-build comparison, and reviewer approval.
+The PNCP version is a bounded seven-day, modality-6 window. It is not a complete historical archive, a legal certification, or a procurement recommendation system. The education version contains annual municipal SIOPE declarations from 2019 through 2023 joined to IBGE context. It excludes person-level records, school-level Censo Escolar data, and state-level declarations. Every later release must complete source-specific retrieval, terms review, schema review, privacy audit, deterministic-build comparison, and reviewer approval.
 
 ## License
 
