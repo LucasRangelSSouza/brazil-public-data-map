@@ -12,6 +12,7 @@ from .pipeline import build_public_release
 from .pncp import fetch_publications
 from .registry import load_registry
 from .siope import SIOPE_ODATA_URL, build_records as build_siope_records, capture as capture_siope
+from .censo import extract_enrollment_rows
 
 
 def main() -> None:
@@ -55,6 +56,11 @@ def main() -> None:
     education_command.add_argument("--output", type=Path, required=True)
     education_command.add_argument("--retrieved-at", required=True, help="capture timestamp for a deterministic manifest")
     education_command.add_argument("--git-commit", required=True)
+    censo_command = commands.add_parser("extract-censo-aggregate", help="extract the approved municipality aggregate from INEP synopsis table 1.2")
+    censo_command.add_argument("--workbook", type=Path, required=True)
+    censo_command.add_argument("--year", type=int, default=2023)
+    censo_command.add_argument("--captured-at", required=True)
+    censo_command.add_argument("--output", type=Path, required=True)
     profile_command = commands.add_parser("validate-distribution-profile", help="validate distribution metadata without publishing")
     profile_command.add_argument("--path", type=Path, default=Path("release_profiles/official_sources.json"))
     args = parser.parse_args()
@@ -106,6 +112,11 @@ def main() -> None:
             retrieved_at=args.retrieved_at, git_commit=args.git_commit,
         )
         print(json.dumps({"status": "passed", "output": str(args.output), "record_counts": result["audit"]["record_counts"]}, indent=2))
+    elif args.command == "extract-censo-aggregate":
+        records = extract_enrollment_rows(args.workbook, args.year, args.captured_at)
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text("".join(json.dumps(record, sort_keys=True) + "\n" for record in records), encoding="utf-8")
+        print(json.dumps({"status": "passed", "output": str(args.output), "records": len(records)}, indent=2))
     elif args.command == "validate-distribution-profile":
         profile = json.loads(args.path.read_text(encoding="utf-8"))
         validate_distribution_profile(profile)
