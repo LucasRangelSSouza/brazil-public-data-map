@@ -23,4 +23,4 @@ This repository maps reproducible releases of Brazilian public education and pro
 
 ## Next verifiable task
 
-Add a reviewed Censo Escolar municipality-year aggregate to the education release (version 2), and a PNCP release with deadlines and item descriptions for the recommender.
+Implement and test the reviewed Censo Escolar municipality-year aggregate defined in `docs/research/censo-aggregate-v2-decision.md`. It is a source candidate only until its build, privacy gate, deterministic comparison, approval, and clean-download checks complete. A PNCP release with deadlines and item descriptions remains a separate future candidate.
