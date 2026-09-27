@@ -23,4 +23,4 @@ This repository maps reproducible releases of Brazilian public education and pro
 
 ## Next verifiable task
 
-Implement and test the reviewed Censo Escolar municipality-year aggregate defined in `docs/research/censo-aggregate-v2-decision.md`. It is a source candidate only until its build, privacy gate, deterministic comparison, approval, and clean-download checks complete. A PNCP release with deadlines and item descriptions remains a separate future candidate.
+The Censo aggregate extractor now validates the approved INEP 2023 XLSX table 1.2 and writes 5,570 municipality-year enrollment records from a locally verified source package. It is a source candidate only until it is joined to the education release and passes its build, privacy gate, deterministic comparison, approval, and clean-download checks. A PNCP release with deadlines and item descriptions remains a separate future candidate.
