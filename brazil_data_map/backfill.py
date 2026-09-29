@@ -6,7 +6,7 @@ from pathlib import Path
 from typing import Any, Callable, Iterable
 
 from .pipeline import build_public_release
-from .pncp import fetch_publications
+from .pncp import enrich_procurement_items, fetch_procurement_items, fetch_publications
 
 
 FetchPublications = Callable[[date, date, int], list[dict[str, Any]]]
@@ -78,6 +78,38 @@ def rebuild_capture_release(
     )
     return {
         "deduplicated_records": len(records),
+        "output_root": str(output_root),
+        "audit": result["audit"],
+        "manifest": result["manifest"],
+    }
+
+
+def build_item_candidate_from_capture(
+    capture_path: Path,
+    output_root: Path,
+    *,
+    item_fetcher=fetch_procurement_items,
+    retrieved_at: str | None = None,
+    git_commit: str | None = None,
+) -> dict[str, Any]:
+    """Build a bounded item-grain candidate from an ignored normalized capture."""
+    procurements = deduplicate_latest(_read_json_lines(capture_path))
+    if not procurements:
+        raise ValueError("capture must contain at least one JSONL procurement")
+    items = enrich_procurement_items(procurements, item_fetcher=item_fetcher)
+    if not items:
+        raise ValueError("item enrichment returned no records")
+    result = build_public_release(
+        items,
+        output_root,
+        "pncp-v2",
+        "https://pncp.gov.br/api/pncp/v1",
+        retrieved_at=retrieved_at,
+        git_commit=git_commit,
+    )
+    return {
+        "deduplicated_procurements": len(procurements),
+        "item_records": len(items),
         "output_root": str(output_root),
         "audit": result["audit"],
         "manifest": result["manifest"],

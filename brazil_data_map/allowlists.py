@@ -12,6 +12,12 @@ PUBLIC_FIELDS: dict[str, frozenset[str]] = {
         "procurement_sequence", "procurement_category", "modality_id", "estimated_value",
         "contracting_organization_id", "contracting_organization_name",
     }),
+    "pncp-v2": frozenset({
+        "id", "updated_at", "published_at", "proposal_deadline_at", "procurement_year",
+        "procurement_sequence", "modality_id", "estimated_value", "contracting_organization_id",
+        "contracting_organization_name", "procurement_id", "item_number", "item_kind",
+        "item_quantity", "item_unit", "item_category",
+    }),
     "fnde-siope": frozenset({
         "id", "updated_at", "year", "municipality_code", "municipality_name", "state_code",
         "population", "total_revenue_realized", "total_expenditure_paid",

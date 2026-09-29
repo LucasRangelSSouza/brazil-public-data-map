@@ -164,6 +164,38 @@ def fetch_procurement_items(
     return records
 
 
+def enrich_procurement_items(
+    publications: list[dict[str, Any]],
+    item_fetcher: Callable[[str, int, int, str], list[dict[str, Any]]] = fetch_procurement_items,
+) -> list[dict[str, Any]]:
+    """Create an item-grain candidate from normalized procurement publications.
+
+    A parent without the identifiers required by the documented item route blocks the
+    candidate. Silent partial enrichment would make its coverage impossible to assess.
+    """
+    parent_fields = (
+        "updated_at", "published_at", "proposal_deadline_at", "procurement_year",
+        "procurement_sequence", "modality_id", "estimated_value",
+        "contracting_organization_id", "contracting_organization_name",
+    )
+    records: list[dict[str, Any]] = []
+    for parent in publications:
+        source_id = parent.get("id")
+        organization_id = parent.get("contracting_organization_id")
+        if not isinstance(source_id, str) or not source_id:
+            raise ValueError("PNCP parent requires an id")
+        if not isinstance(organization_id, str) or not organization_id.isdigit() or len(organization_id) != 14:
+            raise ValueError(f"PNCP parent {source_id} requires a 14-digit organization id for the item route")
+        year, sequence = parent.get("procurement_year"), parent.get("procurement_sequence")
+        if isinstance(year, bool) or not isinstance(year, int) or isinstance(sequence, bool) or not isinstance(sequence, int):
+            raise ValueError(f"PNCP parent {source_id} requires integer procurement year and sequence")
+        for item in item_fetcher(organization_id, year, sequence, source_id):
+            record = {field: parent.get(field) for field in parent_fields}
+            record.update(item)
+            records.append(record)
+    return records
+
+
 def incremental_snapshot(fetch_page: Callable[[str], list[dict[str, Any]]], watermark: str, retries: int = 2):
     raw: list[dict[str, Any]] = []
     while True:

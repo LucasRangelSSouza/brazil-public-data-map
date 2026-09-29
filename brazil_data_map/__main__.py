@@ -6,7 +6,7 @@ from datetime import date
 from pathlib import Path
 
 from .download import download_public_file
-from .backfill import rebuild_capture_release, run_backfill
+from .backfill import build_item_candidate_from_capture, rebuild_capture_release, run_backfill
 from .distribution import validate_distribution_profile
 from .pipeline import build_public_release
 from .pncp import fetch_publications
@@ -47,6 +47,11 @@ def main() -> None:
     rebuild_command.add_argument("--output", type=Path, required=True, help="candidate output directory")
     rebuild_command.add_argument("--retrieved-at", required=True, help="original capture timestamp for a deterministic manifest")
     rebuild_command.add_argument("--git-commit", required=True, help="source commit recorded in the manifest")
+    item_candidate_command = commands.add_parser("build-pncp-item-candidate", help="build a bounded item-grain candidate from an ignored normalized PNCP capture")
+    item_candidate_command.add_argument("--input", type=Path, required=True, help="local normalized PNCP JSONL capture")
+    item_candidate_command.add_argument("--output", type=Path, required=True, help="candidate output directory")
+    item_candidate_command.add_argument("--retrieved-at", required=True, help="original capture timestamp for a deterministic manifest")
+    item_candidate_command.add_argument("--git-commit", required=True, help="source commit recorded in the manifest")
     siope_capture = commands.add_parser("capture-siope", help="capture annual SIOPE municipality declarations and the IBGE reference")
     siope_capture.add_argument("--start-year", type=int, required=True)
     siope_capture.add_argument("--end-year", type=int, required=True)
@@ -118,6 +123,14 @@ def main() -> None:
             retrieved_at=args.retrieved_at, git_commit=args.git_commit,
         )
         print(json.dumps({"status": "passed", "output": str(args.output), "record_counts": result["audit"]["record_counts"]}, indent=2))
+    elif args.command == "build-pncp-item-candidate":
+        result = build_item_candidate_from_capture(
+            args.input,
+            args.output,
+            retrieved_at=args.retrieved_at,
+            git_commit=args.git_commit,
+        )
+        print(json.dumps({"status": "passed", **result}, indent=2))
     elif args.command == "extract-censo-aggregate":
         records = extract_enrollment_rows(args.workbook, args.year, args.captured_at)
         args.output.parent.mkdir(parents=True, exist_ok=True)

@@ -48,3 +48,19 @@ class PublicReleasePipelineTests(unittest.TestCase):
         self.assertNotIn("internal_note", raw[0])
         self.assertNotIn("item", raw[0])
         self.assertEqual(raw[0]["procurement_category"], "education")
+
+    def test_item_grain_candidate_excludes_raw_item_description(self) -> None:
+        records = [{
+            "id": "purchase:item:1", "updated_at": "2026-01-02T00:00:00Z", "procurement_id": "purchase",
+            "proposal_deadline_at": "2026-01-10T18:00:00-03:00", "item_number": 1,
+            "item_kind": "M", "item_quantity": 2.0, "item_unit": "box", "item_category": "education",
+            "descricao": "unbounded source item text", "source_record_url": "https://example.invalid/process",
+        }]
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory)
+            build_public_release(records, root, "pncp-v2", "https://pncp.gov.br/api/pncp/v1")
+            raw = pq.read_table(root / "raw" / "records.parquet").to_pylist()
+
+        self.assertEqual(raw[0]["item_category"], "education")
+        self.assertNotIn("descricao", raw[0])
+        self.assertNotIn("source_record_url", raw[0])

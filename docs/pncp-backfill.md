@@ -31,6 +31,22 @@ On 2026-09-23, the command ran against the official PNCP route for one window: 2
 
 This was a source-access and resume test. It is not a historical dataset, a source-terms conclusion, or a public release. Any distributed dataset must state its date and modality coverage precisely, complete the release contract, and have a separate reviewer decision.
 
+## Item-grain candidate
+
+`build-pncp-item-candidate` reads an ignored normalized procurement capture, deduplicates each parent procurement, then calls the documented PNCP item route for every retained parent. It emits one record per `procurement_id + item_number`. The command is a local candidate builder. It does not publish a dataset or use a Kaggle credential.
+
+```powershell
+python -m brazil_data_map build-pncp-item-candidate `
+  --input <ignored-normalized-capture.jsonl> `
+  --output <candidate-directory> `
+  --retrieved-at 2026-01-03T00:00:00Z `
+  --git-commit <source-commit>
+```
+
+The candidate blocks a procurement that lacks the organization CNPJ, purchase year, or sequence required by the item route. Its public contract keeps a validated proposal deadline, item number, material-or-service code, non-negative quantity, bounded unit, and a controlled category derived from the item description. It never writes the raw description, source-system links, documents, contacts, or supplier-result records.
+
+An item candidate remains unpublished until it passes the separate source review, privacy audit, deterministic-build comparison, release approval, and clean-download verification defined in the release policy.
+
 ## Claim-to-evidence map
 
 | Claim | Evidence | Status |

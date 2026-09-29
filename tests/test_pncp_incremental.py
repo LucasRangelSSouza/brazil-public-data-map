@@ -3,7 +3,7 @@ from datetime import date
 from io import BytesIO
 from urllib.error import HTTPError, URLError
 
-from brazil_data_map.pncp import fetch_procurement_items, fetch_publications, incremental_snapshot, normalize_publication
+from brazil_data_map.pncp import enrich_procurement_items, fetch_procurement_items, fetch_publications, incremental_snapshot, normalize_publication
 
 
 class Response(BytesIO):
@@ -15,6 +15,28 @@ class Response(BytesIO):
 
 
 class PncpIncrementalTests(unittest.TestCase):
+    def test_item_enrichment_carries_only_approved_parent_context(self) -> None:
+        parent = {
+            "id": "source-1", "updated_at": "2026-01-02T00:00:00Z", "published_at": "2026-01-01",
+            "proposal_deadline_at": "2026-01-10T18:00:00-03:00", "procurement_year": 2026,
+            "procurement_sequence": 42, "modality_id": 6, "estimated_value": 100,
+            "contracting_organization_id": "12345678000195", "contracting_organization_name": "Public body",
+            "item": "source text must not pass",
+        }
+
+        def item_fetcher(*_):
+            return [{"id": "source-1:item:2", "procurement_id": "source-1", "item_number": 2, "item_kind": "S", "item_quantity": 3.0, "item_unit": "licenca", "item_category": "technology"}]
+
+        records = enrich_procurement_items([parent], item_fetcher=item_fetcher)
+
+        self.assertEqual(records[0]["id"], "source-1:item:2")
+        self.assertEqual(records[0]["proposal_deadline_at"], "2026-01-10T18:00:00-03:00")
+        self.assertNotIn("item", records[0])
+
+    def test_item_enrichment_blocks_a_parent_without_item_route_keys(self) -> None:
+        with self.assertRaisesRegex(ValueError, "organization id"):
+            enrich_procurement_items([{"id": "source-1", "updated_at": "2026-01-02T00:00:00Z", "procurement_year": 2026, "procurement_sequence": 42}])
+
     def test_item_client_paginates_and_emits_a_safe_item_grain(self) -> None:
         pages = [
             b'{"data":[{"numeroItem":2,"materialOuServico":"S","descricao":"software educacional","quantidade":3,"unidadeMedida":"licenca"}],"paginasRestantes":1}',

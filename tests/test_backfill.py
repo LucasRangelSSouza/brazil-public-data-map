@@ -4,10 +4,30 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from brazil_data_map.backfill import deduplicate_latest, rebuild_capture_release, run_backfill
+from brazil_data_map.backfill import build_item_candidate_from_capture, deduplicate_latest, rebuild_capture_release, run_backfill
 
 
 class BackfillTests(unittest.TestCase):
+    def test_builds_a_item_grain_candidate_from_a_local_capture(self) -> None:
+        parent = {
+            "id": "purchase", "updated_at": "2026-01-02T00:00:00Z", "procurement_year": 2026,
+            "procurement_sequence": 42, "contracting_organization_id": "12345678000195",
+            "proposal_deadline_at": "2026-01-10T18:00:00-03:00", "item": "discard this source text",
+        }
+
+        def item_fetcher(*_):
+            return [{"id": "purchase:item:1", "procurement_id": "purchase", "item_number": 1, "item_kind": "M", "item_quantity": 2.0, "item_unit": "box", "item_category": "education"}]
+
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory)
+            capture = root / "capture.jsonl"
+            capture.write_text(json.dumps(parent) + "\n", encoding="utf-8")
+            result = build_item_candidate_from_capture(capture, root / "release", item_fetcher=item_fetcher, retrieved_at="2026-01-03T00:00:00Z", git_commit="abc123")
+
+        self.assertEqual(result["deduplicated_procurements"], 1)
+        self.assertEqual(result["item_records"], 1)
+        self.assertEqual(result["manifest"]["source_id"], "pncp-v2")
+
     def test_deduplicates_to_latest_update_deterministically(self) -> None:
         records = [
             {"id": "b", "updated_at": "2026-01-01T00:00:00Z"},
