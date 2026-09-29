@@ -33,7 +33,7 @@ This was a source-access and resume test. It is not a historical dataset, a sour
 
 ## Item-grain candidate
 
-`build-pncp-item-candidate` reads an ignored normalized procurement capture, deduplicates each parent procurement, then calls the documented PNCP item route for every retained parent. It emits one record per `procurement_id + item_number`. The command is a local candidate builder. It does not publish a dataset or use a Kaggle credential.
+`build-pncp-item-candidate` reads an ignored normalized procurement capture, deduplicates each parent procurement, then calls the documented PNCP item route for every retained parent. It emits one record per `procurement_id + item_number`. On the first successful run it stores that already normalized, allowlisted item result in `normalized-item-capture.jsonl` beside the candidate directory. A later build from the same parent capture reuses this item capture instead of calling the source again, so a fixed input can be compared deterministically. The command is a local candidate builder. It does not publish a dataset or use a Kaggle credential.
 
 ```powershell
 python -m brazil_data_map build-pncp-item-candidate `
@@ -43,7 +43,7 @@ python -m brazil_data_map build-pncp-item-candidate `
   --git-commit <source-commit>
 ```
 
-The candidate blocks a procurement that lacks the organization CNPJ, purchase year, or sequence required by the item route. Its public contract keeps a validated proposal deadline, item number, material-or-service code, non-negative quantity, bounded unit, and a controlled category derived from the item description. It never writes the raw description, source-system links, documents, contacts, or supplier-result records.
+The candidate blocks a procurement that lacks the organization CNPJ, purchase year, or sequence required by the item route. It also blocks a reused item capture that does not cover exactly the retained procurement IDs. Its public contract keeps a validated proposal deadline, item number, material-or-service code, non-negative quantity, bounded unit, and a controlled category derived from the item description. It never writes the raw description, source-system links, documents, contacts, or supplier-result records.
 
 An item candidate remains unpublished until it passes the separate source review, privacy audit, deterministic-build comparison, release approval, and clean-download verification defined in the release policy.
 

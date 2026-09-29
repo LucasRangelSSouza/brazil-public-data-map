@@ -52,6 +52,20 @@ def _read_json_lines(path: Path) -> list[dict[str, Any]]:
     return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
 
 
+def _write_json_lines(path: Path, records: list[dict[str, Any]]) -> None:
+    """Persist a normalized local capture in a stable, reviewable order."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        "".join(json.dumps(record, ensure_ascii=False, sort_keys=True) + "\n" for record in records),
+        encoding="utf-8",
+    )
+
+
+def _canonicalize_records(records: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Give JSON and Parquet writers one stable field order across rebuilds."""
+    return [json.loads(json.dumps(record, ensure_ascii=False, sort_keys=True)) for record in records]
+
+
 def rebuild_capture_release(
     capture_path: Path,
     output_root: Path,
@@ -92,13 +106,32 @@ def build_item_candidate_from_capture(
     retrieved_at: str | None = None,
     git_commit: str | None = None,
 ) -> dict[str, Any]:
-    """Build a bounded item-grain candidate from an ignored normalized capture."""
+    """Build a bounded item-grain candidate from ignored normalized captures.
+
+    The first build resolves the documented item route and records only its already
+    normalized, allowlisted result beside the source capture. Rebuilds reuse that
+    item capture, allowing deterministic release validation without a second live
+    request or another chance for the source to change underneath the candidate.
+    """
     procurements = deduplicate_latest(_read_json_lines(capture_path))
     if not procurements:
         raise ValueError("capture must contain at least one JSONL procurement")
-    items = enrich_procurement_items(procurements, item_fetcher=item_fetcher)
+    parent_ids = {str(procurement["id"]) for procurement in procurements}
+    item_capture_path = output_root.parent / "normalized-item-capture.jsonl"
+    items = _read_json_lines(item_capture_path)
+    if items:
+        captured_parent_ids = {str(item.get("procurement_id")) for item in items}
+        unexpected_parent_ids = captured_parent_ids - parent_ids
+        missing_parent_ids = parent_ids - captured_parent_ids
+        if unexpected_parent_ids or missing_parent_ids:
+            raise ValueError("normalized item capture does not exactly cover the procurement capture")
+    else:
+        items = enrich_procurement_items(procurements, item_fetcher=item_fetcher)
+        items = sorted(items, key=lambda item: (str(item["procurement_id"]), int(item["item_number"])))
+        _write_json_lines(item_capture_path, items)
     if not items:
         raise ValueError("item enrichment returned no records")
+    items = _canonicalize_records(items)
     result = build_public_release(
         items,
         output_root,
@@ -110,6 +143,7 @@ def build_item_candidate_from_capture(
     return {
         "deduplicated_procurements": len(procurements),
         "item_records": len(items),
+        "item_capture_path": str(item_capture_path),
         "output_root": str(output_root),
         "audit": result["audit"],
         "manifest": result["manifest"],

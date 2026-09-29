@@ -3,6 +3,7 @@ __pycache__/
 .local-release/
 .local-pncp-release/
 .local-pncp-backfill*/
+.local-pncp*/
 .venv/
 artifacts/
 dist/
@@ -10,3 +11,5 @@ dist/
 .local-siope*/
 .local-censo/
 .local-education-v1/
+.local-education*/
+.release-staging/

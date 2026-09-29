@@ -23,10 +23,18 @@ class BackfillTests(unittest.TestCase):
             capture = root / "capture.jsonl"
             capture.write_text(json.dumps(parent) + "\n", encoding="utf-8")
             result = build_item_candidate_from_capture(capture, root / "release", item_fetcher=item_fetcher, retrieved_at="2026-01-03T00:00:00Z", git_commit="abc123")
+            replay = build_item_candidate_from_capture(
+                capture,
+                root / "release-replay",
+                item_fetcher=lambda *_: (_ for _ in ()).throw(AssertionError("item route should not be called during replay")),
+                retrieved_at="2026-01-03T00:00:00Z",
+                git_commit="abc123",
+            )
 
         self.assertEqual(result["deduplicated_procurements"], 1)
         self.assertEqual(result["item_records"], 1)
         self.assertEqual(result["manifest"]["source_id"], "pncp-v2")
+        self.assertEqual(result["manifest"], replay["manifest"])
 
     def test_deduplicates_to_latest_update_deterministically(self) -> None:
         records = [
