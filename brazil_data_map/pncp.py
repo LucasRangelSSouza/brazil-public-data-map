@@ -23,6 +23,7 @@ def normalize_publication(record: dict[str, Any]) -> dict[str, Any]:
         "id": str(source_id),
         "updated_at": str(updated_at),
         "published_at": record.get("dataPublicacaoPncp"),
+        "proposal_deadline_at": record.get("dataEncerramentoProposta"),
         "procurement_year": record.get("anoCompra"),
         "procurement_sequence": record.get("sequencialCompra"),
         "item": record.get("objetoCompra"),
@@ -30,7 +31,6 @@ def normalize_publication(record: dict[str, Any]) -> dict[str, Any]:
         "estimated_value": record.get("valorTotalEstimado"),
         "contracting_organization_id": organization.get("cnpj"),
         "contracting_organization_name": organization.get("razaoSocial"),
-        "source_record_url": record.get("linkSistemaOrigem"),
     }
 
 

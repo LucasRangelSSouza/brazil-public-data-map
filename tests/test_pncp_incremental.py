@@ -3,7 +3,7 @@ from datetime import date
 from io import BytesIO
 from urllib.error import HTTPError, URLError
 
-from brazil_data_map.pncp import fetch_publications, incremental_snapshot
+from brazil_data_map.pncp import fetch_publications, incremental_snapshot, normalize_publication
 
 
 class Response(BytesIO):
@@ -15,6 +15,18 @@ class Response(BytesIO):
 
 
 class PncpIncrementalTests(unittest.TestCase):
+    def test_publication_normalization_keeps_a_proposal_deadline_without_source_links(self) -> None:
+        record = normalize_publication({
+            "numeroControlePNCP": "source-1",
+            "dataAtualizacao": "2026-01-02T00:00:00Z",
+            "dataEncerramentoProposta": "2026-01-10T18:00:00-03:00",
+            "orgaoEntidade": {"cnpj": "12345678000195"},
+            "linkSistemaOrigem": "https://example.invalid/private-process",
+        })
+
+        self.assertEqual(record["proposal_deadline_at"], "2026-01-10T18:00:00-03:00")
+        self.assertNotIn("source_record_url", record)
+
     def test_publications_client_retries_paginates_and_minimizes_response_fields(self) -> None:
         pages = [
             URLError("temporary"),

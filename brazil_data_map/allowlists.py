@@ -8,7 +8,7 @@ import unicodedata
 # policy and never reach a written layer.
 PUBLIC_FIELDS: dict[str, frozenset[str]] = {
     "pncp": frozenset({
-        "id", "updated_at", "published_at", "procurement_year",
+        "id", "updated_at", "published_at", "proposal_deadline_at", "procurement_year",
         "procurement_sequence", "procurement_category", "modality_id", "estimated_value",
         "contracting_organization_id", "contracting_organization_name",
     }),

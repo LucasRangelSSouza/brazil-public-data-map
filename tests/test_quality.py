@@ -12,6 +12,8 @@ class QualityTests(unittest.TestCase):
             ])
         with self.assertRaisesRegex(ValueError, "invalid updated_at"):
             validate_records([{"id": "a", "updated_at": "not-a-date"}])
+        with self.assertRaisesRegex(ValueError, "invalid proposal_deadline_at"):
+            validate_records([{"id": "a", "updated_at": "2026-01-01T00:00:00Z", "proposal_deadline_at": "not-a-date"}])
 
     def test_reconciliation_requires_matching_trusted_and_semantic_counts(self) -> None:
         layers = {

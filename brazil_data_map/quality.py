@@ -23,6 +23,12 @@ def validate_records(records: list[dict[str, Any]]) -> None:
             datetime.fromisoformat(str(record["updated_at"]).replace("Z", "+00:00"))
         except ValueError as error:
             raise ValueError(f"record {index} has an invalid updated_at timestamp") from error
+        deadline = record.get("proposal_deadline_at")
+        if deadline is not None:
+            try:
+                datetime.fromisoformat(str(deadline).replace("Z", "+00:00"))
+            except ValueError as error:
+                raise ValueError(f"record {index} has an invalid proposal_deadline_at timestamp") from error
 
 
 def validate_reconciliation(layers: dict[str, list[dict[str, Any]]]) -> None:
