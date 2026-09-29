@@ -3,7 +3,7 @@ from datetime import date
 from io import BytesIO
 from urllib.error import HTTPError, URLError
 
-from brazil_data_map.pncp import fetch_publications, incremental_snapshot, normalize_publication
+from brazil_data_map.pncp import fetch_procurement_items, fetch_publications, incremental_snapshot, normalize_publication
 
 
 class Response(BytesIO):
@@ -15,6 +15,31 @@ class Response(BytesIO):
 
 
 class PncpIncrementalTests(unittest.TestCase):
+    def test_item_client_paginates_and_emits_a_safe_item_grain(self) -> None:
+        pages = [
+            b'{"data":[{"numeroItem":2,"materialOuServico":"S","descricao":"software educacional","quantidade":3,"unidadeMedida":"licenca"}],"paginasRestantes":1}',
+            b'{"data":[{"numeroItem":3,"materialOuServico":"M","descricao":"paper","quantidade":10,"unidadeMedida":"caixa"}],"paginasRestantes":0}',
+        ]
+
+        def opener(*_, **__):
+            return Response(pages.pop(0))
+
+        records = fetch_procurement_items(
+            "12345678000195", 2026, 42, "source-1", page_size=10, opener=opener
+        )
+
+        self.assertEqual([record["id"] for record in records], ["source-1:item:2", "source-1:item:3"])
+        self.assertEqual(records[0]["item_category"], "technology")
+        self.assertEqual(records[0]["item_kind"], "S")
+        self.assertNotIn("descricao", records[0])
+
+    def test_item_client_rejects_identifier_like_units(self) -> None:
+        def opener(*_, **__):
+            return Response(b'{"data":[{"numeroItem":1,"materialOuServico":"M","descricao":"paper","quantidade":1,"unidadeMedida":"person@example.org"}],"paginasRestantes":0}')
+
+        with self.assertRaisesRegex(ValueError, "item unit"):
+            fetch_procurement_items("12345678000195", 2026, 42, "source-1", page_size=10, opener=opener)
+
     def test_publication_normalization_keeps_a_proposal_deadline_without_source_links(self) -> None:
         record = normalize_publication({
             "numeroControlePNCP": "source-1",

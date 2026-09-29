@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from copy import deepcopy
 from datetime import date
+from decimal import Decimal, InvalidOperation
 import json
 from typing import Any, Callable
 import time
@@ -9,8 +10,12 @@ from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
+from .allowlists import procurement_category
+from .privacy import redact_direct_identifiers
+
 
 PNCP_PUBLICATIONS_URL = "https://pncp.gov.br/api/consulta/v1/contratacoes/publicacao"
+PNCP_API_BASE_URL = "https://pncp.gov.br/api/pncp/v1"
 
 
 def normalize_publication(record: dict[str, Any]) -> dict[str, Any]:
@@ -78,6 +83,82 @@ def fetch_publications(
         records.extend(normalize_publication(record) for record in page_records)
         remaining = payload.get("paginasRestantes")
         if not page_records or remaining in (0, "0", None):
+            break
+        page += 1
+    return records
+
+
+def _normalize_item(source_id: str, item: dict[str, Any]) -> dict[str, Any]:
+    item_number = item.get("numeroItem")
+    if isinstance(item_number, bool) or not isinstance(item_number, int) or item_number < 1:
+        raise ValueError("PNCP item requires a positive integer numeroItem")
+    item_kind = item.get("materialOuServico")
+    if item_kind not in {"M", "S"}:
+        raise ValueError("PNCP item requires materialOuServico M or S")
+    try:
+        quantity = Decimal(str(item.get("quantidade")))
+    except (InvalidOperation, TypeError, ValueError) as error:
+        raise ValueError("PNCP item requires a numeric quantity") from error
+    if not quantity.is_finite() or quantity < 0:
+        raise ValueError("PNCP item quantity must be non-negative")
+    unit = item.get("unidadeMedida")
+    if not isinstance(unit, str) or not (normalized_unit := unit.strip()) or len(normalized_unit) > 30:
+        raise ValueError("PNCP item unit must be a non-empty string up to 30 characters")
+    if redact_direct_identifiers(normalized_unit) != normalized_unit:
+        raise ValueError("PNCP item unit contains a direct identifier")
+    return {
+        "id": f"{source_id}:item:{item_number}",
+        "procurement_id": source_id,
+        "item_number": item_number,
+        "item_kind": item_kind,
+        "item_quantity": float(quantity),
+        "item_unit": normalized_unit,
+        "item_category": procurement_category(item.get("descricao")),
+    }
+
+
+def fetch_procurement_items(
+    organization_cnpj: str,
+    procurement_year: int,
+    procurement_sequence: int,
+    source_id: str,
+    page_size: int = 50,
+    retries: int = 2,
+    opener: Callable[..., object] = urlopen,
+    sleeper: Callable[[float], None] = time.sleep,
+) -> list[dict[str, Any]]:
+    """Fetch one procurement's items and discard unbounded source descriptions."""
+    if not organization_cnpj.isdigit() or len(organization_cnpj) != 14:
+        raise ValueError("organization_cnpj must contain 14 digits")
+    if procurement_year < 1 or procurement_sequence < 1:
+        raise ValueError("procurement_year and procurement_sequence must be positive")
+    if page_size < 10:
+        raise ValueError("page_size must be at least 10")
+
+    records: list[dict[str, Any]] = []
+    page = 1
+    while True:
+        query = urlencode({"pagina": page, "tamanhoPagina": page_size})
+        url = f"{PNCP_API_BASE_URL}/orgaos/{organization_cnpj}/compras/{procurement_year}/{procurement_sequence}/itens?{query}"
+        http_request = Request(url, headers={"Accept": "application/json", "User-Agent": "brazil-public-data-map/0.1"})
+        for attempt in range(retries + 1):
+            try:
+                with opener(http_request, timeout=30) as response:
+                    payload = json.loads(response.read().decode("utf-8"))
+                break
+            except (HTTPError, URLError, json.JSONDecodeError) as error:
+                if attempt == retries:
+                    raise RuntimeError(f"PNCP item request failed after {retries + 1} attempts for page {page}") from error
+                retry_after = error.headers.get("Retry-After") if isinstance(error, HTTPError) and error.headers else None
+                delay = float(retry_after) if retry_after and retry_after.isdigit() else min(2 ** attempt, 8)
+                sleeper(delay)
+
+        page_items = payload.get("data", payload.get("itens"))
+        if not isinstance(page_items, list):
+            raise ValueError("PNCP item response must contain a data or itens list")
+        records.extend(_normalize_item(source_id, item) for item in page_items)
+        remaining = payload.get("paginasRestantes")
+        if not page_items or remaining in (0, "0", None):
             break
         page += 1
     return records
