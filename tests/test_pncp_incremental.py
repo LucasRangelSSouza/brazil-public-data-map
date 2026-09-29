@@ -62,6 +62,14 @@ class PncpIncrementalTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "item unit"):
             fetch_procurement_items("12345678000195", 2026, 42, "source-1", page_size=10, opener=opener)
 
+    def test_item_client_accepts_a_direct_list_response(self) -> None:
+        def opener(*_, **__):
+            return Response(b'[{"numeroItem":1,"materialOuServico":"M","descricao":"paper","quantidade":1,"unidadeMedida":"box"}]')
+
+        records = fetch_procurement_items("12345678000195", 2026, 42, "source-1", page_size=10, opener=opener)
+
+        self.assertEqual(records[0]["id"], "source-1:item:1")
+
     def test_publication_normalization_keeps_a_proposal_deadline_without_source_links(self) -> None:
         record = normalize_publication({
             "numeroControlePNCP": "source-1",

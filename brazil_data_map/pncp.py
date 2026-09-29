@@ -153,11 +153,18 @@ def fetch_procurement_items(
                 delay = float(retry_after) if retry_after and retry_after.isdigit() else min(2 ** attempt, 8)
                 sleeper(delay)
 
-        page_items = payload.get("data", payload.get("itens"))
+        if isinstance(payload, list):
+            page_items = payload
+            remaining = 0
+        elif isinstance(payload, dict):
+            page_items = payload.get("data", payload.get("itens"))
+            remaining = payload.get("paginasRestantes")
+        else:
+            page_items = None
+            remaining = None
         if not isinstance(page_items, list):
             raise ValueError("PNCP item response must contain a data or itens list")
         records.extend(_normalize_item(source_id, item) for item in page_items)
-        remaining = payload.get("paginasRestantes")
         if not page_items or remaining in (0, "0", None):
             break
         page += 1
