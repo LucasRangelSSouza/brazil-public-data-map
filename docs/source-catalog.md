@@ -19,3 +19,5 @@ Before a release, confirm the current official URL, the applicable terms, the re
 ## PNCP publication adapter
 
 The local PNCP adapter calls the documented public publication route, `GET /api/consulta/v1/contratacoes/publicacao`, with a bounded date range, modality code, page, and page size. The [official PNCP manuals](https://www.gov.br/pncp/pt-br/pncp/manuais) remain the authority for route behavior and fields. The adapter normalizes a selected analytical subset, paginates according to the response, and keeps no credential path.
+
+The [PNCP table catalogue](pncp-table-catalog.md) maps 47 table-layer pairs to 14 subject datasets. Related raw and trusted tables share a dataset; semantic tables use a separate one. The reference-code bundle is live. We downloaded and checked its 38 files. Thirty-five pairs remain `inventory-only`: 13 raw, 16 trusted, and 6 semantic. The complete-catalogue gate is still open. Earlier standalone lookup datasets remain listed as legacy releases.

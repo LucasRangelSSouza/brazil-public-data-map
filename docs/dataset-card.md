@@ -2,7 +2,7 @@
 
 ## Status
 
-Kaggle hosts version 1 as [Brazil PNCP Procurement History: January 2025](https://www.kaggle.com/datasets/lucasrangelss/brazil-pncp-procurement-history). The package covers publication dates from 2025-01-01 through 2025-01-07 for modality 6, and its manifest, approval record, and three Parquet layers preserve that limit. It does not claim PNCP-wide historical coverage.
+Kaggle hosts version 3 as [Brazil PNCP Procurement History: bounded item sample](https://www.kaggle.com/datasets/lucasrangelss/brazil-pncp-procurement-history). The current package covers publication date 2026-09-20 for modality 6: 25 procurement parents and 513 item records in each Parquet layer. Its manifest, approval record, and three layers preserve that limit. Earlier releases remain in Kaggle version history. It does not claim PNCP-wide historical coverage.
 
 ## Intended content
 
@@ -16,4 +16,4 @@ The release gate excludes natural-person and unknown supplier documents. It deri
 
 ## Reproducibility
 
-Run `make check` to validate the fixture pipeline. The [version-1 evidence record](evidence/pncp-kaggle-release-v1.md) records the manifest identity and clean-download validation. The Airflow template is portable and does not contain Kaggle credentials, storage locations, or infrastructure identifiers.
+Run `make check` to validate the fixture pipeline. The [version-3 evidence record](evidence/pncp-kaggle-release-v3.md) records the manifest identity and clean-download validation. The Airflow template is portable and does not contain Kaggle credentials, storage locations, or infrastructure identifiers.

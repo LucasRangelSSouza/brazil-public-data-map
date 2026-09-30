@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "canonical_publication_rule": "Group raw and trusted Parquet files by PNCP subject; publish semantic tables in a separate dataset for that subject. Keep legacy standalone datasets unchanged.",
+  "datasets": [
+    {
+      "kaggle_slug": "pncp-reference-codes-data",
+      "kaggle_url": "https://www.kaggle.com/datasets/lucasrangelss/pncp-reference-codes-data",
+      "version": 2,
+      "subject_id": "reference-codes",
+      "kind": "data",
+      "status": "ready",
+      "data_cutoff": "2026-07-31T23:59:59Z",
+      "verified_on": "2026-09-29",
+      "table_layer_count": 12,
+      "row_count": 272,
+      "downloadable_file_count": 38,
+      "downloadable_bytes": 84770,
+      "release_manifest_sha256": "f198d763c96efa159ba56d0420ffc12cae393ecbd9d898575be5d11335b711f8",
+      "clean_download": {
+        "status": "passed",
+        "files_checked": 38,
+        "hash_mismatches": 0,
+        "parquet_row_count_mismatches": 0
+      },
+      "tables": [
+        {"table_id": "pncp_dom_amparos_legais", "layer": "trusted", "row_count": 183, "parquet_path": "trusted__pncp_dom_amparos_legais.parquet"},
+        {"table_id": "pncp_dom_catalogos", "layer": "trusted", "row_count": 2, "parquet_path": "trusted__pncp_dom_catalogos.parquet"},
+        {"table_id": "pncp_dom_criterios_julgamento", "layer": "trusted", "row_count": 9, "parquet_path": "trusted__pncp_dom_criterios_julgamento.parquet"},
+        {"table_id": "pncp_dom_fontes_orcamentarias", "layer": "trusted", "row_count": 6, "parquet_path": "trusted__pncp_dom_fontes_orcamentarias.parquet"},
+        {"table_id": "pncp_dom_modalidades", "layer": "trusted", "row_count": 19, "parquet_path": "trusted__pncp_dom_modalidades.parquet"},
+        {"table_id": "pncp_dom_modos_disputa", "layer": "trusted", "row_count": 6, "parquet_path": "trusted__pncp_dom_modos_disputa.parquet"},
+        {"table_id": "pncp_dom_portes_empresa", "layer": "trusted", "row_count": 6, "parquet_path": "trusted__pncp_dom_portes_empresa.parquet"},
+        {"table_id": "pncp_dom_tipos_contrato", "layer": "trusted", "row_count": 12, "parquet_path": "trusted__pncp_dom_tipos_contrato.parquet"},
+        {"table_id": "pncp_dom_tipos_documento", "layer": "trusted", "row_count": 20, "parquet_path": "trusted__pncp_dom_tipos_documento.parquet"},
+        {"table_id": "pncp_dom_tipos_instrumento_cobranca", "layer": "trusted", "row_count": 1, "parquet_path": "trusted__pncp_dom_tipos_instrumento_cobranca.parquet"},
+        {"table_id": "pncp_dom_tipos_instrumento_convocatorio", "layer": "trusted", "row_count": 5, "parquet_path": "trusted__pncp_dom_tipos_instrumento_convocatorio.parquet"},
+        {"table_id": "pncp_dom_tipos_parte_envolvida", "layer": "trusted", "row_count": 3, "parquet_path": "trusted__pncp_dom_tipos_parte_envolvida.parquet", "cutoff_evidence": "The source snapshot's last-modified metadata is 2026-07-23T03:15:21Z, before the declared cutoff. The table has no row-level business timestamp."}
+      ]
+    }
+  ]
+}

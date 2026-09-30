@@ -7,7 +7,14 @@ from pathlib import Path
 
 from .download import download_public_file
 from .backfill import build_item_candidate_from_capture, rebuild_capture_release, run_backfill
+from .api_catalog import sync_operation_inventory, validate_operation_inventory
 from .distribution import validate_distribution_profile
+from .pncp_catalog import (
+    load_pncp_publication_plan,
+    load_pncp_table_catalog,
+    validate_pncp_release_bundle,
+    validate_pncp_release_package,
+)
 from .pipeline import build_public_release
 from .pncp import fetch_publications
 from .registry import load_registry
@@ -74,6 +81,23 @@ def main() -> None:
     censo_build.add_argument("--git-commit", required=True)
     profile_command = commands.add_parser("validate-distribution-profile", help="validate distribution metadata without publishing")
     profile_command.add_argument("--path", type=Path, default=Path("release_profiles/official_sources.json"))
+    table_catalog_command = commands.add_parser("validate-pncp-table-catalog", help="validate the PNCP table-to-Kaggle inventory")
+    table_catalog_command.add_argument("--path", type=Path, default=Path("sources/pncp_table_catalog.json"))
+    publication_plan_command = commands.add_parser("validate-pncp-publication-plan", help="validate subject-grouped PNCP Kaggle dataset targets")
+    publication_plan_command.add_argument("--catalog", type=Path, default=Path("sources/pncp_table_catalog.json"))
+    publication_plan_command.add_argument("--plan", type=Path, default=Path("sources/pncp_publication_plan.json"))
+    release_package_command = commands.add_parser("validate-pncp-release-package", help="verify a downloaded PNCP Kaggle package against its manifest")
+    release_package_command.add_argument("--catalog", type=Path, default=Path("sources/pncp_table_catalog.json"))
+    release_package_command.add_argument("--dataset-slug", required=True)
+    release_package_command.add_argument("--package-dir", type=Path, required=True)
+    release_bundle_command = commands.add_parser("validate-pncp-release-bundle", help="verify every table in a subject-grouped PNCP Kaggle dataset")
+    release_bundle_command.add_argument("--catalog", type=Path, default=Path("sources/pncp_table_catalog.json"))
+    release_bundle_command.add_argument("--plan", type=Path, default=Path("sources/pncp_publication_plan.json"))
+    release_bundle_command.add_argument("--dataset-slug", required=True)
+    release_bundle_command.add_argument("--package-dir", type=Path, required=True)
+    operation_catalog_command = commands.add_parser("sync-pncp-endpoints", help="refresh the official PNCP OpenAPI operation inventory")
+    operation_catalog_command.add_argument("--output", type=Path, default=Path("sources/pncp_api_operations.json"))
+    operation_catalog_command.add_argument("--validate", action="store_true", help="validate an existing inventory without network access")
     args = parser.parse_args()
 
     if args.command == "validate-registry":
@@ -144,6 +168,28 @@ def main() -> None:
         profile = json.loads(args.path.read_text(encoding="utf-8"))
         validate_distribution_profile(profile)
         print(json.dumps({"status": "passed", "distribution_status": profile["distribution_status"], "datasets": len(profile["datasets"])}, indent=2))
+    elif args.command == "validate-pncp-table-catalog":
+        catalog = load_pncp_table_catalog(args.path)
+        print(json.dumps({"status": "passed", "counts_by_layer": catalog["counts_by_layer"], "tables": catalog["expected_table_count"], "release_status": catalog["release_status"]}, indent=2))
+    elif args.command == "validate-pncp-publication-plan":
+        catalog = load_pncp_table_catalog(args.catalog)
+        plan = load_pncp_publication_plan(args.plan, catalog)
+        dataset_count = sum(len(subject["datasets"]) for subject in plan["subjects"])
+        print(json.dumps({"status": "passed", "subjects": len(plan["subjects"]), "datasets": dataset_count, "table_layers": catalog["expected_table_count"]}, indent=2))
+    elif args.command == "validate-pncp-release-package":
+        catalog = load_pncp_table_catalog(args.catalog)
+        print(json.dumps(validate_pncp_release_package(catalog, args.dataset_slug, args.package_dir), indent=2))
+    elif args.command == "validate-pncp-release-bundle":
+        catalog = load_pncp_table_catalog(args.catalog)
+        plan = load_pncp_publication_plan(args.plan, catalog)
+        print(json.dumps(validate_pncp_release_bundle(catalog, plan, args.dataset_slug, args.package_dir), indent=2))
+    elif args.command == "sync-pncp-endpoints":
+        if args.validate:
+            catalog = json.loads(args.output.read_text(encoding="utf-8"))
+            validate_operation_inventory(catalog)
+        else:
+            catalog = sync_operation_inventory(args.output)
+        print(json.dumps({"status": "passed", "operations": catalog["operation_count"], "release_status": catalog["release_status"], "output": str(args.output)}, indent=2))
 
 
 if __name__ == "__main__":

@@ -1,0 +1,834 @@
+{
+  "schema_version": "1.0",
+  "inventory_date": "2026-09-29",
+  "data_cutoff": "2026-07-31T23:59:59Z",
+  "official_api_specs": [
+    "https://pncp.gov.br/api/consulta/v3/api-docs",
+    "https://pncp.gov.br/api/pncp/v3/api-docs"
+  ],
+  "counts_by_layer": {
+    "raw": 13,
+    "trusted": 28,
+    "semantic": 6
+  },
+  "expected_table_count": 47,
+  "release_status": "inventory-only",
+  "tables": [
+    {
+      "table_id": "pncp_atas_atualizacao",
+      "layer": "raw",
+      "domain": "price-registration-minutes",
+      "source_endpoint": "/api/consulta/v1/atas/atualizacao",
+      "derivation": "official API response capture",
+      "kaggle_slug": "pncp-price-registration-data",
+      "release_status": "inventory-only"
+    },
+    {
+      "table_id": "pncp_contratacoes_arquivos",
+      "layer": "raw",
+      "domain": "procurement-documents",
+      "source_endpoint": "/api/pncp/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/arquivos",
+      "derivation": "official API response capture",
+      "kaggle_slug": "pncp-procurement-data",
+      "release_status": "inventory-only"
+    },
+    {
+      "table_id": "pncp_contratacoes_atualizacao",
+      "layer": "raw",
+      "domain": "procurement-publications",
+      "source_endpoint": "/api/consulta/v1/contratacoes/atualizacao",
+      "derivation": "official API response capture",
+      "kaggle_slug": "pncp-procurement-data",
+      "release_status": "inventory-only"
+    },
+    {
+      "table_id": "pncp_contratacoes_historico",
+      "layer": "raw",
+      "domain": "procurement-history",
+      "source_endpoint": "/api/pncp/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/historico",
+      "derivation": "official API response capture",
+      "kaggle_slug": "pncp-procurement-data",
+      "release_status": "inventory-only"
+    },
+    {
+      "table_id": "pncp_contratacoes_itens",
+      "layer": "raw",
+      "domain": "procurement-items",
+      "source_endpoint": "/api/pncp/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/itens",
+      "derivation": "official API response capture",
+      "kaggle_slug": "pncp-procurement-items-data",
+      "release_status": "inventory-only"
+    },
+    {
+      "table_id": "pncp_contratacoes_itens_resultados",
+      "layer": "raw",
+      "domain": "procurement-item-results",
+      "source_endpoint": "/api/pncp/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/itens/{numeroItem}/resultados",
+      "derivation": "official API response capture",
+      "kaggle_slug": "pncp-procurement-items-data",
+      "release_status": "inventory-only"
+    },
+    {
+      "table_id": "pncp_contratacoes_proposta",
+      "layer": "raw",
+      "domain": "open-proposals",
+      "source_endpoint": "/api/consulta/v1/contratacoes/proposta",
+      "derivation": "official API response capture",
+      "kaggle_slug": "pncp-procurement-data",
+      "release_status": "inventory-only"
+    },
+    {
+      "table_id": "pncp_contratos_atualizacao",
+      "layer": "raw",
+      "domain": "contracts",
+      "source_endpoint": "/api/consulta/v1/contratos/atualizacao",
+      "derivation": "official API response capture",
+      "kaggle_slug": "pncp-contracts-data",
+      "release_status": "inventory-only"
+    },
+    {
+      "table_id": "pncp_contratos_termos",
+      "layer": "raw",
+      "domain": "contract-terms",
+      "source_endpoint": "/api/pncp/v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/termos",
+      "derivation": "official API response capture",
+      "kaggle_slug": "pncp-contracts-data",
+      "release_status": "inventory-only"
+    },
+    {
+      "table_id": "pncp_instrumentos_cobranca",
+      "layer": "raw",
+      "domain": "contract-billing-instruments",
+      "source_endpoint": "/api/consulta/v1/instrumentoscobranca/inclusao",
+      "derivation": "official API response capture",
+      "kaggle_slug": "pncp-billing-instruments-data",
+      "release_status": "inventory-only"
+    },
+    {
+      "table_id": "pncp_orgaos",
+      "layer": "raw",
+      "domain": "organizations",
+      "source_endpoint": "/api/pncp/v1/orgaos/{cnpj}",
+      "derivation": "official API response capture",
+      "kaggle_slug": "pncp-organizations-data",
+      "release_status": "inventory-only"
+    },
+    {
+      "table_id": "pncp_orgaos_unidades",
+      "layer": "raw",
+      "domain": "organization-units",
+      "source_endpoint": "/api/pncp/v1/orgaos/{cnpj}/unidades",
+      "derivation": "official API response capture",
+      "kaggle_slug": "pncp-organizations-data",
+      "release_status": "inventory-only"
+    },
+    {
+      "table_id": "pncp_pca_atualizacao",
+      "layer": "raw",
+      "domain": "annual-procurement-plans",
+      "source_endpoint": "/api/consulta/v1/pca/atualizacao",
+      "derivation": "official API response capture",
+      "kaggle_slug": "pncp-annual-plans-data",
+      "release_status": "inventory-only"
+    },
+    {
+      "table_id": "pncp_atas",
+      "layer": "trusted",
+      "domain": "price-registration-minutes",
+      "source_endpoint": "/api/consulta/v1/atas/atualizacao",
+      "derivation": "typed, validated, and deterministically deduplicated source records",
+      "kaggle_slug": "pncp-price-registration-data",
+      "release_status": "inventory-only"
+    },
+    {
+      "table_id": "pncp_contratacoes",
+      "layer": "trusted",
+      "domain": "procurement-publications",
+      "source_endpoint": "/api/consulta/v1/contratacoes/atualizacao",
+      "derivation": "typed, validated, and deterministically deduplicated source records",
+      "kaggle_slug": "pncp-procurement-data",
+      "release_status": "inventory-only"
+    },
+    {
+      "table_id": "pncp_contratacoes_arquivos",
+      "layer": "trusted",
+      "domain": "procurement-documents",
+      "source_endpoint": "/api/pncp/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/arquivos",
+      "derivation": "typed, validated, and deterministically deduplicated source records",
+      "kaggle_slug": "pncp-procurement-data",
+      "release_status": "inventory-only"
+    },
+    {
+      "table_id": "pncp_contratacoes_historico",
+      "layer": "trusted",
+      "domain": "procurement-history",
+      "source_endpoint": "/api/pncp/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/historico",
+      "derivation": "typed, validated, and deterministically deduplicated source records",
+      "kaggle_slug": "pncp-procurement-data",
+      "release_status": "inventory-only"
+    },
+    {
+      "table_id": "pncp_contratacoes_itens",
+      "layer": "trusted",
+      "domain": "procurement-items",
+      "source_endpoint": "/api/pncp/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/itens",
+      "derivation": "typed, validated, and deterministically deduplicated source records",
+      "kaggle_slug": "pncp-procurement-items-data",
+      "release_status": "inventory-only"
+    },
+    {
+      "table_id": "pncp_contratacoes_itens_resultados",
+      "layer": "trusted",
+      "domain": "procurement-item-results",
+      "source_endpoint": "/api/pncp/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/itens/{numeroItem}/resultados",
+      "derivation": "typed, validated, and deterministically deduplicated source records",
+      "kaggle_slug": "pncp-procurement-items-data",
+      "release_status": "inventory-only"
+    },
+    {
+      "table_id": "pncp_contratacoes_proposta",
+      "layer": "trusted",
+      "domain": "open-proposals",
+      "source_endpoint": "/api/consulta/v1/contratacoes/proposta",
+      "derivation": "typed, validated, and deterministically deduplicated source records",
+      "kaggle_slug": "pncp-procurement-data",
+      "release_status": "inventory-only"
+    },
+    {
+      "table_id": "pncp_contratos",
+      "layer": "trusted",
+      "domain": "contracts",
+      "source_endpoint": "/api/consulta/v1/contratos/atualizacao",
+      "derivation": "typed, validated, and deterministically deduplicated source records",
+      "kaggle_slug": "pncp-contracts-data",
+      "release_status": "inventory-only"
+    },
+    {
+      "table_id": "pncp_contratos_termos",
+      "layer": "trusted",
+      "domain": "contract-terms",
+      "source_endpoint": "/api/pncp/v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/termos",
+      "derivation": "typed, validated, and deterministically deduplicated source records",
+      "kaggle_slug": "pncp-contracts-data",
+      "release_status": "inventory-only"
+    },
+    {
+      "table_id": "pncp_dom_amparos_legais",
+      "layer": "trusted",
+      "domain": "reference-codes",
+      "source_endpoint": "/api/pncp/v1/amparos-legais",
+      "derivation": "typed, validated, and deterministically deduplicated source records",
+      "kaggle_slug": "pncp-reference-codes-data",
+      "release_status": "ready",
+      "release_evidence": {
+        "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/pncp-reference-codes-data",
+        "dataset_version": 2,
+        "data_cutoff": "2026-07-31T23:59:59Z",
+        "snapshot_type": "grouped-reference-codes-release",
+        "row_count": 183,
+        "dataset_row_count": 272,
+        "manifest_sha256": "f198d763c96efa159ba56d0420ffc12cae393ecbd9d898575be5d11335b711f8",
+        "verified_at": "2026-09-29T23:21:08Z",
+        "clean_download": {
+          "status": "passed",
+          "files_checked": 38,
+          "hash_mismatches": 0
+        }
+      },
+      "legacy_publication": {
+        "dataset_slug": "pncp-trusted-dom-amparos-legais",
+        "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/pncp-trusted-dom-amparos-legais",
+        "release_evidence": {
+          "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/pncp-trusted-dom-amparos-legais",
+          "data_cutoff": "2026-07-31T23:59:59Z",
+          "snapshot_type": "cutoff-filtered-source-snapshot",
+          "row_count": 183,
+          "manifest_sha256": "870437d038c55867c9ca52019d39a216bc896544639229200f664d254cfd1253",
+          "verified_at": "2026-09-29T19:10:19Z",
+          "clean_download": {
+            "status": "passed",
+            "files_checked": 5,
+            "hash_mismatches": 0
+          }
+        }
+      }
+    },
+    {
+      "table_id": "pncp_dom_catalogos",
+      "layer": "trusted",
+      "domain": "reference-codes",
+      "source_endpoint": "/api/pncp/v1/catalogos",
+      "derivation": "typed, validated, and deterministically deduplicated source records",
+      "kaggle_slug": "pncp-reference-codes-data",
+      "release_status": "ready",
+      "release_evidence": {
+        "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/pncp-reference-codes-data",
+        "dataset_version": 2,
+        "data_cutoff": "2026-07-31T23:59:59Z",
+        "snapshot_type": "grouped-reference-codes-release",
+        "row_count": 2,
+        "dataset_row_count": 272,
+        "manifest_sha256": "f198d763c96efa159ba56d0420ffc12cae393ecbd9d898575be5d11335b711f8",
+        "verified_at": "2026-09-29T23:21:08Z",
+        "clean_download": {
+          "status": "passed",
+          "files_checked": 38,
+          "hash_mismatches": 0
+        }
+      },
+      "legacy_publication": {
+        "dataset_slug": "pncp-trusted-dom-catalogos",
+        "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/pncp-trusted-dom-catalogos",
+        "release_evidence": {
+          "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/pncp-trusted-dom-catalogos",
+          "data_cutoff": "2026-07-31T23:59:59Z",
+          "snapshot_type": "cutoff-filtered-source-snapshot",
+          "row_count": 2,
+          "manifest_sha256": "7567e2d8fe20afc8302d144a8be21f69c005f828422ead01acd15ef42723db72",
+          "verified_at": "2026-09-29T19:10:19Z",
+          "clean_download": {
+            "status": "passed",
+            "files_checked": 5,
+            "hash_mismatches": 0
+          }
+        }
+      }
+    },
+    {
+      "table_id": "pncp_dom_categoria_item_pca",
+      "layer": "trusted",
+      "domain": "annual-procurement-plans",
+      "source_endpoint": "/api/pncp/v1/categoriaItemPcas",
+      "derivation": "typed, validated, and deterministically deduplicated source records",
+      "kaggle_slug": "pncp-annual-plans-data",
+      "release_status": "inventory-only",
+      "legacy_publication": {
+        "dataset_slug": "pncp-reference-codes-data",
+        "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/pncp-reference-codes-data",
+        "release_evidence": {
+          "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/pncp-reference-codes-data",
+          "dataset_version": 2,
+          "data_cutoff": "2026-07-31T23:59:59Z",
+          "snapshot_type": "grouped-reference-codes-release",
+          "row_count": 8,
+          "dataset_row_count": 272,
+          "manifest_sha256": "f198d763c96efa159ba56d0420ffc12cae393ecbd9d898575be5d11335b711f8",
+          "verified_at": "2026-09-29T23:21:08Z",
+          "clean_download": {
+            "status": "passed",
+            "files_checked": 38,
+            "hash_mismatches": 0
+          }
+        }
+      }
+    },
+    {
+      "table_id": "pncp_dom_criterios_julgamento",
+      "layer": "trusted",
+      "domain": "reference-codes",
+      "source_endpoint": "/api/pncp/v1/criterios-julgamentos",
+      "derivation": "typed, validated, and deterministically deduplicated source records",
+      "kaggle_slug": "pncp-reference-codes-data",
+      "release_status": "ready",
+      "release_evidence": {
+        "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/pncp-reference-codes-data",
+        "dataset_version": 2,
+        "data_cutoff": "2026-07-31T23:59:59Z",
+        "snapshot_type": "grouped-reference-codes-release",
+        "row_count": 9,
+        "dataset_row_count": 272,
+        "manifest_sha256": "f198d763c96efa159ba56d0420ffc12cae393ecbd9d898575be5d11335b711f8",
+        "verified_at": "2026-09-29T23:21:08Z",
+        "clean_download": {
+          "status": "passed",
+          "files_checked": 38,
+          "hash_mismatches": 0
+        }
+      },
+      "legacy_publication": {
+        "dataset_slug": "pncp-trusted-dom-criterios-julgamento",
+        "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/pncp-trusted-dom-criterios-julgamento",
+        "release_evidence": {
+          "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/pncp-trusted-dom-criterios-julgamento",
+          "data_cutoff": "2026-07-31T23:59:59Z",
+          "snapshot_type": "cutoff-filtered-source-snapshot",
+          "row_count": 9,
+          "manifest_sha256": "cde6236caa96556b5fb6cdb4f1ebf4cd174f26c0d94a2cc52e4b52bf35237dfa",
+          "verified_at": "2026-09-29T19:27:30Z",
+          "clean_download": {
+            "status": "passed",
+            "files_checked": 5,
+            "hash_mismatches": 0
+          }
+        }
+      }
+    },
+    {
+      "table_id": "pncp_dom_fontes_orcamentarias",
+      "layer": "trusted",
+      "domain": "reference-codes",
+      "source_endpoint": "/api/pncp/v1/fontes-orcamentarias",
+      "derivation": "typed, validated, and deterministically deduplicated source records",
+      "kaggle_slug": "pncp-reference-codes-data",
+      "release_status": "ready",
+      "release_evidence": {
+        "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/pncp-reference-codes-data",
+        "dataset_version": 2,
+        "data_cutoff": "2026-07-31T23:59:59Z",
+        "snapshot_type": "grouped-reference-codes-release",
+        "row_count": 6,
+        "dataset_row_count": 272,
+        "manifest_sha256": "f198d763c96efa159ba56d0420ffc12cae393ecbd9d898575be5d11335b711f8",
+        "verified_at": "2026-09-29T23:21:08Z",
+        "clean_download": {
+          "status": "passed",
+          "files_checked": 38,
+          "hash_mismatches": 0
+        }
+      },
+      "legacy_publication": {
+        "dataset_slug": "pncp-trusted-dom-fontes-orcamentarias",
+        "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/pncp-trusted-dom-fontes-orcamentarias",
+        "release_evidence": {
+          "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/pncp-trusted-dom-fontes-orcamentarias",
+          "data_cutoff": "2026-07-31T23:59:59Z",
+          "snapshot_type": "cutoff-filtered-source-snapshot",
+          "row_count": 6,
+          "manifest_sha256": "a6701f9e7df687957e794f13af75d471f88850ee4ecbe4586e0a4502d9f82c5e",
+          "verified_at": "2026-09-29T19:25:37Z",
+          "clean_download": {
+            "status": "passed",
+            "files_checked": 5,
+            "hash_mismatches": 0
+          }
+        }
+      }
+    },
+    {
+      "table_id": "pncp_dom_modalidades",
+      "layer": "trusted",
+      "domain": "reference-codes",
+      "source_endpoint": "/api/pncp/v1/modalidades",
+      "derivation": "typed, validated, and deterministically deduplicated source records",
+      "kaggle_slug": "pncp-reference-codes-data",
+      "release_status": "ready",
+      "release_evidence": {
+        "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/pncp-reference-codes-data",
+        "dataset_version": 2,
+        "data_cutoff": "2026-07-31T23:59:59Z",
+        "snapshot_type": "grouped-reference-codes-release",
+        "row_count": 19,
+        "dataset_row_count": 272,
+        "manifest_sha256": "f198d763c96efa159ba56d0420ffc12cae393ecbd9d898575be5d11335b711f8",
+        "verified_at": "2026-09-29T23:21:08Z",
+        "clean_download": {
+          "status": "passed",
+          "files_checked": 38,
+          "hash_mismatches": 0
+        }
+      },
+      "legacy_publication": {
+        "dataset_slug": "pncp-trusted-dom-modalidades",
+        "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/pncp-trusted-dom-modalidades",
+        "release_evidence": {
+          "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/pncp-trusted-dom-modalidades",
+          "data_cutoff": "2026-07-31T23:59:59Z",
+          "row_count": 19,
+          "manifest_sha256": "d88e114fb606a2635759eb161ae421c1218f0e65d64a9025de44b53031582af9",
+          "verified_at": "2026-09-29T18:48:29Z",
+          "snapshot_type": "historical-source-snapshot",
+          "live_source_recheck": {
+            "observed_on": "2026-09-29",
+            "current_endpoint_record_count": 19,
+            "current_endpoint_records_with_source_timestamps_through_cutoff": 9,
+            "historical_release_record_count": 19,
+            "pre_cutoff_values_not_returned_by_current_endpoint": 10
+          },
+          "clean_download": {
+            "status": "passed",
+            "files_checked": 5,
+            "hash_mismatches": 0
+          }
+        }
+      }
+    },
+    {
+      "table_id": "pncp_dom_modos_disputa",
+      "layer": "trusted",
+      "domain": "reference-codes",
+      "source_endpoint": "/api/pncp/v1/modos-disputas",
+      "derivation": "typed, validated, and deterministically deduplicated source records",
+      "kaggle_slug": "pncp-reference-codes-data",
+      "release_status": "ready",
+      "release_evidence": {
+        "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/pncp-reference-codes-data",
+        "dataset_version": 2,
+        "data_cutoff": "2026-07-31T23:59:59Z",
+        "snapshot_type": "grouped-reference-codes-release",
+        "row_count": 6,
+        "dataset_row_count": 272,
+        "manifest_sha256": "f198d763c96efa159ba56d0420ffc12cae393ecbd9d898575be5d11335b711f8",
+        "verified_at": "2026-09-29T23:21:08Z",
+        "clean_download": {
+          "status": "passed",
+          "files_checked": 38,
+          "hash_mismatches": 0
+        }
+      },
+      "legacy_publication": {
+        "dataset_slug": "pncp-trusted-dom-modos-disputa",
+        "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/pncp-trusted-dom-modos-disputa",
+        "release_evidence": {
+          "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/pncp-trusted-dom-modos-disputa",
+          "data_cutoff": "2026-07-31T23:59:59Z",
+          "snapshot_type": "cutoff-filtered-source-snapshot",
+          "row_count": 6,
+          "manifest_sha256": "017ea8258dea6a00ced2a4ef8785f27533492c184d68dd20fdfd64d37b19d582",
+          "verified_at": "2026-09-29T19:30:48Z",
+          "clean_download": {
+            "status": "passed",
+            "files_checked": 5,
+            "hash_mismatches": 0
+          }
+        }
+      }
+    },
+    {
+      "table_id": "pncp_dom_portes_empresa",
+      "layer": "trusted",
+      "domain": "reference-codes",
+      "source_endpoint": "/api/pncp/v1/portes-empresa",
+      "derivation": "typed, validated, and deterministically deduplicated source records",
+      "kaggle_slug": "pncp-reference-codes-data",
+      "release_status": "ready",
+      "release_evidence": {
+        "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/pncp-reference-codes-data",
+        "dataset_version": 2,
+        "data_cutoff": "2026-07-31T23:59:59Z",
+        "snapshot_type": "grouped-reference-codes-release",
+        "row_count": 6,
+        "dataset_row_count": 272,
+        "manifest_sha256": "f198d763c96efa159ba56d0420ffc12cae393ecbd9d898575be5d11335b711f8",
+        "verified_at": "2026-09-29T23:21:08Z",
+        "clean_download": {
+          "status": "passed",
+          "files_checked": 38,
+          "hash_mismatches": 0
+        }
+      },
+      "legacy_publication": {
+        "dataset_slug": "pncp-trusted-dom-portes-empresa",
+        "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/pncp-trusted-dom-portes-empresa",
+        "release_evidence": {
+          "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/pncp-trusted-dom-portes-empresa",
+          "data_cutoff": "2026-07-31T23:59:59Z",
+          "snapshot_type": "cutoff-filtered-source-snapshot",
+          "row_count": 6,
+          "manifest_sha256": "56bf2aed8b996b775694f372701928d52f56f48c995c3821267df8c81ba1e533",
+          "verified_at": "2026-09-29T19:25:37Z",
+          "clean_download": {
+            "status": "passed",
+            "files_checked": 5,
+            "hash_mismatches": 0
+          }
+        }
+      }
+    },
+    {
+      "table_id": "pncp_dom_tipos_contrato",
+      "layer": "trusted",
+      "domain": "reference-codes",
+      "source_endpoint": "/api/pncp/v1/tipos-contratos",
+      "derivation": "typed, validated, and deterministically deduplicated source records",
+      "kaggle_slug": "pncp-reference-codes-data",
+      "release_status": "ready",
+      "release_evidence": {
+        "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/pncp-reference-codes-data",
+        "dataset_version": 2,
+        "data_cutoff": "2026-07-31T23:59:59Z",
+        "snapshot_type": "grouped-reference-codes-release",
+        "row_count": 12,
+        "dataset_row_count": 272,
+        "manifest_sha256": "f198d763c96efa159ba56d0420ffc12cae393ecbd9d898575be5d11335b711f8",
+        "verified_at": "2026-09-29T23:21:08Z",
+        "clean_download": {
+          "status": "passed",
+          "files_checked": 38,
+          "hash_mismatches": 0
+        }
+      },
+      "legacy_publication": {
+        "dataset_slug": "pncp-trusted-dom-tipos-contrato",
+        "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/pncp-trusted-dom-tipos-contrato",
+        "release_evidence": {
+          "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/pncp-trusted-dom-tipos-contrato",
+          "data_cutoff": "2026-07-31T23:59:59Z",
+          "snapshot_type": "cutoff-filtered-source-snapshot",
+          "row_count": 12,
+          "manifest_sha256": "447394473d40a713b16727970479132b64c445df97334a9b38ad79c98d14edaf",
+          "verified_at": "2026-09-29T19:25:37Z",
+          "clean_download": {
+            "status": "passed",
+            "files_checked": 5,
+            "hash_mismatches": 0
+          }
+        }
+      }
+    },
+    {
+      "table_id": "pncp_dom_tipos_documento",
+      "layer": "trusted",
+      "domain": "reference-codes",
+      "source_endpoint": "/api/pncp/v1/tipos-documentos",
+      "derivation": "typed, validated, and deterministically deduplicated source records",
+      "kaggle_slug": "pncp-reference-codes-data",
+      "release_status": "ready",
+      "release_evidence": {
+        "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/pncp-reference-codes-data",
+        "dataset_version": 2,
+        "data_cutoff": "2026-07-31T23:59:59Z",
+        "snapshot_type": "grouped-reference-codes-release",
+        "row_count": 20,
+        "dataset_row_count": 272,
+        "manifest_sha256": "f198d763c96efa159ba56d0420ffc12cae393ecbd9d898575be5d11335b711f8",
+        "verified_at": "2026-09-29T23:21:08Z",
+        "clean_download": {
+          "status": "passed",
+          "files_checked": 38,
+          "hash_mismatches": 0
+        }
+      },
+      "legacy_publication": {
+        "dataset_slug": "pncp-trusted-dom-tipos-documento",
+        "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/pncp-trusted-dom-tipos-documento",
+        "release_evidence": {
+          "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/pncp-trusted-dom-tipos-documento",
+          "data_cutoff": "2026-07-31T23:59:59Z",
+          "snapshot_type": "cutoff-filtered-source-snapshot",
+          "row_count": 20,
+          "manifest_sha256": "51c8e9800aaeb20645868b6201be21d27504ea27257d6e4325a692bb484eaaa6",
+          "verified_at": "2026-09-29T19:30:48Z",
+          "clean_download": {
+            "status": "passed",
+            "files_checked": 5,
+            "hash_mismatches": 0
+          }
+        }
+      }
+    },
+    {
+      "table_id": "pncp_dom_tipos_instrumento_cobranca",
+      "layer": "trusted",
+      "domain": "reference-codes",
+      "source_endpoint": "/api/pncp/v1/tipos-instrumentos-cobranca",
+      "derivation": "typed, validated, and deterministically deduplicated source records",
+      "kaggle_slug": "pncp-reference-codes-data",
+      "release_status": "ready",
+      "release_evidence": {
+        "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/pncp-reference-codes-data",
+        "dataset_version": 2,
+        "data_cutoff": "2026-07-31T23:59:59Z",
+        "snapshot_type": "grouped-reference-codes-release",
+        "row_count": 1,
+        "dataset_row_count": 272,
+        "manifest_sha256": "f198d763c96efa159ba56d0420ffc12cae393ecbd9d898575be5d11335b711f8",
+        "verified_at": "2026-09-29T23:21:08Z",
+        "clean_download": {
+          "status": "passed",
+          "files_checked": 38,
+          "hash_mismatches": 0
+        }
+      },
+      "legacy_publication": {
+        "dataset_slug": "pncp-trusted-dom-tipos-instrumento-cobranca",
+        "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/pncp-trusted-dom-tipos-instrumento-cobranca",
+        "release_evidence": {
+          "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/pncp-trusted-dom-tipos-instrumento-cobranca",
+          "data_cutoff": "2026-07-31T23:59:59Z",
+          "snapshot_type": "cutoff-filtered-source-snapshot",
+          "row_count": 1,
+          "manifest_sha256": "bc4ef7f467d048856a4ccf09087d23942fe004e7084b0b8c9658b3beacd98f6f",
+          "verified_at": "2026-09-29T19:30:48Z",
+          "clean_download": {
+            "status": "passed",
+            "files_checked": 5,
+            "hash_mismatches": 0
+          }
+        }
+      }
+    },
+    {
+      "table_id": "pncp_dom_tipos_instrumento_convocatorio",
+      "layer": "trusted",
+      "domain": "reference-codes",
+      "source_endpoint": "/api/pncp/v1/tipos-instrumentos-convocatorios",
+      "derivation": "typed, validated, and deterministically deduplicated source records",
+      "kaggle_slug": "pncp-reference-codes-data",
+      "release_status": "ready",
+      "release_evidence": {
+        "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/pncp-reference-codes-data",
+        "dataset_version": 2,
+        "data_cutoff": "2026-07-31T23:59:59Z",
+        "snapshot_type": "grouped-reference-codes-release",
+        "row_count": 5,
+        "dataset_row_count": 272,
+        "manifest_sha256": "f198d763c96efa159ba56d0420ffc12cae393ecbd9d898575be5d11335b711f8",
+        "verified_at": "2026-09-29T23:21:08Z",
+        "clean_download": {
+          "status": "passed",
+          "files_checked": 38,
+          "hash_mismatches": 0
+        }
+      },
+      "legacy_publication": {
+        "dataset_slug": "pncp-trusted-dom-tipos-instrumento-convocatorio",
+        "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/pncp-trusted-dom-tipos-instrumento-convocatorio",
+        "release_evidence": {
+          "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/pncp-trusted-dom-tipos-instrumento-convocatorio",
+          "data_cutoff": "2026-07-31T23:59:59Z",
+          "snapshot_type": "cutoff-filtered-source-snapshot",
+          "row_count": 5,
+          "manifest_sha256": "1b7b8c20fdddbb03f17e151e4535980e92f1d5a7134e7c1d3d3d127068647729",
+          "verified_at": "2026-09-29T19:30:48Z",
+          "clean_download": {
+            "status": "passed",
+            "files_checked": 5,
+            "hash_mismatches": 0
+          }
+        }
+      }
+    },
+    {
+      "table_id": "pncp_dom_tipos_parte_envolvida",
+      "layer": "trusted",
+      "domain": "reference-codes",
+      "source_endpoint": "/api/pncp/v1/tipos-parte-envolvida",
+      "derivation": "typed, validated, and deterministically deduplicated source records",
+      "kaggle_slug": "pncp-reference-codes-data",
+      "release_status": "ready",
+      "release_evidence": {
+        "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/pncp-reference-codes-data",
+        "dataset_version": 2,
+        "data_cutoff": "2026-07-31T23:59:59Z",
+        "snapshot_type": "grouped-reference-codes-release",
+        "row_count": 3,
+        "dataset_row_count": 272,
+        "manifest_sha256": "f198d763c96efa159ba56d0420ffc12cae393ecbd9d898575be5d11335b711f8",
+        "verified_at": "2026-09-29T23:21:08Z",
+        "clean_download": {
+          "status": "passed",
+          "files_checked": 38,
+          "hash_mismatches": 0
+        }
+      }
+    },
+    {
+      "table_id": "pncp_editais_embeddings",
+      "layer": "trusted",
+      "domain": "semantic-search",
+      "source_endpoint": "derived:approved-procurement-text-embeddings",
+      "derivation": "typed, validated, and deterministically deduplicated source records",
+      "kaggle_slug": "pncp-procurement-search-data",
+      "release_status": "inventory-only"
+    },
+    {
+      "table_id": "pncp_instrumentos_cobranca",
+      "layer": "trusted",
+      "domain": "contract-billing-instruments",
+      "source_endpoint": "/api/consulta/v1/instrumentoscobranca/inclusao",
+      "derivation": "typed, validated, and deterministically deduplicated source records",
+      "kaggle_slug": "pncp-billing-instruments-data",
+      "release_status": "inventory-only"
+    },
+    {
+      "table_id": "pncp_orgaos",
+      "layer": "trusted",
+      "domain": "organizations",
+      "source_endpoint": "/api/pncp/v1/orgaos/{cnpj}",
+      "derivation": "typed, validated, and deterministically deduplicated source records",
+      "kaggle_slug": "pncp-organizations-data",
+      "release_status": "inventory-only"
+    },
+    {
+      "table_id": "pncp_orgaos_unidades",
+      "layer": "trusted",
+      "domain": "organization-units",
+      "source_endpoint": "/api/pncp/v1/orgaos/{cnpj}/unidades",
+      "derivation": "typed, validated, and deterministically deduplicated source records",
+      "kaggle_slug": "pncp-organizations-data",
+      "release_status": "inventory-only"
+    },
+    {
+      "table_id": "pncp_pca",
+      "layer": "trusted",
+      "domain": "annual-procurement-plans",
+      "source_endpoint": "/api/consulta/v1/pca/atualizacao",
+      "derivation": "typed, validated, and deterministically deduplicated source records",
+      "kaggle_slug": "pncp-annual-plans-data",
+      "release_status": "inventory-only"
+    },
+    {
+      "table_id": "pncp_pca_itens",
+      "layer": "trusted",
+      "domain": "annual-procurement-plan-items",
+      "source_endpoint": "/api/pncp/v1/orgaos/{cnpj}/pca/{ano}/{sequencial}/itens",
+      "derivation": "typed, validated, and deterministically deduplicated source records",
+      "kaggle_slug": "pncp-annual-plans-data",
+      "release_status": "inventory-only"
+    },
+    {
+      "table_id": "obt_pncp_atas",
+      "layer": "semantic",
+      "domain": "price-registration-minutes",
+      "source_endpoint": "derived:trusted-pncp-atas",
+      "derivation": "trusted-pncp-atas",
+      "kaggle_slug": "pncp-price-registration-semantic",
+      "release_status": "inventory-only"
+    },
+    {
+      "table_id": "obt_pncp_contratacoes",
+      "layer": "semantic",
+      "domain": "procurement-publications",
+      "source_endpoint": "derived:trusted-pncp-contratacoes",
+      "derivation": "trusted-pncp-contratacoes",
+      "kaggle_slug": "pncp-procurement-semantic",
+      "release_status": "inventory-only"
+    },
+    {
+      "table_id": "obt_pncp_contratos",
+      "layer": "semantic",
+      "domain": "contracts",
+      "source_endpoint": "derived:trusted-pncp-contratos",
+      "derivation": "trusted-pncp-contratos",
+      "kaggle_slug": "pncp-contracts-semantic",
+      "release_status": "inventory-only"
+    },
+    {
+      "table_id": "obt_pncp_editais_semantico",
+      "layer": "semantic",
+      "domain": "semantic-search",
+      "source_endpoint": "derived:approved-procurement-text-embeddings",
+      "derivation": "approved-procurement-text-embeddings",
+      "kaggle_slug": "pncp-procurement-search-semantic",
+      "release_status": "inventory-only"
+    },
+    {
+      "table_id": "obt_pncp_pca",
+      "layer": "semantic",
+      "domain": "annual-procurement-plans",
+      "source_endpoint": "derived:trusted-pncp-pca",
+      "derivation": "trusted-pncp-pca",
+      "kaggle_slug": "pncp-annual-plans-semantic",
+      "release_status": "inventory-only"
+    },
+    {
+      "table_id": "obt_pncp_pca_itens",
+      "layer": "semantic",
+      "domain": "annual-procurement-plan-items",
+      "source_endpoint": "derived:trusted-pncp-pca-items",
+      "derivation": "trusted-pncp-pca-items",
+      "kaggle_slug": "pncp-annual-plans-semantic",
+      "release_status": "inventory-only"
+    }
+  ]
+}

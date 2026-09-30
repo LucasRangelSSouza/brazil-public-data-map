@@ -1,0 +1,185 @@
+{
+  "schema_version": "1.0",
+  "data_cutoff": "2026-07-31T23:59:59Z",
+  "size_limit_bytes": 200000000000,
+  "max_top_level_files": 50,
+  "size_measurement": "Measure the actual packaged upload bytes for each Kaggle dataset; source warehouse logical/physical bytes are not a substitute.",
+  "split_policy": "A subject normally has one raw+trusted dataset and one separate semantic dataset. Split only the oversized subject-layer bundle into the fewest documented logical partitions needed to remain below platform limits.",
+  "subjects": [
+    {
+      "subject_id": "procurement",
+      "title": "Procurement Publications",
+      "datasets": [
+        {
+          "kind": "data",
+          "kaggle_slug": "pncp-procurement-data",
+          "table_layers": [
+            {"table_id": "pncp_contratacoes_arquivos", "layer": "raw"},
+            {"table_id": "pncp_contratacoes_atualizacao", "layer": "raw"},
+            {"table_id": "pncp_contratacoes_historico", "layer": "raw"},
+            {"table_id": "pncp_contratacoes_proposta", "layer": "raw"},
+            {"table_id": "pncp_contratacoes", "layer": "trusted"},
+            {"table_id": "pncp_contratacoes_arquivos", "layer": "trusted"},
+            {"table_id": "pncp_contratacoes_historico", "layer": "trusted"},
+            {"table_id": "pncp_contratacoes_proposta", "layer": "trusted"}
+          ]
+        },
+        {
+          "kind": "semantic",
+          "kaggle_slug": "pncp-procurement-semantic",
+          "table_layers": [{"table_id": "obt_pncp_contratacoes", "layer": "semantic"}]
+        }
+      ]
+    },
+    {
+      "subject_id": "procurement-items",
+      "title": "Procurement Items and Results",
+      "datasets": [
+        {
+          "kind": "data",
+          "kaggle_slug": "pncp-procurement-items-data",
+          "table_layers": [
+            {"table_id": "pncp_contratacoes_itens", "layer": "raw"},
+            {"table_id": "pncp_contratacoes_itens_resultados", "layer": "raw"},
+            {"table_id": "pncp_contratacoes_itens", "layer": "trusted"},
+            {"table_id": "pncp_contratacoes_itens_resultados", "layer": "trusted"}
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": "procurement-search",
+      "title": "Procurement Semantic Search",
+      "datasets": [
+        {
+          "kind": "data",
+          "kaggle_slug": "pncp-procurement-search-data",
+          "table_layers": [{"table_id": "pncp_editais_embeddings", "layer": "trusted"}]
+        },
+        {
+          "kind": "semantic",
+          "kaggle_slug": "pncp-procurement-search-semantic",
+          "table_layers": [{"table_id": "obt_pncp_editais_semantico", "layer": "semantic"}]
+        }
+      ]
+    },
+    {
+      "subject_id": "contracts",
+      "title": "Contracts and Amendments",
+      "datasets": [
+        {
+          "kind": "data",
+          "kaggle_slug": "pncp-contracts-data",
+          "table_layers": [
+            {"table_id": "pncp_contratos_atualizacao", "layer": "raw"},
+            {"table_id": "pncp_contratos_termos", "layer": "raw"},
+            {"table_id": "pncp_contratos", "layer": "trusted"},
+            {"table_id": "pncp_contratos_termos", "layer": "trusted"}
+          ]
+        },
+        {
+          "kind": "semantic",
+          "kaggle_slug": "pncp-contracts-semantic",
+          "table_layers": [{"table_id": "obt_pncp_contratos", "layer": "semantic"}]
+        }
+      ]
+    },
+    {
+      "subject_id": "price-registration",
+      "title": "Price Registration Minutes",
+      "datasets": [
+        {
+          "kind": "data",
+          "kaggle_slug": "pncp-price-registration-data",
+          "table_layers": [
+            {"table_id": "pncp_atas_atualizacao", "layer": "raw"},
+            {"table_id": "pncp_atas", "layer": "trusted"}
+          ]
+        },
+        {
+          "kind": "semantic",
+          "kaggle_slug": "pncp-price-registration-semantic",
+          "table_layers": [{"table_id": "obt_pncp_atas", "layer": "semantic"}]
+        }
+      ]
+    },
+    {
+      "subject_id": "organizations",
+      "title": "Public Organizations and Units",
+      "datasets": [
+        {
+          "kind": "data",
+          "kaggle_slug": "pncp-organizations-data",
+          "table_layers": [
+            {"table_id": "pncp_orgaos", "layer": "raw"},
+            {"table_id": "pncp_orgaos_unidades", "layer": "raw"},
+            {"table_id": "pncp_orgaos", "layer": "trusted"},
+            {"table_id": "pncp_orgaos_unidades", "layer": "trusted"}
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": "annual-procurement-plans",
+      "title": "Annual Procurement Plans",
+      "datasets": [
+        {
+          "kind": "data",
+          "kaggle_slug": "pncp-annual-plans-data",
+          "table_layers": [
+            {"table_id": "pncp_pca_atualizacao", "layer": "raw"},
+            {"table_id": "pncp_pca", "layer": "trusted"},
+            {"table_id": "pncp_pca_itens", "layer": "trusted"},
+            {"table_id": "pncp_dom_categoria_item_pca", "layer": "trusted"}
+          ]
+        },
+        {
+          "kind": "semantic",
+          "kaggle_slug": "pncp-annual-plans-semantic",
+          "table_layers": [
+            {"table_id": "obt_pncp_pca", "layer": "semantic"},
+            {"table_id": "obt_pncp_pca_itens", "layer": "semantic"}
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": "billing-instruments",
+      "title": "Contract Billing Instruments",
+      "datasets": [
+        {
+          "kind": "data",
+          "kaggle_slug": "pncp-billing-instruments-data",
+          "table_layers": [
+            {"table_id": "pncp_instrumentos_cobranca", "layer": "raw"},
+            {"table_id": "pncp_instrumentos_cobranca", "layer": "trusted"}
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": "reference-codes",
+      "title": "Reference Codes",
+      "datasets": [
+        {
+          "kind": "data",
+          "kaggle_slug": "pncp-reference-codes-data",
+          "table_layers": [
+            {"table_id": "pncp_dom_amparos_legais", "layer": "trusted"},
+            {"table_id": "pncp_dom_catalogos", "layer": "trusted"},
+            {"table_id": "pncp_dom_criterios_julgamento", "layer": "trusted"},
+            {"table_id": "pncp_dom_fontes_orcamentarias", "layer": "trusted"},
+            {"table_id": "pncp_dom_modalidades", "layer": "trusted"},
+            {"table_id": "pncp_dom_modos_disputa", "layer": "trusted"},
+            {"table_id": "pncp_dom_portes_empresa", "layer": "trusted"},
+            {"table_id": "pncp_dom_tipos_contrato", "layer": "trusted"},
+            {"table_id": "pncp_dom_tipos_documento", "layer": "trusted"},
+            {"table_id": "pncp_dom_tipos_instrumento_cobranca", "layer": "trusted"},
+            {"table_id": "pncp_dom_tipos_instrumento_convocatorio", "layer": "trusted"},
+            {"table_id": "pncp_dom_tipos_parte_envolvida", "layer": "trusted"}
+          ]
+        }
+      ]
+    }
+  ]
+}

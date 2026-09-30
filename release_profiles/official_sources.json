@@ -27,9 +27,11 @@
       "intended_slug": "brazil-pncp-procurement-history",
       "distribution_status": "ready",
       "published_slug": "lucasrangelss/brazil-pncp-procurement-history",
-      "version": 1,
-      "review_approval": "docs/evidence/pncp-kaggle-release-v1.md",
-      "manifest_sha256": "9301e83840fc575b841bcce31cff19a6b72bd37528a88fdee4b50c2fddb20c66"
+      "version": 3,
+      "review_approval": "docs/release-reviews/pncp-item-grain-2026-09-20-v2.md",
+      "manifest_sha256": "15610ca71e2b23c5c622272c8f38d2fc276b20d229e5709b58ad47467935528f",
+      "previous_version": 1,
+      "previous_manifest_sha256": "9301e83840fc575b841bcce31cff19a6b72bd37528a88fdee4b50c2fddb20c66"
     }
   ]
 }

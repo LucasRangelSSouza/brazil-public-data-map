@@ -46,11 +46,14 @@ The release gate excludes natural-person and unknown supplier records. It never 
 
 ## Kaggle policy
 
-Kaggle distributes reviewed release artifacts. Two versions are public, and each passed the source, field-minimization, privacy, deterministic-build, manifest, and clean-download checks in its release evidence:
+The datasets below passed a clean-download check against their release manifests and privacy audits. PNCP Reference Codes version 2 groups twelve trusted tables; earlier standalone lookup datasets remain unchanged. Neither release set represents complete PNCP coverage.
+
+The planned complete PNCP release groups related tables by subject. Raw and trusted Parquet files share a Kaggle dataset; semantic tables for the same subject use a separate dataset. The current plan maps 47 table-layer pairs to 14 datasets. These targets are not yet published; each export must pass the bundle manifest, privacy, size, and clean-download checks before RAG Chat or the dashboard uses it. See the [subject publication plan](sources/pncp_publication_plan.json) and [catalogue documentation](docs/pncp-table-catalog.md).
 
 | Dataset | Version | Coverage | Evidence |
 |---|---|---|---|
-| [Brazil PNCP Procurement History: January 2025](https://www.kaggle.com/datasets/lucasrangelss/brazil-pncp-procurement-history) | 1 | PNCP notices 2025-01-01 to 2025-01-07, modality 6, 1,979 rows | [record](docs/evidence/pncp-kaggle-release-v1.md) |
+| [PNCP Reference Codes](https://www.kaggle.com/datasets/lucasrangelss/pncp-reference-codes-data) | 2 | 12 trusted reference tables, 272 rows; data cutoff 2026-07-31 | [grouped release record](docs/evidence/pncp-reference-codes-grouped-v2-2026-09-29.md) |
+| [Brazil PNCP Procurement History: bounded item sample](https://www.kaggle.com/datasets/lucasrangelss/brazil-pncp-procurement-history) | 3 | PNCP publications 2026-09-20, modality 6, 25 parents and 513 item records | [record](docs/evidence/pncp-kaggle-release-v3.md) |
 | [Brazil Education Data Lake: SIOPE 2019-2023](https://www.kaggle.com/datasets/lucasrangelss/brazil-education-data-lake) | 1 | SIOPE municipal declarations 2019-2023 with IBGE codes, 27,830 rows | [record](docs/evidence/education-kaggle-release-v1.md) |
 
 The education release is built with `capture-siope` and `build-education-release`; see the [education dataset card](docs/education-dataset-card.md).
@@ -105,7 +108,7 @@ The first article draft, [Public data is not automatically privacy-safe](article
 
 ## Limitations
 
-The PNCP version is a bounded seven-day, modality-6 window. It is not a complete historical archive, a legal certification, or a procurement recommendation system. The education version contains annual municipal SIOPE declarations from 2019 through 2023 joined to IBGE context. It excludes person-level records, school-level Censo Escolar data, and state-level declarations. Every later release must complete source-specific retrieval, terms review, schema review, privacy audit, deterministic-build comparison, and reviewer approval.
+The current PNCP version is a one-day, modality-6 item-grain sample. Earlier Kaggle versions remain available through Kaggle's version history. It is not a complete historical archive, a legal certification, or a procurement recommendation system. The education version contains annual municipal SIOPE declarations from 2019 through 2023 joined to IBGE context. It excludes person-level records, school-level Censo Escolar data, and state-level declarations. Every later release must complete source-specific retrieval, terms review, schema review, privacy audit, deterministic-build comparison, and reviewer approval.
 
 ## License
 

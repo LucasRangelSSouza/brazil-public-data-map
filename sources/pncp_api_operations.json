@@ -1,0 +1,7023 @@
+{
+  "observed_at": "2026-09-29",
+  "official_openapi_sources": {
+    "consulta-api": "https://pncp.gov.br/api/consulta/v3/api-docs",
+    "integration-api": "https://pncp.gov.br/api/pncp/v3/api-docs"
+  },
+  "operation_count": 219,
+  "operations": [
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "consultarAtaRegistroPrecoPeriodo",
+      "parameters": [
+        {
+          "in": "query",
+          "name": "cnpj",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "codigoUnidadeAdministrativa",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "dataFinal",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "dataInicial",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "idUsuario",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "pagina",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "tamanhoPagina",
+          "required": false,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/atas",
+      "release_status": "inventory-only",
+      "source_api": "consulta-api",
+      "tags": [
+        "Ata"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "consultarAtaRegistroPrecoDataAtualizacao",
+      "parameters": [
+        {
+          "in": "query",
+          "name": "cnpj",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "codigoUnidadeAdministrativa",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "dataFinal",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "dataInicial",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "idUsuario",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "pagina",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "tamanhoPagina",
+          "required": false,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/atas/atualizacao",
+      "release_status": "inventory-only",
+      "source_api": "consulta-api",
+      "tags": [
+        "Ata"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "consultarContratacaoPorDataUltimaAtualizacao",
+      "parameters": [
+        {
+          "in": "query",
+          "name": "cnpj",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "codigoModalidadeContratacao",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "codigoModoDisputa",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "codigoMunicipioIbge",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "codigoUnidadeAdministrativa",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "dataFinal",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "dataInicial",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "idUsuario",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "pagina",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "tamanhoPagina",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "uf",
+          "required": false,
+          "type": "string"
+        }
+      ],
+      "path": "/v1/contratacoes/atualizacao",
+      "release_status": "inventory-only",
+      "source_api": "consulta-api",
+      "tags": [
+        "Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "consultarContratacaoPeriodoRecebimentoPropostas",
+      "parameters": [
+        {
+          "in": "query",
+          "name": "cnpj",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "codigoModalidadeContratacao",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "codigoMunicipioIbge",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "codigoUnidadeAdministrativa",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "dataFinal",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "idUsuario",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "pagina",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "tamanhoPagina",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "uf",
+          "required": false,
+          "type": "string"
+        }
+      ],
+      "path": "/v1/contratacoes/proposta",
+      "release_status": "inventory-only",
+      "source_api": "consulta-api",
+      "tags": [
+        "Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "consultarContratacaoPorDataDePublicacao",
+      "parameters": [
+        {
+          "in": "query",
+          "name": "cnpj",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "codigoModalidadeContratacao",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "codigoModoDisputa",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "codigoMunicipioIbge",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "codigoUnidadeAdministrativa",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "dataFinal",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "dataInicial",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "idUsuario",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "pagina",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "tamanhoPagina",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "uf",
+          "required": false,
+          "type": "string"
+        }
+      ],
+      "path": "/v1/contratacoes/publicacao",
+      "release_status": "inventory-only",
+      "source_api": "consulta-api",
+      "tags": [
+        "Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "consultarContratosPorDataPublicacao",
+      "parameters": [
+        {
+          "in": "query",
+          "name": "cnpjOrgao",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "codigoUnidadeAdministrativa",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "dataFinal",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "dataInicial",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "pagina",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "tamanhoPagina",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "usuarioId",
+          "required": false,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/contratos",
+      "release_status": "inventory-only",
+      "source_api": "consulta-api",
+      "tags": [
+        "Contrato/Empenho"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "consultarContratosPorDataAtualizacaoGlobal",
+      "parameters": [
+        {
+          "in": "query",
+          "name": "cnpjOrgao",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "codigoUnidadeAdministrativa",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "dataFinal",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "dataInicial",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "pagina",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "tamanhoPagina",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "usuarioId",
+          "required": false,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/contratos/atualizacao",
+      "release_status": "inventory-only",
+      "source_api": "consulta-api",
+      "tags": [
+        "Contrato/Empenho"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "consultarInstrumentos",
+      "parameters": [
+        {
+          "in": "query",
+          "name": "cnpjOrgao",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "dataFinal",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "dataInicial",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "pagina",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "tamanhoPagina",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "tipoInstrumentoCobranca",
+          "required": false,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/instrumentoscobranca/inclusao",
+      "release_status": "inventory-only",
+      "source_api": "consulta-api",
+      "tags": [
+        "Instrumento de Cobran\u00e7a de Contrato/Empenho"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "consultarCompra",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}",
+      "release_status": "inventory-only",
+      "source_api": "consulta-api",
+      "tags": [
+        "Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "consultarItensPorAno",
+      "parameters": [
+        {
+          "in": "query",
+          "name": "anoPca",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "codigoClassificacaoSuperior",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "pagina",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "tamanhoPagina",
+          "required": false,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/pca/",
+      "release_status": "inventory-only",
+      "source_api": "consulta-api",
+      "tags": [
+        "Plano de Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "consultarItensPorUsuarioAno_1",
+      "parameters": [
+        {
+          "in": "query",
+          "name": "cnpj",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "codigoUnidade",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "dataFim",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "dataInicio",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "pagina",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "tamanhoPagina",
+          "required": false,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/pca/atualizacao",
+      "release_status": "inventory-only",
+      "source_api": "consulta-api",
+      "tags": [
+        "Plano de Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "consultarItensPorUsuarioAno",
+      "parameters": [
+        {
+          "in": "query",
+          "name": "anoPca",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "cnpj",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "codigoClassificacaoSuperior",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "idUsuario",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "pagina",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "tamanhoPagina",
+          "required": false,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/pca/usuario",
+      "release_status": "inventory-only",
+      "source_api": "consulta-api",
+      "tags": [
+        "Plano de Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [
+        "pncp-trusted-dom-amparos-legais"
+      ],
+      "method": "GET",
+      "operation_id": "obterTodosRegistros_11",
+      "parameters": [
+        {
+          "in": "query",
+          "name": "statusAtivo",
+          "required": false,
+          "type": "boolean"
+        },
+        {
+          "in": "query",
+          "name": "tipoAmparoLegalId",
+          "required": false,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/amparos-legais",
+      "release_status": "ready",
+      "source_api": "integration-api",
+      "tags": [
+        "Amparo legal"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "POST",
+      "operation_id": "incluirRegistro_13",
+      "parameters": [],
+      "path": "/v1/amparos-legais",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Amparo legal"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "obterRegistro_14",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/amparos-legais/{id}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Amparo legal"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "PATCH",
+      "operation_id": "alterarParcialmenteRegistro_11",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/amparos-legais/{id}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Amparo legal"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [
+        "pncp-trusted-dom-catalogos"
+      ],
+      "method": "GET",
+      "operation_id": "obterTodosRegistros_10",
+      "parameters": [
+        {
+          "in": "query",
+          "name": "statusAtivo",
+          "required": false,
+          "type": "boolean"
+        }
+      ],
+      "path": "/v1/catalogos",
+      "release_status": "ready",
+      "source_api": "integration-api",
+      "tags": [
+        "Cat\u00e1logo"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "POST",
+      "operation_id": "incluirRegistro_12",
+      "parameters": [],
+      "path": "/v1/catalogos",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Cat\u00e1logo"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "obterRegistro_13",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/catalogos/{id}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Cat\u00e1logo"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "PATCH",
+      "operation_id": "alterarParcialmenteRegistro_10",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/catalogos/{id}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Cat\u00e1logo"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "obterTodosRegistros_9",
+      "parameters": [
+        {
+          "in": "query",
+          "name": "statusAtivo",
+          "required": false,
+          "type": "boolean"
+        }
+      ],
+      "path": "/v1/categoriaItemPcas",
+      "release_status": "ready",
+      "source_api": "integration-api",
+      "linked_table_slugs": [
+        "pncp-trusted-dom-categoria-item-pca"
+      ],
+      "tags": [
+        "Categoria de Item"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "POST",
+      "operation_id": "incluirRegistro_11",
+      "parameters": [],
+      "path": "/v1/categoriaItemPcas",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Categoria de Item"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "obterRegistro_12",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/categoriaItemPcas/{id}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Categoria de Item"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "PATCH",
+      "operation_id": "alterarParcialmenteRegistro_9",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/categoriaItemPcas/{id}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Categoria de Item"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "obterTodosRegistros_8",
+      "parameters": [
+        {
+          "in": "query",
+          "name": "statusAtivo",
+          "required": false,
+          "type": "boolean"
+        }
+      ],
+      "path": "/v1/criterios-julgamentos",
+      "release_status": "ready",
+      "source_api": "integration-api",
+      "linked_table_slugs": [
+        "pncp-trusted-dom-criterios-julgamento"
+      ],
+      "tags": [
+        "Crit\u00e9rio de julgamento"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "POST",
+      "operation_id": "incluirRegistro_10",
+      "parameters": [],
+      "path": "/v1/criterios-julgamentos",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Crit\u00e9rio de julgamento"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "obterRegistro_11",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/criterios-julgamentos/{id}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Crit\u00e9rio de julgamento"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "PATCH",
+      "operation_id": "alterarParcialmenteRegistro_8",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/criterios-julgamentos/{id}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Crit\u00e9rio de julgamento"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "obterTodosRegistros_7",
+      "parameters": [
+        {
+          "in": "query",
+          "name": "statusAtivo",
+          "required": false,
+          "type": "boolean"
+        }
+      ],
+      "path": "/v1/fontes-orcamentarias",
+      "release_status": "ready",
+      "source_api": "integration-api",
+      "linked_table_slugs": ["pncp-trusted-dom-fontes-orcamentarias"],
+      "tags": [
+        "Fonte or\u00e7ament\u00e1ria"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "POST",
+      "operation_id": "incluirRegistro_9",
+      "parameters": [],
+      "path": "/v1/fontes-orcamentarias",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Fonte or\u00e7ament\u00e1ria"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "obterRegistro_10",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/fontes-orcamentarias/{id}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Fonte or\u00e7ament\u00e1ria"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "PATCH",
+      "operation_id": "alterarParcialmenteRegistro_7",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/fontes-orcamentarias/{id}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Fonte or\u00e7ament\u00e1ria"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "consultar",
+      "parameters": [
+        {
+          "in": "query",
+          "name": "amparoLegalId",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "modalidadeId",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "tipoInstrumentoConvocatorioId",
+          "required": false,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/instrumento-convocatorio-modalidade-amparo-legal",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Conformidade Instrumento Convocat\u00f3rio, Modalidade de Contrata\u00e7\u00e3o e Amparo Legal"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "POST",
+      "operation_id": "incluirRegistro_8",
+      "parameters": [],
+      "path": "/v1/instrumento-convocatorio-modalidade-amparo-legal",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Conformidade Instrumento Convocat\u00f3rio, Modalidade de Contrata\u00e7\u00e3o e Amparo Legal"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "DELETE",
+      "operation_id": "deletarRegistro",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "amparoLegalId",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "modalidadeId",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "tipoInstrumentoConvocatorioId",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/instrumento-convocatorio-modalidade-amparo-legal/{amparoLegalId}/{modalidadeId}/{tipoInstrumentoConvocatorioId}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Conformidade Instrumento Convocat\u00f3rio, Modalidade de Contrata\u00e7\u00e3o e Amparo Legal"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "obterRegistro_9",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "amparoLegalId",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "modalidadeId",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "tipoInstrumentoConvocatorioId",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/instrumento-convocatorio-modalidade-amparo-legal/{amparoLegalId}/{modalidadeId}/{tipoInstrumentoConvocatorioId}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Conformidade Instrumento Convocat\u00f3rio, Modalidade de Contrata\u00e7\u00e3o e Amparo Legal"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "obterCriteriosJulgamentoPorModalidade",
+      "parameters": [
+        {
+          "in": "query",
+          "name": "criterioJulgamentoId",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "modalidadeId",
+          "required": false,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/modalidade-criterio-julgamento",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Conformidade Modalidade e Crit\u00e9rio de Julgamento"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "POST",
+      "operation_id": "incluirModalidadeCriterioJulgamento",
+      "parameters": [],
+      "path": "/v1/modalidade-criterio-julgamento",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Conformidade Modalidade e Crit\u00e9rio de Julgamento"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "DELETE",
+      "operation_id": "excluirModalidadeCriterioJulgamento",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "criterioJulgamentoId",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "modalidadeId",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/modalidade-criterio-julgamento/{modalidadeId}/{criterioJulgamentoId}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Conformidade Modalidade e Crit\u00e9rio de Julgamento"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "obterModalidadeCriterioJulgamento",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "criterioJulgamentoId",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "modalidadeId",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/modalidade-criterio-julgamento/{modalidadeId}/{criterioJulgamentoId}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Conformidade Modalidade e Crit\u00e9rio de Julgamento"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "obterFonteOrcamentariaPorModalidade",
+      "parameters": [
+        {
+          "in": "query",
+          "name": "fonteOrcamentariaId",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "modalidadeId",
+          "required": false,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/modalidade-fonte-orcamentaria",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Conformidade Modalidade e Fonte Or\u00e7amentaria"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "POST",
+      "operation_id": "incluirModalidadeFonteOrcamentaria",
+      "parameters": [],
+      "path": "/v1/modalidade-fonte-orcamentaria",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Conformidade Modalidade e Fonte Or\u00e7amentaria"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "DELETE",
+      "operation_id": "excluirModalidadeFonteOrcamentaria",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "fonteOrcamentariaId",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "modalidadeId",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/modalidade-fonte-orcamentaria/{modalidadeId}/{fonteOrcamentariaId}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Conformidade Modalidade e Fonte Or\u00e7amentaria"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "obterModalidadeFonteOrcamentaria",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "fonteOrcamentariaId",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "modalidadeId",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/modalidade-fonte-orcamentaria/{modalidadeId}/{fonteOrcamentariaId}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Conformidade Modalidade e Fonte Or\u00e7amentaria"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [
+        "pncp-trusted-dom-modalidades"
+      ],
+      "method": "GET",
+      "operation_id": "obterTodosRegistros_6",
+      "parameters": [
+        {
+          "in": "query",
+          "name": "irp",
+          "required": false,
+          "type": "boolean"
+        },
+        {
+          "in": "query",
+          "name": "statusAtivo",
+          "required": false,
+          "type": "boolean"
+        }
+      ],
+      "path": "/v1/modalidades",
+      "release_status": "ready",
+      "source_api": "integration-api",
+      "tags": [
+        "Modalidade"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "POST",
+      "operation_id": "incluirRegistro_7",
+      "parameters": [],
+      "path": "/v1/modalidades",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Modalidade"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "obterRegistro_8",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/modalidades/{id}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Modalidade"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "PATCH",
+      "operation_id": "alterarParcialmenteRegistro_6",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/modalidades/{id}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Modalidade"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "obterTodosRegistros_5",
+      "parameters": [
+        {
+          "in": "query",
+          "name": "statusAtivo",
+          "required": false,
+          "type": "boolean"
+        }
+      ],
+      "path": "/v1/modos-disputas",
+      "release_status": "ready",
+      "source_api": "integration-api",
+      "linked_table_slugs": ["pncp-trusted-dom-modos-disputa"],
+      "tags": [
+        "Modo de disputa"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "POST",
+      "operation_id": "incluirRegistro_6",
+      "parameters": [],
+      "path": "/v1/modos-disputas",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Modo de disputa"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "obterRegistro_7",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/modos-disputas/{id}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Modo de disputa"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "PATCH",
+      "operation_id": "alterarParcialmenteRegistro_5",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/modos-disputas/{id}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Modo de disputa"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "POST",
+      "operation_id": "postEnteGoverno",
+      "parameters": [],
+      "path": "/v1/orgaos",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "\u00d3rg\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "PUT",
+      "operation_id": "putEnteGoverno",
+      "parameters": [],
+      "path": "/v1/orgaos",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "\u00d3rg\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "consultarEntesPorFiltro",
+      "parameters": [
+        {
+          "in": "query",
+          "name": "pagina",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "razaoSocial",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "path": "/v1/orgaos/",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "\u00d3rg\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarEnte_1",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "orgaoId",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/id/{orgaoId}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "\u00d3rg\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarEnte",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "\u00d3rg\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "POST",
+      "operation_id": "incluirCompra",
+      "parameters": [
+        {
+          "in": "header",
+          "name": "Tipo-Documento-Id",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "header",
+          "name": "Titulo-Documento",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarAtasPorFiltros",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "anoCompra",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencialCompra",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "pagina",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "tamanhoPagina",
+          "required": false,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{anoCompra}/{sequencialCompra}/atas",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Ata"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "POST",
+      "operation_id": "inserirAta",
+      "parameters": [
+        {
+          "in": "header",
+          "name": "Tipo-Documento-Id",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "header",
+          "name": "Titulo-Documento",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "anoCompra",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencialCompra",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{anoCompra}/{sequencialCompra}/atas",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Ata"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "DELETE",
+      "operation_id": "deleteAta",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "anoCompra",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencialAta",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialCompra",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{anoCompra}/{sequencialCompra}/atas/{sequencialAta}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Ata"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarAtaRegistoPreco",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "anoCompra",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencialAta",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialCompra",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{anoCompra}/{sequencialCompra}/atas/{sequencialAta}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Ata"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "PATCH",
+      "operation_id": "retificarParcialmenteAta",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "anoCompra",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencialAta",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialCompra",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{anoCompra}/{sequencialCompra}/atas/{sequencialAta}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Ata"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "PUT",
+      "operation_id": "retificarAta",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "anoCompra",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencialAta",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialCompra",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{anoCompra}/{sequencialCompra}/atas/{sequencialAta}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Ata"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarInformacoesDocumentosAta",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "anoCompra",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencialAta",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialCompra",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "pagina",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "tamanhoPagina",
+          "required": false,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{anoCompra}/{sequencialCompra}/atas/{sequencialAta}/arquivos",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Ata"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "POST",
+      "operation_id": "inserirArquivo_4",
+      "parameters": [
+        {
+          "in": "header",
+          "name": "Tipo-Documento",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "header",
+          "name": "Titulo-Documento",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "anoCompra",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencialAta",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialCompra",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{anoCompra}/{sequencialCompra}/atas/{sequencialAta}/arquivos",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Ata"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarArquivo_6",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "anoCompra",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencialAta",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialCompra",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialDocumento",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{anoCompra}/{sequencialCompra}/atas/{sequencialAta}/arquivos/excluidos/{sequencialDocumento}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Ata"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarAtaDocumentoQuantidade",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "anoCompra",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencialAta",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialCompra",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{anoCompra}/{sequencialCompra}/atas/{sequencialAta}/arquivos/quantidade",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Ata"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "DELETE",
+      "operation_id": "deleteDocumentoAta",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "anoCompra",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencialAta",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialCompra",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialDocumento",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{anoCompra}/{sequencialCompra}/atas/{sequencialAta}/arquivos/{sequencialDocumento}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Ata"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarArquivo_5",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "anoCompra",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencialAta",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialCompra",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialDocumento",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{anoCompra}/{sequencialCompra}/atas/{sequencialAta}/arquivos/{sequencialDocumento}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Ata"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarContratosAtaRegistoPreco",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "anoCompra",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencialAta",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialCompra",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "pagina",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "tamanhoPagina",
+          "required": false,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{anoCompra}/{sequencialCompra}/atas/{sequencialAta}/contratos",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Ata"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "buscar",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "anoCompra",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencialAta",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialCompra",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "pagina",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "tamanhoPagina",
+          "required": false,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{anoCompra}/{sequencialCompra}/atas/{sequencialAta}/partesenvolvidas",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Partes Envolvidas"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "POST",
+      "operation_id": "inserirParteEnvolvidaAta",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "anoCompra",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencialAta",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialCompra",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{anoCompra}/{sequencialCompra}/atas/{sequencialAta}/partesenvolvidas",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Partes Envolvidas"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "DELETE",
+      "operation_id": "excluirParteEnvolvida",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "anoCompra",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "cnpjOrgao",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "codUnidade",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencialAta",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialCompra",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "tipoParteEnvolvida",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{anoCompra}/{sequencialCompra}/atas/{sequencialAta}/partesenvolvidas/{cnpjOrgao}/{codUnidade}/{tipoParteEnvolvida}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Partes Envolvidas"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "parteEnvolvidaAta",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "anoCompra",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "cnpjOrgao",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "codUnidade",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencialAta",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialCompra",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "tipoParteEnvolvida",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{anoCompra}/{sequencialCompra}/atas/{sequencialAta}/partesenvolvidas/{cnpjOrgao}/{codUnidade}/{tipoParteEnvolvida}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Partes Envolvidas"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "DELETE",
+      "operation_id": "removerCompra",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "PATCH",
+      "operation_id": "retificarParcialmenteCompra",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "PUT",
+      "operation_id": "retificarCompra",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarInformacoesDocumentosCompra",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "pagina",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "tamanhoPagina",
+          "required": false,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/arquivos",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "POST",
+      "operation_id": "inserirArquivo_3",
+      "parameters": [
+        {
+          "in": "header",
+          "name": "Tipo-Documento-Id",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "header",
+          "name": "Titulo-Documento",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/arquivos",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarArquivoExlcuido",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialDocumento",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/arquivos/excluidos/{sequencialDocumento}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarCompraDocumentoQuantidade",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/arquivos/quantidade",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "DELETE",
+      "operation_id": "removerDocumentoCompra",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialDocumento",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/arquivos/{sequencialDocumento}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarArquivo_4",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialDocumento",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/arquivos/{sequencialDocumento}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "consultarHistoricoAta",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialAta",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "pagina",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "tamanhoPagina",
+          "required": false,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/atas/{sequencialAta}/historico",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Ata"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "consultarHistoricoAtaQuantidade",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialAta",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/atas/{sequencialAta}/historico/quantidade",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Ata"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "DELETE",
+      "operation_id": "excluirRegistro_1",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/fonte-orcamentaria",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Fonte or\u00e7ament\u00e1ria da contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "obterRegistros_1",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/fonte-orcamentaria",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Fonte or\u00e7ament\u00e1ria da contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "POST",
+      "operation_id": "incluirRegistros",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/fonte-orcamentaria",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Fonte or\u00e7ament\u00e1ria da contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "obterRegistro_6",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "fonteOrcamentariaId",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/fonte-orcamentaria/{fonteOrcamentariaId}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Fonte or\u00e7ament\u00e1ria da contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "consultarCompra",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "pagina",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "tamanhoPagina",
+          "required": false,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/historico",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "consultarQuantidade_1",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/historico/quantidade",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "pesquisarCompraItem",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "pagina",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "tamanhoPagina",
+          "required": false,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/itens",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "POST",
+      "operation_id": "incluirCompraItem",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/itens",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarCompraItemQuantidade",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/itens/quantidade",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarCompraItem",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "numeroItem",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/itens/{numeroItem}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "PATCH",
+      "operation_id": "retificarParcialmenteCompraItem",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "numeroItem",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/itens/{numeroItem}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "PUT",
+      "operation_id": "retificarCompraItem",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "numeroItem",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/itens/{numeroItem}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "getImagemLista",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "numeroItem",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/itens/{numeroItem}/imagem",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "POST",
+      "operation_id": "inserirImagem",
+      "parameters": [
+        {
+          "in": "header",
+          "name": "Legenda-Imagem",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "in": "header",
+          "name": "Texto-Alternativo-Imagem",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "header",
+          "name": "Titulo-Imagem",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "numeroItem",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/itens/{numeroItem}/imagem",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "DELETE",
+      "operation_id": "removerImagem",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "numeroItem",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialImagem",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/itens/{numeroItem}/imagem/{sequencialImagem}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "getImagem",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "numeroItem",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialImagem",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/itens/{numeroItem}/imagem/{sequencialImagem}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarResultados",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "numeroItem",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/itens/{numeroItem}/resultados",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "POST",
+      "operation_id": "incluirCompraItemResultado",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "numeroItem",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/itens/{numeroItem}/resultados",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarResultado",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "numeroItem",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialResultado",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/itens/{numeroItem}/resultados/{sequencialResultado}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "PUT",
+      "operation_id": "retificarCompraItemResultado",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "numeroItem",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialResultado",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/itens/{numeroItem}/resultados/{sequencialResultado}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "POST",
+      "operation_id": "inserirContrato",
+      "parameters": [
+        {
+          "in": "header",
+          "name": "Tipo-Documento-Id",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "header",
+          "name": "Titulo-Documento",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/contratos",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Contrato/Empenho"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "consultarContratosContratacao",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "anoContratacao",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencialContratacao",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "pagina",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "tamanhoPagina",
+          "required": false,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/contratos/contratacao/{anoContratacao}/{sequencialContratacao}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Contrato/Empenho"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "consultarInstrumentosCobranca",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencialContrato",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/contratos/{ano}/{sequencialContrato}/instrumentocobranca",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Instrumento de Cobran\u00e7a de Contrato/Empenho"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "POST",
+      "operation_id": "inserirInstrumentoCobranca",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencialContrato",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/contratos/{ano}/{sequencialContrato}/instrumentocobranca",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Instrumento de Cobran\u00e7a de Contrato/Empenho"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "DELETE",
+      "operation_id": "excluirInstrumentoCobranca",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencialContrato",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialInstrumentoCobranca",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/contratos/{ano}/{sequencialContrato}/instrumentocobranca/{sequencialInstrumentoCobranca}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Instrumento de Cobran\u00e7a de Contrato/Empenho"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "consultarInstrumentoCobranca",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencialContrato",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialInstrumentoCobranca",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/contratos/{ano}/{sequencialContrato}/instrumentocobranca/{sequencialInstrumentoCobranca}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Instrumento de Cobran\u00e7a de Contrato/Empenho"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "PATCH",
+      "operation_id": "retificarInstrumentoCobranca",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencialContrato",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialInstrumentoCobranca",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/contratos/{ano}/{sequencialContrato}/instrumentocobranca/{sequencialInstrumentoCobranca}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Instrumento de Cobran\u00e7a de Contrato/Empenho"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "DELETE",
+      "operation_id": "removerContrato",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Contrato/Empenho"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "consultarContrato",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Contrato/Empenho"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "PATCH",
+      "operation_id": "retificarParicalmenteContrato",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Contrato/Empenho"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "PUT",
+      "operation_id": "retificarContrato",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Contrato/Empenho"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarInformacoesDocumentosContrato",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "pagina",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "tamanhoPagina",
+          "required": false,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/arquivos",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Contrato/Empenho"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "POST",
+      "operation_id": "inserirArquivo_2",
+      "parameters": [
+        {
+          "in": "header",
+          "name": "Tipo-Documento-Id",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "header",
+          "name": "Titulo-Documento",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/arquivos",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Contrato/Empenho"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarArquivo_3",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialDocumento",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/arquivos/excluidos/{sequencialDocumento}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Contrato/Empenho"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarContratoDocumentoQuantidade",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/arquivos/quantidade",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Contrato/Empenho"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "DELETE",
+      "operation_id": "removerDocumentoContrato_1",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialDocumento",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/arquivos/{sequencialDocumento}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Contrato/Empenho"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarArquivo_2",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialDocumento",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/arquivos/{sequencialDocumento}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Contrato/Empenho"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "consultarEmpenhosDoContrato",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "pagina",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "tamanhoPagina",
+          "required": false,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/empenhos",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Empenho"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "POST",
+      "operation_id": "inserirEmpenho",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/empenhos",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Empenho"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "DELETE",
+      "operation_id": "excluirEmpenhoDeContrato",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialEmpenho",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/empenhos/{sequencialEmpenho}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Empenho"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "consultarEmpenhoPeloNumeroSequencial",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialEmpenho",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/empenhos/{sequencialEmpenho}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Empenho"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "PATCH",
+      "operation_id": "retificarEmpenho",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialEmpenho",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/empenhos/{sequencialEmpenho}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Empenho"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "consultarContrato_1",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "pagina",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "tamanhoPagina",
+          "required": false,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/historico",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Contrato/Empenho"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "consultarContrato_2",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/historico/quantidade",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Contrato/Empenho"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarTermosContrato",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "pagina",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "tamanhoPagina",
+          "required": false,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/termos",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Termo de Contrato"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "POST",
+      "operation_id": "inserirTermoContrato",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/termos",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Termo de Contrato"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarQuantidadeTermosContrato",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/termos/quantidade",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Termo de Contrato"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "DELETE",
+      "operation_id": "removerContrato_1",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialTermoContrato",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/termos/{sequencialTermoContrato}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Termo de Contrato"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarTermoContrato",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialTermoContrato",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/termos/{sequencialTermoContrato}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Termo de Contrato"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "PUT",
+      "operation_id": "retificarTermoContrato",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialTermoContrato",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/termos/{sequencialTermoContrato}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Termo de Contrato"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarInformacoesDocumentosTermoContrato",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialTermo",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "pagina",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "tamanhoPagina",
+          "required": false,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/termos/{sequencialTermo}/arquivos",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Termo de Contrato"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "POST",
+      "operation_id": "inserirArquivo_1",
+      "parameters": [
+        {
+          "in": "header",
+          "name": "Tipo-Documento-Id",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "header",
+          "name": "Titulo-Documento",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialTermo",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/termos/{sequencialTermo}/arquivos",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Termo de Contrato"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "arquivoexcluido",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialDocumento",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialTermo",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/termos/{sequencialTermo}/arquivos/excluidos/{sequencialDocumento}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Termo de Contrato"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarQuantidadeDocumentosTermoContrato",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialTermo",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/termos/{sequencialTermo}/arquivos/quantidade",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Termo de Contrato"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "DELETE",
+      "operation_id": "removerDocumentoContrato",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialDocumento",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialTermo",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/termos/{sequencialTermo}/arquivos/{sequencialDocumento}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Termo de Contrato"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarArquivo_1",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialDocumento",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialTermo",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/termos/{sequencialTermo}/arquivos/{sequencialDocumento}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Termo de Contrato"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "POST",
+      "operation_id": "incluirIrp",
+      "parameters": [
+        {
+          "in": "header",
+          "name": "Tipo-Documento-Id",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "header",
+          "name": "Titulo-Documento",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/irp",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Inten\u00e7\u00e3o de Registro de Pre\u00e7o"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "DELETE",
+      "operation_id": "excluirIrp",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/irp/{ano}/{sequencial}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Inten\u00e7\u00e3o de Registro de Pre\u00e7o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "consultarIrp",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/irp/{ano}/{sequencial}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Inten\u00e7\u00e3o de Registro de Pre\u00e7o"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "PATCH",
+      "operation_id": "retificarParcialmenteIrp",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/irp/{ano}/{sequencial}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Inten\u00e7\u00e3o de Registro de Pre\u00e7o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarInformacoesDocumentosIrp",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "pagina",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "tamanhoPagina",
+          "required": false,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/irp/{ano}/{sequencial}/arquivos",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Inten\u00e7\u00e3o de Registro de Pre\u00e7o"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "POST",
+      "operation_id": "inserirArquivo",
+      "parameters": [
+        {
+          "in": "header",
+          "name": "Tipo-Documento",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "header",
+          "name": "Titulo-Documento",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/irp/{ano}/{sequencial}/arquivos",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Inten\u00e7\u00e3o de Registro de Pre\u00e7o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarIrpDocumentoQuantidade",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/irp/{ano}/{sequencial}/arquivos/quantidade",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Inten\u00e7\u00e3o de Registro de Pre\u00e7o"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "DELETE",
+      "operation_id": "deleteDocumentoIrp",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialDocumento",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/irp/{ano}/{sequencial}/arquivos/{sequencialDocumento}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Inten\u00e7\u00e3o de Registro de Pre\u00e7o"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarArquivo",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencialDocumento",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/irp/{ano}/{sequencial}/arquivos/{sequencialDocumento}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Inten\u00e7\u00e3o de Registro de Pre\u00e7o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "consultarIrp_1",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "pagina",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "tamanhoPagina",
+          "required": false,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/irp/{ano}/{sequencial}/historico",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Inten\u00e7\u00e3o de Registro de Pre\u00e7o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "consultarQuantidade",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/irp/{ano}/{sequencial}/historico/quantidade",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Inten\u00e7\u00e3o de Registro de Pre\u00e7o"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "DELETE",
+      "operation_id": "excluirItensIrp",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/irp/{ano}/{sequencial}/itens",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Inten\u00e7\u00e3o de Registro de Pre\u00e7o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "listarItensIrp",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "pagina",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "tamanhoPagina",
+          "required": false,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/irp/{ano}/{sequencial}/itens",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Inten\u00e7\u00e3o de Registro de Pre\u00e7o"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "PATCH",
+      "operation_id": "retificarParcialmenteItensIrp",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/irp/{ano}/{sequencial}/itens",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Inten\u00e7\u00e3o de Registro de Pre\u00e7o"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "POST",
+      "operation_id": "incluirItensIrp",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/irp/{ano}/{sequencial}/itens",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Inten\u00e7\u00e3o de Registro de Pre\u00e7o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarQuantidadeItensIrp",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/irp/{ano}/{sequencial}/itens/quantidade",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Inten\u00e7\u00e3o de Registro de Pre\u00e7o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarItemIrp",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "numeroItem",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/irp/{ano}/{sequencial}/itens/{numeroItem}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Inten\u00e7\u00e3o de Registro de Pre\u00e7o"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "POST",
+      "operation_id": "incluirPlano",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/pca",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Plano de Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarDadosOrgaoPca",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/pca/{ano}/consolidado",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Plano de Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarDadosOrgaoPcaUnidades",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "pagina",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "tamanhoPagina",
+          "required": false,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/pca/{ano}/consolidado/unidades",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Plano de Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "retornarPlanosTodasUnidadesDoOrgaoCsv",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/pca/{ano}/csv",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Plano de Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarDadosOrgaoPcaQuantidade",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/pca/{ano}/quantidade",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Plano de Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarValoresCategoriaItem_1",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "categoriaItem",
+          "required": false,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/pca/{ano}/valorescategoriaitem",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Plano de Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "DELETE",
+      "operation_id": "removerPlano",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/pca/{ano}/{sequencial}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Plano de Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "consultarPlanoConsolidado",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/pca/{ano}/{sequencial}/consolidado",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Plano de Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "DELETE",
+      "operation_id": "removerItensPlano",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/pca/{ano}/{sequencial}/itens",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Plano de Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarDadosPcaItensCategoria",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "categoria",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "pagina",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "tamanhoPagina",
+          "required": false,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/pca/{ano}/{sequencial}/itens",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Plano de Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "PATCH",
+      "operation_id": "retificarParcialmentePlanoContratacaoItens",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/pca/{ano}/{sequencial}/itens",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Plano de Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "POST",
+      "operation_id": "incluirPlanoContratacaoItem",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/pca/{ano}/{sequencial}/itens",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Plano de Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "DELETE",
+      "operation_id": "removerItensPlanoPorContratacao",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "numeroContratacao",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/pca/{ano}/{sequencial}/itens/contratacao",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Plano de Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarItensPlanoPorContratacao",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "numeroContratacao",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "pagina",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "tamanhoPagina",
+          "required": false,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/pca/{ano}/{sequencial}/itens/contratacao",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Plano de Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "consultarPlanoComItens",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/pca/{ano}/{sequencial}/itens/plano",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Plano de Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarDadosPcaItensQuantidadeItens",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "categoria",
+          "required": false,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/pca/{ano}/{sequencial}/itens/quantidade",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Plano de Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "DELETE",
+      "operation_id": "removerItemPlano",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "numeroItem",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/pca/{ano}/{sequencial}/itens/{numeroItem}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Plano de Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "PATCH",
+      "operation_id": "retificarParcialmentePlanoContratacaoItem",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "numeroItem",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/pca/{ano}/{sequencial}/itens/{numeroItem}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Plano de Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarValoresCategoriaItem",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "sequencial",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "categoriaItem",
+          "required": false,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/pca/{ano}/{sequencial}/valorescategoriaitem",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Plano de Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarSequenciaisDoPlano",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "ano",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "uasg",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/pca/{uasg}/{ano}/sequenciaisplano",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Plano de Contrata\u00e7\u00e3o"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarUnidadesOrgao",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/unidades",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Unidade"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "POST",
+      "operation_id": "salvarUnidadeOrgao",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/unidades",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Unidade"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "PUT",
+      "operation_id": "atualizarUnidadeOrgao",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/unidades",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Unidade"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "recuperarUnidadeOrgao",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "cnpj",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "codigoUnidade",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "path": "/v1/orgaos/{cnpj}/unidades/{codigoUnidade}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Unidade"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "obterTodosRegistros_4",
+      "parameters": [
+        {
+          "in": "query",
+          "name": "statusAtivo",
+          "required": false,
+          "type": "boolean"
+        }
+      ],
+      "path": "/v1/portes-empresa",
+      "release_status": "ready",
+      "source_api": "integration-api",
+      "linked_table_slugs": ["pncp-trusted-dom-portes-empresa"],
+      "tags": [
+        "Porte da Empresa"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "POST",
+      "operation_id": "incluirRegistro_5",
+      "parameters": [],
+      "path": "/v1/portes-empresa",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Porte da Empresa"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "obterRegistro_5",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/portes-empresa/{id}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Porte da Empresa"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "PATCH",
+      "operation_id": "alterarParcialmenteRegistro_4",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/portes-empresa/{id}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Porte da Empresa"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "obterRegistros",
+      "parameters": [
+        {
+          "in": "query",
+          "name": "modoDisputaId",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "in": "query",
+          "name": "tipoInstrumentoConvocatorioId",
+          "required": false,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/tipo-instrumento-convocatorio-modo-disputa",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Conformidade Instrumento convocat\u00f3rio e Modo de disputa"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "POST",
+      "operation_id": "incluirRegistro_4",
+      "parameters": [],
+      "path": "/v1/tipo-instrumento-convocatorio-modo-disputa",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Conformidade Instrumento convocat\u00f3rio e Modo de disputa"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "DELETE",
+      "operation_id": "excluirRegistro",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "modoDisputaId",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "tipoInstrumentoConvocatorioId",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/tipo-instrumento-convocatorio-modo-disputa/{tipoInstrumentoConvocatorioId}/{modoDisputaId}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Conformidade Instrumento convocat\u00f3rio e Modo de disputa"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "obterRegistro_4",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "modoDisputaId",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "in": "path",
+          "name": "tipoInstrumentoConvocatorioId",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/tipo-instrumento-convocatorio-modo-disputa/{tipoInstrumentoConvocatorioId}/{modoDisputaId}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Conformidade Instrumento convocat\u00f3rio e Modo de disputa"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "obterTodosRegistros_3",
+      "parameters": [
+        {
+          "in": "query",
+          "name": "statusAtivo",
+          "required": false,
+          "type": "boolean"
+        }
+      ],
+      "path": "/v1/tipos-contratos",
+      "release_status": "ready",
+      "source_api": "integration-api",
+      "linked_table_slugs": ["pncp-trusted-dom-tipos-contrato"],
+      "tags": [
+        "Tipo de Contrato"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "POST",
+      "operation_id": "incluirRegistro_3",
+      "parameters": [],
+      "path": "/v1/tipos-contratos",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Tipo de Contrato"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "obterRegistro_3",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/tipos-contratos/{id}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Tipo de Contrato"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "PATCH",
+      "operation_id": "alterarParcialmenteRegistro_3",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/tipos-contratos/{id}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Tipo de Contrato"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "obterTodosRegistros_2",
+      "parameters": [
+        {
+          "in": "query",
+          "name": "statusAtivo",
+          "required": false,
+          "type": "boolean"
+        }
+      ],
+      "path": "/v1/tipos-documentos",
+      "release_status": "ready",
+      "source_api": "integration-api",
+      "linked_table_slugs": ["pncp-trusted-dom-tipos-documento"],
+      "tags": [
+        "Tipo de Documento"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "POST",
+      "operation_id": "incluirRegistro_2",
+      "parameters": [],
+      "path": "/v1/tipos-documentos",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Tipo de Documento"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "obterRegistro_2",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/tipos-documentos/{id}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Tipo de Documento"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "PATCH",
+      "operation_id": "alterarParcialmenteRegistro_2",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/tipos-documentos/{id}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Tipo de Documento"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "obterTodosRegistros_1",
+      "parameters": [
+        {
+          "in": "query",
+          "name": "statusAtivo",
+          "required": false,
+          "type": "boolean"
+        }
+      ],
+      "path": "/v1/tipos-instrumentos-cobranca",
+      "release_status": "ready",
+      "source_api": "integration-api",
+      "linked_table_slugs": ["pncp-trusted-dom-tipos-instrumento-cobranca"],
+      "tags": [
+        "Tipo de Instrumento de Cobran\u00e7a"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "POST",
+      "operation_id": "incluirRegistro_1",
+      "parameters": [],
+      "path": "/v1/tipos-instrumentos-cobranca",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Tipo de Instrumento de Cobran\u00e7a"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "obterRegistro_1",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/tipos-instrumentos-cobranca/{id}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Tipo de Instrumento de Cobran\u00e7a"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "PATCH",
+      "operation_id": "alterarParcialmenteRegistro_1",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/tipos-instrumentos-cobranca/{id}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Tipo de Instrumento de Cobran\u00e7a"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "obterTodosRegistros",
+      "parameters": [
+        {
+          "in": "query",
+          "name": "statusAtivo",
+          "required": false,
+          "type": "boolean"
+        }
+      ],
+      "path": "/v1/tipos-instrumentos-convocatorios",
+      "release_status": "ready",
+      "source_api": "integration-api",
+      "linked_table_slugs": ["pncp-trusted-dom-tipos-instrumento-convocatorio"],
+      "tags": [
+        "Instrumento convocat\u00f3rio"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "POST",
+      "operation_id": "incluirRegistro",
+      "parameters": [],
+      "path": "/v1/tipos-instrumentos-convocatorios",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Instrumento convocat\u00f3rio"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "obterRegistro",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/tipos-instrumentos-convocatorios/{id}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Instrumento convocat\u00f3rio"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "PATCH",
+      "operation_id": "alterarParcialmenteRegistro",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/tipos-instrumentos-convocatorios/{id}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Instrumento convocat\u00f3rio"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "getTiposParteEnvolvida",
+      "parameters": [],
+      "path": "/v1/tipos-parte-envolvida",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Tipos de Parte Envolvida"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "tipoParteEnvolvida",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/tipos-parte-envolvida/{id}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Tipos de Parte Envolvida"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "getByLoginNi",
+      "parameters": [
+        {
+          "in": "query",
+          "name": "cpfCnpj",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "in": "query",
+          "name": "login",
+          "required": false,
+          "type": "string"
+        }
+      ],
+      "path": "/v1/usuarios",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Usu\u00e1rio"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "POST",
+      "operation_id": "post",
+      "parameters": [],
+      "path": "/v1/usuarios",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Usu\u00e1rio"
+      ]
+    },
+    {
+      "authentication_required": false,
+      "linked_table_slugs": [],
+      "method": "POST",
+      "operation_id": "autenticar",
+      "parameters": [],
+      "path": "/v1/usuarios/login",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Usu\u00e1rio"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "obterTodasPermissoes",
+      "parameters": [],
+      "path": "/v1/usuarios/permissoes",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Usu\u00e1rio"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "DELETE",
+      "operation_id": "delete",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/usuarios/{id}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Usu\u00e1rio"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "GET",
+      "operation_id": "get",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/usuarios/{id}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Usu\u00e1rio"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "PUT",
+      "operation_id": "put",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/usuarios/{id}",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Usu\u00e1rio"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "DELETE",
+      "operation_id": "delete_1",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/usuarios/{id}/orgaos",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Usu\u00e1rio"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "POST",
+      "operation_id": "post_1",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/usuarios/{id}/orgaos",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Usu\u00e1rio"
+      ]
+    },
+    {
+      "authentication_required": true,
+      "linked_table_slugs": [],
+      "method": "PATCH",
+      "operation_id": "alterarParcialmentePermissaoUsuario",
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "path": "/v1/usuarios/{id}/permissoes",
+      "release_status": "inventory-only",
+      "source_api": "integration-api",
+      "tags": [
+        "Usu\u00e1rio"
+      ]
+    }
+  ],
+  "release_status": "inventory-only",
+  "schema_version": "1.0"
+}
