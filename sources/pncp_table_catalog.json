@@ -791,7 +791,7 @@
       "domain": "procurement-publications",
       "source_endpoint": "derived:trusted-pncp-contratacoes",
       "derivation": "trusted-pncp-contratacoes",
-      "kaggle_slug": "pncp-procurement-semantic",
+      "kaggle_slug": "pncp-procurement-notices-semantic",
       "release_status": "inventory-only"
     },
     {

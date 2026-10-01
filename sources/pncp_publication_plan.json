@@ -26,7 +26,7 @@
         },
         {
           "kind": "semantic",
-          "kaggle_slug": "pncp-procurement-semantic",
+          "kaggle_slug": "pncp-procurement-notices-semantic",
           "table_layers": [{"table_id": "obt_pncp_contratacoes", "layer": "semantic"}]
         }
       ]
