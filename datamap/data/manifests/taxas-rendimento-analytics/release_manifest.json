@@ -1,0 +1,144 @@
+{
+  "schema_version": "3.0",
+  "dataset_slug": "taxas-rendimento-analytics",
+  "subject": "taxas-rendimento",
+  "group": "analytics",
+  "part": 1,
+  "parts": 1,
+  "snapshot_date": "2026-10-01",
+  "tables": [
+    {
+      "table_id": "obt_inep_taxa_distorcao_brasil_ano",
+      "layer": "semantic",
+      "rows": 90,
+      "parquet": "semantic__obt_inep_taxa_distorcao_brasil_ano.parquet"
+    },
+    {
+      "table_id": "obt_inep_taxa_distorcao_escola_ano",
+      "layer": "semantic",
+      "rows": 2148183,
+      "parquet": "semantic__obt_inep_taxa_distorcao_escola_ano.parquet"
+    },
+    {
+      "table_id": "obt_inep_taxa_distorcao_municipio_ano",
+      "layer": "semantic",
+      "rows": 81730,
+      "parquet": "semantic__obt_inep_taxa_distorcao_municipio_ano.parquet"
+    },
+    {
+      "table_id": "obt_inep_taxa_distorcao_regiao_ano",
+      "layer": "semantic",
+      "rows": 300,
+      "parquet": "semantic__obt_inep_taxa_distorcao_regiao_ano.parquet"
+    },
+    {
+      "table_id": "obt_inep_taxa_distorcao_uf_ano",
+      "layer": "semantic",
+      "rows": 3332,
+      "parquet": "semantic__obt_inep_taxa_distorcao_uf_ano.parquet"
+    },
+    {
+      "table_id": "obt_inep_taxa_rendimento_brasil_ano",
+      "layer": "semantic",
+      "rows": 342,
+      "parquet": "semantic__obt_inep_taxa_rendimento_brasil_ano.parquet"
+    },
+    {
+      "table_id": "obt_inep_taxa_rendimento_escola_ano",
+      "layer": "semantic",
+      "rows": 2652720,
+      "parquet": "semantic__obt_inep_taxa_rendimento_escola_ano.parquet"
+    },
+    {
+      "table_id": "obt_inep_taxa_rendimento_municipio_ano",
+      "layer": "semantic",
+      "rows": 105799,
+      "parquet": "semantic__obt_inep_taxa_rendimento_municipio_ano.parquet"
+    },
+    {
+      "table_id": "obt_inep_taxa_rendimento_regiao_ano",
+      "layer": "semantic",
+      "rows": 1710,
+      "parquet": "semantic__obt_inep_taxa_rendimento_regiao_ano.parquet"
+    },
+    {
+      "table_id": "obt_inep_taxa_rendimento_uf_ano",
+      "layer": "semantic",
+      "rows": 9042,
+      "parquet": "semantic__obt_inep_taxa_rendimento_uf_ano.parquet"
+    }
+  ],
+  "kaggle_metadata_sha256": "a5f80770055d5ea22fb427f878aabc2406284566da93c0dbf28a3a150a8d6a63",
+  "files": [
+    {
+      "path": "03_semantic_taxas-rendimento.ipynb",
+      "bytes": 4017,
+      "sha256": "4ed1d209821b593ae3f1e9d3260f96d7cc33025597fc70b58b8fb0e7962f82f4"
+    },
+    {
+      "path": "README.md",
+      "bytes": 733,
+      "sha256": "ca2db8eac167cecd402ce95a4f6008126424746fbd5fa9c2e1087ddafda0e2f3"
+    },
+    {
+      "path": "audit.json",
+      "bytes": 8130,
+      "sha256": "01d23fa03f6b46734d280604287fff820fcd5574a56f5763176f87371eaf9335"
+    },
+    {
+      "path": "schemas.json",
+      "bytes": 31316,
+      "sha256": "9ecd01b50760612c4a536073e04224fdb5e13ea6335e5ffa88a1271ddc317e1b"
+    },
+    {
+      "path": "semantic__obt_inep_taxa_distorcao_brasil_ano.parquet",
+      "bytes": 79077,
+      "sha256": "603d7646ae68a551e4eeb3ee541c58111bc499a2f7c226560cf1b152cf2d063c"
+    },
+    {
+      "path": "semantic__obt_inep_taxa_distorcao_escola_ano.parquet",
+      "bytes": 147329587,
+      "sha256": "90847fe24935e6e147cc4628a4dc297d9f361aeff36a2c8e08a2481dc0537959"
+    },
+    {
+      "path": "semantic__obt_inep_taxa_distorcao_municipio_ano.parquet",
+      "bytes": 4739570,
+      "sha256": "88b15bd6d8806f6103c68ba50b0ab508c1e13861149da01211855012e339fe58"
+    },
+    {
+      "path": "semantic__obt_inep_taxa_distorcao_regiao_ano.parquet",
+      "bytes": 81348,
+      "sha256": "301d85e2de34c1b47cfd4df4143600dd58fbbeb66085730b739cb714e280751d"
+    },
+    {
+      "path": "semantic__obt_inep_taxa_distorcao_uf_ano.parquet",
+      "bytes": 233627,
+      "sha256": "e4fbb31fc6fa18d4241b1703faaac4cb545ff0b00fbd74d2747ce697014fa722"
+    },
+    {
+      "path": "semantic__obt_inep_taxa_rendimento_brasil_ano.parquet",
+      "bytes": 92739,
+      "sha256": "4720bfead4587129566183bb537089f6a2e1841a2fc45144dfe104a973dbfc84"
+    },
+    {
+      "path": "semantic__obt_inep_taxa_rendimento_escola_ano.parquet",
+      "bytes": 94284309,
+      "sha256": "0f55a076e3cd0a5487556701130031d33bcaafe235481d871faa8790ed5789f6"
+    },
+    {
+      "path": "semantic__obt_inep_taxa_rendimento_municipio_ano.parquet",
+      "bytes": 4253897,
+      "sha256": "038e95ed53812057be4c7a5c62bf95fb252cd537fa1253efd4b7fce3dd3155de"
+    },
+    {
+      "path": "semantic__obt_inep_taxa_rendimento_regiao_ano.parquet",
+      "bytes": 145180,
+      "sha256": "ca21815c4e671e6f03eac3d0ff14ff1c584b4fbe970bc754056029461b0b55a4"
+    },
+    {
+      "path": "semantic__obt_inep_taxa_rendimento_uf_ano.parquet",
+      "bytes": 288437,
+      "sha256": "d4c4423c5da4584254034d3920f475131e6a64ae8ccadbd01dea9ea7663b063a"
+    }
+  ]
+}

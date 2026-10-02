@@ -1,0 +1,56 @@
+{
+  "schema_version": "3.0",
+  "dataset_slug": "ibge-analytics",
+  "subject": "ibge",
+  "group": "analytics",
+  "part": 1,
+  "parts": 1,
+  "snapshot_date": "2026-09-30",
+  "tables": [
+    {
+      "table_id": "obt_ibge_municipio",
+      "layer": "semantic",
+      "rows": 5571,
+      "parquet": "semantic__obt_ibge_municipio.parquet"
+    },
+    {
+      "table_id": "obt_ibge_uf",
+      "layer": "semantic",
+      "rows": 27,
+      "parquet": "semantic__obt_ibge_uf.parquet"
+    }
+  ],
+  "kaggle_metadata_sha256": "141219d93afd849f4b5308fcc38542a92f4ffe2ca98e883cab06c7bb3e1ba8ef",
+  "files": [
+    {
+      "path": "03_semantic_ibge.ipynb",
+      "bytes": 3283,
+      "sha256": "9d201d102428bc053364f826129c70354194d537cb413ad89742037e59782d1e"
+    },
+    {
+      "path": "README.md",
+      "bytes": 667,
+      "sha256": "7eb01f2a958d9ca169203a54d8c5ca12bfd57a7cb7fff20e221616943c8399f4"
+    },
+    {
+      "path": "audit.json",
+      "bytes": 751,
+      "sha256": "72108a12c5151a03ac19327df0c3251a6d9bb1fec4f58f35aef3adbbbe3103d6"
+    },
+    {
+      "path": "schemas.json",
+      "bytes": 2426,
+      "sha256": "bffd49852d5cc62703d74fe3949c174e54a6efee4f75de4388bb5740a694cba7"
+    },
+    {
+      "path": "semantic__obt_ibge_municipio.parquet",
+      "bytes": 90724,
+      "sha256": "9fb99ba2cda2af454923fb5b4e85f548457000ff97b38d7d183f37c84344dccf"
+    },
+    {
+      "path": "semantic__obt_ibge_uf.parquet",
+      "bytes": 2409,
+      "sha256": "fecb9d49155eeb82d8866666426ddca4c6b64615944fb2e35035b4121cf483a4"
+    }
+  ]
+}

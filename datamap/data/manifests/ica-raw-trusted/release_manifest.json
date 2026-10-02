@@ -1,0 +1,83 @@
+{
+  "schema_version": "3.0",
+  "dataset_slug": "ica-raw-trusted",
+  "subject": "ica",
+  "group": "raw-trusted",
+  "part": 1,
+  "parts": 1,
+  "snapshot_date": "2026-09-30",
+  "tables": [
+    {
+      "table_id": "inep_ica_municipios",
+      "layer": "raw",
+      "rows": 5485,
+      "parquet": "raw__inep_ica_municipios.parquet"
+    },
+    {
+      "table_id": "inep_ica_ufs",
+      "layer": "raw",
+      "rows": 28,
+      "parquet": "raw__inep_ica_ufs.parquet"
+    },
+    {
+      "table_id": "inep_ica_municipios",
+      "layer": "trusted",
+      "rows": 5485,
+      "parquet": "trusted__inep_ica_municipios.parquet"
+    },
+    {
+      "table_id": "inep_ica_ufs",
+      "layer": "trusted",
+      "rows": 28,
+      "parquet": "trusted__inep_ica_ufs.parquet"
+    }
+  ],
+  "kaggle_metadata_sha256": "3dd87922680eb0a7418b7a0fe2269ce5917268987a0c8fe924910e031a7176d1",
+  "files": [
+    {
+      "path": "01_ingestion_ica.ipynb",
+      "bytes": 3469,
+      "sha256": "2e9b771300339b41e8b619cc44e224a2b640f47ec2cb14b86c67917c9cfbc427"
+    },
+    {
+      "path": "02_transform_to_trusted_ica.ipynb",
+      "bytes": 3784,
+      "sha256": "2480b4b8a15e801ddd71de3407fbc7f8ccd17c1505641530185fa4fe1d267c46"
+    },
+    {
+      "path": "README.md",
+      "bytes": 762,
+      "sha256": "629615479d5a0baaca656eb1ffa1e5387b81370d6f9edfaefbaf7d98e59bcb61"
+    },
+    {
+      "path": "audit.json",
+      "bytes": 2440,
+      "sha256": "0b4de7fd64944122ecacecf5baa3b43d7ef012b4cda18480b7fa8672de3ed401"
+    },
+    {
+      "path": "raw__inep_ica_municipios.parquet",
+      "bytes": 121575,
+      "sha256": "fe3157e761257683ff866ec34c61b7f21d330c4d480945471d03199e3ef44d84"
+    },
+    {
+      "path": "raw__inep_ica_ufs.parquet",
+      "bytes": 6220,
+      "sha256": "7af3d2810ec90da42765f1b5eaf9c4628c14ed37467023c0646d8983e1cfb3c3"
+    },
+    {
+      "path": "schemas.json",
+      "bytes": 10386,
+      "sha256": "88be0715cab7da905f83bb68ead9fbeb4f5578130bd791e7bb07b6f353feb588"
+    },
+    {
+      "path": "trusted__inep_ica_municipios.parquet",
+      "bytes": 125856,
+      "sha256": "7e04994554e579aa6e0c6373bf2a98a8b7afee6ba65c1c84e10da05671fcb55f"
+    },
+    {
+      "path": "trusted__inep_ica_ufs.parquet",
+      "bytes": 7244,
+      "sha256": "917ed3661f21302c469de0dd97d9ef014e6188b7f67b27e89e285c1431b65461"
+    }
+  ]
+}

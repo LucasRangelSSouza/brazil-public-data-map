@@ -1,0 +1,56 @@
+{
+  "schema_version": "3.0",
+  "dataset_slug": "fnde-salario-educacao-analytics",
+  "subject": "fnde-salario-educacao",
+  "group": "analytics",
+  "part": 1,
+  "parts": 1,
+  "snapshot_date": "2026-09-30",
+  "tables": [
+    {
+      "table_id": "obt_fnde_salario_educacao_distribuido_municipio_mes",
+      "layer": "semantic",
+      "rows": 338835,
+      "parquet": "semantic__obt_fnde_salario_educacao_distribuido_municipio_mes.parquet"
+    },
+    {
+      "table_id": "obt_fnde_salario_educacao_previsto_municipio_ano",
+      "layer": "semantic",
+      "rows": 94727,
+      "parquet": "semantic__obt_fnde_salario_educacao_previsto_municipio_ano.parquet"
+    }
+  ],
+  "kaggle_metadata_sha256": "daaa2fe0d1f752e908d59c208e79f3e8e33aa2a868c031052e4f20c651e57f31",
+  "files": [
+    {
+      "path": "03_semantic_fnde-salario-educacao.ipynb",
+      "bytes": 3423,
+      "sha256": "c52ba265c95cb0cb1b71492eef50ed250e33b565292a908813c3efe7236aad2c"
+    },
+    {
+      "path": "README.md",
+      "bytes": 682,
+      "sha256": "3363115b9b47a35ac9193d8d97dfaa9cad9610c441ac297354c942a641ffe9ac"
+    },
+    {
+      "path": "audit.json",
+      "bytes": 1029,
+      "sha256": "7a800de93f75648e3cacd2a0cbaf9d8cd00cfb2acee4f464b0d61f2b83c229bc"
+    },
+    {
+      "path": "schemas.json",
+      "bytes": 3813,
+      "sha256": "4fb3e1ca2902c8b4fa4fe51372851a279888005e7c42434683a3c3c4130ed31b"
+    },
+    {
+      "path": "semantic__obt_fnde_salario_educacao_distribuido_municipio_mes.parquet",
+      "bytes": 4052332,
+      "sha256": "5fdbdf0e3721cb3281fc7d30d953063e3835feb146dcf09825b44e4063e34051"
+    },
+    {
+      "path": "semantic__obt_fnde_salario_educacao_previsto_municipio_ano.parquet",
+      "bytes": 3777142,
+      "sha256": "34ee62706378d0c9642a34d2eccb93358484b99e8f95bfe49a32fd53d618e0aa"
+    }
+  ]
+}

@@ -1,0 +1,479 @@
+{
+  "schema_version": "3.0",
+  "dataset_slug": "saeb-raw-trusted-part-1",
+  "subject": "saeb",
+  "group": "raw-trusted",
+  "part": 1,
+  "parts": 4,
+  "snapshot_date": "2026-10-01",
+  "tables": [
+    {
+      "table_id": "api_saeb_boletim_raw",
+      "layer": "raw",
+      "rows": 464751,
+      "parquet": "raw__api_saeb_boletim_raw.parquet"
+    },
+    {
+      "table_id": "inep_saeb_aluno_2013",
+      "layer": "raw",
+      "rows": 5395142,
+      "parquet": "raw__inep_saeb_aluno_2013.parquet"
+    },
+    {
+      "table_id": "inep_saeb_aluno_2015",
+      "layer": "raw",
+      "rows": 5031032,
+      "parquet": "raw__inep_saeb_aluno_2015.parquet"
+    },
+    {
+      "table_id": "inep_saeb_aluno_2017",
+      "layer": "raw",
+      "rows": 8388310,
+      "parquet": "raw__inep_saeb_aluno_2017.parquet"
+    },
+    {
+      "table_id": "inep_saeb_aluno_2019",
+      "layer": "raw",
+      "rows": 7074919,
+      "parquet": "raw__inep_saeb_aluno_2019.parquet"
+    },
+    {
+      "table_id": "inep_saeb_aluno_2021",
+      "layer": "raw",
+      "rows": 7464687,
+      "parquet": "raw__inep_saeb_aluno_2021.parquet"
+    },
+    {
+      "table_id": "inep_saeb_aluno_2023",
+      "layer": "raw",
+      "rows": 7073491,
+      "parquet": "raw__inep_saeb_aluno_2023.parquet"
+    },
+    {
+      "table_id": "inep_saeb_arquivos",
+      "layer": "raw",
+      "rows": 64,
+      "parquet": "raw__inep_saeb_arquivos.parquet"
+    },
+    {
+      "table_id": "inep_saeb_arquivos_conteudo",
+      "layer": "raw",
+      "rows": 720,
+      "parquet": "raw__inep_saeb_arquivos_conteudo.parquet"
+    },
+    {
+      "table_id": "inep_saeb_microdados_csv_2011_ts_item",
+      "layer": "raw",
+      "rows": 518,
+      "parquet": "raw__inep_saeb_microdados_csv_2011_ts_item.parquet"
+    },
+    {
+      "table_id": "inep_saeb_microdados_csv_2011_ts_pesos",
+      "layer": "raw",
+      "rows": 184518,
+      "parquet": "raw__inep_saeb_microdados_csv_2011_ts_pesos.parquet"
+    },
+    {
+      "table_id": "inep_saeb_microdados_csv_2011_ts_quest_diretor",
+      "layer": "raw",
+      "rows": 58960,
+      "parquet": "raw__inep_saeb_microdados_csv_2011_ts_quest_diretor.parquet"
+    },
+    {
+      "table_id": "inep_saeb_microdados_csv_2011_ts_quest_escola",
+      "layer": "raw",
+      "rows": 58960,
+      "parquet": "raw__inep_saeb_microdados_csv_2011_ts_quest_escola.parquet"
+    },
+    {
+      "table_id": "inep_saeb_microdados_csv_2011_ts_quest_professor",
+      "layer": "raw",
+      "rows": 316668,
+      "parquet": "raw__inep_saeb_microdados_csv_2011_ts_quest_professor.parquet"
+    },
+    {
+      "table_id": "inep_saeb_microdados_csv_2011_ts_resultado_brasil",
+      "layer": "raw",
+      "rows": 162,
+      "parquet": "raw__inep_saeb_microdados_csv_2011_ts_resultado_brasil.parquet"
+    },
+    {
+      "table_id": "inep_saeb_microdados_csv_2011_ts_resultado_escola",
+      "layer": "raw",
+      "rows": 72808,
+      "parquet": "raw__inep_saeb_microdados_csv_2011_ts_resultado_escola.parquet"
+    },
+    {
+      "table_id": "inep_saeb_microdados_csv_2011_ts_resultado_municipio",
+      "layer": "raw",
+      "rows": 60608,
+      "parquet": "raw__inep_saeb_microdados_csv_2011_ts_resultado_municipio.parquet"
+    },
+    {
+      "table_id": "inep_saeb_microdados_csv_2011_ts_resultado_regiao",
+      "layer": "raw",
+      "rows": 810,
+      "parquet": "raw__inep_saeb_microdados_csv_2011_ts_resultado_regiao.parquet"
+    },
+    {
+      "table_id": "inep_saeb_microdados_csv_2011_ts_resultado_uf",
+      "layer": "raw",
+      "rows": 4374,
+      "parquet": "raw__inep_saeb_microdados_csv_2011_ts_resultado_uf.parquet"
+    },
+    {
+      "table_id": "inep_saeb_microdados_csv_2013_ts_aluno_3em",
+      "layer": "raw",
+      "rows": 150429,
+      "parquet": "raw__inep_saeb_microdados_csv_2013_ts_aluno_3em.parquet"
+    },
+    {
+      "table_id": "inep_saeb_microdados_csv_2013_ts_aluno_5ef",
+      "layer": "raw",
+      "rows": 2524125,
+      "parquet": "raw__inep_saeb_microdados_csv_2013_ts_aluno_5ef.parquet"
+    },
+    {
+      "table_id": "inep_saeb_microdados_csv_2013_ts_aluno_9ef",
+      "layer": "raw",
+      "rows": 2720588,
+      "parquet": "raw__inep_saeb_microdados_csv_2013_ts_aluno_9ef.parquet"
+    },
+    {
+      "table_id": "inep_saeb_microdados_csv_2013_ts_diretor",
+      "layer": "raw",
+      "rows": 56737,
+      "parquet": "raw__inep_saeb_microdados_csv_2013_ts_diretor.parquet"
+    },
+    {
+      "table_id": "inep_saeb_microdados_csv_2013_ts_escola",
+      "layer": "raw",
+      "rows": 59251,
+      "parquet": "raw__inep_saeb_microdados_csv_2013_ts_escola.parquet"
+    },
+    {
+      "table_id": "inep_saeb_microdados_csv_2013_ts_item",
+      "layer": "raw",
+      "rows": 518,
+      "parquet": "raw__inep_saeb_microdados_csv_2013_ts_item.parquet"
+    },
+    {
+      "table_id": "inep_saeb_microdados_csv_2013_ts_professor",
+      "layer": "raw",
+      "rows": 237186,
+      "parquet": "raw__inep_saeb_microdados_csv_2013_ts_professor.parquet"
+    },
+    {
+      "table_id": "inep_saeb_microdados_csv_2015_ts_aluno_3em",
+      "layer": "raw",
+      "rows": 114225,
+      "parquet": "raw__inep_saeb_microdados_csv_2015_ts_aluno_3em.parquet"
+    },
+    {
+      "table_id": "inep_saeb_microdados_csv_2015_ts_aluno_5ef",
+      "layer": "raw",
+      "rows": 2497431,
+      "parquet": "raw__inep_saeb_microdados_csv_2015_ts_aluno_5ef.parquet"
+    },
+    {
+      "table_id": "inep_saeb_microdados_csv_2015_ts_aluno_9ef",
+      "layer": "raw",
+      "rows": 2419376,
+      "parquet": "raw__inep_saeb_microdados_csv_2015_ts_aluno_9ef.parquet"
+    },
+    {
+      "table_id": "inep_saeb_microdados_csv_2015_ts_diretor",
+      "layer": "raw",
+      "rows": 55693,
+      "parquet": "raw__inep_saeb_microdados_csv_2015_ts_diretor.parquet"
+    },
+    {
+      "table_id": "inep_saeb_microdados_csv_2015_ts_escola",
+      "layer": "raw",
+      "rows": 57744,
+      "parquet": "raw__inep_saeb_microdados_csv_2015_ts_escola.parquet"
+    },
+    {
+      "table_id": "inep_saeb_microdados_csv_2015_ts_item",
+      "layer": "raw",
+      "rows": 518,
+      "parquet": "raw__inep_saeb_microdados_csv_2015_ts_item.parquet"
+    },
+    {
+      "table_id": "inep_saeb_microdados_csv_2015_ts_professor",
+      "layer": "raw",
+      "rows": 274179,
+      "parquet": "raw__inep_saeb_microdados_csv_2015_ts_professor.parquet"
+    },
+    {
+      "table_id": "inep_saeb_microdados_csv_2017_ts_aluno_3em_ag",
+      "layer": "raw",
+      "rows": 1966507,
+      "parquet": "raw__inep_saeb_microdados_csv_2017_ts_aluno_3em_ag.parquet"
+    },
+    {
+      "table_id": "inep_saeb_microdados_csv_2017_ts_aluno_3em_esc",
+      "layer": "raw",
+      "rows": 1456325,
+      "parquet": "raw__inep_saeb_microdados_csv_2017_ts_aluno_3em_esc.parquet"
+    },
+    {
+      "table_id": "inep_saeb_microdados_csv_2017_ts_aluno_5ef",
+      "layer": "raw",
+      "rows": 2624019,
+      "parquet": "raw__inep_saeb_microdados_csv_2017_ts_aluno_5ef.parquet"
+    },
+    {
+      "table_id": "inep_saeb_microdados_csv_2017_ts_aluno_9ef",
+      "layer": "raw",
+      "rows": 2341459,
+      "parquet": "raw__inep_saeb_microdados_csv_2017_ts_aluno_9ef.parquet"
+    },
+    {
+      "table_id": "inep_saeb_microdados_csv_2017_ts_diretor",
+      "layer": "raw",
+      "rows": 73674,
+      "parquet": "raw__inep_saeb_microdados_csv_2017_ts_diretor.parquet"
+    },
+    {
+      "table_id": "inep_saeb_microdados_csv_2017_ts_escola",
+      "layer": "raw",
+      "rows": 73674,
+      "parquet": "raw__inep_saeb_microdados_csv_2017_ts_escola.parquet"
+    },
+    {
+      "table_id": "inep_saeb_microdados_csv_2017_ts_item",
+      "layer": "raw",
+      "rows": 518,
+      "parquet": "raw__inep_saeb_microdados_csv_2017_ts_item.parquet"
+    }
+  ],
+  "kaggle_metadata_sha256": "7c424f83ef6fe9dcaa43b4950c487fca4065a90d41e63b0048daf52befba1bb1",
+  "files": [
+    {
+      "path": "01_ingestion_saeb.ipynb",
+      "bytes": 6487,
+      "sha256": "922e58523fc6cc333375f8a4ec0d5032c88d1d3292f90a0265f938164dc638b3"
+    },
+    {
+      "path": "02_transform_to_trusted_saeb.ipynb",
+      "bytes": 3558,
+      "sha256": "0002d0a06161cf70e8e23bfc9fdc1ae28b1e3cb6c619d8ed1f01cc64c34240b1"
+    },
+    {
+      "path": "README.md",
+      "bytes": 767,
+      "sha256": "1df8b1fa7848cc841bd7b764aa8e749d798460fcd647ef0b4f51c8a659046e7d"
+    },
+    {
+      "path": "audit.json",
+      "bytes": 74543,
+      "sha256": "15d2984a9976c4d4f8c95ebcabf3673e7fea5cf253d91e4ac8a28bd8e3f0a180"
+    },
+    {
+      "path": "raw__api_saeb_boletim_raw.parquet",
+      "bytes": 671496918,
+      "sha256": "bffa94c801be139c93d79933e9b10436488915b41f9a98075a58661f13e628e7"
+    },
+    {
+      "path": "raw__inep_saeb_aluno_2013.parquet",
+      "bytes": 803656221,
+      "sha256": "24de6b08c2bf947db6101efa90e92c4c9187bf571687ed47e66103db80ffe464"
+    },
+    {
+      "path": "raw__inep_saeb_aluno_2015.parquet",
+      "bytes": 757296234,
+      "sha256": "1baf45d1d4094b5ac42dafe32bf5249661f0f5efa1464732ce5c26a2736d2da6"
+    },
+    {
+      "path": "raw__inep_saeb_aluno_2017.parquet",
+      "bytes": 1277799556,
+      "sha256": "11ad7bf8acd1826dcb902468bf4bc3ac48b6b90346dd0b5d6bb7c71d42372e4d"
+    },
+    {
+      "path": "raw__inep_saeb_aluno_2019.parquet",
+      "bytes": 1586350701,
+      "sha256": "589d489cee5843c36dcd4272ea9ae1df054a15afbaa637225ed3c42bedf4dd46"
+    },
+    {
+      "path": "raw__inep_saeb_aluno_2021.parquet",
+      "bytes": 1888091253,
+      "sha256": "38657a67e367552eb30cc4cc272c745755fb837ee6160fecf474fae052a8ff3f"
+    },
+    {
+      "path": "raw__inep_saeb_aluno_2023.parquet",
+      "bytes": 1863900794,
+      "sha256": "447b394bed14eed24ea88302bb4a5bc01edeffb0d52d00fffd6a89d2f0201061"
+    },
+    {
+      "path": "raw__inep_saeb_arquivos.parquet",
+      "bytes": 18270,
+      "sha256": "bace5f48a6eb62ed0a868c959ec49d8fced4c61c58be0f314615e228631ccda0"
+    },
+    {
+      "path": "raw__inep_saeb_arquivos_conteudo.parquet",
+      "bytes": 32642,
+      "sha256": "d15fccb218107d70dbd704a635ce139039d1be05e257ea5ae2d55017e90801fd"
+    },
+    {
+      "path": "raw__inep_saeb_microdados_csv_2011_ts_item.parquet",
+      "bytes": 4942,
+      "sha256": "dd6abe5fb476d97a952ceb5ac94f27f1ae06c7d38ab75c8507a9990b78ab8f9d"
+    },
+    {
+      "path": "raw__inep_saeb_microdados_csv_2011_ts_pesos.parquet",
+      "bytes": 2038821,
+      "sha256": "f83815614abf1067b513e8a5a639fe7f215c5a6c14438413d623c25819a382cd"
+    },
+    {
+      "path": "raw__inep_saeb_microdados_csv_2011_ts_quest_diretor.parquet",
+      "bytes": 20101186,
+      "sha256": "080f250a24b7ca531c0969bab3aeeaca42d1ff9a1de671ef63e04a9709e5036b"
+    },
+    {
+      "path": "raw__inep_saeb_microdados_csv_2011_ts_quest_escola.parquet",
+      "bytes": 3277418,
+      "sha256": "8e65b3d960b367592bdc89214e6c3a8ee820a92fff1c94a8b692cd2d19a876ee"
+    },
+    {
+      "path": "raw__inep_saeb_microdados_csv_2011_ts_quest_professor.parquet",
+      "bytes": 55774963,
+      "sha256": "2725c7b1da54ae7a8c8e46d392bc433e04cf8d613459db24ee6ab7d04c3d6c0f"
+    },
+    {
+      "path": "raw__inep_saeb_microdados_csv_2011_ts_resultado_brasil.parquet",
+      "bytes": 5687,
+      "sha256": "55eb49d32641ff48eb3eb27e65761fabadebfd75a6ee0525449e63a19d1ab3bc"
+    },
+    {
+      "path": "raw__inep_saeb_microdados_csv_2011_ts_resultado_escola.parquet",
+      "bytes": 1494943,
+      "sha256": "f96ca053df063027f1e17262b2fb6875e6cffd396d454d0a0209fa19756c5629"
+    },
+    {
+      "path": "raw__inep_saeb_microdados_csv_2011_ts_resultado_municipio.parquet",
+      "bytes": 1183659,
+      "sha256": "bcb468d6dacce791d6f9680434c04342f31f12ca35a38bdf855f74d3201fcf5d"
+    },
+    {
+      "path": "raw__inep_saeb_microdados_csv_2011_ts_resultado_regiao.parquet",
+      "bytes": 14976,
+      "sha256": "113cea6543dfa79343648e47feaa271ec92226715ae79c0c7ee2410c405fb4b2"
+    },
+    {
+      "path": "raw__inep_saeb_microdados_csv_2011_ts_resultado_uf.parquet",
+      "bytes": 57563,
+      "sha256": "6293a41dcc0e7f4104b71e57f25d6cc464bb1c80f7286f3fc042e2554e5454ce"
+    },
+    {
+      "path": "raw__inep_saeb_microdados_csv_2013_ts_aluno_3em.parquet",
+      "bytes": 16286920,
+      "sha256": "69d2fd46e5dfa39e22fa5d05e5c74992ce71de356b30364ad0b64070304c2848"
+    },
+    {
+      "path": "raw__inep_saeb_microdados_csv_2013_ts_aluno_5ef.parquet",
+      "bytes": 363043913,
+      "sha256": "657b7df011e93c8ea179427f5a2f144993327818ed9c7a2abc90c2d6e5bcb280"
+    },
+    {
+      "path": "raw__inep_saeb_microdados_csv_2013_ts_aluno_9ef.parquet",
+      "bytes": 387755622,
+      "sha256": "99b4aaf29321022b100dd7c7e3a345b5a3c3da92d13b6fde242949718fbda2f0"
+    },
+    {
+      "path": "raw__inep_saeb_microdados_csv_2013_ts_diretor.parquet",
+      "bytes": 6258669,
+      "sha256": "8d7de5797875a6a67ac20da9fbd059d7c385e3ed4449bc19f69108ab0ebc5c4c"
+    },
+    {
+      "path": "raw__inep_saeb_microdados_csv_2013_ts_escola.parquet",
+      "bytes": 11596206,
+      "sha256": "d72a931028b45d6c79eac8b7cd51b87df38a0700d3b2fe6061690da1dfd1a483"
+    },
+    {
+      "path": "raw__inep_saeb_microdados_csv_2013_ts_item.parquet",
+      "bytes": 12455,
+      "sha256": "612694cf0b6e1cca7b75aa64c6f691a74ac1878b82e2098da26f43d00425783d"
+    },
+    {
+      "path": "raw__inep_saeb_microdados_csv_2013_ts_professor.parquet",
+      "bytes": 37595792,
+      "sha256": "e134892170b4911de560d58d03ed31d5046b06e3b2049b91c4e352ea5d0932aa"
+    },
+    {
+      "path": "raw__inep_saeb_microdados_csv_2015_ts_aluno_3em.parquet",
+      "bytes": 12642343,
+      "sha256": "fa3eae469f0b750e67548748af9ea3671e19e60f7a9170109d8fff36d6ab894b"
+    },
+    {
+      "path": "raw__inep_saeb_microdados_csv_2015_ts_aluno_5ef.parquet",
+      "bytes": 342780650,
+      "sha256": "96ef8596619711cc2291664d9f72b0a9c90a0f792b45399e22461262ceeb13a6"
+    },
+    {
+      "path": "raw__inep_saeb_microdados_csv_2015_ts_aluno_9ef.parquet",
+      "bytes": 351099618,
+      "sha256": "92817e22997b7582ce35200c1f6be522224f3497468fe12a6df53af2441141f9"
+    },
+    {
+      "path": "raw__inep_saeb_microdados_csv_2015_ts_diretor.parquet",
+      "bytes": 6028928,
+      "sha256": "a4ee7f4a3624ac1622c42d016b89409240649b09de8a1c33dfcef77ad54563a1"
+    },
+    {
+      "path": "raw__inep_saeb_microdados_csv_2015_ts_escola.parquet",
+      "bytes": 11085775,
+      "sha256": "3998348919d2e0d20695400e33472a6bd65f460f5e72d99571bb5d1dcaad4eab"
+    },
+    {
+      "path": "raw__inep_saeb_microdados_csv_2015_ts_item.parquet",
+      "bytes": 12370,
+      "sha256": "a67dbac093598f28ec5413eb3463d76e12b4d432b86c659b1c0c9e49b4478bff"
+    },
+    {
+      "path": "raw__inep_saeb_microdados_csv_2015_ts_professor.parquet",
+      "bytes": 42630362,
+      "sha256": "e607b81dd2db5ad381e6afc7dc55d2c6dcaf0fed1f6577b58c8f4e5a2e89f965"
+    },
+    {
+      "path": "raw__inep_saeb_microdados_csv_2017_ts_aluno_3em_ag.parquet",
+      "bytes": 284121805,
+      "sha256": "b05cc7e53d60933c1e129824d0a86a0ade93b58f8cd88a04990f252368cdd53f"
+    },
+    {
+      "path": "raw__inep_saeb_microdados_csv_2017_ts_aluno_3em_esc.parquet",
+      "bytes": 254091714,
+      "sha256": "fd164bd2dccb522d463e7ab7331647d123ffd288c51a1c3f4292d2e082c4c877"
+    },
+    {
+      "path": "raw__inep_saeb_microdados_csv_2017_ts_aluno_5ef.parquet",
+      "bytes": 373899682,
+      "sha256": "8d3004e84aa94bdf9fc3bcdc3621477114f7fed5de66480111006dfd46c42fbe"
+    },
+    {
+      "path": "raw__inep_saeb_microdados_csv_2017_ts_aluno_9ef.parquet",
+      "bytes": 332655191,
+      "sha256": "c55770dc625b101c2520f1696037a90dde9db0be15cf321d1707ae35c055f34f"
+    },
+    {
+      "path": "raw__inep_saeb_microdados_csv_2017_ts_diretor.parquet",
+      "bytes": 8555194,
+      "sha256": "8f93a34b7666eb8951d17a218714038a2bb15d3e0ae3532d6a9494d4ed37270f"
+    },
+    {
+      "path": "raw__inep_saeb_microdados_csv_2017_ts_escola.parquet",
+      "bytes": 19210541,
+      "sha256": "8efd2e8b4289b3943720acec3237f58bd8a8bc36ba057b1daf8c8fa3a493171b"
+    },
+    {
+      "path": "raw__inep_saeb_microdados_csv_2017_ts_item.parquet",
+      "bytes": 12635,
+      "sha256": "c9a3d04b9bb3aa693e93d9fbd9452a3c8a70bcc62cad43b2b7849f186074538a"
+    },
+    {
+      "path": "schemas.json",
+      "bytes": 442860,
+      "sha256": "ea009e0568305bc0c865c57ea5a26a9775cc71f7c6813924bc99153e9d40617d"
+    }
+  ]
+}

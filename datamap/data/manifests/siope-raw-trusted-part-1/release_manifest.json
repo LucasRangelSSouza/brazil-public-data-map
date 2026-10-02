@@ -1,0 +1,61 @@
+{
+  "schema_version": "3.0",
+  "dataset_slug": "siope-raw-trusted-part-1",
+  "subject": "siope",
+  "group": "raw-trusted",
+  "part": 1,
+  "parts": 4,
+  "snapshot_date": "2026-10-01",
+  "tables": [
+    {
+      "table_id": "api_olinda_siope_dados_gerais",
+      "layer": "raw",
+      "rows": 742142,
+      "parquet": "raw__api_olinda_siope_dados_gerais.parquet"
+    },
+    {
+      "table_id": "api_olinda_siope_despesas",
+      "layer": "raw",
+      "rows": 721239044,
+      "parquet": "raw__api_olinda_siope_despesas.parquet"
+    }
+  ],
+  "kaggle_metadata_sha256": "5cec96a75c23baef3a4812f3330e86d550c6cf8ed14062d548e32dbf31aef90c",
+  "files": [
+    {
+      "path": "01_ingestion_siope.ipynb",
+      "bytes": 3465,
+      "sha256": "03caafd4f5dc0495641812437ec1d99662e4ac74dbc57077171a5a62b8e99995"
+    },
+    {
+      "path": "02_transform_to_trusted_siope.ipynb",
+      "bytes": 3560,
+      "sha256": "a46a6951ad23e125ccf3970ed0cef2a83b6de1f4fd967e9c7c3f2c5c8c89a80d"
+    },
+    {
+      "path": "README.md",
+      "bytes": 728,
+      "sha256": "84379cfb4f54140fe4800e4f6c248dd41c16552c0fd81d9a113ea75a1b76e1b8"
+    },
+    {
+      "path": "audit.json",
+      "bytes": 2256,
+      "sha256": "87f888fb59faea2f238253b379f97dcf21023098f7b49c7b0b72b246b12b4aa0"
+    },
+    {
+      "path": "raw__api_olinda_siope_dados_gerais.parquet",
+      "bytes": 56013705,
+      "sha256": "708f57ad7f082904077c19c860ef0975e6a3b2f39d1497f10cb657908e9e45d5"
+    },
+    {
+      "path": "raw__api_olinda_siope_despesas.parquet",
+      "bytes": 4769389689,
+      "sha256": "3fd67b72e9e79198005b6c15cc6b09aaeebd4bbc6ebbd2279d158d18331a7338"
+    },
+    {
+      "path": "schemas.json",
+      "bytes": 12978,
+      "sha256": "3d4b28c874b0c480bc19578cdafe7097d8e58e48de7a52195788f7fed82fb4da"
+    }
+  ]
+}

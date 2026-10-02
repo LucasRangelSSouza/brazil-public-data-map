@@ -1,0 +1,479 @@
+{
+  "schema_version": "3.0",
+  "dataset_slug": "pncp-raw-trusted-part-1",
+  "subject": "pncp",
+  "group": "raw-trusted",
+  "part": 1,
+  "parts": 2,
+  "snapshot_date": "2026-09-30",
+  "tables": [
+    {
+      "table_id": "pncp_atas_atualizacao",
+      "layer": "raw",
+      "rows": 2723277,
+      "parquet": "raw__pncp_atas_atualizacao.parquet"
+    },
+    {
+      "table_id": "pncp_contratacoes_arquivos",
+      "layer": "raw",
+      "rows": 4045882,
+      "parquet": "raw__pncp_contratacoes_arquivos.parquet"
+    },
+    {
+      "table_id": "pncp_contratacoes_atualizacao",
+      "layer": "raw",
+      "rows": 7719898,
+      "parquet": "raw__pncp_contratacoes_atualizacao.parquet"
+    },
+    {
+      "table_id": "pncp_contratacoes_historico",
+      "layer": "raw",
+      "rows": 68610105,
+      "parquet": "raw__pncp_contratacoes_historico.parquet"
+    },
+    {
+      "table_id": "pncp_contratacoes_itens",
+      "layer": "raw",
+      "rows": 25595585,
+      "parquet": "raw__pncp_contratacoes_itens.parquet"
+    },
+    {
+      "table_id": "pncp_contratacoes_itens_resultados",
+      "layer": "raw",
+      "rows": 4004953,
+      "parquet": "raw__pncp_contratacoes_itens_resultados.parquet"
+    },
+    {
+      "table_id": "pncp_contratacoes_proposta",
+      "layer": "raw",
+      "rows": 74088,
+      "parquet": "raw__pncp_contratacoes_proposta.parquet"
+    },
+    {
+      "table_id": "pncp_contratos_atualizacao",
+      "layer": "raw",
+      "rows": 10275091,
+      "parquet": "raw__pncp_contratos_atualizacao.parquet"
+    },
+    {
+      "table_id": "pncp_contratos_termos",
+      "layer": "raw",
+      "rows": 382798,
+      "parquet": "raw__pncp_contratos_termos.parquet"
+    },
+    {
+      "table_id": "pncp_instrumentos_cobranca",
+      "layer": "raw",
+      "rows": 769359,
+      "parquet": "raw__pncp_instrumentos_cobranca.parquet"
+    },
+    {
+      "table_id": "pncp_orgaos",
+      "layer": "raw",
+      "rows": 45594,
+      "parquet": "raw__pncp_orgaos.parquet"
+    },
+    {
+      "table_id": "pncp_orgaos_unidades",
+      "layer": "raw",
+      "rows": 409469,
+      "parquet": "raw__pncp_orgaos_unidades.parquet"
+    },
+    {
+      "table_id": "pncp_pca_atualizacao",
+      "layer": "raw",
+      "rows": 147425,
+      "parquet": "raw__pncp_pca_atualizacao.parquet"
+    },
+    {
+      "table_id": "pncp_atas",
+      "layer": "trusted",
+      "rows": 1078249,
+      "parquet": "trusted__pncp_atas.parquet"
+    },
+    {
+      "table_id": "pncp_contratacoes",
+      "layer": "trusted",
+      "rows": 3768885,
+      "parquet": "trusted__pncp_contratacoes.parquet"
+    },
+    {
+      "table_id": "pncp_contratacoes_arquivos",
+      "layer": "trusted",
+      "rows": 3289351,
+      "parquet": "trusted__pncp_contratacoes_arquivos.parquet"
+    },
+    {
+      "table_id": "pncp_contratacoes_historico",
+      "layer": "trusted",
+      "rows": 51038072,
+      "parquet": "trusted__pncp_contratacoes_historico.parquet"
+    },
+    {
+      "table_id": "pncp_contratacoes_itens",
+      "layer": "trusted",
+      "rows": 20890388,
+      "parquet": "trusted__pncp_contratacoes_itens.parquet"
+    },
+    {
+      "table_id": "pncp_contratacoes_itens_resultados",
+      "layer": "trusted",
+      "rows": 3393191,
+      "parquet": "trusted__pncp_contratacoes_itens_resultados.parquet"
+    },
+    {
+      "table_id": "pncp_contratacoes_proposta",
+      "layer": "trusted",
+      "rows": 70,
+      "parquet": "trusted__pncp_contratacoes_proposta.parquet"
+    },
+    {
+      "table_id": "pncp_contratos",
+      "layer": "trusted",
+      "rows": 3435513,
+      "parquet": "trusted__pncp_contratos.parquet"
+    },
+    {
+      "table_id": "pncp_contratos_termos",
+      "layer": "trusted",
+      "rows": 310593,
+      "parquet": "trusted__pncp_contratos_termos.parquet"
+    },
+    {
+      "table_id": "pncp_dom_amparos_legais",
+      "layer": "trusted",
+      "rows": 183,
+      "parquet": "trusted__pncp_dom_amparos_legais.parquet"
+    },
+    {
+      "table_id": "pncp_dom_catalogos",
+      "layer": "trusted",
+      "rows": 2,
+      "parquet": "trusted__pncp_dom_catalogos.parquet"
+    },
+    {
+      "table_id": "pncp_dom_categoria_item_pca",
+      "layer": "trusted",
+      "rows": 8,
+      "parquet": "trusted__pncp_dom_categoria_item_pca.parquet"
+    },
+    {
+      "table_id": "pncp_dom_criterios_julgamento",
+      "layer": "trusted",
+      "rows": 9,
+      "parquet": "trusted__pncp_dom_criterios_julgamento.parquet"
+    },
+    {
+      "table_id": "pncp_dom_fontes_orcamentarias",
+      "layer": "trusted",
+      "rows": 6,
+      "parquet": "trusted__pncp_dom_fontes_orcamentarias.parquet"
+    },
+    {
+      "table_id": "pncp_dom_modalidades",
+      "layer": "trusted",
+      "rows": 19,
+      "parquet": "trusted__pncp_dom_modalidades.parquet"
+    },
+    {
+      "table_id": "pncp_dom_modos_disputa",
+      "layer": "trusted",
+      "rows": 6,
+      "parquet": "trusted__pncp_dom_modos_disputa.parquet"
+    },
+    {
+      "table_id": "pncp_dom_portes_empresa",
+      "layer": "trusted",
+      "rows": 6,
+      "parquet": "trusted__pncp_dom_portes_empresa.parquet"
+    },
+    {
+      "table_id": "pncp_dom_tipos_contrato",
+      "layer": "trusted",
+      "rows": 12,
+      "parquet": "trusted__pncp_dom_tipos_contrato.parquet"
+    },
+    {
+      "table_id": "pncp_dom_tipos_documento",
+      "layer": "trusted",
+      "rows": 20,
+      "parquet": "trusted__pncp_dom_tipos_documento.parquet"
+    },
+    {
+      "table_id": "pncp_dom_tipos_instrumento_cobranca",
+      "layer": "trusted",
+      "rows": 1,
+      "parquet": "trusted__pncp_dom_tipos_instrumento_cobranca.parquet"
+    },
+    {
+      "table_id": "pncp_dom_tipos_instrumento_convocatorio",
+      "layer": "trusted",
+      "rows": 5,
+      "parquet": "trusted__pncp_dom_tipos_instrumento_convocatorio.parquet"
+    },
+    {
+      "table_id": "pncp_dom_tipos_parte_envolvida",
+      "layer": "trusted",
+      "rows": 3,
+      "parquet": "trusted__pncp_dom_tipos_parte_envolvida.parquet"
+    },
+    {
+      "table_id": "pncp_editais_embeddings",
+      "layer": "trusted",
+      "rows": 1249424,
+      "parquet": "trusted__pncp_editais_embeddings.parquet"
+    },
+    {
+      "table_id": "pncp_instrumentos_cobranca",
+      "layer": "trusted",
+      "rows": 262529,
+      "parquet": "trusted__pncp_instrumentos_cobranca.parquet"
+    },
+    {
+      "table_id": "pncp_orgaos",
+      "layer": "trusted",
+      "rows": 19126,
+      "parquet": "trusted__pncp_orgaos.parquet"
+    },
+    {
+      "table_id": "pncp_orgaos_unidades",
+      "layer": "trusted",
+      "rows": 154097,
+      "parquet": "trusted__pncp_orgaos_unidades.parquet"
+    },
+    {
+      "table_id": "pncp_pca",
+      "layer": "trusted",
+      "rows": 7534,
+      "parquet": "trusted__pncp_pca.parquet"
+    }
+  ],
+  "kaggle_metadata_sha256": "059cbc8e553a53986fcaa930b7e2b0eb6a749a90add54954a188ed2eee390958",
+  "files": [
+    {
+      "path": "01_ingestion_pncp.ipynb",
+      "bytes": 4190,
+      "sha256": "148447b2e212b06de885e384291ae7524ced9a346bd158a3252c75c5246de226"
+    },
+    {
+      "path": "02_transform_to_trusted_pncp.ipynb",
+      "bytes": 6095,
+      "sha256": "f43da9f1301cf77d981ce2c90b96e35d52e2ea6c90bc20d02639141df0f63d37"
+    },
+    {
+      "path": "README.md",
+      "bytes": 737,
+      "sha256": "8cc76191c050ae3f0aa77dc01bea1f743d887adb5178a09f656458b042fa4aa9"
+    },
+    {
+      "path": "audit.json",
+      "bytes": 17105,
+      "sha256": "13ca7e2b1054e830b6b087e1a6d935f51ef3540e7c43b90329351d558d778f5d"
+    },
+    {
+      "path": "raw__pncp_atas_atualizacao.parquet",
+      "bytes": 233987784,
+      "sha256": "44aeddd9429a74b135c87d967308fd58129d0ff81b321b9a8ae6f89722f01486"
+    },
+    {
+      "path": "raw__pncp_contratacoes_arquivos.parquet",
+      "bytes": 196268503,
+      "sha256": "ad63f3c8c4910622ed81355884cbcee2c39aac03f4415bd451c91d3d8707bc39"
+    },
+    {
+      "path": "raw__pncp_contratacoes_atualizacao.parquet",
+      "bytes": 2171763350,
+      "sha256": "fec7600670aec76fdfeb89c8852c5497be4c4d0081d722748889b9f393bcc4d9"
+    },
+    {
+      "path": "raw__pncp_contratacoes_historico.parquet",
+      "bytes": 1027474242,
+      "sha256": "eec884485099c0ab6762aa0c7521d4c4930d9bfe7e6c3a7d0a04abef01ec456d"
+    },
+    {
+      "path": "raw__pncp_contratacoes_itens.parquet",
+      "bytes": 1807117684,
+      "sha256": "5a17d0b4d3218c0735804baa8d32573e5f2cd974342e41c3cdf47b35a7fb267f"
+    },
+    {
+      "path": "raw__pncp_contratacoes_itens_resultados.parquet",
+      "bytes": 373918734,
+      "sha256": "2a6946847cce0ca33bd0d22d8a17da0466030568eeb4063e1bdf4cc4bb02f0f4"
+    },
+    {
+      "path": "raw__pncp_contratacoes_proposta.parquet",
+      "bytes": 21678606,
+      "sha256": "b4ca30f181f9f1506c00982c4d98c75e85cb33dfab182102d6175acfe0eb5833"
+    },
+    {
+      "path": "raw__pncp_contratos_atualizacao.parquet",
+      "bytes": 2315647717,
+      "sha256": "d7040a9d3c6c8cbadcf4a20ea38221bb1f4cdf1b271e583124cc6867cba64c8d"
+    },
+    {
+      "path": "raw__pncp_contratos_termos.parquet",
+      "bytes": 88520479,
+      "sha256": "a022739550c1bbecc923097f5a8e9ca5d6734c95d4738a773865c445ab3e6980"
+    },
+    {
+      "path": "raw__pncp_instrumentos_cobranca.parquet",
+      "bytes": 297266706,
+      "sha256": "fda29e488eb07c5e2d267542a1ff48597737d6bbef1516f72048b4e5a54c5adc"
+    },
+    {
+      "path": "raw__pncp_orgaos.parquet",
+      "bytes": 1818292,
+      "sha256": "5cf01839b05cf39ad03f4b656ec21c6fae3fc3ddd947536c7645100ba63e2081"
+    },
+    {
+      "path": "raw__pncp_orgaos_unidades.parquet",
+      "bytes": 17552149,
+      "sha256": "a5d157921aec7a51d4c046bae0a4b50e893cd92bf4dd1828d13fbf41bc09279b"
+    },
+    {
+      "path": "raw__pncp_pca_atualizacao.parquet",
+      "bytes": 1562974078,
+      "sha256": "8661aa2cbe137a4bf03f5d77d1db4f101eb5dda0637bb4eb9cd4d38ef8a7898d"
+    },
+    {
+      "path": "schemas.json",
+      "bytes": 56431,
+      "sha256": "8c58ac84103253657d2e21ac0597f6c60fdffb1e9e38a2af94007460c04048cb"
+    },
+    {
+      "path": "trusted__pncp_atas.parquet",
+      "bytes": 76973049,
+      "sha256": "1941dd4810e70275dcdbb93e1d5f06dbbe70fcd0d3f0f599e0adf437760a8ad6"
+    },
+    {
+      "path": "trusted__pncp_contratacoes.parquet",
+      "bytes": 725534401,
+      "sha256": "7d7062459c6c023cdf05b5c47be676fe64699d281c84b6af633b7889e48648d3"
+    },
+    {
+      "path": "trusted__pncp_contratacoes_arquivos.parquet",
+      "bytes": 382427824,
+      "sha256": "b0b0c96f4b4e4e85c6889085ed8cb486fc411a91c361b36692d447d09672e52f"
+    },
+    {
+      "path": "trusted__pncp_contratacoes_historico.parquet",
+      "bytes": 2756481324,
+      "sha256": "11a29cbb4a179f75075460363f6a9bc777e464b2d62f77e696779bf9503b3ad4"
+    },
+    {
+      "path": "trusted__pncp_contratacoes_itens.parquet",
+      "bytes": 4908737974,
+      "sha256": "e9b557442234ea4c041217b47530c21e7e17f7b2ece2847b1deca1fb9e373855"
+    },
+    {
+      "path": "trusted__pncp_contratacoes_itens_resultados.parquet",
+      "bytes": 517804463,
+      "sha256": "1552b6ed4be186690d25d7e411d48bd58d3a5cca340bd98452a5625e990b5202"
+    },
+    {
+      "path": "trusted__pncp_contratacoes_proposta.parquet",
+      "bytes": 18828,
+      "sha256": "966537aa3fee165d75825d7b86c6b50f5335b57b916716f8b1954e67d468c4cb"
+    },
+    {
+      "path": "trusted__pncp_contratos.parquet",
+      "bytes": 523271595,
+      "sha256": "7c800d3f77bab9f99a4629ff587cbb0323518e3e3bc46dff4a19f4b3fe0e9add"
+    },
+    {
+      "path": "trusted__pncp_contratos_termos.parquet",
+      "bytes": 109016442,
+      "sha256": "e0342a5fe0bbf3d9977a0300fa0e040c5295b7e64d7ef8281a12726eaed6453d"
+    },
+    {
+      "path": "trusted__pncp_dom_amparos_legais.parquet",
+      "bytes": 20067,
+      "sha256": "4be45cdc06aa70b12f6c47627d5a4988c384d905f43f63c6166455b55c3fba70"
+    },
+    {
+      "path": "trusted__pncp_dom_catalogos.parquet",
+      "bytes": 2595,
+      "sha256": "583de6ed0bde90d7aecbf3e03bef8fd3af01f3cf73a11eee7e41090e23224923"
+    },
+    {
+      "path": "trusted__pncp_dom_categoria_item_pca.parquet",
+      "bytes": 2080,
+      "sha256": "585ed9da5b7da5d8c2dcca3a440084f749e43c7e6fe1f362134cabeed72d8077"
+    },
+    {
+      "path": "trusted__pncp_dom_criterios_julgamento.parquet",
+      "bytes": 2050,
+      "sha256": "3123cbb97148bf27bb20a6ffbb8effcf8a58c3adb7a929b09f908a9dd4f7e644"
+    },
+    {
+      "path": "trusted__pncp_dom_fontes_orcamentarias.parquet",
+      "bytes": 3178,
+      "sha256": "9a842478cfce62434661a8170cfffb44862a954e73928103d776fe70b3aef4c3"
+    },
+    {
+      "path": "trusted__pncp_dom_modalidades.parquet",
+      "bytes": 4609,
+      "sha256": "4958a570ee3c2729e13395fb9857a5fdf03f356525f157b71cd66934f34438b2"
+    },
+    {
+      "path": "trusted__pncp_dom_modos_disputa.parquet",
+      "bytes": 1955,
+      "sha256": "04475878928feaaaa673fee05d22c02c83a0f8f51d200b2197d165d3ebfceb8c"
+    },
+    {
+      "path": "trusted__pncp_dom_portes_empresa.parquet",
+      "bytes": 2110,
+      "sha256": "7e403a2ef1a43cde4b53dc445d1c6197a4cc6ce0b32ef1086e35070cfaea8e98"
+    },
+    {
+      "path": "trusted__pncp_dom_tipos_contrato.parquet",
+      "bytes": 2519,
+      "sha256": "5937c4898cacb9885c5fce3e6415def706eac3307482493e7b87f268afe74cf4"
+    },
+    {
+      "path": "trusted__pncp_dom_tipos_documento.parquet",
+      "bytes": 3067,
+      "sha256": "fae7a53a78a5d136386acf80c5ad943206ddb0df5531fe1feb65db108daaa34d"
+    },
+    {
+      "path": "trusted__pncp_dom_tipos_instrumento_cobranca.parquet",
+      "bytes": 3944,
+      "sha256": "85a9f87f6bcd200cf8123bad8de37a13f16dcddfe288e4e0d399d17e1a701c80"
+    },
+    {
+      "path": "trusted__pncp_dom_tipos_instrumento_convocatorio.parquet",
+      "bytes": 3297,
+      "sha256": "28e8b45c7a7a2c6d4803b21d800f7dcb9085c3fbf3d8b2e09e039697b3f57bfe"
+    },
+    {
+      "path": "trusted__pncp_dom_tipos_parte_envolvida.parquet",
+      "bytes": 1017,
+      "sha256": "50ccf004536c8d918a938d6179e2254805511ccbc28751954d60eee02d4c7693"
+    },
+    {
+      "path": "trusted__pncp_editais_embeddings.parquet",
+      "bytes": 5041697481,
+      "sha256": "af7d59f501d5b2ff5500445d6ad259afad44a8087ac83130eb96b589c161336e"
+    },
+    {
+      "path": "trusted__pncp_instrumentos_cobranca.parquet",
+      "bytes": 86247583,
+      "sha256": "6dbc722488f37996ffbb6909a56ae11125ec436a9cde7dbe500fc63ec33c4ca8"
+    },
+    {
+      "path": "trusted__pncp_orgaos.parquet",
+      "bytes": 977937,
+      "sha256": "b520ecf4f29bc68accfb5c0c35745bd3e0d6fac364f8217f6173eb66cfc3b486"
+    },
+    {
+      "path": "trusted__pncp_orgaos_unidades.parquet",
+      "bytes": 9546909,
+      "sha256": "85c58f861b4da0d7bd13ef3f73e84804bbac6d67ec2de5db93cc943a39924601"
+    },
+    {
+      "path": "trusted__pncp_pca.parquet",
+      "bytes": 339156,
+      "sha256": "800ed50e96be530edb894b678856e1c3a25074815afd39a97bb0d4f76aabc168"
+    }
+  ]
+}

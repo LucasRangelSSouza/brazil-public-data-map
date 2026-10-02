@@ -1,0 +1,56 @@
+{
+  "schema_version": "3.0",
+  "dataset_slug": "ica-analytics",
+  "subject": "ica",
+  "group": "analytics",
+  "part": 1,
+  "parts": 1,
+  "snapshot_date": "2026-09-30",
+  "tables": [
+    {
+      "table_id": "obt_ica_municipio_ano",
+      "layer": "semantic",
+      "rows": 43719,
+      "parquet": "semantic__obt_ica_municipio_ano.parquet"
+    },
+    {
+      "table_id": "obt_ica_uf_ano",
+      "layer": "semantic",
+      "rows": 189,
+      "parquet": "semantic__obt_ica_uf_ano.parquet"
+    }
+  ],
+  "kaggle_metadata_sha256": "7e5cdcf1848dbe279d7cd27d8844eb9cceb51e17552089290d4c1b1d1c61f6b7",
+  "files": [
+    {
+      "path": "03_semantic_ica.ipynb",
+      "bytes": 3305,
+      "sha256": "1b09dac04c1ece963cf94af087ebbe2f3b1cc5da15ec72388a300626320070b8"
+    },
+    {
+      "path": "README.md",
+      "bytes": 724,
+      "sha256": "c91d001b7f2211fdf4d02263cb2a23b2a2008f6a222618204583fe9a916bfa7e"
+    },
+    {
+      "path": "audit.json",
+      "bytes": 933,
+      "sha256": "c7872755d3a91845cc0535df71badac704aa4e959dc0a459700c94fd7787c104"
+    },
+    {
+      "path": "schemas.json",
+      "bytes": 4077,
+      "sha256": "3a264e5fb6495e0386f3076e15c52f6d0a5bae7e13cd2102accede9df3c14890"
+    },
+    {
+      "path": "semantic__obt_ica_municipio_ano.parquet",
+      "bytes": 749142,
+      "sha256": "39f80617cf33f03073cbe3d1f3bd4e2d44f84919486d4976a62dd0791c230c36"
+    },
+    {
+      "path": "semantic__obt_ica_uf_ano.parquet",
+      "bytes": 23647,
+      "sha256": "269ba698afc5d3d27bbcae05c0af2113e84df55335090fe62af3ebf7e6e2d9d7"
+    }
+  ]
+}

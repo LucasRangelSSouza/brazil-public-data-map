@@ -1,0 +1,215 @@
+{
+  "schema_version": "3.0",
+  "dataset_slug": "ideb-raw-trusted",
+  "subject": "ideb",
+  "group": "raw-trusted",
+  "part": 1,
+  "parts": 1,
+  "snapshot_date": "2026-09-30",
+  "tables": [
+    {
+      "table_id": "inep_ideb_brasil_anos_finais",
+      "layer": "raw",
+      "rows": 15,
+      "parquet": "raw__inep_ideb_brasil_anos_finais.parquet"
+    },
+    {
+      "table_id": "inep_ideb_brasil_anos_iniciais",
+      "layer": "raw",
+      "rows": 16,
+      "parquet": "raw__inep_ideb_brasil_anos_iniciais.parquet"
+    },
+    {
+      "table_id": "inep_ideb_brasil_ensino_medio",
+      "layer": "raw",
+      "rows": 14,
+      "parquet": "raw__inep_ideb_brasil_ensino_medio.parquet"
+    },
+    {
+      "table_id": "inep_ideb_escola_anos_finais",
+      "layer": "raw",
+      "rows": 48020,
+      "parquet": "raw__inep_ideb_escola_anos_finais.parquet"
+    },
+    {
+      "table_id": "inep_ideb_escola_anos_iniciais",
+      "layer": "raw",
+      "rows": 66153,
+      "parquet": "raw__inep_ideb_escola_anos_iniciais.parquet"
+    },
+    {
+      "table_id": "inep_ideb_escola_ensino_medio",
+      "layer": "raw",
+      "rows": 22184,
+      "parquet": "raw__inep_ideb_escola_ensino_medio.parquet"
+    },
+    {
+      "table_id": "inep_ideb_municipio_anos_finais",
+      "layer": "raw",
+      "rows": 14428,
+      "parquet": "raw__inep_ideb_municipio_anos_finais.parquet"
+    },
+    {
+      "table_id": "inep_ideb_municipio_anos_iniciais",
+      "layer": "raw",
+      "rows": 14533,
+      "parquet": "raw__inep_ideb_municipio_anos_iniciais.parquet"
+    },
+    {
+      "table_id": "inep_ideb_municipio_ensino_medio",
+      "layer": "raw",
+      "rows": 11765,
+      "parquet": "raw__inep_ideb_municipio_ensino_medio.parquet"
+    },
+    {
+      "table_id": "inep_ideb_regioes_ufs_anos_finais",
+      "layer": "raw",
+      "rows": 141,
+      "parquet": "raw__inep_ideb_regioes_ufs_anos_finais.parquet"
+    },
+    {
+      "table_id": "inep_ideb_regioes_ufs_anos_iniciais",
+      "layer": "raw",
+      "rows": 142,
+      "parquet": "raw__inep_ideb_regioes_ufs_anos_iniciais.parquet"
+    },
+    {
+      "table_id": "inep_ideb_regioes_ufs_ensino_medio",
+      "layer": "raw",
+      "rows": 109,
+      "parquet": "raw__inep_ideb_regioes_ufs_ensino_medio.parquet"
+    },
+    {
+      "table_id": "inep_ideb_brasil",
+      "layer": "trusted",
+      "rows": 154,
+      "parquet": "trusted__inep_ideb_brasil.parquet"
+    },
+    {
+      "table_id": "inep_ideb_escola",
+      "layer": "trusted",
+      "rows": 1366823,
+      "parquet": "trusted__inep_ideb_escola.parquet"
+    },
+    {
+      "table_id": "inep_ideb_municipio",
+      "layer": "trusted",
+      "rows": 377396,
+      "parquet": "trusted__inep_ideb_municipio.parquet"
+    },
+    {
+      "table_id": "inep_ideb_regioes_ufs",
+      "layer": "trusted",
+      "rows": 3872,
+      "parquet": "trusted__inep_ideb_regioes_ufs.parquet"
+    }
+  ],
+  "kaggle_metadata_sha256": "1391744091d463530ec5893fba9544a59fcdcf9b8124ab44f1d39629524463e3",
+  "files": [
+    {
+      "path": "01_ingestion_ideb.ipynb",
+      "bytes": 4175,
+      "sha256": "d0986f1d76e2aac3ecc3f4922cd091172410b37b3c23b7a55ed1d6b762c674a7"
+    },
+    {
+      "path": "02_transform_to_trusted_ideb.ipynb",
+      "bytes": 3759,
+      "sha256": "02fd95dbfccbac1804442f4325c653fcf32e9530775f30dc15f7b49944ddaa48"
+    },
+    {
+      "path": "README.md",
+      "bytes": 747,
+      "sha256": "1f6084830190d821ccb95890dbdd9c22f375130d9913860241d3043f10bf8cac"
+    },
+    {
+      "path": "audit.json",
+      "bytes": 41014,
+      "sha256": "c358a2347c78fa9481be3b4c577c5969ce02c5d88c68b3d7ae6a714f1f770adf"
+    },
+    {
+      "path": "raw__inep_ideb_brasil_anos_finais.parquet",
+      "bytes": 39809,
+      "sha256": "792c256339ffc816354c926c7c88a03f3eb94a54d4810da07794a71b8f90afbe"
+    },
+    {
+      "path": "raw__inep_ideb_brasil_anos_iniciais.parquet",
+      "bytes": 43499,
+      "sha256": "24cb87348c28d902778ed2f2ba0a79889ce52b4c012e5d25958f40e7892c2623"
+    },
+    {
+      "path": "raw__inep_ideb_brasil_ensino_medio.parquet",
+      "bytes": 39002,
+      "sha256": "b57b52eff5f7ea78a432179a079d563d61db0bfebee71ac9b0abddb83df41f0c"
+    },
+    {
+      "path": "raw__inep_ideb_escola_anos_finais.parquet",
+      "bytes": 16420184,
+      "sha256": "d2626920d4b0667d15c90a87b67297d8c4dbf967f75d2dc2d69a6927cc20cce1"
+    },
+    {
+      "path": "raw__inep_ideb_escola_anos_iniciais.parquet",
+      "bytes": 24877290,
+      "sha256": "25ba065c2986e399d2ad370859f899114fb05755d037be8dfbd9afdadd739977"
+    },
+    {
+      "path": "raw__inep_ideb_escola_ensino_medio.parquet",
+      "bytes": 3177592,
+      "sha256": "2074c36f3d6cc0787fb48d0f6fc30b52cd6d1ebf1b620c81cddbc7b96a3da886"
+    },
+    {
+      "path": "raw__inep_ideb_municipio_anos_finais.parquet",
+      "bytes": 5324961,
+      "sha256": "e4ba401c2a713706259c80658027432ccfad839520b1d05faba844ee4b2d546c"
+    },
+    {
+      "path": "raw__inep_ideb_municipio_anos_iniciais.parquet",
+      "bytes": 5699415,
+      "sha256": "b5dbd83cdb70064a09a81d2457f60313526fec60d10542b69917065b4c710912"
+    },
+    {
+      "path": "raw__inep_ideb_municipio_ensino_medio.parquet",
+      "bytes": 1426465,
+      "sha256": "9b36d50c9c659447ffc1df4bdb2315416ba3450d8d2d098edf2ab7eae3ce2bd9"
+    },
+    {
+      "path": "raw__inep_ideb_regioes_ufs_anos_finais.parquet",
+      "bytes": 83635,
+      "sha256": "9a4512d0213abfa4c86fae704d56399106ee84bd3b51d16369843cc1f6edbebe"
+    },
+    {
+      "path": "raw__inep_ideb_regioes_ufs_anos_iniciais.parquet",
+      "bytes": 88755,
+      "sha256": "ba4c238ebf84dfd79fa74abb8a668ce248e2a7a461609706aabe48fa38dbb843"
+    },
+    {
+      "path": "raw__inep_ideb_regioes_ufs_ensino_medio.parquet",
+      "bytes": 74289,
+      "sha256": "dc324099815f14755b969c25e10f60bf1ba093b690c1905920358efa4bca284a"
+    },
+    {
+      "path": "schemas.json",
+      "bytes": 200256,
+      "sha256": "46a4f89b19747ff88516020122704cd21619c0aa250b881e00c597a7dda77fdf"
+    },
+    {
+      "path": "trusted__inep_ideb_brasil.parquet",
+      "bytes": 38911,
+      "sha256": "1705765e1b3c86918e04069bc0a5e07d6e38925c07c2da207c63482d531598c4"
+    },
+    {
+      "path": "trusted__inep_ideb_escola.parquet",
+      "bytes": 53882599,
+      "sha256": "59b56a89394b743efdb6511bf2d300f0bdc06911f79c239275c83e55098c449d"
+    },
+    {
+      "path": "trusted__inep_ideb_municipio.parquet",
+      "bytes": 12871029,
+      "sha256": "9263651401025533015497035f13ef6a00966103a6115d01a40078699a1f24a2"
+    },
+    {
+      "path": "trusted__inep_ideb_regioes_ufs.parquet",
+      "bytes": 166529,
+      "sha256": "7b8178066025c1b14902a0138e886706dadd67cb9122f8498c62b19b22e724b1"
+    }
+  ]
+}

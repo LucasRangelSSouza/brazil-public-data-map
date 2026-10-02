@@ -1,0 +1,78 @@
+{
+  "schema_version": "3.0",
+  "dataset_slug": "ideb-analytics",
+  "subject": "ideb",
+  "group": "analytics",
+  "part": 1,
+  "parts": 1,
+  "snapshot_date": "2026-09-30",
+  "tables": [
+    {
+      "table_id": "obt_inep_ideb_brasil_ano",
+      "layer": "semantic",
+      "rows": 55,
+      "parquet": "semantic__obt_inep_ideb_brasil_ano.parquet"
+    },
+    {
+      "table_id": "obt_inep_ideb_escola_ano",
+      "layer": "semantic",
+      "rows": 798779,
+      "parquet": "semantic__obt_inep_ideb_escola_ano.parquet"
+    },
+    {
+      "table_id": "obt_inep_ideb_municipio_ano",
+      "layer": "semantic",
+      "rows": 181677,
+      "parquet": "semantic__obt_inep_ideb_municipio_ano.parquet"
+    },
+    {
+      "table_id": "obt_inep_ideb_regiao_ano",
+      "layer": "semantic",
+      "rows": 1408,
+      "parquet": "semantic__obt_inep_ideb_regiao_ano.parquet"
+    }
+  ],
+  "kaggle_metadata_sha256": "9c50839afb458b0a7694c694ab95974d8e979a936bc5f8e2ac1e44784c1d4044",
+  "files": [
+    {
+      "path": "03_semantic_ideb.ipynb",
+      "bytes": 3442,
+      "sha256": "0c11b8c6d96c69fc460ec981bdd76aed5e501ceb93935d86bb7071d994bd6d29"
+    },
+    {
+      "path": "README.md",
+      "bytes": 705,
+      "sha256": "1b504a7a78640460f3934c6bb20bb0956eaeda17794759f2584b35049713466c"
+    },
+    {
+      "path": "audit.json",
+      "bytes": 2968,
+      "sha256": "5805df1410d0943dc5bc26feb1c6b61fd90acc73a2844be5d5aa5220ea4f3611"
+    },
+    {
+      "path": "schemas.json",
+      "bytes": 14094,
+      "sha256": "f3fde4455be77dedfc3d3366e905c6da688b748bae79f89b93ed805ae9482637"
+    },
+    {
+      "path": "semantic__obt_inep_ideb_brasil_ano.parquet",
+      "bytes": 61679,
+      "sha256": "fbc21da7a9f11cdeaf3792348643e1d443a66f38ee12be327308135cd276235d"
+    },
+    {
+      "path": "semantic__obt_inep_ideb_escola_ano.parquet",
+      "bytes": 49096955,
+      "sha256": "0f6fb68b9870896aa828720f6400318facad2e0020f56598f7af9a9d6ae14c8d"
+    },
+    {
+      "path": "semantic__obt_inep_ideb_municipio_ano.parquet",
+      "bytes": 10455625,
+      "sha256": "aa29ee5537ff8bcd4f7a25da32e76feed22cdc7909797f1d23b3a5c6848aca01"
+    },
+    {
+      "path": "semantic__obt_inep_ideb_regiao_ano.parquet",
+      "bytes": 209146,
+      "sha256": "1ec12fe570d7d26f1e82edeb591194f798a57394592b0909a645683dbd59c48c"
+    }
+  ]
+}

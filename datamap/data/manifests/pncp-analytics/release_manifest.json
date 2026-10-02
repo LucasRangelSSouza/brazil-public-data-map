@@ -1,0 +1,100 @@
+{
+  "schema_version": "3.0",
+  "dataset_slug": "pncp-analytics",
+  "subject": "pncp",
+  "group": "analytics",
+  "part": 1,
+  "parts": 1,
+  "snapshot_date": "2026-09-30",
+  "tables": [
+    {
+      "table_id": "obt_pncp_atas",
+      "layer": "semantic",
+      "rows": 1076677,
+      "parquet": "semantic__obt_pncp_atas.parquet"
+    },
+    {
+      "table_id": "obt_pncp_contratacoes",
+      "layer": "semantic",
+      "rows": 3763118,
+      "parquet": "semantic__obt_pncp_contratacoes.parquet"
+    },
+    {
+      "table_id": "obt_pncp_contratos",
+      "layer": "semantic",
+      "rows": 3428193,
+      "parquet": "semantic__obt_pncp_contratos.parquet"
+    },
+    {
+      "table_id": "obt_pncp_editais_semantico",
+      "layer": "semantic",
+      "rows": 1248539,
+      "parquet": "semantic__obt_pncp_editais_semantico.parquet"
+    },
+    {
+      "table_id": "obt_pncp_pca",
+      "layer": "semantic",
+      "rows": 7534,
+      "parquet": "semantic__obt_pncp_pca.parquet"
+    },
+    {
+      "table_id": "obt_pncp_pca_itens",
+      "layer": "semantic",
+      "rows": 817791,
+      "parquet": "semantic__obt_pncp_pca_itens.parquet"
+    }
+  ],
+  "kaggle_metadata_sha256": "83f5ad1e0b7149302f318961d1c46d1faef26ee236428fbea1b296f347751ae7",
+  "files": [
+    {
+      "path": "03_semantic_pncp.ipynb",
+      "bytes": 3568,
+      "sha256": "f73c40794e1958453b8f32a7c92d98e47aaade7832166c33ff02c5cf069165db"
+    },
+    {
+      "path": "README.md",
+      "bytes": 689,
+      "sha256": "ce3d57297270430b51319b959e567d1cc904e3b82c38dc8ad88c2fe505ac5bf8"
+    },
+    {
+      "path": "audit.json",
+      "bytes": 5649,
+      "sha256": "bbf3aaec9ac1987ee6174e83d4fa7e13a5cc6ebec2db700ad8148f942369c043"
+    },
+    {
+      "path": "schemas.json",
+      "bytes": 25527,
+      "sha256": "769b271e9121fb39da4a4f70589a90d6cf1f65601059003e72fc74758fadc622"
+    },
+    {
+      "path": "semantic__obt_pncp_atas.parquet",
+      "bytes": 76861992,
+      "sha256": "6b3eb520d4c627eef94e6293d197ba2e91263ed35a557fbf19593ae8f144ef4c"
+    },
+    {
+      "path": "semantic__obt_pncp_contratacoes.parquet",
+      "bytes": 688781430,
+      "sha256": "7a98a9129123d9eb13dacccb1091cd4cef3873c36f84bd5473af38ff59ab2e78"
+    },
+    {
+      "path": "semantic__obt_pncp_contratos.parquet",
+      "bytes": 439036125,
+      "sha256": "efc344ccd8b739cd5a9c2b95b1e30640229436e32d1efa662e54564074a85e4d"
+    },
+    {
+      "path": "semantic__obt_pncp_editais_semantico.parquet",
+      "bytes": 5271446724,
+      "sha256": "4d928940548c7f8d0736312c8c3b12105075490ab473860a8d451fb9f5f1f474"
+    },
+    {
+      "path": "semantic__obt_pncp_pca.parquet",
+      "bytes": 336742,
+      "sha256": "cc0248ac994ce4a309f6c1bf5979612a69a25c98e1fedeb528eac5894b387cb1"
+    },
+    {
+      "path": "semantic__obt_pncp_pca_itens.parquet",
+      "bytes": 52482376,
+      "sha256": "26e657b5b7cb59ed67258fab1459dccd1c7fd77790027530068fb5d8cd326e6d"
+    }
+  ]
+}

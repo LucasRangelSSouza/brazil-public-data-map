@@ -1,0 +1,83 @@
+{
+  "schema_version": "3.0",
+  "dataset_slug": "ibge-raw-trusted",
+  "subject": "ibge",
+  "group": "raw-trusted",
+  "part": 1,
+  "parts": 1,
+  "snapshot_date": "2026-09-30",
+  "tables": [
+    {
+      "table_id": "ibge_estados",
+      "layer": "raw",
+      "rows": 27,
+      "parquet": "raw__ibge_estados.parquet"
+    },
+    {
+      "table_id": "ibge_municipios",
+      "layer": "raw",
+      "rows": 5571,
+      "parquet": "raw__ibge_municipios.parquet"
+    },
+    {
+      "table_id": "ibge_estados",
+      "layer": "trusted",
+      "rows": 27,
+      "parquet": "trusted__ibge_estados.parquet"
+    },
+    {
+      "table_id": "ibge_municipios",
+      "layer": "trusted",
+      "rows": 5571,
+      "parquet": "trusted__ibge_municipios.parquet"
+    }
+  ],
+  "kaggle_metadata_sha256": "4dc48539255f6445dd4fa16c59c946520c5aff14ff92f721d6ffd95b3df7ebc7",
+  "files": [
+    {
+      "path": "01_ingestion_ibge.ipynb",
+      "bytes": 3410,
+      "sha256": "93cd41cae5919970dc2ee176ee94486bf34c0b18332b0a6fa56e61ea929d0023"
+    },
+    {
+      "path": "02_transform_to_trusted_ibge.ipynb",
+      "bytes": 3756,
+      "sha256": "7730888761f85575c927215ee453f27d72fad2d81200e6d863566dc40a19fbdb"
+    },
+    {
+      "path": "README.md",
+      "bytes": 707,
+      "sha256": "0bf9d5c34edae1782b963b020b6a1f3988e8d0ed43ae261e7a6d0368e03e645a"
+    },
+    {
+      "path": "audit.json",
+      "bytes": 1946,
+      "sha256": "c661df818be4b850ae92df03698bdebf2e52d9502597f602510c33d1b09826d5"
+    },
+    {
+      "path": "raw__ibge_estados.parquet",
+      "bytes": 2370,
+      "sha256": "63f1676fbbbcc9213d9a745e160628b377985c653f34f87d944403fe1dc0ef5c"
+    },
+    {
+      "path": "raw__ibge_municipios.parquet",
+      "bytes": 128105,
+      "sha256": "0b1a523afa97e4dc2ff29db471badbdd413d3aff05f09ebad0eb12b85bf64a17"
+    },
+    {
+      "path": "schemas.json",
+      "bytes": 6528,
+      "sha256": "c7343f8e8bb5651315b5b814f83084df51053fb1f1008d54545abe7690d589da"
+    },
+    {
+      "path": "trusted__ibge_estados.parquet",
+      "bytes": 2404,
+      "sha256": "88fef99c78ca112bbf08e97f16263d0e00d5a4d75c553f0b4e0c818abcc415fa"
+    },
+    {
+      "path": "trusted__ibge_municipios.parquet",
+      "bytes": 90910,
+      "sha256": "755976397590ea1dc0b976e4f08d312e2eb93e6360c841fa0559a3efd8c5435f"
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "schema_version": "3.0",
+  "dataset_slug": "siope-analytics",
+  "subject": "siope",
+  "group": "analytics",
+  "part": 1,
+  "parts": 1,
+  "snapshot_date": "2026-10-01",
+  "tables": [
+    {
+      "table_id": "obt_api_olinda_siope_comparativo_municipio_par_anos",
+      "layer": "semantic",
+      "rows": 1984229,
+      "parquet": "semantic__obt_api_olinda_siope_comparativo_municipio_par_anos.parquet"
+    },
+    {
+      "table_id": "obt_api_olinda_siope_comparativo_uf_par_anos",
+      "layer": "semantic",
+      "rows": 9073,
+      "parquet": "semantic__obt_api_olinda_siope_comparativo_uf_par_anos.parquet"
+    },
+    {
+      "table_id": "obt_api_olinda_siope_indicadores_municipio_ano",
+      "layer": "semantic",
+      "rows": 105073,
+      "parquet": "semantic__obt_api_olinda_siope_indicadores_municipio_ano.parquet"
+    },
+    {
+      "table_id": "obt_api_olinda_siope_indicadores_municipio_bimestre",
+      "layer": "semantic",
+      "rows": 316538,
+      "parquet": "semantic__obt_api_olinda_siope_indicadores_municipio_bimestre.parquet"
+    },
+    {
+      "table_id": "obt_api_olinda_siope_indicadores_uf_ano",
+      "layer": "semantic",
+      "rows": 491,
+      "parquet": "semantic__obt_api_olinda_siope_indicadores_uf_ano.parquet"
+    },
+    {
+      "table_id": "obt_api_olinda_siope_indicadores_uf_bimestre",
+      "layer": "semantic",
+      "rows": 1433,
+      "parquet": "semantic__obt_api_olinda_siope_indicadores_uf_bimestre.parquet"
+    },
+    {
+      "table_id": "obt_fnde_siope_dados_gerais_municipio_ano",
+      "layer": "semantic",
+      "rows": 166293,
+      "parquet": "semantic__obt_fnde_siope_dados_gerais_municipio_ano.parquet"
+    },
+    {
+      "table_id": "obt_fnde_siope_despesa_educacao_municipio_ano",
+      "layer": "semantic",
+      "rows": 135140891,
+      "parquet": "semantic__obt_fnde_siope_despesa_educacao_municipio_ano.parquet"
+    },
+    {
+      "table_id": "obt_fnde_siope_despesa_funcao_municipio_ano",
+      "layer": "semantic",
+      "rows": 1191974,
+      "parquet": "semantic__obt_fnde_siope_despesa_funcao_municipio_ano.parquet"
+    },
+    {
+      "table_id": "obt_fnde_siope_indicador_municipio_ano",
+      "layer": "semantic",
+      "rows": 6411059,
+      "parquet": "semantic__obt_fnde_siope_indicador_municipio_ano.parquet"
+    },
+    {
+      "table_id": "obt_fnde_siope_info_complementar_municipio_ano",
+      "layer": "semantic",
+      "rows": 8322693,
+      "parquet": "semantic__obt_fnde_siope_info_complementar_municipio_ano.parquet"
+    },
+    {
+      "table_id": "obt_fnde_siope_receita_municipio_ano",
+      "layer": "semantic",
+      "rows": 14236762,
+      "parquet": "semantic__obt_fnde_siope_receita_municipio_ano.parquet"
+    },
+    {
+      "table_id": "obt_rreo_siope_municipio_ano",
+      "layer": "semantic",
+      "rows": 42649158,
+      "parquet": "semantic__obt_rreo_siope_municipio_ano.parquet"
+    },
+    {
+      "table_id": "obt_rreo_siope_municipio_bimestre",
+      "layer": "semantic",
+      "rows": 154132717,
+      "parquet": "semantic__obt_rreo_siope_municipio_bimestre.parquet"
+    },
+    {
+      "table_id": "obt_rreo_siope_uf_ano",
+      "layer": "semantic",
+      "rows": 197542,
+      "parquet": "semantic__obt_rreo_siope_uf_ano.parquet"
+    },
+    {
+      "table_id": "obt_rreo_siope_uf_bimestre",
+      "layer": "semantic",
+      "rows": 725870,
+      "parquet": "semantic__obt_rreo_siope_uf_bimestre.parquet"
+    }
+  ],
+  "kaggle_metadata_sha256": "3a374a3a78644d936c6e5bdfce206f2de6f58de725b9b5612680ac3f1c10af35",
+  "files": [
+    {
+      "path": "03_semantic_siope.ipynb",
+      "bytes": 4563,
+      "sha256": "290772db15fb67ebadce3a90ea206a1047bf8c3a719d0397a87e5206747bbe97"
+    },
+    {
+      "path": "README.md",
+      "bytes": 683,
+      "sha256": "1f0e86255fcc956f1b0c1a9adb848e8e5f66999d0cf64391612a72437984867d"
+    },
+    {
+      "path": "audit.json",
+      "bytes": 25904,
+      "sha256": "d5b7335f3f997c446bef642bb4e9f5db647474fcbfa0ed950aa4b05944cf8069"
+    },
+    {
+      "path": "schemas.json",
+      "bytes": 94728,
+      "sha256": "bdedaac5d0fb0516e1165be82d74b950e1977d4825370307c8af913814c2017a"
+    },
+    {
+      "path": "semantic__obt_api_olinda_siope_comparativo_municipio_par_anos.parquet",
+      "bytes": 1268833861,
+      "sha256": "773a9f31105d378a8d4dd7447266597d13143f1292d05011a63c6efcc441bd8d"
+    },
+    {
+      "path": "semantic__obt_api_olinda_siope_comparativo_uf_par_anos.parquet",
+      "bytes": 6745820,
+      "sha256": "c30f104d9a2df5f5548e1fd51f2ae4a61988069f5c9a14f7be52d2eb4e9576fd"
+    },
+    {
+      "path": "semantic__obt_api_olinda_siope_indicadores_municipio_ano.parquet",
+      "bytes": 21778051,
+      "sha256": "b38eec787fd9a21be9feb7f4d1ecf0529d69e1d1d2bb812c99c102a33a7f77ed"
+    },
+    {
+      "path": "semantic__obt_api_olinda_siope_indicadores_municipio_bimestre.parquet",
+      "bytes": 20744443,
+      "sha256": "1f39b8e0e3701cc6064438d967b7d437f1d0d04de467076db8810506a77b58dd"
+    },
+    {
+      "path": "semantic__obt_api_olinda_siope_indicadores_uf_ano.parquet",
+      "bytes": 355888,
+      "sha256": "6b18ad5ee307f599eda6805d7aa7f95cf44651e87e8d5cf7ddff46652f788ca6"
+    },
+    {
+      "path": "semantic__obt_api_olinda_siope_indicadores_uf_bimestre.parquet",
+      "bytes": 159575,
+      "sha256": "20d1698eb4d67589d28f51fea2354b6639810d883b6ecd6db202bca435894247"
+    },
+    {
+      "path": "semantic__obt_fnde_siope_dados_gerais_municipio_ano.parquet",
+      "bytes": 8243778,
+      "sha256": "92dd11de43d00504bb99ed1a208171ba39f2384d25d61e12b9d29906d39b1750"
+    },
+    {
+      "path": "semantic__obt_fnde_siope_despesa_educacao_municipio_ano.parquet",
+      "bytes": 1429229856,
+      "sha256": "4e934dbc68cacb2b6c32547ee7ed39647c9594ea9f075ce2aaf5724f7c8fdf65"
+    },
+    {
+      "path": "semantic__obt_fnde_siope_despesa_funcao_municipio_ano.parquet",
+      "bytes": 32167017,
+      "sha256": "42b3e235218ca5a2c09628ebe13c01f4b17b323317d1ed06054d0cf452a17dd4"
+    },
+    {
+      "path": "semantic__obt_fnde_siope_indicador_municipio_ano.parquet",
+      "bytes": 53591620,
+      "sha256": "d33d79af9f47136e52e2a0ae93729e8adefd75366b65bff14091f389c00f1025"
+    },
+    {
+      "path": "semantic__obt_fnde_siope_info_complementar_municipio_ano.parquet",
+      "bytes": 123167268,
+      "sha256": "3757940e25ddc2eb296e02ebd9d6a4d67ca8f711332b7f6e6d50195c5d9a440d"
+    },
+    {
+      "path": "semantic__obt_fnde_siope_receita_municipio_ano.parquet",
+      "bytes": 204361005,
+      "sha256": "6dd2862c83a2a7bcb60efc5278b66f3ba8f12f2aec8803d3ebb16008b9c5943c"
+    },
+    {
+      "path": "semantic__obt_rreo_siope_municipio_ano.parquet",
+      "bytes": 472092955,
+      "sha256": "fc198048e7fbdf544a4bf65777fc1da70a3500b18d48fa7fea494118f8a21ebc"
+    },
+    {
+      "path": "semantic__obt_rreo_siope_municipio_bimestre.parquet",
+      "bytes": 1660841512,
+      "sha256": "6f626e42b410f2d88528525d80301851d3a828b2340cbeece2adb209220590e6"
+    },
+    {
+      "path": "semantic__obt_rreo_siope_uf_ano.parquet",
+      "bytes": 2600245,
+      "sha256": "cd2aa5b7aeba3603168b071a50a291a2b968c0e925db3ad0351d10baf2aebe81"
+    },
+    {
+      "path": "semantic__obt_rreo_siope_uf_bimestre.parquet",
+      "bytes": 8474874,
+      "sha256": "5a4f4b62b765ce9b2212b73ab1587523da639c6acc175c12dfe88414513072b4"
+    }
+  ]
+}

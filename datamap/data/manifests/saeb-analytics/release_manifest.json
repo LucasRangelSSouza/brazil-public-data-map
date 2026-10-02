@@ -1,0 +1,122 @@
+{
+  "schema_version": "3.0",
+  "dataset_slug": "saeb-analytics",
+  "subject": "saeb",
+  "group": "analytics",
+  "part": 1,
+  "parts": 1,
+  "snapshot_date": "2026-10-01",
+  "tables": [
+    {
+      "table_id": "obt_api_saeb_boletim",
+      "layer": "semantic",
+      "rows": 603449,
+      "parquet": "semantic__obt_api_saeb_boletim.parquet"
+    },
+    {
+      "table_id": "obt_inep_saeb_indicadores_brasil_ano",
+      "layer": "semantic",
+      "rows": 453,
+      "parquet": "semantic__obt_inep_saeb_indicadores_brasil_ano.parquet"
+    },
+    {
+      "table_id": "obt_inep_saeb_indicadores_estado_ano",
+      "layer": "semantic",
+      "rows": 9917,
+      "parquet": "semantic__obt_inep_saeb_indicadores_estado_ano.parquet"
+    },
+    {
+      "table_id": "obt_inep_saeb_indicadores_historico_brasil_ano",
+      "layer": "semantic",
+      "rows": 24,
+      "parquet": "semantic__obt_inep_saeb_indicadores_historico_brasil_ano.parquet"
+    },
+    {
+      "table_id": "obt_inep_saeb_indicadores_historico_estado_ano",
+      "layer": "semantic",
+      "rows": 714,
+      "parquet": "semantic__obt_inep_saeb_indicadores_historico_estado_ano.parquet"
+    },
+    {
+      "table_id": "obt_inep_saeb_indicadores_municipio_ano",
+      "layer": "semantic",
+      "rows": 540927,
+      "parquet": "semantic__obt_inep_saeb_indicadores_municipio_ano.parquet"
+    },
+    {
+      "table_id": "obt_inep_saeb_micro_escola_ano",
+      "layer": "semantic",
+      "rows": 461283,
+      "parquet": "semantic__obt_inep_saeb_micro_escola_ano.parquet"
+    },
+    {
+      "table_id": "obt_inep_saeb_micro_municipio_ano",
+      "layer": "semantic",
+      "rows": 65442,
+      "parquet": "semantic__obt_inep_saeb_micro_municipio_ano.parquet"
+    }
+  ],
+  "kaggle_metadata_sha256": "d296ac040f29a2d9709bb0e4ecb6c48306fe93076823577b99fe0a431395a007",
+  "files": [
+    {
+      "path": "03_semantic_saeb.ipynb",
+      "bytes": 3815,
+      "sha256": "1c2ee8caf98625a9550e0a081fedbb5c944c49f5793eceacd313fa9d9a966d3b"
+    },
+    {
+      "path": "README.md",
+      "bytes": 718,
+      "sha256": "6cb474c5298f3c247b522658e97d07cc82f75db9bb46d9f1ebbafe4119d01c7d"
+    },
+    {
+      "path": "audit.json",
+      "bytes": 16164,
+      "sha256": "792a3b3cfa218b2b4f967b5cab6a0b38bee8fa2326743ddaf32c062f9337da1d"
+    },
+    {
+      "path": "schemas.json",
+      "bytes": 98802,
+      "sha256": "48d95ebee7391840619d2f9b49dee1a878a7052f2f92afc53a6d8c2ef9d5378d"
+    },
+    {
+      "path": "semantic__obt_api_saeb_boletim.parquet",
+      "bytes": 122173406,
+      "sha256": "21813362d2b56472a0250771598df7e289c01f8778b8c94ddf8c99b347aa39c1"
+    },
+    {
+      "path": "semantic__obt_inep_saeb_indicadores_brasil_ano.parquet",
+      "bytes": 261721,
+      "sha256": "b1247e783e26cd78e1a4b815ea0cbc864b7e583972e8117ae3c15e02ae29b10a"
+    },
+    {
+      "path": "semantic__obt_inep_saeb_indicadores_estado_ano.parquet",
+      "bytes": 3693026,
+      "sha256": "88d21a9c5b6b8ecd3b75ff95ad73e69f710bd320397e2b5704218b46dc3c943b"
+    },
+    {
+      "path": "semantic__obt_inep_saeb_indicadores_historico_brasil_ano.parquet",
+      "bytes": 35241,
+      "sha256": "8c356c2930c153b2d3a78696e4bb5783a4e2e0d45e40f62906ebb48177ef8885"
+    },
+    {
+      "path": "semantic__obt_inep_saeb_indicadores_historico_estado_ano.parquet",
+      "bytes": 274568,
+      "sha256": "cfa8d0d7435ed8f1def31b7eb4e3f3f2b94c03d95f25c7045dd47f79eb39ff3f"
+    },
+    {
+      "path": "semantic__obt_inep_saeb_indicadores_municipio_ano.parquet",
+      "bytes": 97034362,
+      "sha256": "764091d43c52dbd5d77b5578b6481c43820341031fb01f4dedc9e6b0465ebe2c"
+    },
+    {
+      "path": "semantic__obt_inep_saeb_micro_escola_ano.parquet",
+      "bytes": 9182600,
+      "sha256": "c6490733018019a73f33c1ea162c5f39972a3a17fe7800c5e5f9bdafea83decc"
+    },
+    {
+      "path": "semantic__obt_inep_saeb_micro_municipio_ano.parquet",
+      "bytes": 1800085,
+      "sha256": "f76607264bd1bb069c59c5544779c624baa0f8d2988d7f595b4edc5e40a100d5"
+    }
+  ]
+}

@@ -1,0 +1,369 @@
+{
+  "schema_version": "3.0",
+  "dataset_slug": "censo-escolar-raw-trusted-part-3",
+  "subject": "censo-escolar",
+  "group": "raw-trusted",
+  "part": 3,
+  "parts": 3,
+  "snapshot_date": "2026-10-01",
+  "tables": [
+    {
+      "table_id": "inep_censo_escolar_curso_tecnico",
+      "layer": "raw",
+      "rows": 32136,
+      "parquet": "raw__inep_censo_escolar_curso_tecnico.parquet"
+    },
+    {
+      "table_id": "inep_censo_escolar_dados_desp",
+      "layer": "raw",
+      "rows": 49642,
+      "parquet": "raw__inep_censo_escolar_dados_desp.parquet"
+    },
+    {
+      "table_id": "inep_censo_escolar_dadoscurso",
+      "layer": "raw",
+      "rows": 25572,
+      "parquet": "raw__inep_censo_escolar_dadoscurso.parquet"
+    },
+    {
+      "table_id": "inep_censo_escolar_educprof",
+      "layer": "raw",
+      "rows": 323177,
+      "parquet": "raw__inep_censo_escolar_educprof.parquet"
+    },
+    {
+      "table_id": "inep_censo_escolar_em11",
+      "layer": "raw",
+      "rows": 19617,
+      "parquet": "raw__inep_censo_escolar_em11.parquet"
+    },
+    {
+      "table_id": "inep_censo_escolar_em12",
+      "layer": "raw",
+      "rows": 58310,
+      "parquet": "raw__inep_censo_escolar_em12.parquet"
+    },
+    {
+      "table_id": "inep_censo_escolar_em22",
+      "layer": "raw",
+      "rows": 1201,
+      "parquet": "raw__inep_censo_escolar_em22.parquet"
+    },
+    {
+      "table_id": "inep_censo_escolar_em8",
+      "layer": "raw",
+      "rows": 24893,
+      "parquet": "raw__inep_censo_escolar_em8.parquet"
+    },
+    {
+      "table_id": "inep_censo_escolar_es6",
+      "layer": "raw",
+      "rows": 406,
+      "parquet": "raw__inep_censo_escolar_es6.parquet"
+    },
+    {
+      "table_id": "inep_censo_escolar_escola",
+      "layer": "raw",
+      "rows": 214192,
+      "parquet": "raw__inep_censo_escolar_escola.parquet"
+    },
+    {
+      "table_id": "inep_censo_escolar_gestor_escolar",
+      "layer": "raw",
+      "rows": 180540,
+      "parquet": "raw__inep_censo_escolar_gestor_escolar.parquet"
+    },
+    {
+      "table_id": "inep_censo_escolar_indicesc",
+      "layer": "raw",
+      "rows": 877062,
+      "parquet": "raw__inep_censo_escolar_indicesc.parquet"
+    },
+    {
+      "table_id": "inep_censo_escolar_indicreg",
+      "layer": "raw",
+      "rows": 270956,
+      "parquet": "raw__inep_censo_escolar_indicreg.parquet"
+    },
+    {
+      "table_id": "inep_censo_escolar_matricula",
+      "layer": "raw",
+      "rows": 178766,
+      "parquet": "raw__inep_censo_escolar_matricula.parquet"
+    },
+    {
+      "table_id": "inep_censo_escolar_medprof",
+      "layer": "raw",
+      "rows": 102591,
+      "parquet": "raw__inep_censo_escolar_medprof.parquet"
+    },
+    {
+      "table_id": "inep_censo_escolar_microdados_ed_basica",
+      "layer": "raw",
+      "rows": 4058464,
+      "parquet": "raw__inep_censo_escolar_microdados_ed_basica.parquet"
+    },
+    {
+      "table_id": "inep_censo_escolar_suplemento_cursos_tecnicos",
+      "layer": "raw",
+      "rows": 50740,
+      "parquet": "raw__inep_censo_escolar_suplemento_cursos_tecnicos.parquet"
+    },
+    {
+      "table_id": "inep_censo_escolar_turma",
+      "layer": "raw",
+      "rows": 178772,
+      "parquet": "raw__inep_censo_escolar_turma.parquet"
+    },
+    {
+      "table_id": "inep_censo_escolar_colunas_fonte",
+      "layer": "trusted",
+      "rows": 29684,
+      "parquet": "trusted__inep_censo_escolar_colunas_fonte.parquet"
+    },
+    {
+      "table_id": "inep_censo_escolar_cursos_tecnicos",
+      "layer": "trusted",
+      "rows": 82876,
+      "parquet": "trusted__inep_censo_escolar_cursos_tecnicos.parquet"
+    },
+    {
+      "table_id": "inep_censo_escolar_dicionario_campos",
+      "layer": "trusted",
+      "rows": 28786,
+      "parquet": "trusted__inep_censo_escolar_dicionario_campos.parquet"
+    },
+    {
+      "table_id": "inep_censo_escolar_docentes",
+      "layer": "trusted",
+      "rows": 4237236,
+      "parquet": "trusted__inep_censo_escolar_docentes.parquet"
+    },
+    {
+      "table_id": "inep_censo_escolar_educacao_profissional",
+      "layer": "trusted",
+      "rows": 4911299,
+      "parquet": "trusted__inep_censo_escolar_educacao_profissional.parquet"
+    },
+    {
+      "table_id": "inep_censo_escolar_escolas",
+      "layer": "trusted",
+      "rows": 7376443,
+      "parquet": "trusted__inep_censo_escolar_escolas.parquet"
+    },
+    {
+      "table_id": "inep_censo_escolar_etapas_ensino",
+      "layer": "trusted",
+      "rows": 4808966,
+      "parquet": "trusted__inep_censo_escolar_etapas_ensino.parquet"
+    },
+    {
+      "table_id": "inep_censo_escolar_gestores",
+      "layer": "trusted",
+      "rows": 4239004,
+      "parquet": "trusted__inep_censo_escolar_gestores.parquet"
+    },
+    {
+      "table_id": "inep_censo_escolar_infraestrutura",
+      "layer": "trusted",
+      "rows": 7376443,
+      "parquet": "trusted__inep_censo_escolar_infraestrutura.parquet"
+    },
+    {
+      "table_id": "inep_censo_escolar_localizacao",
+      "layer": "trusted",
+      "rows": 7427183,
+      "parquet": "trusted__inep_censo_escolar_localizacao.parquet"
+    },
+    {
+      "table_id": "inep_censo_escolar_matriculas",
+      "layer": "trusted",
+      "rows": 4237230,
+      "parquet": "trusted__inep_censo_escolar_matriculas.parquet"
+    },
+    {
+      "table_id": "inep_censo_escolar_turmas",
+      "layer": "trusted",
+      "rows": 4237236,
+      "parquet": "trusted__inep_censo_escolar_turmas.parquet"
+    }
+  ],
+  "kaggle_metadata_sha256": "4c0f4d0f1b4400e5a1ce12ec09ec0c3337e0b9587e9e35676da3e7aeb5ff3a21",
+  "files": [
+    {
+      "path": "01_ingestion_censo-escolar.ipynb",
+      "bytes": 4600,
+      "sha256": "7fc837aa9c7a1c5c57bf6fa5e8ebd031e41487b98f334d0b1966748693c34b35"
+    },
+    {
+      "path": "02_transform_to_trusted_censo-escolar.ipynb",
+      "bytes": 4462,
+      "sha256": "b9ca3721f3fb8845ecfbece346c94c0bf037c6973f00e7709da348336e7cfd1b"
+    },
+    {
+      "path": "README.md",
+      "bytes": 766,
+      "sha256": "ba25207b1950c1d00d7bfff20d860d1255bc981bdea30a7f1f6c6fac7c93b5de"
+    },
+    {
+      "path": "audit.json",
+      "bytes": 100626,
+      "sha256": "b8ee644d8c28ca84111aa8f55cd3dcf4fcba8f5c380fbb1a22c6842f1eb3bed6"
+    },
+    {
+      "path": "raw__inep_censo_escolar_curso_tecnico.parquet",
+      "bytes": 223921,
+      "sha256": "ddc8504138570094bc4e1bee9817d4bdc06995bceefaaa470a6f3cceb1a92724"
+    },
+    {
+      "path": "raw__inep_censo_escolar_dados_desp.parquet",
+      "bytes": 532341,
+      "sha256": "9e0ec8902d9ae3919e4123db605ecb1d862cd0e750069b9c0b4851be9c044720"
+    },
+    {
+      "path": "raw__inep_censo_escolar_dadoscurso.parquet",
+      "bytes": 485518,
+      "sha256": "ae3b0136fbac1cb9a3327977b44c4e7660471e7d808a242ebe0577233f7c5c99"
+    },
+    {
+      "path": "raw__inep_censo_escolar_educprof.parquet",
+      "bytes": 3039000,
+      "sha256": "ab2096583b35205c5656c1a8f4226b4102f666373bc0bd7e0aee43f75ddc70fb"
+    },
+    {
+      "path": "raw__inep_censo_escolar_em11.parquet",
+      "bytes": 244029,
+      "sha256": "7a64740c7cab43193f132c00d136e9ae16896dbbf9ff6a0190f57a85bd9a87fd"
+    },
+    {
+      "path": "raw__inep_censo_escolar_em12.parquet",
+      "bytes": 589669,
+      "sha256": "8240180cb053dbc26b846cf788b634067cafeaa4bf409c0498c544172587385b"
+    },
+    {
+      "path": "raw__inep_censo_escolar_em22.parquet",
+      "bytes": 19127,
+      "sha256": "fb90b9f4570bd1acb42856ee99b463f06bec7b6732a95ee26b44e6d970848b8c"
+    },
+    {
+      "path": "raw__inep_censo_escolar_em8.parquet",
+      "bytes": 387683,
+      "sha256": "cf167b47b3e2e2fe975b5376d062d7f3b9db8998488929c9b7e80d4bdf084c81"
+    },
+    {
+      "path": "raw__inep_censo_escolar_es6.parquet",
+      "bytes": 14085,
+      "sha256": "2407c223549fa8aeb07a3d0550386ef06e914b24e1f854c26f326c7ae641ab2f"
+    },
+    {
+      "path": "raw__inep_censo_escolar_escola.parquet",
+      "bytes": 19690060,
+      "sha256": "72c119500f18c4904ba72cd7a92a7cd509662247aa97dc93aa81b900a66e072f"
+    },
+    {
+      "path": "raw__inep_censo_escolar_gestor_escolar.parquet",
+      "bytes": 1866713,
+      "sha256": "c3fc2246cae820495be426cbef653e5737fc66e3316cb1d5efefff26d39aed2a"
+    },
+    {
+      "path": "raw__inep_censo_escolar_indicesc.parquet",
+      "bytes": 59005522,
+      "sha256": "8036161eb323ecbc51bcc9558b1632800520326cb9989a3953e4e4ca189807f6"
+    },
+    {
+      "path": "raw__inep_censo_escolar_indicreg.parquet",
+      "bytes": 33877920,
+      "sha256": "f309a9647ee97a5ab29b6534b4562e8431f6609a6bb66b54350bd5b64dc5b646"
+    },
+    {
+      "path": "raw__inep_censo_escolar_matricula.parquet",
+      "bytes": 15428340,
+      "sha256": "02e0db86ec6eec5190cb43430344c8d378c7bcd0546072eaf30975e54b9d9859"
+    },
+    {
+      "path": "raw__inep_censo_escolar_medprof.parquet",
+      "bytes": 1560043,
+      "sha256": "1b7a43578acfa00b445f69411b5457fe96a0d867ba56a07c2871f9246cbee1e0"
+    },
+    {
+      "path": "raw__inep_censo_escolar_microdados_ed_basica.parquet",
+      "bytes": 417961967,
+      "sha256": "c92c61b9f94ad4b1f0d19b484ad7078c2ac2f3814290c8f484c7c01abff1c20a"
+    },
+    {
+      "path": "raw__inep_censo_escolar_suplemento_cursos_tecnicos.parquet",
+      "bytes": 778018,
+      "sha256": "242e77cb35050928dec8d56ddda8a83d0fca6111973ccd522e780de798b175e7"
+    },
+    {
+      "path": "raw__inep_censo_escolar_turma.parquet",
+      "bytes": 7993637,
+      "sha256": "90e6f5164484842491ca38f6478fb0ca863765278b50f3b72ef028c87d1b729e"
+    },
+    {
+      "path": "schemas.json",
+      "bytes": 558877,
+      "sha256": "7246b1ff695492ab2bbfa952e3f74407fdb2185c1ec283b9a89a949686009bc4"
+    },
+    {
+      "path": "trusted__inep_censo_escolar_colunas_fonte.parquet",
+      "bytes": 728013,
+      "sha256": "619e3734b05c8893fe438d42602bdd24b35aa562fab60820a0914eb0d4e2ef2d"
+    },
+    {
+      "path": "trusted__inep_censo_escolar_cursos_tecnicos.parquet",
+      "bytes": 1139475,
+      "sha256": "9ef501614c9436fb0ddf9c8a9f51aef439a730e5eaaefc6eadd51f6ce0aa0998"
+    },
+    {
+      "path": "trusted__inep_censo_escolar_dicionario_campos.parquet",
+      "bytes": 735067,
+      "sha256": "c7f9b7a7211e310629343124b9722fda236115ba4d5abeccfbd9ecfb62832cd7"
+    },
+    {
+      "path": "trusted__inep_censo_escolar_docentes.parquet",
+      "bytes": 40666916,
+      "sha256": "e11339e8893c07c23205624469fff18ca37762641216c17402a58448c6cc010b"
+    },
+    {
+      "path": "trusted__inep_censo_escolar_educacao_profissional.parquet",
+      "bytes": 80093618,
+      "sha256": "a93c5fdc4d7f648c02dd0c797fed39c5900bd712f14810c77b430ed14c03bf3c"
+    },
+    {
+      "path": "trusted__inep_censo_escolar_escolas.parquet",
+      "bytes": 258566770,
+      "sha256": "bf69b5dab4df8fa7b86539f10de64bf968e889cc96ec0b2e772116c1704d5bbb"
+    },
+    {
+      "path": "trusted__inep_censo_escolar_etapas_ensino.parquet",
+      "bytes": 251090763,
+      "sha256": "66635f35b9e29c7fab2c9cc81bf65f9bc40174fbf6686b0cafde03084b6a533c"
+    },
+    {
+      "path": "trusted__inep_censo_escolar_gestores.parquet",
+      "bytes": 20726960,
+      "sha256": "5708939e739b993638a5c16b5e9b3324961dab19840dce0f51c3ddb345782377"
+    },
+    {
+      "path": "trusted__inep_censo_escolar_infraestrutura.parquet",
+      "bytes": 57698699,
+      "sha256": "d103ac47ce98898c70a84f893453d3bae491246882facbd385f5a6f0a669a9f9"
+    },
+    {
+      "path": "trusted__inep_censo_escolar_localizacao.parquet",
+      "bytes": 122472880,
+      "sha256": "1b937ed1322251250bec37f16f0fbe391de4d3cdcbf95ad4fa8e2025b472ea4b"
+    },
+    {
+      "path": "trusted__inep_censo_escolar_matriculas.parquet",
+      "bytes": 128159724,
+      "sha256": "e80abb5700c583208fa36a49021535464274e0a03730c64d3bc37f6526f981b1"
+    },
+    {
+      "path": "trusted__inep_censo_escolar_turmas.parquet",
+      "bytes": 40735901,
+      "sha256": "55b77ef5ded2bb24e5b10bf7216d69e6d95bff95f8368f9444f0bdd74724c6c7"
+    }
+  ]
+}

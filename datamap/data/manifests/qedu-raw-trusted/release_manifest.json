@@ -1,0 +1,94 @@
+{
+  "schema_version": "3.0",
+  "dataset_slug": "qedu-raw-trusted",
+  "subject": "qedu",
+  "group": "raw-trusted",
+  "part": 1,
+  "parts": 1,
+  "snapshot_date": "2026-09-30",
+  "tables": [
+    {
+      "table_id": "wscrap_qedu_educacao_infantil_raw",
+      "layer": "raw",
+      "rows": 5570,
+      "parquet": "raw__wscrap_qedu_educacao_infantil_raw.parquet"
+    },
+    {
+      "table_id": "wscrap_qedu_educacao_infantil_atendimento",
+      "layer": "trusted",
+      "rows": 11016,
+      "parquet": "trusted__wscrap_qedu_educacao_infantil_atendimento.parquet"
+    },
+    {
+      "table_id": "wscrap_qedu_educacao_infantil_docentes",
+      "layer": "trusted",
+      "rows": 5570,
+      "parquet": "trusted__wscrap_qedu_educacao_infantil_docentes.parquet"
+    },
+    {
+      "table_id": "wscrap_qedu_educacao_infantil_infraestrutura",
+      "layer": "trusted",
+      "rows": 5570,
+      "parquet": "trusted__wscrap_qedu_educacao_infantil_infraestrutura.parquet"
+    },
+    {
+      "table_id": "wscrap_qedu_educacao_infantil_politicas",
+      "layer": "trusted",
+      "rows": 5570,
+      "parquet": "trusted__wscrap_qedu_educacao_infantil_politicas.parquet"
+    }
+  ],
+  "kaggle_metadata_sha256": "38d082a9e0993ea8042031bcd535aed98d97a261ee6dbd11eba47d39c8db0d4c",
+  "files": [
+    {
+      "path": "01_ingestion_qedu.ipynb",
+      "bytes": 3382,
+      "sha256": "255bfd85642c615f52706d0c24dc084a6c476121e2f4615a99b0d184e1616990"
+    },
+    {
+      "path": "02_transform_to_trusted_qedu.ipynb",
+      "bytes": 3855,
+      "sha256": "e00db356e87cead82a660fe163cb45bdc9b63dd0f897711f5f00b522c3f3decb"
+    },
+    {
+      "path": "README.md",
+      "bytes": 709,
+      "sha256": "365d20f16ed96fcf049343a9d8db302463d3217b0ed2e4e67a620643183ba0f3"
+    },
+    {
+      "path": "audit.json",
+      "bytes": 2952,
+      "sha256": "1fcb5e9a83ea5d79ee8b0f2382a8d34f738232cafb1ef1d8e48bf5dd48bc3a75"
+    },
+    {
+      "path": "raw__wscrap_qedu_educacao_infantil_raw.parquet",
+      "bytes": 741472,
+      "sha256": "b4822a73781e9c26627ee73f4cc8c775693cde07c6b4ca2ae558434b5ec7637d"
+    },
+    {
+      "path": "schemas.json",
+      "bytes": 10340,
+      "sha256": "f3db3e737c8aa79fcd96d068a3faa94ceab9c38c0f62c487c3d0f0ece4977467"
+    },
+    {
+      "path": "trusted__wscrap_qedu_educacao_infantil_atendimento.parquet",
+      "bytes": 181200,
+      "sha256": "a27c422bac17fa5d208f604e3b344f3b9e59cd760c23c68462a6f9804f849f67"
+    },
+    {
+      "path": "trusted__wscrap_qedu_educacao_infantil_docentes.parquet",
+      "bytes": 165258,
+      "sha256": "fb359f7e1e0b217551e4c2610b417656eda19e956fab997997dd56f7ff02b555"
+    },
+    {
+      "path": "trusted__wscrap_qedu_educacao_infantil_infraestrutura.parquet",
+      "bytes": 258792,
+      "sha256": "ef2fc9d7407a43ac1fa0f3a1a91a371d5c223fb800f93959a566b2ba29383d7f"
+    },
+    {
+      "path": "trusted__wscrap_qedu_educacao_infantil_politicas.parquet",
+      "bytes": 130716,
+      "sha256": "bbbb883894510dab543e99a46ab24c7590f51f138248d193914fdd6aa6fa2bed"
+    }
+  ]
+}

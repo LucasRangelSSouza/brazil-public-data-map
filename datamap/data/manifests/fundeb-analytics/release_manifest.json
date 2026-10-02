@@ -1,0 +1,78 @@
+{
+  "schema_version": "3.0",
+  "dataset_slug": "fundeb-analytics",
+  "subject": "fundeb",
+  "group": "analytics",
+  "part": 1,
+  "parts": 1,
+  "snapshot_date": "2026-09-30",
+  "tables": [
+    {
+      "table_id": "obt_fnde_fundeb_cronograma_vaat_municipio_ano",
+      "layer": "semantic",
+      "rows": 13030,
+      "parquet": "semantic__obt_fnde_fundeb_cronograma_vaat_municipio_ano.parquet"
+    },
+    {
+      "table_id": "obt_fnde_fundeb_distribuicao_municipio_mes",
+      "layer": "semantic",
+      "rows": 3382306,
+      "parquet": "semantic__obt_fnde_fundeb_distribuicao_municipio_mes.parquet"
+    },
+    {
+      "table_id": "obt_fnde_fundeb_indicadores_siope_municipio_ano",
+      "layer": "semantic",
+      "rows": 626256,
+      "parquet": "semantic__obt_fnde_fundeb_indicadores_siope_municipio_ano.parquet"
+    },
+    {
+      "table_id": "obt_fnde_fundeb_municipio_ano",
+      "layer": "semantic",
+      "rows": 83916,
+      "parquet": "semantic__obt_fnde_fundeb_municipio_ano.parquet"
+    }
+  ],
+  "kaggle_metadata_sha256": "69def264ff39dbf5f4f18488d274fa31809d0d8bd08f4830bc2acd97e5d36af0",
+  "files": [
+    {
+      "path": "03_semantic_fundeb.ipynb",
+      "bytes": 3514,
+      "sha256": "8a11e5284d200441d3ae9fca3c602a374f8d5efda735a6e56dc3fcbd6fb1db2e"
+    },
+    {
+      "path": "README.md",
+      "bytes": 663,
+      "sha256": "7940c05b452c2d7f6303cf2d500aac25c62b250e569b23bd2e6d86601f3ac9c4"
+    },
+    {
+      "path": "audit.json",
+      "bytes": 2559,
+      "sha256": "f7845c5a554ffade766760c202935a3e72fdc9c56b7022599d792b7458f56f65"
+    },
+    {
+      "path": "schemas.json",
+      "bytes": 11443,
+      "sha256": "c64aa63c37fe7e5dd149bdd0cd314e5de7f745bce80fdcfd32b8dd12aced7a32"
+    },
+    {
+      "path": "semantic__obt_fnde_fundeb_cronograma_vaat_municipio_ano.parquet",
+      "bytes": 1783584,
+      "sha256": "c5635a7fa0df1e073b8e2cd1810ef19e2d24b8d2b2335cfc832b9b65a550ce9a"
+    },
+    {
+      "path": "semantic__obt_fnde_fundeb_distribuicao_municipio_mes.parquet",
+      "bytes": 43671444,
+      "sha256": "f641fc90c6d1ec3c2464953d8a8590f5558b0198c03c58a12a76f9c558caac8c"
+    },
+    {
+      "path": "semantic__obt_fnde_fundeb_indicadores_siope_municipio_ano.parquet",
+      "bytes": 5217955,
+      "sha256": "28a011089bdd47af475b0a77325e87a51fc679153130dc7b506d1573490278ba"
+    },
+    {
+      "path": "semantic__obt_fnde_fundeb_municipio_ano.parquet",
+      "bytes": 7190732,
+      "sha256": "cf9d186356c6dbe7cc903cc6be86e5b48b46350f30754d44e492e10ba899d429"
+    }
+  ]
+}

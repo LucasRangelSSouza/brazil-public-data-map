@@ -1,0 +1,144 @@
+{
+  "schema_version": "3.0",
+  "dataset_slug": "censo-escolar-analytics",
+  "subject": "censo-escolar",
+  "group": "analytics",
+  "part": 1,
+  "parts": 1,
+  "snapshot_date": "2026-10-01",
+  "tables": [
+    {
+      "table_id": "f_censo_escolar",
+      "layer": "semantic",
+      "rows": 178050,
+      "parquet": "semantic__f_censo_escolar.parquet"
+    },
+    {
+      "table_id": "f_censo_escolar_municipio",
+      "layer": "semantic",
+      "rows": 5596,
+      "parquet": "semantic__f_censo_escolar_municipio.parquet"
+    },
+    {
+      "table_id": "obt_inep_censo_docente_escola_ano",
+      "layer": "semantic",
+      "rows": 7341023,
+      "parquet": "semantic__obt_inep_censo_docente_escola_ano.parquet"
+    },
+    {
+      "table_id": "obt_inep_censo_escola_ano",
+      "layer": "semantic",
+      "rows": 7376443,
+      "parquet": "semantic__obt_inep_censo_escola_ano.parquet"
+    },
+    {
+      "table_id": "obt_inep_censo_infraestrutura_escola",
+      "layer": "semantic",
+      "rows": 944184704,
+      "parquet": "semantic__obt_inep_censo_infraestrutura_escola.parquet"
+    },
+    {
+      "table_id": "obt_inep_censo_matricula_escola_ano",
+      "layer": "semantic",
+      "rows": 7341017,
+      "parquet": "semantic__obt_inep_censo_matricula_escola_ano.parquet"
+    },
+    {
+      "table_id": "obt_inep_censo_municipio_ano",
+      "layer": "semantic",
+      "rows": 170578,
+      "parquet": "semantic__obt_inep_censo_municipio_ano.parquet"
+    },
+    {
+      "table_id": "obt_inep_censo_municipio_rede_ano",
+      "layer": "semantic",
+      "rows": 352866,
+      "parquet": "semantic__obt_inep_censo_municipio_rede_ano.parquet"
+    },
+    {
+      "table_id": "obt_inep_censo_perguntas",
+      "layer": "semantic",
+      "rows": 8723,
+      "parquet": "semantic__obt_inep_censo_perguntas.parquet"
+    },
+    {
+      "table_id": "obt_inep_censo_turma_escola_ano",
+      "layer": "semantic",
+      "rows": 7341023,
+      "parquet": "semantic__obt_inep_censo_turma_escola_ano.parquet"
+    }
+  ],
+  "kaggle_metadata_sha256": "52234e36f279fbbe90d9fd3154cbfb6a253f10c5ba6d7fb10876fe21cabcb174",
+  "files": [
+    {
+      "path": "03_semantic_censo-escolar.ipynb",
+      "bytes": 3955,
+      "sha256": "f9e8cabcbba87df99e8e441ab6b33a7efa938e863ec6d36d0f3b12e2e93af563"
+    },
+    {
+      "path": "README.md",
+      "bytes": 719,
+      "sha256": "91ec734ffa47fb6362b566e9fa9264dd0e2bb75ef64c674fe15d9795a928bf96"
+    },
+    {
+      "path": "audit.json",
+      "bytes": 28458,
+      "sha256": "80d32e898a8596c32affe3a0c18913c31186bd6f5a6f80889e6da5c17592daaa"
+    },
+    {
+      "path": "schemas.json",
+      "bytes": 123871,
+      "sha256": "ba6568b192884317f9a41d56f7c7a60890efe0d745a77f63252bf7e589663490"
+    },
+    {
+      "path": "semantic__f_censo_escolar.parquet",
+      "bytes": 7579958,
+      "sha256": "30823ae42e9bf9a7465b1f8e0e7bbce0279ddb226c5fca79f59888b318af6640"
+    },
+    {
+      "path": "semantic__f_censo_escolar_municipio.parquet",
+      "bytes": 321689,
+      "sha256": "8b939b290f6c39ab5df6029925a3a1bc6f020d93ec60f8bfb93a68a46a03c653"
+    },
+    {
+      "path": "semantic__obt_inep_censo_docente_escola_ano.parquet",
+      "bytes": 49772335,
+      "sha256": "255a72bfb9aec8023ab01c7a2ae699758806350ac18bba335d48aa96af3d4c82"
+    },
+    {
+      "path": "semantic__obt_inep_censo_escola_ano.parquet",
+      "bytes": 157190297,
+      "sha256": "1382c38a7174ae2f5eae098026b53ec5d1a85da450bfb5306c84fa58816be99c"
+    },
+    {
+      "path": "semantic__obt_inep_censo_infraestrutura_escola.parquet",
+      "bytes": 1173354055,
+      "sha256": "c4acff6fe61593ca2d8ea80ca468b158e7aa592aa1123766f2f17623ed34ef0d"
+    },
+    {
+      "path": "semantic__obt_inep_censo_matricula_escola_ano.parquet",
+      "bytes": 138528972,
+      "sha256": "9de57fad613be70c4ffb2fda93506fe3786f2bbbec18bf23fa835806f7a3b454"
+    },
+    {
+      "path": "semantic__obt_inep_censo_municipio_ano.parquet",
+      "bytes": 5979679,
+      "sha256": "6c44cbd102fd5e6459f43f877c37e1b1320413deee176d01fae25d99169220db"
+    },
+    {
+      "path": "semantic__obt_inep_censo_municipio_rede_ano.parquet",
+      "bytes": 9123022,
+      "sha256": "c9a6ffcb7c83ad83ea217f59989a06e52faea86062faf48c13855efed3cb3683"
+    },
+    {
+      "path": "semantic__obt_inep_censo_perguntas.parquet",
+      "bytes": 71353,
+      "sha256": "a5c728e5eab742934fe6a49659589aa33cf76b217665f2211d55a57b2b5f7b2f"
+    },
+    {
+      "path": "semantic__obt_inep_censo_turma_escola_ano.parquet",
+      "bytes": 57791174,
+      "sha256": "aaa1b9ef2f342fded6d268950d7ea391c86eaab76de287cabbba854171e97d8c"
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "site_url": "https://rangeltech.net/datamap/",
+  "subjects": {
+    "pncp": {
+      "title": "PNCP public procurement",
+      "publisher": "Portal Nacional de Contratações Públicas (PNCP)",
+      "official_url": "https://pncp.gov.br/api/consulta/v1",
+      "summary": "Procurement notices (including editais), contracts, price-registration records (atas) and annual procurement plans (PCA) with their items, published through the PNCP consultation API.",
+      "grain": "One row per natural key, keeping the latest version by `dataAtualizacaoGlobal`: `numero_controle_pncp` for notices and contracts, `numero_controle_pncp_ata` for atas, `id_pca_pncp` for plans. Municipality is reachable through `unidade_codigo_ibge` (IBGE code).",
+      "how_to_fetch": "Public REST API, no key. Four domains are read through the `/atualizacao` axis so a window returns everything that entered or changed: `contratacoes/atualizacao`, `contratos/atualizacao`, `atas/atualizacao`, `pca/atualizacao`. Notices require the modality code (loop 1..19) and a page size of at most 50; the plan endpoint uses `dataInicio`/`dataFim`.",
+      "notebook": "pncp"
+    },
+    "siope": {
+      "title": "SIOPE education finance",
+      "publisher": "Fundo Nacional de Desenvolvimento da Educação (FNDE)",
+      "official_url": "https://www.fnde.gov.br/siope/",
+      "summary": "Education revenue, expenditure and indicators reported by municipalities and states, from the SIOPE open-data API (Olinda), the FNDE SIOPE exports, and the budget execution report (RREO) PDFs parsed into tables.",
+      "grain": "Municipality (or state) by year and reporting period. Indicator rows repeat by `num_periodo`, so analyses keep the latest period per municipality and year. Municipality joins to IBGE through `codigo_municipio`.",
+      "how_to_fetch": "The open-data API is an OData service at https://www.fnde.gov.br/olinda-ide/servico/DADOS_ABERTOS_SIOPE/versao/v1/odata. The RREO reports are PDFs published by FNDE and parsed into tables.",
+      "notebook": "siope"
+    },
+    "fundeb": {
+      "title": "FUNDEB",
+      "publisher": "Fundo Nacional de Desenvolvimento da Educação (FNDE)",
+      "official_url": "https://www.fnde.gov.br/",
+      "summary": "The FUNDEB panel: complementation by VAAF, VAAT and VAAR, distribution, qualification and indicators per entity and year.",
+      "grain": "One row per federal entity (state or municipality) and year for the panel tables.",
+      "how_to_fetch": "Published by FNDE as the FUNDEB panel; the raw tables are the panel exports as delivered.",
+      "notebook": "fundeb"
+    },
+    "fnde-salario-educacao": {
+      "title": "FNDE education contribution",
+      "publisher": "Fundo Nacional de Desenvolvimento da Educação (FNDE)",
+      "official_url": "https://www.fnde.gov.br/",
+      "summary": "Collection and distribution of the education contribution (salário-educação) published by FNDE.",
+      "grain": "See each table.",
+      "how_to_fetch": "Published by FNDE; the raw tables are the exports as delivered.",
+      "notebook": "fnde-salario-educacao"
+    },
+    "censo-escolar": {
+      "title": "School Census (INEP)",
+      "publisher": "Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (INEP)",
+      "official_url": "https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/censo-escolar",
+      "summary": "Yearly School Census microdata at school level: schools, classes, teachers, enrolments and infrastructure, with the historical series recovered from 1995. Student-level and teacher-level microdata are not released.",
+      "grain": "School by year for the school tables; the semantic tables aggregate to school-year and municipality-year. The 2025 edition changed the enrolment file from student level to school-level aggregates.",
+      "how_to_fetch": "INEP publishes one ZIP of microdata per year on the open-data page. Download the year, read the CSV inside and apply the data dictionary shipped in the same ZIP.",
+      "notebook": "censo-escolar"
+    },
+    "saeb": {
+      "title": "SAEB assessment (INEP)",
+      "publisher": "Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (INEP)",
+      "official_url": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/saeb",
+      "summary": "SAEB results: aggregated proficiency indicators, the school report-card API (boletim) for 2011 onward, and the assessment microdata tables released without student-level records.",
+      "grain": "Indicators: school, municipality, state or Brazil by edition. Boletim: school by edition. The publication format changes between editions, so each edition is validated against the live source.",
+      "how_to_fetch": "Indicators up to 2023 are `.rar` files named `planilha_de_resultados_{year}.rar` on download.inep.gov.br/saeb/resultados/; from 2025 a single `.xlsx`. The link for each edition is on that year's sub-page of the SAEB results page.",
+      "notebook": "saeb"
+    },
+    "ideb": {
+      "title": "IDEB (INEP)",
+      "publisher": "Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (INEP)",
+      "official_url": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/ideb",
+      "summary": "Observed IDEB against targets by school, municipality, state, region and Brazil, every two years. IDEB is the SAEB proficiency score times the flow indicator.",
+      "grain": "School, municipality, state, region or Brazil by edition.",
+      "how_to_fetch": "Spreadsheets published by INEP on the IDEB page, one set per edition.",
+      "notebook": "ideb"
+    },
+    "ica": {
+      "title": "Literate Child Indicator (INEP)",
+      "publisher": "Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (INEP)",
+      "official_url": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais",
+      "summary": "Share of children literate at the right age, with the targets agreed up to 2030, by municipality (municipal network) and by state and Brazil (public network).",
+      "grain": "Municipality by edition (wide format in trusted, long series in semantic); one row per state plus a Brazil row.",
+      "how_to_fetch": "Spreadsheets published by INEP with the results of the literacy assessment.",
+      "notebook": "ica"
+    },
+    "taxas-rendimento": {
+      "title": "School flow and distortion rates (INEP)",
+      "publisher": "Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (INEP)",
+      "official_url": "https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/indicadores-educacionais",
+      "summary": "Approval, failure and dropout rates and the age-grade distortion rate by school, municipality, state, region and Brazil, per year.",
+      "grain": "School, municipality, state, region or Brazil by year.",
+      "how_to_fetch": "Spreadsheets published by INEP in the educational indicators area.",
+      "notebook": "taxas-rendimento"
+    },
+    "ibge": {
+      "title": "IBGE geography",
+      "publisher": "Instituto Brasileiro de Geografia e Estatística (IBGE)",
+      "official_url": "https://servicodados.ibge.gov.br/api/docs/localidades",
+      "summary": "States and municipalities with their IBGE codes: the key that joins almost every education table.",
+      "grain": "One row per municipality or state.",
+      "how_to_fetch": "Public REST API of IBGE localities, no key.",
+      "notebook": "ibge"
+    },
+    "qedu": {
+      "title": "QEdu early childhood",
+      "publisher": "QEdu",
+      "official_url": "https://qedu.org.br/",
+      "summary": "Early childhood education attendance, teachers, infrastructure and policies per municipality, collected from the QEdu site.",
+      "grain": "Municipality. Two endpoints (basic infrastructure and teachers) return no data at the source for early childhood, which is not a parsing error.",
+      "how_to_fetch": "Collected from the QEdu site; field names in the JSON do not match the domain names, so the raw table keeps the JSON as delivered.",
+      "notebook": "qedu"
+    }
+  }
+}

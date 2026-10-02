@@ -1,0 +1,193 @@
+{
+  "schema_version": "3.0",
+  "dataset_slug": "fundeb-raw-trusted",
+  "subject": "fundeb",
+  "group": "raw-trusted",
+  "part": 1,
+  "parts": 1,
+  "snapshot_date": "2026-09-30",
+  "tables": [
+    {
+      "table_id": "fnde_fundeb_painel_complementacao",
+      "layer": "raw",
+      "rows": 106300,
+      "parquet": "raw__fnde_fundeb_painel_complementacao.parquet"
+    },
+    {
+      "table_id": "fnde_fundeb_painel_cronograma_vaat",
+      "layer": "raw",
+      "rows": 23246,
+      "parquet": "raw__fnde_fundeb_painel_cronograma_vaat.parquet"
+    },
+    {
+      "table_id": "fnde_fundeb_painel_dim_entes",
+      "layer": "raw",
+      "rows": 27980,
+      "parquet": "raw__fnde_fundeb_painel_dim_entes.parquet"
+    },
+    {
+      "table_id": "fnde_fundeb_painel_distribuicao",
+      "layer": "raw",
+      "rows": 4362779,
+      "parquet": "raw__fnde_fundeb_painel_distribuicao.parquet"
+    },
+    {
+      "table_id": "fnde_fundeb_painel_hab_vaar",
+      "layer": "raw",
+      "rows": 268712,
+      "parquet": "raw__fnde_fundeb_painel_hab_vaar.parquet"
+    },
+    {
+      "table_id": "fnde_fundeb_painel_hab_vaat",
+      "layer": "raw",
+      "rows": 55955,
+      "parquet": "raw__fnde_fundeb_painel_hab_vaat.parquet"
+    },
+    {
+      "table_id": "fnde_fundeb_painel_indicadores",
+      "layer": "raw",
+      "rows": 983302,
+      "parquet": "raw__fnde_fundeb_painel_indicadores.parquet"
+    },
+    {
+      "table_id": "fundeb_painel_complementacao",
+      "layer": "trusted",
+      "rows": 83916,
+      "parquet": "trusted__fundeb_painel_complementacao.parquet"
+    },
+    {
+      "table_id": "fundeb_painel_cronograma_vaat",
+      "layer": "trusted",
+      "rows": 13030,
+      "parquet": "trusted__fundeb_painel_cronograma_vaat.parquet"
+    },
+    {
+      "table_id": "fundeb_painel_dim_entes",
+      "layer": "trusted",
+      "rows": 5570,
+      "parquet": "trusted__fundeb_painel_dim_entes.parquet"
+    },
+    {
+      "table_id": "fundeb_painel_distribuicao",
+      "layer": "trusted",
+      "rows": 3382306,
+      "parquet": "trusted__fundeb_painel_distribuicao.parquet"
+    },
+    {
+      "table_id": "fundeb_painel_habilitacao_vaar",
+      "layer": "trusted",
+      "rows": 134352,
+      "parquet": "trusted__fundeb_painel_habilitacao_vaar.parquet"
+    },
+    {
+      "table_id": "fundeb_painel_habilitacao_vaat",
+      "layer": "trusted",
+      "rows": 33571,
+      "parquet": "trusted__fundeb_painel_habilitacao_vaat.parquet"
+    },
+    {
+      "table_id": "fundeb_painel_indicadores_siope",
+      "layer": "trusted",
+      "rows": 626256,
+      "parquet": "trusted__fundeb_painel_indicadores_siope.parquet"
+    }
+  ],
+  "kaggle_metadata_sha256": "f4950718105283ba043ad4f2e87eb5f6000440e13de4a0720513eb861b82c806",
+  "files": [
+    {
+      "path": "01_ingestion_fundeb.ipynb",
+      "bytes": 3798,
+      "sha256": "284f7fd67c5d7f73c066c5ba72c93b104ea43ecb06e9ecabeff373008ca60ac1"
+    },
+    {
+      "path": "02_transform_to_trusted_fundeb.ipynb",
+      "bytes": 4017,
+      "sha256": "4cc328c80b9f1fc96dfaf4e9c08178dd66d58291ec544ac1c74c56496f7e2be1"
+    },
+    {
+      "path": "README.md",
+      "bytes": 704,
+      "sha256": "9879f02827771129c0e1af60100519f3a166a36760928b6bf3a9aaa5a7b7d503"
+    },
+    {
+      "path": "audit.json",
+      "bytes": 7182,
+      "sha256": "63c0212167babae394f0d97e31dbeb9fa077b30f2d9a6ec26bfcd631c0cdcf14"
+    },
+    {
+      "path": "raw__fnde_fundeb_painel_complementacao.parquet",
+      "bytes": 7453829,
+      "sha256": "0339b6281d0970dd6496852458bff31b7f185ae04de41a7ec4b179fae541c112"
+    },
+    {
+      "path": "raw__fnde_fundeb_painel_cronograma_vaat.parquet",
+      "bytes": 1697309,
+      "sha256": "46c0adeb4856b789709a8dca33e375843b16ba6618a2a331dbd1fb1a6f299456"
+    },
+    {
+      "path": "raw__fnde_fundeb_painel_dim_entes.parquet",
+      "bytes": 229061,
+      "sha256": "ca868eba6e06b6ea11eb16f046ca22e69e0a570682365e03b88c833f1b8fc3fd"
+    },
+    {
+      "path": "raw__fnde_fundeb_painel_distribuicao.parquet",
+      "bytes": 39345721,
+      "sha256": "a7b5db6032b5ff863b24acda4aadbdb533541093e84b896723bf519a7ed029dc"
+    },
+    {
+      "path": "raw__fnde_fundeb_painel_hab_vaar.parquet",
+      "bytes": 1095078,
+      "sha256": "23c90b3f960eb98a6b13393fe17f64321c3fb4cc95d2f3a0a0f3d0922745e5ea"
+    },
+    {
+      "path": "raw__fnde_fundeb_painel_hab_vaat.parquet",
+      "bytes": 757340,
+      "sha256": "389b0e8c3286becb2b2437cc88b5e2a72c5a679188098be30334559bb64ac0f0"
+    },
+    {
+      "path": "raw__fnde_fundeb_painel_indicadores.parquet",
+      "bytes": 5712348,
+      "sha256": "cf168f3a494e0d08f0ed982bdad0234117dc7506dae7971491f4898af051dea7"
+    },
+    {
+      "path": "schemas.json",
+      "bytes": 28984,
+      "sha256": "c32a0c36bcd26cc5d357b53c672bea0f8b0417b26f693df757d3adf184f04f93"
+    },
+    {
+      "path": "trusted__fundeb_painel_complementacao.parquet",
+      "bytes": 5870263,
+      "sha256": "f2c843462d3165e1bbc0b85c2c34b40570769c7e12cc0b09adb136cd30c923aa"
+    },
+    {
+      "path": "trusted__fundeb_painel_cronograma_vaat.parquet",
+      "bytes": 1690279,
+      "sha256": "3cf4bfdd8fa61214a410cdf00442d2758887ea54821bb8993f49c37b60c78817"
+    },
+    {
+      "path": "trusted__fundeb_painel_dim_entes.parquet",
+      "bytes": 139705,
+      "sha256": "9c94ab47d0245d9bccea0fc9ab92033669b771e186cca0de2d85e402f7c9096d"
+    },
+    {
+      "path": "trusted__fundeb_painel_distribuicao.parquet",
+      "bytes": 41511390,
+      "sha256": "dbbbe6c7394314bbce22d2757234b7faa90ef8644268d20e0b6a76ef8a18ed38"
+    },
+    {
+      "path": "trusted__fundeb_painel_habilitacao_vaar.parquet",
+      "bytes": 780123,
+      "sha256": "7d37edaa35a8da903b12a23644a301004b6419d09069d6068d2aee9a2cf11014"
+    },
+    {
+      "path": "trusted__fundeb_painel_habilitacao_vaat.parquet",
+      "bytes": 492507,
+      "sha256": "f3bd6955b7a45cbf1083193c5416044a960d35dc2034aee642f8c73c31cd9791"
+    },
+    {
+      "path": "trusted__fundeb_painel_indicadores_siope.parquet",
+      "bytes": 5647915,
+      "sha256": "233862c2dba183127b2d1d651d17d0ea34b6898d4eeebab8e4b350f56b53c05c"
+    }
+  ]
+}

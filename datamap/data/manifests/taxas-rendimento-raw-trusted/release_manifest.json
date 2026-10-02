@@ -1,0 +1,160 @@
+{
+  "schema_version": "3.0",
+  "dataset_slug": "taxas-rendimento-raw-trusted",
+  "subject": "taxas-rendimento",
+  "group": "raw-trusted",
+  "part": 1,
+  "parts": 1,
+  "snapshot_date": "2026-10-01",
+  "tables": [
+    {
+      "table_id": "inep_taxa_distorcao_brasil_regioes_ufs",
+      "layer": "raw",
+      "rows": 7404,
+      "parquet": "raw__inep_taxa_distorcao_brasil_regioes_ufs.parquet"
+    },
+    {
+      "table_id": "inep_taxa_distorcao_escolas",
+      "layer": "raw",
+      "rows": 2148217,
+      "parquet": "raw__inep_taxa_distorcao_escolas.parquet"
+    },
+    {
+      "table_id": "inep_taxa_distorcao_municipios",
+      "layer": "raw",
+      "rows": 982518,
+      "parquet": "raw__inep_taxa_distorcao_municipios.parquet"
+    },
+    {
+      "table_id": "inep_taxas_rendimento_escolar",
+      "layer": "raw",
+      "rows": 3974168,
+      "parquet": "raw__inep_taxas_rendimento_escolar.parquet"
+    },
+    {
+      "table_id": "inep_taxas_rendimento_escolar_arquivos",
+      "layer": "raw",
+      "rows": 54,
+      "parquet": "raw__inep_taxas_rendimento_escolar_arquivos.parquet"
+    },
+    {
+      "table_id": "inep_taxa_distorcao_brasil_regioes_ufs",
+      "layer": "trusted",
+      "rows": 7356,
+      "parquet": "trusted__inep_taxa_distorcao_brasil_regioes_ufs.parquet"
+    },
+    {
+      "table_id": "inep_taxa_distorcao_escolas",
+      "layer": "trusted",
+      "rows": 2148183,
+      "parquet": "trusted__inep_taxa_distorcao_escolas.parquet"
+    },
+    {
+      "table_id": "inep_taxa_distorcao_municipios",
+      "layer": "trusted",
+      "rows": 982486,
+      "parquet": "trusted__inep_taxa_distorcao_municipios.parquet"
+    },
+    {
+      "table_id": "inep_taxas_rendimento_escolar",
+      "layer": "trusted",
+      "rows": 3974168,
+      "parquet": "trusted__inep_taxas_rendimento_escolar.parquet"
+    },
+    {
+      "table_id": "inep_taxas_rendimento_escolar_long",
+      "layer": "trusted",
+      "rows": 204107094,
+      "parquet": "trusted__inep_taxas_rendimento_escolar_long.parquet"
+    },
+    {
+      "table_id": "inep_taxas_rendimento_escolar_qualidade",
+      "layer": "trusted",
+      "rows": 8,
+      "parquet": "trusted__inep_taxas_rendimento_escolar_qualidade.parquet"
+    }
+  ],
+  "kaggle_metadata_sha256": "3ba1375ad2855c4a52ccfa8378af17a8c705e69241f13d0021322d5fa2576431",
+  "files": [
+    {
+      "path": "01_ingestion_taxas-rendimento.ipynb",
+      "bytes": 3748,
+      "sha256": "005e37ff5b347c62533823a5e043ece67f69d704b25d7d1e0b0b290d2c48ed50"
+    },
+    {
+      "path": "02_transform_to_trusted_taxas-rendimento.ipynb",
+      "bytes": 4424,
+      "sha256": "43af74b18cfcf142e995f67ec29bc0c54f27a12c51a2dd23f9c8db13c4e6b6fc"
+    },
+    {
+      "path": "README.md",
+      "bytes": 768,
+      "sha256": "6e7e18295037e9f481b5e9cdd6151d405967ba139437fe33d50c210a26f61e0e"
+    },
+    {
+      "path": "audit.json",
+      "bytes": 11314,
+      "sha256": "e7353e87386a47a80ea899ab4aef0491eb60925e14f1ed7715c792fda319580e"
+    },
+    {
+      "path": "raw__inep_taxa_distorcao_brasil_regioes_ufs.parquet",
+      "bytes": 353282,
+      "sha256": "1826cd8c3620da1dec1066118111dfaee459093049525280bb7859dccd22c80e"
+    },
+    {
+      "path": "raw__inep_taxa_distorcao_escolas.parquet",
+      "bytes": 101903339,
+      "sha256": "7b019493d4cbd9829bb880419d2ac6328fa5122a564ad777bbd2890534e9e8a4"
+    },
+    {
+      "path": "raw__inep_taxa_distorcao_municipios.parquet",
+      "bytes": 36104383,
+      "sha256": "473ba31240e1d1399b822bb61f655898abb33857c267e8c8d7862abdb9858c2a"
+    },
+    {
+      "path": "raw__inep_taxas_rendimento_escolar.parquet",
+      "bytes": 429139458,
+      "sha256": "8ae258597cfa190c96283f5dce5ccf4112521dce5a5265bff0d94481d1727b63"
+    },
+    {
+      "path": "raw__inep_taxas_rendimento_escolar_arquivos.parquet",
+      "bytes": 10376,
+      "sha256": "fef03b3f3606613412304fcf2f125c13b85e1dc127d2da01f4e3986e5995d0a2"
+    },
+    {
+      "path": "schemas.json",
+      "bytes": 55113,
+      "sha256": "c96c03d7804a9c739f9d8638d0de606b306837781e2d1eb578252881348f9bad"
+    },
+    {
+      "path": "trusted__inep_taxa_distorcao_brasil_regioes_ufs.parquet",
+      "bytes": 405677,
+      "sha256": "17ac82409b945493c028ba9d4ba61ca97b7663f81114846ba9357183dbbbc90e"
+    },
+    {
+      "path": "trusted__inep_taxa_distorcao_escolas.parquet",
+      "bytes": 89750179,
+      "sha256": "a2fb256282a6324713a0243cd4987bcbaa342164b7c6f1b27da32514bef86491"
+    },
+    {
+      "path": "trusted__inep_taxa_distorcao_municipios.parquet",
+      "bytes": 29249900,
+      "sha256": "84332f092a6bef7a8112e3d328abee5e15772c976c037954ba60f3dee8dfdf68"
+    },
+    {
+      "path": "trusted__inep_taxas_rendimento_escolar.parquet",
+      "bytes": 458239647,
+      "sha256": "4915d20e01dd384d62e26498576a1d4ae89aaf7e73f4f0257c61b6847ff884bf"
+    },
+    {
+      "path": "trusted__inep_taxas_rendimento_escolar_long.parquet",
+      "bytes": 5247931271,
+      "sha256": "de00ae04df797260cc957b4463b647d440bad19d996f50122e9b87070c83c6a5"
+    },
+    {
+      "path": "trusted__inep_taxas_rendimento_escolar_qualidade.parquet",
+      "bytes": 9133,
+      "sha256": "afdea9d4cbd9b9dccb3fc152b543a480dc9fef4e0a2183723f1039681d7267e4"
+    }
+  ]
+}

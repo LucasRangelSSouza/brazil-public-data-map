@@ -1,0 +1,479 @@
+{
+  "schema_version": "3.0",
+  "dataset_slug": "fnde-salario-educacao-raw-trusted-part-1",
+  "subject": "fnde-salario-educacao",
+  "group": "raw-trusted",
+  "part": 1,
+  "parts": 2,
+  "snapshot_date": "2026-09-30",
+  "tables": [
+    {
+      "table_id": "fnde_salario_educacao_previsto_2010",
+      "layer": "raw",
+      "rows": 5589,
+      "parquet": "raw__fnde_salario_educacao_previsto_2010.parquet"
+    },
+    {
+      "table_id": "fnde_salario_educacao_previsto_2011",
+      "layer": "raw",
+      "rows": 5589,
+      "parquet": "raw__fnde_salario_educacao_previsto_2011.parquet"
+    },
+    {
+      "table_id": "fnde_salario_educacao_previsto_2012",
+      "layer": "raw",
+      "rows": 5590,
+      "parquet": "raw__fnde_salario_educacao_previsto_2012.parquet"
+    },
+    {
+      "table_id": "fnde_salario_educacao_previsto_2013",
+      "layer": "raw",
+      "rows": 5590,
+      "parquet": "raw__fnde_salario_educacao_previsto_2013.parquet"
+    },
+    {
+      "table_id": "fnde_salario_educacao_previsto_2014",
+      "layer": "raw",
+      "rows": 5595,
+      "parquet": "raw__fnde_salario_educacao_previsto_2014.parquet"
+    },
+    {
+      "table_id": "fnde_salario_educacao_previsto_2015",
+      "layer": "raw",
+      "rows": 5595,
+      "parquet": "raw__fnde_salario_educacao_previsto_2015.parquet"
+    },
+    {
+      "table_id": "fnde_salario_educacao_previsto_2016",
+      "layer": "raw",
+      "rows": 5595,
+      "parquet": "raw__fnde_salario_educacao_previsto_2016.parquet"
+    },
+    {
+      "table_id": "fnde_salario_educacao_previsto_2017",
+      "layer": "raw",
+      "rows": 5595,
+      "parquet": "raw__fnde_salario_educacao_previsto_2017.parquet"
+    },
+    {
+      "table_id": "fnde_salario_educacao_previsto_2018",
+      "layer": "raw",
+      "rows": 5595,
+      "parquet": "raw__fnde_salario_educacao_previsto_2018.parquet"
+    },
+    {
+      "table_id": "fnde_salario_educacao_previsto_2019",
+      "layer": "raw",
+      "rows": 5595,
+      "parquet": "raw__fnde_salario_educacao_previsto_2019.parquet"
+    },
+    {
+      "table_id": "fnde_salario_educacao_previsto_2020",
+      "layer": "raw",
+      "rows": 5595,
+      "parquet": "raw__fnde_salario_educacao_previsto_2020.parquet"
+    },
+    {
+      "table_id": "fnde_salario_educacao_previsto_2021",
+      "layer": "raw",
+      "rows": 5595,
+      "parquet": "raw__fnde_salario_educacao_previsto_2021.parquet"
+    },
+    {
+      "table_id": "fnde_salario_educacao_previsto_2022",
+      "layer": "raw",
+      "rows": 5595,
+      "parquet": "raw__fnde_salario_educacao_previsto_2022.parquet"
+    },
+    {
+      "table_id": "fnde_salario_educacao_previsto_2023",
+      "layer": "raw",
+      "rows": 5595,
+      "parquet": "raw__fnde_salario_educacao_previsto_2023.parquet"
+    },
+    {
+      "table_id": "fnde_salario_educacao_previsto_2024",
+      "layer": "raw",
+      "rows": 5595,
+      "parquet": "raw__fnde_salario_educacao_previsto_2024.parquet"
+    },
+    {
+      "table_id": "fnde_salario_educacao_previsto_2025",
+      "layer": "raw",
+      "rows": 5595,
+      "parquet": "raw__fnde_salario_educacao_previsto_2025.parquet"
+    },
+    {
+      "table_id": "fnde_salario_educacao_previsto_2026",
+      "layer": "raw",
+      "rows": 5596,
+      "parquet": "raw__fnde_salario_educacao_previsto_2026.parquet"
+    },
+    {
+      "table_id": "fnde_salario_educacao_realizado_2000",
+      "layer": "raw",
+      "rows": 24,
+      "parquet": "raw__fnde_salario_educacao_realizado_2000.parquet"
+    },
+    {
+      "table_id": "fnde_salario_educacao_realizado_2001",
+      "layer": "raw",
+      "rows": 23,
+      "parquet": "raw__fnde_salario_educacao_realizado_2001.parquet"
+    },
+    {
+      "table_id": "fnde_salario_educacao_realizado_2002",
+      "layer": "raw",
+      "rows": 24,
+      "parquet": "raw__fnde_salario_educacao_realizado_2002.parquet"
+    },
+    {
+      "table_id": "fnde_salario_educacao_realizado_2003",
+      "layer": "raw",
+      "rows": 24,
+      "parquet": "raw__fnde_salario_educacao_realizado_2003.parquet"
+    },
+    {
+      "table_id": "fnde_salario_educacao_realizado_2004",
+      "layer": "raw",
+      "rows": 54,
+      "parquet": "raw__fnde_salario_educacao_realizado_2004.parquet"
+    },
+    {
+      "table_id": "fnde_salario_educacao_realizado_2005",
+      "layer": "raw",
+      "rows": 54,
+      "parquet": "raw__fnde_salario_educacao_realizado_2005.parquet"
+    },
+    {
+      "table_id": "fnde_salario_educacao_realizado_2006",
+      "layer": "raw",
+      "rows": 54,
+      "parquet": "raw__fnde_salario_educacao_realizado_2006.parquet"
+    },
+    {
+      "table_id": "fnde_salario_educacao_realizado_2007",
+      "layer": "raw",
+      "rows": 54,
+      "parquet": "raw__fnde_salario_educacao_realizado_2007.parquet"
+    },
+    {
+      "table_id": "fnde_salario_educacao_realizado_2008",
+      "layer": "raw",
+      "rows": 54,
+      "parquet": "raw__fnde_salario_educacao_realizado_2008.parquet"
+    },
+    {
+      "table_id": "fnde_salario_educacao_realizado_2009",
+      "layer": "raw",
+      "rows": 52,
+      "parquet": "raw__fnde_salario_educacao_realizado_2009.parquet"
+    },
+    {
+      "table_id": "fnde_salario_educacao_realizado_2010",
+      "layer": "raw",
+      "rows": 54,
+      "parquet": "raw__fnde_salario_educacao_realizado_2010.parquet"
+    },
+    {
+      "table_id": "fnde_salario_educacao_realizado_2011",
+      "layer": "raw",
+      "rows": 54,
+      "parquet": "raw__fnde_salario_educacao_realizado_2011.parquet"
+    },
+    {
+      "table_id": "fnde_salario_educacao_realizado_2012",
+      "layer": "raw",
+      "rows": 54,
+      "parquet": "raw__fnde_salario_educacao_realizado_2012.parquet"
+    },
+    {
+      "table_id": "fnde_salario_educacao_realizado_2013",
+      "layer": "raw",
+      "rows": 54,
+      "parquet": "raw__fnde_salario_educacao_realizado_2013.parquet"
+    },
+    {
+      "table_id": "fnde_salario_educacao_realizado_2014",
+      "layer": "raw",
+      "rows": 54,
+      "parquet": "raw__fnde_salario_educacao_realizado_2014.parquet"
+    },
+    {
+      "table_id": "fnde_salario_educacao_realizado_2015",
+      "layer": "raw",
+      "rows": 54,
+      "parquet": "raw__fnde_salario_educacao_realizado_2015.parquet"
+    },
+    {
+      "table_id": "fnde_salario_educacao_realizado_2016",
+      "layer": "raw",
+      "rows": 54,
+      "parquet": "raw__fnde_salario_educacao_realizado_2016.parquet"
+    },
+    {
+      "table_id": "fnde_salario_educacao_realizado_2017",
+      "layer": "raw",
+      "rows": 54,
+      "parquet": "raw__fnde_salario_educacao_realizado_2017.parquet"
+    },
+    {
+      "table_id": "fnde_salario_educacao_realizado_2018",
+      "layer": "raw",
+      "rows": 54,
+      "parquet": "raw__fnde_salario_educacao_realizado_2018.parquet"
+    },
+    {
+      "table_id": "fnde_salario_educacao_realizado_2019",
+      "layer": "raw",
+      "rows": 54,
+      "parquet": "raw__fnde_salario_educacao_realizado_2019.parquet"
+    },
+    {
+      "table_id": "fnde_salario_educacao_realizado_2020",
+      "layer": "raw",
+      "rows": 5594,
+      "parquet": "raw__fnde_salario_educacao_realizado_2020.parquet"
+    },
+    {
+      "table_id": "fnde_salario_educacao_realizado_2021",
+      "layer": "raw",
+      "rows": 5596,
+      "parquet": "raw__fnde_salario_educacao_realizado_2021.parquet"
+    },
+    {
+      "table_id": "fnde_salario_educacao_realizado_2022",
+      "layer": "raw",
+      "rows": 5595,
+      "parquet": "raw__fnde_salario_educacao_realizado_2022.parquet"
+    }
+  ],
+  "kaggle_metadata_sha256": "fa402864ccdea7b11e55b4cf62e6c2672244f3ecbe81238e4f07c853b0e571b9",
+  "files": [
+    {
+      "path": "01_ingestion_fnde-salario-educacao.ipynb",
+      "bytes": 6268,
+      "sha256": "f34386f29b9a6c173a2674f8596bac2b9f42d13e77bed0ce2df85d9165cfbcd1"
+    },
+    {
+      "path": "02_transform_to_trusted_fnde-salario-educacao.ipynb",
+      "bytes": 3580,
+      "sha256": "c85e6eaa2676eca495b105781e576f1b7a26a30bf896fdfd3afe872eed6013b7"
+    },
+    {
+      "path": "README.md",
+      "bytes": 725,
+      "sha256": "698dffb133aa85226a3ad23fdf558d71efa88adc1d776ffdc48457963175ddfa"
+    },
+    {
+      "path": "audit.json",
+      "bytes": 19372,
+      "sha256": "6b4605062777b1270508e6c2df0cbb718cfe1e1274c75cc42d5ec222789376c9"
+    },
+    {
+      "path": "raw__fnde_salario_educacao_previsto_2010.parquet",
+      "bytes": 164261,
+      "sha256": "70f30fa673587392c7a5f7db3b00383b601b8c94e086c280c6e5cd08d0e44731"
+    },
+    {
+      "path": "raw__fnde_salario_educacao_previsto_2011.parquet",
+      "bytes": 164113,
+      "sha256": "2c20732749936d8b01ed112998afb62b019e39607f7b608f57bf87d3e9abf204"
+    },
+    {
+      "path": "raw__fnde_salario_educacao_previsto_2012.parquet",
+      "bytes": 165115,
+      "sha256": "ac67eecba8c597ace3d963b1e41d290f96ce5e7009946d26d9ec6a07170c08a2"
+    },
+    {
+      "path": "raw__fnde_salario_educacao_previsto_2013.parquet",
+      "bytes": 164862,
+      "sha256": "8fb7f186ecab0579df9e2563baae223da78b2b952956fea70b37a12fe34ba5fa"
+    },
+    {
+      "path": "raw__fnde_salario_educacao_previsto_2014.parquet",
+      "bytes": 164938,
+      "sha256": "35cdee7656f58724fdac6d68b49a374123368847805aac67cd6a447cfbc533c4"
+    },
+    {
+      "path": "raw__fnde_salario_educacao_previsto_2015.parquet",
+      "bytes": 165695,
+      "sha256": "30e2a521016b5b27378185ff3d3a9d3c6f51601423203de8bec067fac8a6227d"
+    },
+    {
+      "path": "raw__fnde_salario_educacao_previsto_2016.parquet",
+      "bytes": 165137,
+      "sha256": "c8766bbe2166dd633d797fa3c823fa62aebed4db918127650d54417562ca6b20"
+    },
+    {
+      "path": "raw__fnde_salario_educacao_previsto_2017.parquet",
+      "bytes": 165998,
+      "sha256": "69f6a66ab4e0ea4021036fcba9d7b504a80fe4e379b6ae10eb5e10e546ca7b5e"
+    },
+    {
+      "path": "raw__fnde_salario_educacao_previsto_2018.parquet",
+      "bytes": 165745,
+      "sha256": "bf14edf2b960818d926b3cc391899cc910a2da4accf736862ad6c78c0403739a"
+    },
+    {
+      "path": "raw__fnde_salario_educacao_previsto_2019.parquet",
+      "bytes": 165045,
+      "sha256": "57a14059c7958009a7416626d15d42dc1109efafb7936a3c6bb4c14500767d83"
+    },
+    {
+      "path": "raw__fnde_salario_educacao_previsto_2020.parquet",
+      "bytes": 164870,
+      "sha256": "093b9deef084ea6eae34f2e2c2220523c5155395c9cc0592ae4295a98ba2c149"
+    },
+    {
+      "path": "raw__fnde_salario_educacao_previsto_2021.parquet",
+      "bytes": 165505,
+      "sha256": "7f1d87d11f010139c6fe4d0f7fe66829b31c93d8c430fee0824f0248f4eb5d25"
+    },
+    {
+      "path": "raw__fnde_salario_educacao_previsto_2022.parquet",
+      "bytes": 166069,
+      "sha256": "f73bb440ca64c12887ab42195211b5785e90f81df4912da9373b70524377e643"
+    },
+    {
+      "path": "raw__fnde_salario_educacao_previsto_2023.parquet",
+      "bytes": 165744,
+      "sha256": "5016e93f7c0a2c362f2bf9ba9effaf550e6efe1c166bcd16cb56bbab3810cbf8"
+    },
+    {
+      "path": "raw__fnde_salario_educacao_previsto_2024.parquet",
+      "bytes": 139975,
+      "sha256": "e22ea5016f97a626b33ef1ec7737e73ac472f98a11caf8aa6b4e72a3478c2178"
+    },
+    {
+      "path": "raw__fnde_salario_educacao_previsto_2025.parquet",
+      "bytes": 139382,
+      "sha256": "275ca59c0f70b150e08ac8d4354350729a8c51fe9549bd13a38d82ab4558d3b5"
+    },
+    {
+      "path": "raw__fnde_salario_educacao_previsto_2026.parquet",
+      "bytes": 135656,
+      "sha256": "bda82e0cc0449e96a8718b5bfa0c4f52ee23a9ba2241b53c4e630281c788627b"
+    },
+    {
+      "path": "raw__fnde_salario_educacao_realizado_2000.parquet",
+      "bytes": 9356,
+      "sha256": "df2e2c6289081ada49f2cf8053c607d464bf91c2aabf6d4a5bbc64fd67babf29"
+    },
+    {
+      "path": "raw__fnde_salario_educacao_realizado_2001.parquet",
+      "bytes": 9230,
+      "sha256": "2e326a295cb55c6fb82e3c27d3666d2d6b4f918e2345b48e15e6d0cf3e7f9c84"
+    },
+    {
+      "path": "raw__fnde_salario_educacao_realizado_2002.parquet",
+      "bytes": 9364,
+      "sha256": "9f10a7be7e6a435e2e7e1f487e7ea3278831022ea2a455d9e68b8c25a3ad8359"
+    },
+    {
+      "path": "raw__fnde_salario_educacao_realizado_2003.parquet",
+      "bytes": 9377,
+      "sha256": "81dc8362fa344830f92f6e58250ca0dfebffbe4c6487ae01107ed7c6e2bcf81f"
+    },
+    {
+      "path": "raw__fnde_salario_educacao_realizado_2004.parquet",
+      "bytes": 8245,
+      "sha256": "0f8432934eba07997e330020e3afe0e115f77030ef7a11a7ce45f6a1af74f8aa"
+    },
+    {
+      "path": "raw__fnde_salario_educacao_realizado_2005.parquet",
+      "bytes": 8211,
+      "sha256": "b61991af3a742ff0f044c002098f55a89657c4f16dd78b48d90a37b5d55a215d"
+    },
+    {
+      "path": "raw__fnde_salario_educacao_realizado_2006.parquet",
+      "bytes": 8224,
+      "sha256": "230f51a9ea655307072ca34896ed5bc30c7b33c88f1f36ddcdb99b78dfc471c6"
+    },
+    {
+      "path": "raw__fnde_salario_educacao_realizado_2007.parquet",
+      "bytes": 7350,
+      "sha256": "9a70166a8108ab25e55956d65de7721a76b727357dd4e228b356734a6db5914c"
+    },
+    {
+      "path": "raw__fnde_salario_educacao_realizado_2008.parquet",
+      "bytes": 7355,
+      "sha256": "371e737afcc657c7da6f5d9762e1a6cc483f88d37391c67f80c7c7d263ff4a76"
+    },
+    {
+      "path": "raw__fnde_salario_educacao_realizado_2009.parquet",
+      "bytes": 12431,
+      "sha256": "bf5a9ee9936f67e419dbefbcded918fdadb8d9d9cf747b8e303d4dbaecb32290"
+    },
+    {
+      "path": "raw__fnde_salario_educacao_realizado_2010.parquet",
+      "bytes": 12501,
+      "sha256": "38c8e704daf4a4fb23eb53752252e99ebefc8120fe3e782ef6e14009af21f785"
+    },
+    {
+      "path": "raw__fnde_salario_educacao_realizado_2011.parquet",
+      "bytes": 12594,
+      "sha256": "4591a019eaefb154634bc9169692925d6cdf1cf33dd32ec4220866c3d910ce4f"
+    },
+    {
+      "path": "raw__fnde_salario_educacao_realizado_2012.parquet",
+      "bytes": 12630,
+      "sha256": "d70925b7a786c18084c5967f052835fdd6d8c67ddcb3fd73e5b8e1f62125112e"
+    },
+    {
+      "path": "raw__fnde_salario_educacao_realizado_2013.parquet",
+      "bytes": 12731,
+      "sha256": "cf7d3d8bee6006fb6bc40089f529262af5474ce6fe77c7b9c2bbec07001efc69"
+    },
+    {
+      "path": "raw__fnde_salario_educacao_realizado_2014.parquet",
+      "bytes": 12771,
+      "sha256": "77778b6c02c557b243aadaeccf88893883f8ae3ba8d820d2bb92bd5a4936d787"
+    },
+    {
+      "path": "raw__fnde_salario_educacao_realizado_2015.parquet",
+      "bytes": 12788,
+      "sha256": "0998c1d6aeb59eb6bcd92ce1c263503434ed3e6b2298658656861e8227bef70b"
+    },
+    {
+      "path": "raw__fnde_salario_educacao_realizado_2016.parquet",
+      "bytes": 12783,
+      "sha256": "3045b4ebb6d2a34d74b26fffc939f57f546694ab4a8fba66ead0eabe314b3c42"
+    },
+    {
+      "path": "raw__fnde_salario_educacao_realizado_2017.parquet",
+      "bytes": 12437,
+      "sha256": "829ab364f9026608817d888b9cde0c5cb5d91062b13bec33473755fd31766c80"
+    },
+    {
+      "path": "raw__fnde_salario_educacao_realizado_2018.parquet",
+      "bytes": 12778,
+      "sha256": "4986212d0428b832afe9dc5fd39444ef999d8fa0809c349d0760059a8c92cda7"
+    },
+    {
+      "path": "raw__fnde_salario_educacao_realizado_2019.parquet",
+      "bytes": 12816,
+      "sha256": "b38dbbf674c84e71b2fa49f101596d5b49dbde9d72298affb88c7c4b1f62bcc4"
+    },
+    {
+      "path": "raw__fnde_salario_educacao_realizado_2020.parquet",
+      "bytes": 118454,
+      "sha256": "ce5ca2abfbdcb115f016bd64de24a24ee45d739e3893ce9ce2a242604de2029c"
+    },
+    {
+      "path": "raw__fnde_salario_educacao_realizado_2021.parquet",
+      "bytes": 118551,
+      "sha256": "f3d06837b6dd4ce27e530a7f770665f74217fb146eadae0879887c06827619b6"
+    },
+    {
+      "path": "raw__fnde_salario_educacao_realizado_2022.parquet",
+      "bytes": 506126,
+      "sha256": "6addaea12d9428672773b9ca43c1fbf8efc8e129213fc0b3845e23d72f00277d"
+    },
+    {
+      "path": "schemas.json",
+      "bytes": 85828,
+      "sha256": "d1a19e03587edba2b5fb59a8dd13a76654f9b1d51e14a27e221dbf7e8a04dca9"
+    }
+  ]
+}

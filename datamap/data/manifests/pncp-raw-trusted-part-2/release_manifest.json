@@ -1,0 +1,50 @@
+{
+  "schema_version": "3.0",
+  "dataset_slug": "pncp-raw-trusted-part-2",
+  "subject": "pncp",
+  "group": "raw-trusted",
+  "part": 2,
+  "parts": 2,
+  "snapshot_date": "2026-10-01",
+  "tables": [
+    {
+      "table_id": "pncp_pca_itens",
+      "layer": "trusted",
+      "rows": 817211,
+      "parquet": "trusted__pncp_pca_itens.parquet"
+    }
+  ],
+  "kaggle_metadata_sha256": "d33c5283d064d2beaed8b665b8a2b7dfe658f247999a539da5a5206f0be01af8",
+  "files": [
+    {
+      "path": "01_ingestion_pncp.ipynb",
+      "bytes": 3361,
+      "sha256": "356611d46cc8ec9dee5f200ffe3dc530180b94fe71a0cdeb7df6d9a2f7a94f6c"
+    },
+    {
+      "path": "02_transform_to_trusted_pncp.ipynb",
+      "bytes": 3589,
+      "sha256": "ea01b4c90ab78c33d8cfd76d7c8421004590ffb7fd17fef47ed991939fff6e65"
+    },
+    {
+      "path": "README.md",
+      "bytes": 732,
+      "sha256": "071920e149f5dd4df47876be4aa92882f5769d41c772d48f889f6b0f7e8ce923"
+    },
+    {
+      "path": "audit.json",
+      "bytes": 760,
+      "sha256": "5fc8bb537b22ab89fd0529c4107734a134c58c9e3e9ccafca293cb72a0ae0e89"
+    },
+    {
+      "path": "schemas.json",
+      "bytes": 3084,
+      "sha256": "b97aaf2ab36f2d0ddb86994ca6e2880b4dc21065b45672e1a16d509092adcf93"
+    },
+    {
+      "path": "trusted__pncp_pca_itens.parquet",
+      "bytes": 98422695,
+      "sha256": "9726cf8d706d7e52d4d4351512797419a00eff4870b58fdc1270c39f3d4a4f19"
+    }
+  ]
+}

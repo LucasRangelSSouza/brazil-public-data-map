@@ -1,0 +1,127 @@
+{
+  "schema_version": "3.0",
+  "dataset_slug": "siope-raw-trusted-part-3",
+  "subject": "siope",
+  "group": "raw-trusted",
+  "part": 3,
+  "parts": 4,
+  "snapshot_date": "2026-10-01",
+  "tables": [
+    {
+      "table_id": "rreo_siope_municipio",
+      "layer": "raw",
+      "rows": 354435,
+      "parquet": "raw__rreo_siope_municipio.parquet"
+    },
+    {
+      "table_id": "rreo_siope_uf",
+      "layer": "raw",
+      "rows": 1685,
+      "parquet": "raw__rreo_siope_uf.parquet"
+    },
+    {
+      "table_id": "siope_data",
+      "layer": "raw",
+      "rows": 190229,
+      "parquet": "raw__siope_data.parquet"
+    },
+    {
+      "table_id": "api_olinda_siope_dados_gerais",
+      "layer": "trusted",
+      "rows": 382669,
+      "parquet": "trusted__api_olinda_siope_dados_gerais.parquet"
+    },
+    {
+      "table_id": "api_olinda_siope_despesas",
+      "layer": "trusted",
+      "rows": 305518954,
+      "parquet": "trusted__api_olinda_siope_despesas.parquet"
+    },
+    {
+      "table_id": "api_olinda_siope_despesas_funcao_educacao",
+      "layer": "trusted",
+      "rows": 3060656,
+      "parquet": "trusted__api_olinda_siope_despesas_funcao_educacao.parquet"
+    },
+    {
+      "table_id": "api_olinda_siope_indicadores",
+      "layer": "trusted",
+      "rows": 14993255,
+      "parquet": "trusted__api_olinda_siope_indicadores.parquet"
+    },
+    {
+      "table_id": "api_olinda_siope_informacoes_complementares",
+      "layer": "trusted",
+      "rows": 13795325,
+      "parquet": "trusted__api_olinda_siope_informacoes_complementares.parquet"
+    }
+  ],
+  "kaggle_metadata_sha256": "1813f230402eaa076eeb1524557e12aafe838991bbb5e8a6e7387d2b60cd56b6",
+  "files": [
+    {
+      "path": "01_ingestion_siope.ipynb",
+      "bytes": 3489,
+      "sha256": "a12a119e71a82bc025a1e71403f30bc6a3fa09cf6c8fff327b0e80bd75fd0f51"
+    },
+    {
+      "path": "02_transform_to_trusted_siope.ipynb",
+      "bytes": 3934,
+      "sha256": "a3f4150ed0600865b5677960e4cb36857b6c88a1c9ea04a5e05d6918881ebfd0"
+    },
+    {
+      "path": "README.md",
+      "bytes": 728,
+      "sha256": "7268c3be4b83dd2fda0f188e7c72c765d073f34d3545b0737268bf6b79d6c6b4"
+    },
+    {
+      "path": "audit.json",
+      "bytes": 4905,
+      "sha256": "a0744c6cfe5e737dc6412bbb4580fa3ff6f5bc9e5fcc5f59807e2da961cf6601"
+    },
+    {
+      "path": "raw__rreo_siope_municipio.parquet",
+      "bytes": 1136591828,
+      "sha256": "2aa351b63835a541f316579f25e7a8767f9c8c155b7d97ae229c50dd57e8f20b"
+    },
+    {
+      "path": "raw__rreo_siope_uf.parquet",
+      "bytes": 5098387,
+      "sha256": "98e01b53db0a9b73e7540e578f1af8ea99b6ce59159594cf7dfef0af5d4e4a82"
+    },
+    {
+      "path": "raw__siope_data.parquet",
+      "bytes": 312793530,
+      "sha256": "c8cd7fe3ea982238851e95c845280a26e8a1489f2fe10f20242ac5199acc934b"
+    },
+    {
+      "path": "schemas.json",
+      "bytes": 24672,
+      "sha256": "153474c54e8a214c4f08e95a768e73036761cf0986d64d67da900202f0e6f566"
+    },
+    {
+      "path": "trusted__api_olinda_siope_dados_gerais.parquet",
+      "bytes": 71803948,
+      "sha256": "5beec84fec27ba76cae93ac4ac51608e6b1dbf68416c51f67d1830ee9c364045"
+    },
+    {
+      "path": "trusted__api_olinda_siope_despesas.parquet",
+      "bytes": 10368707483,
+      "sha256": "6709292e60c25aa708deb1b5f1bd6d8a38e23a8aacacd53a900445f2f4a4af5c"
+    },
+    {
+      "path": "trusted__api_olinda_siope_despesas_funcao_educacao.parquet",
+      "bytes": 129250977,
+      "sha256": "6f3e0cb16a5fc6b5f1a91c4b852502b4f03986925a3412a5048ef36bb1e8b2cd"
+    },
+    {
+      "path": "trusted__api_olinda_siope_indicadores.parquet",
+      "bytes": 440325456,
+      "sha256": "a5bb2d0f1e1ab51f690e0f88db81340006b8d79fc3bce2d1740159ecae44fa6c"
+    },
+    {
+      "path": "trusted__api_olinda_siope_informacoes_complementares.parquet",
+      "bytes": 280445883,
+      "sha256": "748d995cfe3b37ca0907050f62a951c7a8796f7b07fd97acaa89d68cea9535bc"
+    }
+  ]
+}

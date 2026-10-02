@@ -1,0 +1,50 @@
+{
+  "schema_version": "3.0",
+  "dataset_slug": "censo-escolar-raw-trusted-part-2",
+  "subject": "censo-escolar",
+  "group": "raw-trusted",
+  "part": 2,
+  "parts": 3,
+  "snapshot_date": "2026-10-01",
+  "tables": [
+    {
+      "table_id": "inep_censo_escolar_movimento_escolar",
+      "layer": "trusted",
+      "rows": 4831642,
+      "parquet": "trusted__inep_censo_escolar_movimento_escolar.parquet"
+    }
+  ],
+  "kaggle_metadata_sha256": "b9e42e764980f6f471a9bd06cb1dc3b7943e191131590d97adb929ff5c1039b3",
+  "files": [
+    {
+      "path": "01_ingestion_censo-escolar.ipynb",
+      "bytes": 3398,
+      "sha256": "edb01526263151f69f8b06bafbd4d539cab17780031f274d0d2beb768410687e"
+    },
+    {
+      "path": "02_transform_to_trusted_censo-escolar.ipynb",
+      "bytes": 3619,
+      "sha256": "13e13e93c67873693bff7376bdc8b6be4fe1cd90c81cebb5b536054929510039"
+    },
+    {
+      "path": "README.md",
+      "bytes": 764,
+      "sha256": "04385f0fca049b1067e87431b764601d7a96eb390dabc96feb56695cd4eb1502"
+    },
+    {
+      "path": "audit.json",
+      "bytes": 96343,
+      "sha256": "ab017cbf7a6f06acadc01e090e647505f1dbc2cc3830f688c9e089b6d3d37c3f"
+    },
+    {
+      "path": "schemas.json",
+      "bytes": 872566,
+      "sha256": "fc26f25e3eeaed6dedaf433aeedb8cd179608b7214aca6980a16731e4b055c4a"
+    },
+    {
+      "path": "trusted__inep_censo_escolar_movimento_escolar.parquet",
+      "bytes": 2076079511,
+      "sha256": "b4e977c5889d1c5593e4bfa747feef0b4c8087a13b1776e7a50ff6e3b00b1b61"
+    }
+  ]
+}
