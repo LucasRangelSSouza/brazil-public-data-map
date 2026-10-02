@@ -84,7 +84,11 @@ def main() -> None:
                 "is_private": "false", "enable_gpu": "false", "enable_internet": "false", "dataset_sources": [f"{OWNER}/{slug}"], "competition_sources": [], "kernel_sources": [], "model_sources": [],
             }), encoding="utf-8")
             r = subprocess.run([sys.executable, "-m", "kaggle", "kernels", "push", "-p", str(tmp)], capture_output=True, text=True, encoding="utf-8", errors="replace")
-            print(slug, "ok" if r.returncode == 0 else "FAILED", (r.stdout + r.stderr).strip()[-220:].replace("\n", " | "), flush=True)
+            out = (r.stdout + r.stderr).strip()
+            print(slug, "ok" if r.returncode == 0 else "FAILED", out[-220:].replace("\n", " | "), flush=True)
+            if "429" in out:  # Kaggle is rate limiting public notebooks for this account: stop instead of hammering the API
+                print("stopped on HTTP 429; run again later")
+                break
 
 
 if __name__ == "__main__":
