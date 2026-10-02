@@ -5,7 +5,7 @@
   "group": "raw-trusted",
   "part": 1,
   "parts": 4,
-  "snapshot_date": "2026-10-01",
+  "snapshot_date": "2026-10-02",
   "tables": [
     {
       "table_id": "api_saeb_boletim_raw",
@@ -248,8 +248,13 @@
       "parquet": "raw__inep_saeb_microdados_csv_2017_ts_item.parquet"
     }
   ],
-  "kaggle_metadata_sha256": "7c424f83ef6fe9dcaa43b4950c487fca4065a90d41e63b0048daf52befba1bb1",
+  "kaggle_metadata_sha256": "93b78db8b1db178e9ac81c4608e31a0b5638ca223e1b582bfdaf54de54dc9c67",
   "files": [
+    {
+      "path": "00_source_ingestion_saeb.ipynb",
+      "bytes": 6305,
+      "sha256": "13ddd36c464a63a1c0156b7be674aa77dbff700f0a4a9980eb3309cb025f61b7"
+    },
     {
       "path": "01_ingestion_saeb.ipynb",
       "bytes": 6487,
@@ -261,59 +266,64 @@
       "sha256": "0002d0a06161cf70e8e23bfc9fdc1ae28b1e3cb6c619d8ed1f01cc64c34240b1"
     },
     {
+      "path": "DATA_DICTIONARY.md",
+      "bytes": 451957,
+      "sha256": "2de906d964c2ca2797047441620d15c48c297e20776f3e781ce848c29e22f916"
+    },
+    {
       "path": "README.md",
       "bytes": 767,
-      "sha256": "1df8b1fa7848cc841bd7b764aa8e749d798460fcd647ef0b4f51c8a659046e7d"
+      "sha256": "8adf642e109921143fe8eb932dd4c427d03c41551ed9a7dcc4422cc605bd2ac7"
     },
     {
       "path": "audit.json",
-      "bytes": 74543,
-      "sha256": "15d2984a9976c4d4f8c95ebcabf3673e7fea5cf253d91e4ac8a28bd8e3f0a180"
+      "bytes": 74434,
+      "sha256": "3d7490b79b3c49af1f9897f77c1c954cbc45d856adc56518cb1154c0cc0da63d"
     },
     {
       "path": "raw__api_saeb_boletim_raw.parquet",
-      "bytes": 671496918,
-      "sha256": "bffa94c801be139c93d79933e9b10436488915b41f9a98075a58661f13e628e7"
+      "bytes": 667616821,
+      "sha256": "53c077a69774a05e9df95beb4a11bbaecef19daec099fc53357b5644aad40878"
     },
     {
       "path": "raw__inep_saeb_aluno_2013.parquet",
-      "bytes": 803656221,
-      "sha256": "24de6b08c2bf947db6101efa90e92c4c9187bf571687ed47e66103db80ffe464"
+      "bytes": 396068514,
+      "sha256": "b36317244394890fb11c34687fed5b71a79fabad77f9cfeae64c75ad9a151429"
     },
     {
       "path": "raw__inep_saeb_aluno_2015.parquet",
-      "bytes": 757296234,
-      "sha256": "1baf45d1d4094b5ac42dafe32bf5249661f0f5efa1464732ce5c26a2736d2da6"
+      "bytes": 377911992,
+      "sha256": "6ae48b88d44fdbd44f95fe642223f80589aa1a8856e098b3b1110f4140ac4b7a"
     },
     {
       "path": "raw__inep_saeb_aluno_2017.parquet",
-      "bytes": 1277799556,
-      "sha256": "11ad7bf8acd1826dcb902468bf4bc3ac48b6b90346dd0b5d6bb7c71d42372e4d"
+      "bytes": 639989107,
+      "sha256": "b9218e1aa31c248293733fe48a49ed7f72941cfc868f413eb8c03fcae057f5b1"
     },
     {
       "path": "raw__inep_saeb_aluno_2019.parquet",
-      "bytes": 1586350701,
-      "sha256": "589d489cee5843c36dcd4272ea9ae1df054a15afbaa637225ed3c42bedf4dd46"
+      "bytes": 532979417,
+      "sha256": "202a6a967c87e50652c5ee6a6ed6bcc08a9e7ad1fdd1a4ef08269fafddf42937"
     },
     {
       "path": "raw__inep_saeb_aluno_2021.parquet",
-      "bytes": 1888091253,
-      "sha256": "38657a67e367552eb30cc4cc272c745755fb837ee6160fecf474fae052a8ff3f"
+      "bytes": 570726377,
+      "sha256": "b0e5082aec3482d4ea88e6b067e767ea6666d04e67cda6d905c205b033865246"
     },
     {
       "path": "raw__inep_saeb_aluno_2023.parquet",
-      "bytes": 1863900794,
-      "sha256": "447b394bed14eed24ea88302bb4a5bc01edeffb0d52d00fffd6a89d2f0201061"
+      "bytes": 605916528,
+      "sha256": "4516ae664b7e95f88a48d4e4272d1dd2c57acc6f19747e76a557b6edaa3354b9"
     },
     {
       "path": "raw__inep_saeb_arquivos.parquet",
-      "bytes": 18270,
-      "sha256": "bace5f48a6eb62ed0a868c959ec49d8fced4c61c58be0f314615e228631ccda0"
+      "bytes": 15280,
+      "sha256": "6b3c5f22a2f46345cbefb56b93628bb48c071b6e1a54d9ccf2a94f8bbc5117b9"
     },
     {
       "path": "raw__inep_saeb_arquivos_conteudo.parquet",
-      "bytes": 32642,
-      "sha256": "d15fccb218107d70dbd704a635ce139039d1be05e257ea5ae2d55017e90801fd"
+      "bytes": 20314,
+      "sha256": "f069c8ec9f9e47a6e30e396627f8f8f5e6ddfedec37353c461372773f38aac64"
     },
     {
       "path": "raw__inep_saeb_microdados_csv_2011_ts_item.parquet",
@@ -322,23 +332,23 @@
     },
     {
       "path": "raw__inep_saeb_microdados_csv_2011_ts_pesos.parquet",
-      "bytes": 2038821,
-      "sha256": "f83815614abf1067b513e8a5a639fe7f215c5a6c14438413d623c25819a382cd"
+      "bytes": 1801938,
+      "sha256": "8fb09a876d5c6ef55af2508b0d586521eec05cb37d961026cb91a9473a18c284"
     },
     {
       "path": "raw__inep_saeb_microdados_csv_2011_ts_quest_diretor.parquet",
-      "bytes": 20101186,
-      "sha256": "080f250a24b7ca531c0969bab3aeeaca42d1ff9a1de671ef63e04a9709e5036b"
+      "bytes": 2611508,
+      "sha256": "d15739655bdc04267d818fa8728e5fc89f8acf3abdaf5c1ef693079e39e561d1"
     },
     {
       "path": "raw__inep_saeb_microdados_csv_2011_ts_quest_escola.parquet",
-      "bytes": 3277418,
-      "sha256": "8e65b3d960b367592bdc89214e6c3a8ee820a92fff1c94a8b692cd2d19a876ee"
+      "bytes": 1196506,
+      "sha256": "bc509035d9d8694a56224d8a9f369d74e850dd4cfb692a1df3111bdaf2a24dfe"
     },
     {
       "path": "raw__inep_saeb_microdados_csv_2011_ts_quest_professor.parquet",
-      "bytes": 55774963,
-      "sha256": "2725c7b1da54ae7a8c8e46d392bc433e04cf8d613459db24ee6ab7d04c3d6c0f"
+      "bytes": 9621954,
+      "sha256": "58f2aca9caca6470f53d0addbf03927d7da445ed400804f19067e9a06d30498b"
     },
     {
       "path": "raw__inep_saeb_microdados_csv_2011_ts_resultado_brasil.parquet",
@@ -347,13 +357,13 @@
     },
     {
       "path": "raw__inep_saeb_microdados_csv_2011_ts_resultado_escola.parquet",
-      "bytes": 1494943,
-      "sha256": "f96ca053df063027f1e17262b2fb6875e6cffd396d454d0a0209fa19756c5629"
+      "bytes": 1062668,
+      "sha256": "9561bda9418aa10a8190cc842c70f29626321c12c824d93fb7eca09dd7b0a73c"
     },
     {
       "path": "raw__inep_saeb_microdados_csv_2011_ts_resultado_municipio.parquet",
-      "bytes": 1183659,
-      "sha256": "bcb468d6dacce791d6f9680434c04342f31f12ca35a38bdf855f74d3201fcf5d"
+      "bytes": 863824,
+      "sha256": "b6d018b0d1a4fcc31b0a91a48095caac9a28c43e731f5f0bc70dc811b9c3502a"
     },
     {
       "path": "raw__inep_saeb_microdados_csv_2011_ts_resultado_regiao.parquet",
@@ -362,33 +372,33 @@
     },
     {
       "path": "raw__inep_saeb_microdados_csv_2011_ts_resultado_uf.parquet",
-      "bytes": 57563,
-      "sha256": "6293a41dcc0e7f4104b71e57f25d6cc464bb1c80f7286f3fc042e2554e5454ce"
+      "bytes": 52661,
+      "sha256": "1cb9600666315f720b8e53eec1d67bd261d9ae700e3e72b438c546eaffef4a11"
     },
     {
       "path": "raw__inep_saeb_microdados_csv_2013_ts_aluno_3em.parquet",
-      "bytes": 16286920,
-      "sha256": "69d2fd46e5dfa39e22fa5d05e5c74992ce71de356b30364ad0b64070304c2848"
+      "bytes": 9198265,
+      "sha256": "de2bf7bf6bb2f54a7d5be465b83e1ebce141d12c0e14408a13fae36c1b03d217"
     },
     {
       "path": "raw__inep_saeb_microdados_csv_2013_ts_aluno_5ef.parquet",
-      "bytes": 363043913,
-      "sha256": "657b7df011e93c8ea179427f5a2f144993327818ed9c7a2abc90c2d6e5bcb280"
+      "bytes": 178777002,
+      "sha256": "cd5bf8b920435fd89c6d5b0a110708bb191dbe1589851a3f9224833b29fe8e08"
     },
     {
       "path": "raw__inep_saeb_microdados_csv_2013_ts_aluno_9ef.parquet",
-      "bytes": 387755622,
-      "sha256": "99b4aaf29321022b100dd7c7e3a345b5a3c3da92d13b6fde242949718fbda2f0"
+      "bytes": 185178827,
+      "sha256": "5cf87428a4385692933ba2cf2ca8a038440c072ad8adc5d9a266bf4732806500"
     },
     {
       "path": "raw__inep_saeb_microdados_csv_2013_ts_diretor.parquet",
-      "bytes": 6258669,
-      "sha256": "8d7de5797875a6a67ac20da9fbd059d7c385e3ed4449bc19f69108ab0ebc5c4c"
+      "bytes": 1719473,
+      "sha256": "aa1553e90cd64830e32c9253f17507e8374d2de5595c13eb17f1979a4f4a258f"
     },
     {
       "path": "raw__inep_saeb_microdados_csv_2013_ts_escola.parquet",
-      "bytes": 11596206,
-      "sha256": "d72a931028b45d6c79eac8b7cd51b87df38a0700d3b2fe6061690da1dfd1a483"
+      "bytes": 4109018,
+      "sha256": "955bb99461ec4a53c4862c391e5e06050100e7135ce537bd1b985c9137184e75"
     },
     {
       "path": "raw__inep_saeb_microdados_csv_2013_ts_item.parquet",
@@ -397,33 +407,33 @@
     },
     {
       "path": "raw__inep_saeb_microdados_csv_2013_ts_professor.parquet",
-      "bytes": 37595792,
-      "sha256": "e134892170b4911de560d58d03ed31d5046b06e3b2049b91c4e352ea5d0932aa"
+      "bytes": 8572605,
+      "sha256": "945d3ad969bfcf547053dae10e3895357e60164fa16a48ef2f3bf40b765bcfa2"
     },
     {
       "path": "raw__inep_saeb_microdados_csv_2015_ts_aluno_3em.parquet",
-      "bytes": 12642343,
-      "sha256": "fa3eae469f0b750e67548748af9ea3671e19e60f7a9170109d8fff36d6ab894b"
+      "bytes": 7402326,
+      "sha256": "59827b547193173cea6d4a2651ed89366810102a386d486b06e40b91e5e911db"
     },
     {
       "path": "raw__inep_saeb_microdados_csv_2015_ts_aluno_5ef.parquet",
-      "bytes": 342780650,
-      "sha256": "96ef8596619711cc2291664d9f72b0a9c90a0f792b45399e22461262ceeb13a6"
+      "bytes": 177360162,
+      "sha256": "535d956f609d59ccb06abdc8c1a2d5adda56737a13c44f2d0c6250b0cb0fef1c"
     },
     {
       "path": "raw__inep_saeb_microdados_csv_2015_ts_aluno_9ef.parquet",
-      "bytes": 351099618,
-      "sha256": "92817e22997b7582ce35200c1f6be522224f3497468fe12a6df53af2441141f9"
+      "bytes": 169633141,
+      "sha256": "2fdb45ad7f4c1ef31d9921daa2b3061f2724ad6f077fce5c08da93ef98af915b"
     },
     {
       "path": "raw__inep_saeb_microdados_csv_2015_ts_diretor.parquet",
-      "bytes": 6028928,
-      "sha256": "a4ee7f4a3624ac1622c42d016b89409240649b09de8a1c33dfcef77ad54563a1"
+      "bytes": 1566176,
+      "sha256": "a79be80e14696cfd55ed5fb54ea65192bea4ade26f3fbc3ac92b02655ae8e00f"
     },
     {
       "path": "raw__inep_saeb_microdados_csv_2015_ts_escola.parquet",
-      "bytes": 11085775,
-      "sha256": "3998348919d2e0d20695400e33472a6bd65f460f5e72d99571bb5d1dcaad4eab"
+      "bytes": 3916879,
+      "sha256": "ae3ccba54332b6c176088cafd0b6b9d512f0e80ca256b06e6e52f6be9b0c9d9c"
     },
     {
       "path": "raw__inep_saeb_microdados_csv_2015_ts_item.parquet",
@@ -432,38 +442,38 @@
     },
     {
       "path": "raw__inep_saeb_microdados_csv_2015_ts_professor.parquet",
-      "bytes": 42630362,
-      "sha256": "e607b81dd2db5ad381e6afc7dc55d2c6dcaf0fed1f6577b58c8f4e5a2e89f965"
+      "bytes": 9136607,
+      "sha256": "a725792edfe83bdad621689fe3861106f090201404ba1b11cb53204af5ab6acb"
     },
     {
       "path": "raw__inep_saeb_microdados_csv_2017_ts_aluno_3em_ag.parquet",
-      "bytes": 284121805,
-      "sha256": "b05cc7e53d60933c1e129824d0a86a0ade93b58f8cd88a04990f252368cdd53f"
+      "bytes": 132359174,
+      "sha256": "1de0772cc3e6e2408d867d7e28ef5cf72dd397f1d005b4f4ea4a4129a7e298ea"
     },
     {
       "path": "raw__inep_saeb_microdados_csv_2017_ts_aluno_3em_esc.parquet",
-      "bytes": 254091714,
-      "sha256": "fd164bd2dccb522d463e7ab7331647d123ffd288c51a1c3f4292d2e082c4c877"
+      "bytes": 131903359,
+      "sha256": "3a74772346a9ceae8d06d18b366049172b882c4fdad5980f03397162022b9d3d"
     },
     {
       "path": "raw__inep_saeb_microdados_csv_2017_ts_aluno_5ef.parquet",
-      "bytes": 373899682,
-      "sha256": "8d3004e84aa94bdf9fc3bcdc3621477114f7fed5de66480111006dfd46c42fbe"
+      "bytes": 184367105,
+      "sha256": "5f8deac034e68388877b06cdb79d381d9ac467e6a58bb448a35f9798cb78bc83"
     },
     {
       "path": "raw__inep_saeb_microdados_csv_2017_ts_aluno_9ef.parquet",
-      "bytes": 332655191,
-      "sha256": "c55770dc625b101c2520f1696037a90dde9db0be15cf321d1707ae35c055f34f"
+      "bytes": 162352995,
+      "sha256": "f1e1e1d856f773299c0c114dc3460c7b993e699424895db19f1db80ac252facf"
     },
     {
       "path": "raw__inep_saeb_microdados_csv_2017_ts_diretor.parquet",
-      "bytes": 8555194,
-      "sha256": "8f93a34b7666eb8951d17a218714038a2bb15d3e0ae3532d6a9494d4ed37270f"
+      "bytes": 2499444,
+      "sha256": "fd66133155b575f8420fb3b8b70ed6c9f5ef3bf108f3edc6d8dafa3373bda50a"
     },
     {
       "path": "raw__inep_saeb_microdados_csv_2017_ts_escola.parquet",
-      "bytes": 19210541,
-      "sha256": "8efd2e8b4289b3943720acec3237f58bd8a8bc36ba057b1daf8c8fa3a493171b"
+      "bytes": 5822865,
+      "sha256": "b759cd6c9df7a29f5fed29e4cfd61e16f97ec6dcecb7259e4184532443a5712a"
     },
     {
       "path": "raw__inep_saeb_microdados_csv_2017_ts_item.parquet",
@@ -472,8 +482,8 @@
     },
     {
       "path": "schemas.json",
-      "bytes": 442860,
-      "sha256": "ea009e0568305bc0c865c57ea5a26a9775cc71f7c6813924bc99153e9d40617d"
+      "bytes": 442191,
+      "sha256": "a3a6a2df23ca6fdc81aec0852d3201b5ea71d53311234b6975a30c6196aed86d"
     }
   ]
 }

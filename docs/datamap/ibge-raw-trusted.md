@@ -1,6 +1,6 @@
 # IBGE geography: Raw and Trusted
 
-Dataset: [lucasrangelss/ibge-raw-trusted](https://www.kaggle.com/datasets/lucasrangelss/ibge-raw-trusted) · snapshot 2026-09-30 · 4 tables · 11,196 rows
+Dataset: [lucasrangelss/ibge-raw-trusted](https://www.kaggle.com/datasets/lucasrangelss/ibge-raw-trusted) · snapshot 2026-10-01 · 4 tables · 11,196 rows
 
 **Source:** Instituto Brasileiro de Geografia e Estatística (IBGE), [https://servicodados.ibge.gov.br/api/docs/localidades](https://servicodados.ibge.gov.br/api/docs/localidades)
 
@@ -78,7 +78,7 @@ Tabela de dimensão geográfica contendo o mapeamento político-administrativo e
 
 File `trusted__ibge_estados.parquet` · 27 rows · 7 columns
 
-Estados brasileiros (UFs) conforme IBGE API de Localidades. Grão: 1 linha/UF (codigo_uf INT64, 2 dígitos). 27 linhas. Inclui região. codigo_uf/codigo_regiao INT64 para join padronizado. Origem raw: raw_zone.ibge_estados. Fonte: IBGE API de Localidades (servicodados.ibge.gov.br/api/v1/localidades/estados). Atualização: anual ou sob demanda.
+Estados brasileiros (UFs) conforme IBGE API de Localidades. Grão: 1 linha/UF (codigo_uf INT64, 2 dígitos). 27 linhas. Inclui região. codigo_uf/codigo_regiao INT64 para join padronizado. Origem raw: raw/ibge_estados. Fonte: IBGE API de Localidades (servicodados.ibge.gov.br/api/v1/localidades/estados). Atualização: anual ou sob demanda.
 
 **Built from:** `raw/ibge_estados`
 
@@ -98,7 +98,7 @@ Estados brasileiros (UFs) conforme IBGE API de Localidades. Grão: 1 linha/UF (c
 
 File `trusted__ibge_municipios.parquet` · 5,571 rows · 13 columns
 
-Municípios brasileiros conforme IBGE API de Localidades. Grão: 1 linha/município (codigo_municipio INT64, 7 dígitos). ~5.570 linhas. Inclui hierarquia completa: município → microrregião → mesorregião → UF → região. codigo_municipio/codigo_uf/codigo_regiao são INT64 para join padronizado com todas as tabelas educacionais. UF/região usam COALESCE com fallback para estrutura regiao-imediata (cobre municípios novos com gap na API). Origem raw: raw_zone.ibge_municipios. Fonte: IBGE API de Localidades (servicodados.ibge.gov.br/api/v1/localidades/municipios). Atualização: anual ou sob demanda.
+Municípios brasileiros conforme IBGE API de Localidades. Grão: 1 linha/município (codigo_municipio INT64, 7 dígitos). ~5.570 linhas. Inclui hierarquia completa: município → microrregião → mesorregião → UF → região. codigo_municipio/codigo_uf/codigo_regiao são INT64 para join padronizado com todas as tabelas educacionais. UF/região usam COALESCE com fallback para estrutura regiao-imediata (cobre municípios novos com gap na API). Origem raw: raw/ibge_municipios. Fonte: IBGE API de Localidades (servicodados.ibge.gov.br/api/v1/localidades/municipios). Atualização: anual ou sob demanda.
 
 **Built from:** `raw/ibge_municipios`
 
@@ -112,7 +112,7 @@ Municípios brasileiros conforme IBGE API de Localidades. Grão: 1 linha/municí
 | `nome_microrregiao` | STRING | Nome da microrregião geográfica IBGE. |
 | `codigo_mesorregiao` | INTEGER | Código IBGE da mesorregião geográfica (INT64). |
 | `nome_mesorregiao` | STRING | Nome da mesorregião geográfica IBGE. |
-| `codigo_uf` | INTEGER | Código IBGE da UF (INT64, 2 dígitos). FK para trusted_zone.ibge_estados. |
+| `codigo_uf` | INTEGER | Código IBGE da UF (INT64, 2 dígitos). FK para trusted/ibge_estados. |
 | `sigla_uf` | STRING | Sigla da UF. Ex: SP, RJ, MG. |
 | `nome_uf` | STRING | Nome completo da UF. |
 | `codigo_regiao` | INTEGER | Código IBGE da região geográfica (INT64, 1 dígito). 1=Norte, 2=Nordeste, 3=Sudeste, 4=Sul, 5=Centro-Oeste. |

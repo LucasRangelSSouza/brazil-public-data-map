@@ -41,16 +41,20 @@ TECH_TABLE = re.compile(r"(__rebuild|_bak|_old|_tmp|_backup|_copy|_test)")
 
 
 # Internal names that must not appear in a public dictionary. The descriptions are kept otherwise verbatim.
+# Organisation and product names of the source environment live in .scrub-terms.local (one
+# "pattern<TAB>replacement" per line, git-ignored), so this public file never names them.
 SCRUB = [
-    (re.compile(r"Data Lake Educacional d[aeo] MindLab", re.I), "educational data lake"),
-    (re.compile(r"d[aeo] MindLab", re.I), "of the source lake"),
-    (re.compile(r"MindLab", re.I), "the source lake"),
-    (re.compile(r"Mente Inovadora", re.I), "the source organization"),
-    (re.compile(r"Neolude", re.I), "the platform vendor"),
-    (re.compile(r"(raw|trusted|semantic)_zone\.", re.I), r"/"),
+    (re.compile(r"\b(raw|trusted|semantic)_zone\.", re.I), r"\1/"),
+    (re.compile(r"\s*\w*url_download_pdf\w* aponta para o PDF-fonte no GCS\.", re.I), ""),
+    (re.compile(r"\bGCS\b"), "cloud storage"),
     (re.compile(r"gs://[^\s,;)]+", re.I), "<storage URI>"),
     (re.compile(r"https://api-datalake[^\s,;)]+", re.I), "<download URL>"),
 ]
+_LOCAL_TERMS = ROOT / ".scrub-terms.local"
+if _LOCAL_TERMS.exists():
+    _local = [line.split("	", 1) for line in _LOCAL_TERMS.read_text(encoding="utf-8").splitlines()
+              if "	" in line and not line.startswith("#")]
+    SCRUB[:0] = [(re.compile(pattern, re.I), replacement) for pattern, replacement in _local]
 
 
 def scrub(text: str) -> str:

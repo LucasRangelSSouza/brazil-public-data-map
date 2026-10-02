@@ -5,7 +5,7 @@
   "group": "raw-trusted",
   "part": 2,
   "parts": 2,
-  "snapshot_date": "2026-09-30",
+  "snapshot_date": "2026-10-02",
   "tables": [
     {
       "table_id": "fnde_salario_educacao_realizado_2023",
@@ -44,8 +44,13 @@
       "parquet": "trusted__fnde_salario_educacao_previsto.parquet"
     }
   ],
-  "kaggle_metadata_sha256": "c60a87960d97b620005464002cbce1bcbe3c1a64e4f0c02049b6f2635bf5540f",
+  "kaggle_metadata_sha256": "e2cc8a207bed4f421f7adac08942e40d58187e35c25b462cce3e49fcd796ec78",
   "files": [
+    {
+      "path": "00_source_ingestion_fnde-salario-educacao.ipynb",
+      "bytes": 5980,
+      "sha256": "3c816b69042c929e3215da8f882516f184e46b36d90a5072a8e69d5e330d53f3"
+    },
     {
       "path": "01_ingestion_fnde-salario-educacao.ipynb",
       "bytes": 3645,
@@ -57,49 +62,54 @@
       "sha256": "fb7198d90806c4c9214902736d864a592f5d46384fc5f70c6105abea07c99ed5"
     },
     {
+      "path": "DATA_DICTIONARY.md",
+      "bytes": 13539,
+      "sha256": "f92ec501431b897ddba3977093aa027c2806632cdbac52174df6f1ba611476bf"
+    },
+    {
       "path": "README.md",
       "bytes": 724,
-      "sha256": "4f20756aa88968c76c8e027160c65e77f81c3bdf1d554630d8f99a37d1fbf9c1"
+      "sha256": "c24593b4c69b8e28f537dbd37e0246a89eba7e8fe70a2d1a8412d529de670cb5"
     },
     {
       "path": "audit.json",
-      "bytes": 3096,
-      "sha256": "ec1f9a349146d3f1075a172f480db8c6ca4ed4f6cdace4a676b243d2f9fbd5d1"
+      "bytes": 3036,
+      "sha256": "1ad92936bc013176dad70b2850793be7edc5fed263c123f2d46f27620e61a71b"
     },
     {
       "path": "raw__fnde_salario_educacao_realizado_2023.parquet",
-      "bytes": 506092,
-      "sha256": "2ec383012aabc80322341a2f18ef62e335edc1f2929b93bc4a7bf42fbbb56f6e"
+      "bytes": 496925,
+      "sha256": "f4e0602385c64d8be1257ab98f93ddde844fbaecf14c25262c82fb6b7bb4b192"
     },
     {
       "path": "raw__fnde_salario_educacao_realizado_2024.parquet",
-      "bytes": 398730,
-      "sha256": "6401659cec798206baa171e8e7cd01d2efb42901e0e2ad9c0904689b7240d1af"
+      "bytes": 395617,
+      "sha256": "60c370e2dc8705504b5cfc98e8474b6399ea3ee3ae57d6748fda6ac634c6c73f"
     },
     {
       "path": "raw__fnde_salario_educacao_realizado_2025.parquet",
-      "bytes": 399107,
-      "sha256": "790737b63b620536e48d0570f60e5ed7d115e92d1ef8683996747e796d9d90ef"
+      "bytes": 395154,
+      "sha256": "2c439559add7fcfeffae5f4e3ea8ef3748d3e7bc443d23c671e2177a5895ce30"
     },
     {
       "path": "raw__fnde_salario_educacao_realizado_2026.parquet",
-      "bytes": 342334,
-      "sha256": "7bc50d25a4a27aa4088b927e1e478daab73a2789e47f2ba1583b26bc676da83b"
+      "bytes": 331065,
+      "sha256": "91a6415bd3d37f541f1772d43d0a8f0df822254ae89038e6b0ed205f93d0affc"
     },
     {
       "path": "schemas.json",
-      "bytes": 13830,
-      "sha256": "f3e264fb5e2518541ae7a281980b10f7c1dc82eb3869d2ee67686cfd9d0bbc89"
+      "bytes": 13322,
+      "sha256": "9a899476da4d90122b69c9537d47431b7828f250cee53125672bf8bf25d6eed5"
     },
     {
       "path": "trusted__fnde_salario_educacao_distribuido_mensal.parquet",
-      "bytes": 3100093,
-      "sha256": "fc91ed2b06530c5bf6d24c9c08f3e39b055df5ddd5f4c2e44f80ec4939f278b2"
+      "bytes": 3026205,
+      "sha256": "d120d37278845f61da8d27975049b06a9132b0b27b871ce72ed5102245913679"
     },
     {
       "path": "trusted__fnde_salario_educacao_previsto.parquet",
-      "bytes": 2038230,
-      "sha256": "d4e0b2b4b78ed9dd883f66f3b253378ea35074691272c0a3c3e6b7037a551ed0"
+      "bytes": 1985475,
+      "sha256": "234e9d93e336a36ad7d8ae2910bfb2023c0e7c666b44f1afcf15aa3edcc4751b"
     }
   ]
 }

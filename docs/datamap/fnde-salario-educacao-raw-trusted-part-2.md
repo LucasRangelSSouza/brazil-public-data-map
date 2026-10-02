@@ -1,6 +1,6 @@
 # FNDE education contribution: Raw and Trusted
 
-Dataset: [lucasrangelss/fnde-salario-educacao-raw-trusted-part-2](https://www.kaggle.com/datasets/lucasrangelss/fnde-salario-educacao-raw-trusted-part-2) · snapshot 2026-09-30 · 6 tables · 455,943 rows
+Dataset: [lucasrangelss/fnde-salario-educacao-raw-trusted-part-2](https://www.kaggle.com/datasets/lucasrangelss/fnde-salario-educacao-raw-trusted-part-2) · snapshot 2026-10-02 · 6 tables · 455,943 rows
 
 **Source:** Fundo Nacional de Desenvolvimento da Educação (FNDE), [https://www.fnde.gov.br/](https://www.fnde.gov.br/)
 

@@ -1,6 +1,6 @@
 # Data dictionary
 
-31 datasets, 428 tables, 3,991,508,838 rows, every field documented where the source lake carries a description. Each dictionary also ships inside its Kaggle dataset as `DATA_DICTIONARY.md` and `data_dictionary.json`.
+31 datasets, 428 tables, 4,002,911,253 rows, every field documented where the source lake carries a description. Each dictionary also ships inside its Kaggle dataset as `DATA_DICTIONARY.md` and `data_dictionary.json`.
 
 Interactive map: https://rangeltech.net/datamap/
 
@@ -32,8 +32,8 @@ Interactive map: https://rangeltech.net/datamap/
 | SAEB assessment (INEP) | [saeb-raw-trusted-part-4](saeb-raw-trusted-part-4.md) | 38 | 5,526,123 |
 | SIOPE education finance | [siope-analytics](siope-analytics.md) | 16 | 365,591,796 |
 | SIOPE education finance | [siope-raw-trusted-part-1](siope-raw-trusted-part-1.md) | 2 | 721,981,186 |
-| SIOPE education finance | [siope-raw-trusted-part-2](siope-raw-trusted-part-2.md) | 13 | 519,024,963 |
-| SIOPE education finance | [siope-raw-trusted-part-3](siope-raw-trusted-part-3.md) | 8 | 338,297,208 |
-| SIOPE education finance | [siope-raw-trusted-part-4](siope-raw-trusted-part-4.md) | 10 | 448,537,682 |
+| SIOPE education finance | [siope-raw-trusted-part-2](siope-raw-trusted-part-2.md) | 13 | 530,094,262 |
+| SIOPE education finance | [siope-raw-trusted-part-3](siope-raw-trusted-part-3.md) | 8 | 338,460,104 |
+| SIOPE education finance | [siope-raw-trusted-part-4](siope-raw-trusted-part-4.md) | 10 | 448,707,902 |
 | School flow and distortion rates (INEP) | [taxas-rendimento-analytics](taxas-rendimento-analytics.md) | 10 | 5,003,248 |
 | School flow and distortion rates (INEP) | [taxas-rendimento-raw-trusted](taxas-rendimento-raw-trusted.md) | 11 | 218,331,656 |

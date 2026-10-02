@@ -5,7 +5,7 @@
   "group": "raw-trusted",
   "part": 1,
   "parts": 1,
-  "snapshot_date": "2026-09-30",
+  "snapshot_date": "2026-10-01",
   "tables": [
     {
       "table_id": "ibge_estados",
@@ -32,52 +32,52 @@
       "parquet": "trusted__ibge_municipios.parquet"
     }
   ],
-  "kaggle_metadata_sha256": "4dc48539255f6445dd4fa16c59c946520c5aff14ff92f721d6ffd95b3df7ebc7",
+  "kaggle_metadata_sha256": "d1f4a3f1edef06c910749eae68cf8450479c1f3e7809ee7f5efc8c5f66d380a8",
   "files": [
     {
       "path": "01_ingestion_ibge.ipynb",
-      "bytes": 3410,
-      "sha256": "93cd41cae5919970dc2ee176ee94486bf34c0b18332b0a6fa56e61ea929d0023"
+      "bytes": 3516,
+      "sha256": "c11ec95896d5206bcf6402539af007172badc065224f5ebd58d3c638c2bd99b7"
     },
     {
       "path": "02_transform_to_trusted_ibge.ipynb",
-      "bytes": 3756,
-      "sha256": "7730888761f85575c927215ee453f27d72fad2d81200e6d863566dc40a19fbdb"
-    },
-    {
-      "path": "README.md",
-      "bytes": 707,
-      "sha256": "0bf9d5c34edae1782b963b020b6a1f3988e8d0ed43ae261e7a6d0368e03e645a"
+      "bytes": 3854,
+      "sha256": "f879808904064e6f07303b3fe5e31a82ced5f9c5748e1c5de494f04f29d39b65"
     },
     {
       "path": "audit.json",
-      "bytes": 1946,
-      "sha256": "c661df818be4b850ae92df03698bdebf2e52d9502597f602510c33d1b09826d5"
+      "bytes": 2030,
+      "sha256": "30de93b12a2c16ca5af77dc5270db86b1f65ee45b18f377020dd7a64c4ad8461"
     },
     {
       "path": "raw__ibge_estados.parquet",
-      "bytes": 2370,
-      "sha256": "63f1676fbbbcc9213d9a745e160628b377985c653f34f87d944403fe1dc0ef5c"
+      "bytes": 2450,
+      "sha256": "c0e9f81c1c4d5500e5ab2ef651419b29854669cd832fe0071fae3f00171f344e"
     },
     {
       "path": "raw__ibge_municipios.parquet",
-      "bytes": 128105,
-      "sha256": "0b1a523afa97e4dc2ff29db471badbdd413d3aff05f09ebad0eb12b85bf64a17"
+      "bytes": 106896,
+      "sha256": "a197c23aabfad54f16db43f02e0029868f7612816afa1bd047fe90fd3cf0016d"
+    },
+    {
+      "path": "README.md",
+      "bytes": 714,
+      "sha256": "8293c5702f3a9b91d13864b51d36364b3277679f079268fe17a703466a5296b0"
     },
     {
       "path": "schemas.json",
-      "bytes": 6528,
-      "sha256": "c7343f8e8bb5651315b5b814f83084df51053fb1f1008d54545abe7690d589da"
+      "bytes": 6772,
+      "sha256": "f4ef850ac8844a81352b1b2bbd5083ac35ec6393a920b7709df4f78210bf0bad"
     },
     {
       "path": "trusted__ibge_estados.parquet",
-      "bytes": 2404,
-      "sha256": "88fef99c78ca112bbf08e97f16263d0e00d5a4d75c553f0b4e0c818abcc415fa"
+      "bytes": 2488,
+      "sha256": "c331ea04dc8aca221a2122786537e1834801a04240be36cb0224e32f0ac1d265"
     },
     {
       "path": "trusted__ibge_municipios.parquet",
-      "bytes": 90910,
-      "sha256": "755976397590ea1dc0b976e4f08d312e2eb93e6360c841fa0559a3efd8c5435f"
+      "bytes": 85534,
+      "sha256": "84fa7965b23e2fe90afe6980d6c84dd460afe3171c57104264b8114829706902"
     }
   ]
 }

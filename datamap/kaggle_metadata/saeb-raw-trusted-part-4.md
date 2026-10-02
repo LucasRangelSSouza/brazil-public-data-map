@@ -1,6 +1,6 @@
 # SAEB assessment (INEP): Raw and Trusted
 
-38 tables, 5,526,123 rows, snapshot 2026-10-01. SAEB results: aggregated proficiency indicators, the school report-card API (boletim) for 2011 onward, and the assessment microdata tables released without student-level records.
+38 tables, 5,526,123 rows, snapshot 2026-10-02. SAEB results: aggregated proficiency indicators, the school report-card API (boletim) for 2011 onward, and the assessment microdata tables released without student-level records.
 
 ## Where the data comes from
 

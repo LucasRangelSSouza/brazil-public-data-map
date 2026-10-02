@@ -321,7 +321,7 @@ Censo Escolar — contagens de docentes por escola e ano. Grao: 1 linha por (cod
 
 File `semantic__obt_inep_censo_escola_ano.parquet` · 7,376,443 rows · 85 columns
 
-Censo Escolar — cadastro e classificacao de escolas por ano. Grao: 1 linha por (codigo_escola, ano). SEM colunas QT_* — matrículas em obt_inep_censo_matricula_escola_ano, docentes em obt_inep_censo_docente_escola_ano, turmas em obt_inep_censo_turma_escola_ano. Dedup por source_file DESC. FK: codigo_escola (= CO_ENTIDADE INEP), codigo_municipio → obt_ibge_municipio. Origem: trusted_zone.inep_censo_escolar_escolas + inep_censo_escolar_localizacao. INEP Censo Escolar dados.gov.br.
+Censo Escolar — cadastro e classificacao de escolas por ano. Grao: 1 linha por (codigo_escola, ano). SEM colunas QT_* — matrículas em obt_inep_censo_matricula_escola_ano, docentes em obt_inep_censo_docente_escola_ano, turmas em obt_inep_censo_turma_escola_ano. Dedup por source_file DESC. FK: codigo_escola (= CO_ENTIDADE INEP), codigo_municipio → obt_ibge_municipio. Origem: trusted/inep_censo_escolar_escolas + inep_censo_escolar_localizacao. INEP Censo Escolar dados.gov.br.
 
 **Built from:** `semantic/obt_ibge_municipio`, `trusted/inep_censo_escolar_escolas`, `trusted/inep_censo_escolar_localizacao`
 
@@ -419,7 +419,7 @@ Censo Escolar — cadastro e classificacao de escolas por ano. Grao: 1 linha por
 
 File `semantic__obt_inep_censo_infraestrutura_escola.parquet` · 944,184,704 rows · 15 columns
 
-Infraestrutura escolar em formato longo (EAV): cada linha = 1 escola x 1 ano x 1 indicador. Particionada por ano, clusterizada por sigla_uf e campo_codigo. Origem: trusted_zone.inep_censo_escolar_infraestrutura + inep_censo_escolar_escolas (geo). Chave logica: codigo_escola + ano + campo_codigo.
+Infraestrutura escolar em formato longo (EAV): cada linha = 1 escola x 1 ano x 1 indicador. Particionada por ano, clusterizada por sigla_uf e campo_codigo. Origem: trusted/inep_censo_escolar_infraestrutura + inep_censo_escolar_escolas (geo). Chave logica: codigo_escola + ano + campo_codigo.
 
 **Built from:** `trusted/inep_censo_escolar_escolas`, `trusted/inep_censo_escolar_infraestrutura`
 
@@ -701,7 +701,7 @@ Censo Escolar — contagens de matrículas por escola e ano. Grao: 1 linha por (
 
 File `semantic__obt_inep_censo_municipio_ano.parquet` · 170,578 rows · 32 columns
 
-Censo Escolar — agregacao por municipio e ano. Grao: 1 linha por (codigo_municipio, ano). Contagens de escolas por dependência e localização + somas de QT_MAT/DOC/TUR. FK: codigo_municipio → obt_ibge_municipio. Origem: semantic_zone.obt_inep_censo_escola/matricula/docente/turma_escola_ano. INEP Censo Escolar dados.gov.br.
+Censo Escolar — agregacao por municipio e ano. Grao: 1 linha por (codigo_municipio, ano). Contagens de escolas por dependência e localização + somas de QT_MAT/DOC/TUR. FK: codigo_municipio → obt_ibge_municipio. Origem: semantic/obt_inep_censo_escola/matricula/docente/turma_escola_ano. INEP Censo Escolar dados.gov.br.
 
 **Built from:** `semantic/obt_inep_censo_docente_escola_ano`, `semantic/obt_inep_censo_escola_ano`, `semantic/obt_inep_censo_matricula_escola_ano`, `semantic/obt_inep_censo_turma_escola_ano`
 
@@ -785,7 +785,7 @@ Censo Escolar agregado por municipio, ano e dependencia administrativa. Grao: 1 
 
 File `semantic__obt_inep_censo_perguntas.parquet` · 8,723 rows · 20 columns
 
-Catálogo analítico de todos os campos/variáveis coletados no Censo Escolar INEP. Grão: 1 campo por tabela de domínio. Para cada campo informa: definição oficial (quando disponível no dicionário INEP), tabelas de origem, primeiro e último ano de disponibilidade, lista de anos em que apareceu, tipo de dado, flags de tipo (IN_*, QT_*, TP_*, CO_*, NO_*). Origem: trusted_zone.inep_censo_escolar_dicionario_campos + inep_censo_escolar_colunas_fonte. INEP Censo Escolar dados.gov.br.
+Catálogo analítico de todos os campos/variáveis coletados no Censo Escolar INEP. Grão: 1 campo por tabela de domínio. Para cada campo informa: definição oficial (quando disponível no dicionário INEP), tabelas de origem, primeiro e último ano de disponibilidade, lista de anos em que apareceu, tipo de dado, flags de tipo (IN_*, QT_*, TP_*, CO_*, NO_*). Origem: trusted/inep_censo_escolar_dicionario_campos + inep_censo_escolar_colunas_fonte. INEP Censo Escolar dados.gov.br.
 
 **Built from:** `trusted/inep_censo_escolar_colunas_fonte`, `trusted/inep_censo_escolar_dicionario_campos`
 

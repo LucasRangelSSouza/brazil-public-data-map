@@ -224,7 +224,7 @@ FUNDEB Painel FNDE — complementacao/coeficientes/matriculas por ente x ano (ta
 | Column | Type | Description |
 |---|---|---|
 | `ano` | INTEGER | Ano de referencia do FUNDEB. |
-| `codigo_municipio` | STRING | Codigo IBGE do municipio, 7 digitos. FK -> semantic_zone.obt_ibge_municipio.codigo_municipio. |
+| `codigo_municipio` | STRING | Codigo IBGE do municipio, 7 digitos. FK -> semantic/obt_ibge_municipio.codigo_municipio. |
 | `ente_federado` | STRING | Nome do ente federado (municipio ou governo estadual). |
 | `sigla_uf` | STRING | Sigla da UF (ex.: SP, MG). |
 | `qt_matriculas` | INTEGER | Quantidade total de matrículas presenciais na rede pública consideradas pelo FUNDEB. — descrição gerada por IA. |
@@ -262,7 +262,7 @@ FUNDEB Painel FNDE — cronograma mensal da complementacao VAAT por ente x ano. 
 | Column | Type | Description |
 |---|---|---|
 | `ano` | INTEGER | Ano de referencia do FUNDEB. |
-| `codigo_municipio` | STRING | Codigo IBGE do municipio, 7 digitos. FK -> semantic_zone.obt_ibge_municipio.codigo_municipio. |
+| `codigo_municipio` | STRING | Codigo IBGE do municipio, 7 digitos. FK -> semantic/obt_ibge_municipio.codigo_municipio. |
 | `ente_federado` | STRING | Nome do ente federado (municipio ou governo estadual). |
 | `sigla_uf` | STRING | Sigla da UF (ex.: SP, MG). |
 | `vl_mes_1` | NUMERIC | Parcela do mes 1 da complementacao VAAT distribuida ao ente, em R$. |
@@ -297,7 +297,7 @@ FUNDEB Painel FNDE — dimensao de entes (geografia): municipio/estado, UF, regi
 
 | Column | Type | Description |
 |---|---|---|
-| `codigo_municipio` | STRING | Codigo IBGE do municipio, 7 digitos. FK -> semantic_zone.obt_ibge_municipio.codigo_municipio. |
+| `codigo_municipio` | STRING | Codigo IBGE do municipio, 7 digitos. FK -> semantic/obt_ibge_municipio.codigo_municipio. |
 | `codigo_ibge_completo` | STRING | Codigo IBGE completo agrupado do ente (identificador do painel). |
 | `codigo_municipio_fnde` | STRING | Codigo do municipio no padrao FNDE. |
 | `ente_federado` | STRING | Nome do ente federado (municipio ou governo estadual). |
@@ -328,7 +328,7 @@ FUNDEB Painel FNDE — valores efetivamente distribuidos (pagos) por ente/ano/me
 | `mes_num` | INTEGER | Mes numerico (1-12). |
 | `mes_nome` | STRING | Mes por extenso. |
 | `codigo_ibge` | STRING | Codigo IBGE bruto (municipio 7 digitos; governo estadual 2 digitos = UF). |
-| `codigo_municipio` | STRING | Codigo IBGE do municipio, 7 digitos. FK -> semantic_zone.obt_ibge_municipio.codigo_municipio. |
+| `codigo_municipio` | STRING | Codigo IBGE do municipio, 7 digitos. FK -> semantic/obt_ibge_municipio.codigo_municipio. |
 | `esfera` | STRING | Esfera do ente: Estadual ou Municipal. |
 | `ente_federado` | STRING | Nome do ente federado (municipio ou governo estadual). |
 | `sigla_uf` | STRING | Sigla da UF (ex.: SP, MG). |
@@ -353,7 +353,7 @@ FUNDEB Painel FNDE — habilitacao VAAR (situacao + motivo/atributo de inabilita
 | Column | Type | Description |
 |---|---|---|
 | `ano` | INTEGER | Ano de referencia do FUNDEB. |
-| `codigo_municipio` | STRING | Codigo IBGE do municipio, 7 digitos. FK -> semantic_zone.obt_ibge_municipio.codigo_municipio. |
+| `codigo_municipio` | STRING | Codigo IBGE do municipio, 7 digitos. FK -> semantic/obt_ibge_municipio.codigo_municipio. |
 | `ente_federado` | STRING | Nome do ente federado (municipio ou governo estadual). |
 | `sigla_uf` | STRING | Sigla da UF (ex.: SP, MG). |
 | `situacao_vaar` | STRING | Situacao de habilitacao ao VAAR (Habilitado/Inabilitado). |
@@ -377,7 +377,7 @@ FUNDEB Painel FNDE — habilitacao VAAT (serie historica: situacao + motivo) por
 | Column | Type | Description |
 |---|---|---|
 | `ano` | INTEGER | Ano de referencia do FUNDEB. |
-| `codigo_municipio` | STRING | Codigo IBGE do municipio, 7 digitos. FK -> semantic_zone.obt_ibge_municipio.codigo_municipio. |
+| `codigo_municipio` | STRING | Codigo IBGE do municipio, 7 digitos. FK -> semantic/obt_ibge_municipio.codigo_municipio. |
 | `ente_federado` | STRING | Nome do ente federado (municipio ou governo estadual). |
 | `sigla_uf` | STRING | Sigla da UF (ex.: SP, MG). |
 | `situacao` | STRING | Situacao de habilitacao ao VAAT (Habilitado/Inabilitado). |
@@ -401,7 +401,7 @@ FUNDEB Painel FNDE — indicadores legais SIOPE (MDE, remuneracao, IEI, aplicaca
 |---|---|---|
 | `ano` | INTEGER | Ano de referencia do FUNDEB. |
 | `periodo` | INTEGER | Periodo/bimestre do indicador. |
-| `codigo_municipio` | STRING | Codigo IBGE do municipio, 7 digitos. FK -> semantic_zone.obt_ibge_municipio.codigo_municipio. |
+| `codigo_municipio` | STRING | Codigo IBGE do municipio, 7 digitos. FK -> semantic/obt_ibge_municipio.codigo_municipio. |
 | `ente_federado` | STRING | Nome do ente federado (municipio ou governo estadual). |
 | `sigla_uf` | STRING | Sigla da UF (ex.: SP, MG). |
 | `nome_indicador` | STRING | Indicador legal SIOPE (MDE 25%, remuneracao 70%, MDE 40%, IEI, aplicacao VAAT em educacao infantil/capital, % destinacao ao Fundeb etc.). |

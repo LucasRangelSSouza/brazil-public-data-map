@@ -5,7 +5,7 @@
   "group": "raw-trusted",
   "part": 4,
   "parts": 4,
-  "snapshot_date": "2026-10-01",
+  "snapshot_date": "2026-10-02",
   "tables": [
     {
       "table_id": "inep_saeb_microdados_txt_2003_escola_03_txt",
@@ -236,8 +236,13 @@
       "parquet": "trusted__inep_saeb_secretario.parquet"
     }
   ],
-  "kaggle_metadata_sha256": "422b6a8c32f76ac6f09f562d58d00248ce2b0bb1241e656ebcf8dcf24a4fe2ef",
+  "kaggle_metadata_sha256": "8da08c056e87da9527aae35225aab2a4de07901a747fe402d1a0577579301783",
   "files": [
+    {
+      "path": "00_source_ingestion_saeb.ipynb",
+      "bytes": 6305,
+      "sha256": "13ddd36c464a63a1c0156b7be674aa77dbff700f0a4a9980eb3309cb025f61b7"
+    },
     {
       "path": "01_ingestion_saeb.ipynb",
       "bytes": 5506,
@@ -249,129 +254,134 @@
       "sha256": "912cb8492fbbd01579701eed212e1ad4ae27cb21a0c87c19fe2380b9ba2b255a"
     },
     {
+      "path": "DATA_DICTIONARY.md",
+      "bytes": 148038,
+      "sha256": "eef0b9ccb9466306ab8131da77a30e76fbd908fbb64b20f15be3249e326ef20a"
+    },
+    {
       "path": "README.md",
       "bytes": 766,
-      "sha256": "047f44098a7c740d1681c3fe55cb021a05bc19fcf43e8af547c324e6fdfee219"
+      "sha256": "e6301393d5658423d44fd6fdabe0c65af1c545fa19b2042e03338fffbb5d932f"
     },
     {
       "path": "audit.json",
-      "bytes": 35189,
-      "sha256": "bc3136673b719cbb1c0895fc5bde919e14dafc1555186b29c19ae68d9a68255e"
+      "bytes": 35150,
+      "sha256": "e86ee275a401a6795c497868fda47b8ade0fcbf0c48abacbdb9ad521d248dfa9"
     },
     {
       "path": "raw__inep_saeb_microdados_txt_2003_escola_03_txt.parquet",
-      "bytes": 236281,
-      "sha256": "62a438ce91c7fcced96f62dc9cd8c414c5cb77febb60a59d472e72d695eb89d0"
+      "bytes": 231984,
+      "sha256": "206cc0c1d30cd2fe5894af27627858394aabd2c205ee9fa68672ae9b4ad7dc86"
     },
     {
       "path": "raw__inep_saeb_microdados_txt_2003_mascara_txt.parquet",
-      "bytes": 2571497,
-      "sha256": "deb6f3e8490d74d8b7cd98afd40c0ecdf53812184046f231309a02c5e4b6aac2"
+      "bytes": 2430037,
+      "sha256": "9cf0f2ff543716662353bd46537c0271aa3e6f2a69444a4d0e9047b203ece1fc"
     },
     {
       "path": "raw__inep_saeb_microdados_txt_2003_matematica_03ano_txt.parquet",
-      "bytes": 2244128,
-      "sha256": "195ca7d2b4ec66b1da4056c92bc7a39c9c7bc01e15e98545bb17efa1e6af2f40"
+      "bytes": 2215314,
+      "sha256": "cdf9b72d0fe221e37fb53bb4265605ace2eed626cae1b3bf132bd2a815925c19"
     },
     {
       "path": "raw__inep_saeb_microdados_txt_2003_matematica_04serie_txt.parquet",
-      "bytes": 3809539,
-      "sha256": "4f82a1da4fa7bc7ea90eb260c47b3a8dd1350f70ff1c70b1323afe85217095e9"
+      "bytes": 3758082,
+      "sha256": "b10ecb1c35e73b529fbfb48828bd844eb10ef94040cda0d890f71e990bb4dc57"
     },
     {
       "path": "raw__inep_saeb_microdados_txt_2003_matematica_08serie_txt.parquet",
-      "bytes": 3130965,
-      "sha256": "ea719f11a3180af0992ffd00a8e065e6351fd16bc637bedba9be3e0e7333d300"
+      "bytes": 3089553,
+      "sha256": "4dc0bd80064b51d21424f0877834670bcf54fde8c2e782f8c1ad32c1bb8f18c6"
     },
     {
       "path": "raw__inep_saeb_microdados_txt_2003_portugues_03ano_txt.parquet",
-      "bytes": 2202584,
-      "sha256": "c8eda3d934817a5a9b397db7657af2275c367cecda7dfa1395c327da67797512"
+      "bytes": 2173810,
+      "sha256": "3ba587235323abce9b66df33c8b34be56ac0e3dd0724edc38841c30064afccb7"
     },
     {
       "path": "raw__inep_saeb_microdados_txt_2003_portugues_04serie_txt.parquet",
-      "bytes": 3764847,
-      "sha256": "4d6d8e5b1d77b3bbc185e008a72f55e29e3932ab2b43b11c832f9b863d7eaa7b"
+      "bytes": 3714559,
+      "sha256": "7dbbca08c7e339a1aae8c2925b60767556ce788746fe4a4f3499588596e6ad23"
     },
     {
       "path": "raw__inep_saeb_microdados_txt_2003_portugues_08serie_txt.parquet",
-      "bytes": 3148577,
-      "sha256": "a001aac419cb56c8282fda4a07bc89aac6f24ffc004fe4c167678032f759deac"
+      "bytes": 3107159,
+      "sha256": "875d475b1752235d5a5f9284ab154c0c269f76a848d5394115f52c9ee4479431"
     },
     {
       "path": "raw__inep_saeb_microdados_txt_2003_turma_03_txt.parquet",
-      "bytes": 185183,
-      "sha256": "10abb4a9aa7c6b5d349999209305e164da3598df30122b3d6029663c6e764217"
+      "bytes": 179406,
+      "sha256": "020ed6a2e958b32c50021007b55c9f0245f1ce49dbf7514e3e0e005d9b7b66ed"
     },
     {
       "path": "raw__inep_saeb_microdados_txt_2005_diretor_05_txt.parquet",
-      "bytes": 305820,
-      "sha256": "71ee913280888d5a78048defce6be76ada1f7643e01964daa63494c3ae08bc0b"
+      "bytes": 303587,
+      "sha256": "c9baf4d113b93c2467a238a8525101fdadfe7a78a4348a032b3d6263c07098e7"
     },
     {
       "path": "raw__inep_saeb_microdados_txt_2005_docente_05_txt.parquet",
-      "bytes": 708644,
-      "sha256": "3b4c5759db8c69d6972138ad3f634a1ae02f9ab7981791c996ca9c8a73e5d8b0"
+      "bytes": 691788,
+      "sha256": "58e6a66cabb99a81eeaa46ea8fde79b9314d67ce0365557f5acfc776ff7bb96e"
     },
     {
       "path": "raw__inep_saeb_microdados_txt_2005_escola_05_txt.parquet",
-      "bytes": 153219,
-      "sha256": "e750200a6148c394365a18a9520958c452376e4a3ad6e71ac9b35ca0d44e5148"
+      "bytes": 152065,
+      "sha256": "1787292f154637ff088025052c62470d999848961a0310d9d74f2a957a34f039"
     },
     {
       "path": "raw__inep_saeb_microdados_txt_2005_matematica_03ano_txt.parquet",
-      "bytes": 1563878,
-      "sha256": "96d40ff1044dd6e87e12a817c12dd9d8175e94775609d9e4b88459d8e0c60769"
+      "bytes": 1533150,
+      "sha256": "461be55dd7bea6585a457770082c818225472ee15a820b3417908da0f6163410"
     },
     {
       "path": "raw__inep_saeb_microdados_txt_2005_matematica_04serie_txt.parquet",
-      "bytes": 2849524,
-      "sha256": "ecd3ef00fa3ed4eeea49dadd4aeaf98e73ef56854da7cd79bfad55a72b1d1912"
+      "bytes": 2785742,
+      "sha256": "8277f0f58dc88293c767d0c16f05cfc42128ea1951731606395f0efe6ff705cf"
     },
     {
       "path": "raw__inep_saeb_microdados_txt_2005_matematica_08serie_txt.parquet",
-      "bytes": 2312872,
-      "sha256": "65a721577dcfe9673a395f149120739d0563f398037c22dd531bfff4ed9b1aa1"
+      "bytes": 2263251,
+      "sha256": "c5b6ed1af4ba468ad85e31e7e924a787d154aff83412478386cd9858ded04751"
     },
     {
       "path": "raw__inep_saeb_microdados_txt_2005_portugues_03ano_txt.parquet",
-      "bytes": 1621427,
-      "sha256": "3e583318bb00a28987bee6caec4da201ed7d5c09a148aa8cdfb0e49d97b41207"
+      "bytes": 1590585,
+      "sha256": "89cc03ffc10a03d0ea82c3fb50bed5a1cc5b1bfebdbd0ec31234919d358169b8"
     },
     {
       "path": "raw__inep_saeb_microdados_txt_2005_portugues_04serie_txt.parquet",
-      "bytes": 3009609,
-      "sha256": "66753915503a5ed852ae416bc842f261111c0eb5f4cae52eb8369d3fe6e89bb4"
+      "bytes": 2945223,
+      "sha256": "233eed524011766fd14d77380e55f3083a4677b84344a938fa4966efcdbd7b02"
     },
     {
       "path": "raw__inep_saeb_microdados_txt_2005_portugues_08serie_txt.parquet",
-      "bytes": 2394970,
-      "sha256": "e2a2fb90c9ff3514328dba35ed59dfe96590811eeab73a8a98c56e59c3a546b6"
+      "bytes": 2345348,
+      "sha256": "4d8573b3b946ab615cc9a866d92953562d4feae3b3ea6b1826b076d7cbf7e70d"
     },
     {
       "path": "raw__inep_saeb_microdados_txt_2005_turma_05_txt.parquet",
-      "bytes": 222575,
-      "sha256": "011bde91f2f0a0b6e208fd857c96b2959c50d4da49b5c13c012b798d774602c1"
+      "bytes": 220029,
+      "sha256": "082611ff2b8364cf8e682bca5096e13c4f32562625a2099b7254234026679788"
     },
     {
       "path": "raw__inep_saeb_microdados_txt_tabelas.parquet",
-      "bytes": 24805,
-      "sha256": "95d5d30018844a35ac1d650129e06b75922691f48dd75ff2c430612c2c84e0e2"
+      "bytes": 23676,
+      "sha256": "d8af904f5492955e447882f489ca0fc50d2781017ae0bbed862d0302a186fe19"
     },
     {
       "path": "raw__inep_saeb_resultados_planilhas_linhas.parquet",
-      "bytes": 133429649,
-      "sha256": "a0dcb61733ed4f75c52f13ffcad54d9d339fbf4f875a8f4b026fa636037f1469"
+      "bytes": 130908803,
+      "sha256": "e21bff5e4a23ed8cad941559a55301feb94811a709727b71218c298641be560e"
     },
     {
       "path": "raw__saeb_indicadores_brasil.parquet",
-      "bytes": 211903,
-      "sha256": "b3530558449f316d15bbfb6dc0523374f675da483a4f84860a359b50de56be37"
+      "bytes": 147951,
+      "sha256": "941ca66f66d3c625f3fab48ce928dc0626322e7c938330116ab95812decef5dd"
     },
     {
       "path": "raw__saeb_indicadores_estados.parquet",
-      "bytes": 3944976,
-      "sha256": "413b5b697b5681fadbed8799c738887a2857be63a5fa0b079dc7387c53f21757"
+      "bytes": 1450323,
+      "sha256": "aa17e86c5ee0b53a8a36fe7417d217fb26ef81c19856cf5fd1622220521a0ae6"
     },
     {
       "path": "raw__saeb_indicadores_historico_brasil.parquet",
@@ -380,38 +390,38 @@
     },
     {
       "path": "raw__saeb_indicadores_historico_estados.parquet",
-      "bytes": 397684,
-      "sha256": "d6a605d08da1078927543880f65a3c3d40c025fc52fa9a227d1e29234182c514"
+      "bytes": 362917,
+      "sha256": "3568e15df178e19aee9eabcbe84a304d1859228cca42ee0df39bea61841aca6e"
     },
     {
       "path": "raw__saeb_indicadores_municipios.parquet",
-      "bytes": 80540354,
-      "sha256": "daa73aa8c182db65508e15d2e24a245b818e1f99a345a530ac20186b88484ca6"
+      "bytes": 29012832,
+      "sha256": "82d975107ed258e2fa7396388986731f158c02234338308462453b3c6cba4312"
     },
     {
       "path": "schemas.json",
-      "bytes": 191858,
-      "sha256": "079f49cf6412c94688ac2a954d45ea2a20ce782417f177f44aba0bf3d9895388"
+      "bytes": 191595,
+      "sha256": "be12b85d6e92d498f7405905365e3e9957e9bef3d78d720e7aaa61b815cdcd4c"
     },
     {
       "path": "trusted__api_saeb_boletim_desempenho.parquet",
-      "bytes": 114124039,
-      "sha256": "e99f04768d86d19d9f6f7dc0a506aeb5d2432cd97f164e9475a5f5c023edb000"
+      "bytes": 52933258,
+      "sha256": "b950080f57011886964edd78a1c3fdb9b37a8056b75e8036097e5c4ed46eebe4"
     },
     {
       "path": "trusted__api_saeb_boletim_escola_edicao.parquet",
-      "bytes": 16284216,
-      "sha256": "35ea8ce0327a796747601b4d36195fe4eff5ece4b7097ffc694bdd6ecdf4f7ca"
+      "bytes": 11270156,
+      "sha256": "cb6b701722091b8b8dfc046cf08359b6c963a927eda0fa97940bd451cc187aea"
     },
     {
       "path": "trusted__inep_saeb_escola.parquet",
-      "bytes": 16481285,
-      "sha256": "a9fdc0db6f748d69d016b21957719d06448600ce2d9f9447317d57870fcb4b98"
+      "bytes": 12165620,
+      "sha256": "907c90503f423ad98793b96c0f89190e51e9ee4d291d6343209180600c4b5e8f"
     },
     {
       "path": "trusted__inep_saeb_indicadores_brasil.parquet",
-      "bytes": 444790,
-      "sha256": "e0f1239833fb93ebf7cae18341db1f697caf658440041cfc1dc0d32e01e8bae7"
+      "bytes": 170500,
+      "sha256": "04f6a8f5c70f5bcf6e9e9bad5ab8eff7efdf55ab77d0d781cde3c6281730300d"
     },
     {
       "path": "trusted__inep_saeb_indicadores_erros_amostrais.parquet",
@@ -420,38 +430,38 @@
     },
     {
       "path": "trusted__inep_saeb_indicadores_estados.parquet",
-      "bytes": 3605454,
-      "sha256": "6ea43f6a85c198189ce7b2d811b2fe01fe237ac92fb979ce5eebbf6ab0f21952"
+      "bytes": 1330056,
+      "sha256": "7606002b249ee14b4cc0e3dbe2c33c75071da9e5cc828de1c4de7ed2042d2561"
     },
     {
       "path": "trusted__inep_saeb_indicadores_historico_brasil.parquet",
-      "bytes": 134649,
-      "sha256": "63d89d5b70f2fdf3e0f20cdd63aa7184348dbd994896bd5b16afe7989ab20a81"
+      "bytes": 36085,
+      "sha256": "e219d61ad9176e46dfbb53e28d4b5302ab1d9cd688fe428441ec5506a470603f"
     },
     {
       "path": "trusted__inep_saeb_indicadores_historico_estados.parquet",
-      "bytes": 355926,
-      "sha256": "238db94d0fe9a705f4a6fdc76ec518a8f7f4f4642f869de800a9d256592a4545"
+      "bytes": 237419,
+      "sha256": "5c4a4724816bc313917caf4509a6113e2f0d2724de397de40030696fc2dd8204"
     },
     {
       "path": "trusted__inep_saeb_indicadores_municipios.parquet",
-      "bytes": 100240916,
-      "sha256": "333d90a9fa8c656f7c5da6b60d453b3fab59d7080c42caabb72ce8cf14308400"
+      "bytes": 30819678,
+      "sha256": "876053b3f2299526e97c6281f62f7d5e72f9a73c3101d9424596714cfc13fd3e"
     },
     {
       "path": "trusted__inep_saeb_microdados_escola.parquet",
-      "bytes": 26266449,
-      "sha256": "094ea6cbe6b1ad9bc8f37e0369bb22dbd66e1e16b22f3e87e37f30e1305f3de2"
+      "bytes": 17307526,
+      "sha256": "38f1e48ecbc1a1841a602f96f1ed31f80a1ea01ebfe787e496c4d850b21ccd7b"
     },
     {
       "path": "trusted__inep_saeb_microdados_item.parquet",
-      "bytes": 123310,
-      "sha256": "3c67a3901de93af2214f9b8776141ca3c1d7b70574cd1e3651a9c019b54ff6ad"
+      "bytes": 88738,
+      "sha256": "586453d321f855b7a892860e9a7b6bbcbb90e830f5aef6eede55056c0c5ef313"
     },
     {
       "path": "trusted__inep_saeb_secretario.parquet",
-      "bytes": 1770658,
-      "sha256": "78c21f5b697df07ec3831204956983e89a06e9322063ce4600d137e6211ded8a"
+      "bytes": 1724532,
+      "sha256": "a93747fb48e6f18e801fead380bd30362de12b1378ed2c164fd01724817b0ef6"
     }
   ]
 }

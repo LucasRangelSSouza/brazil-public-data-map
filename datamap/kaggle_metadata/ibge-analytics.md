@@ -1,6 +1,6 @@
 # IBGE geography: Analytics
 
-2 tables, 5,598 rows, snapshot 2026-09-30. States and municipalities with their IBGE codes: the key that joins almost every education table.
+2 tables, 5,598 rows, snapshot 2026-10-01. States and municipalities with their IBGE codes: the key that joins almost every education table.
 
 ## Where the data comes from
 

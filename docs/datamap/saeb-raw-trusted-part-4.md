@@ -1,6 +1,6 @@
 # SAEB assessment (INEP): Raw and Trusted
 
-Dataset: [lucasrangelss/saeb-raw-trusted-part-4](https://www.kaggle.com/datasets/lucasrangelss/saeb-raw-trusted-part-4) · snapshot 2026-10-01 · 38 tables · 5,526,123 rows
+Dataset: [lucasrangelss/saeb-raw-trusted-part-4](https://www.kaggle.com/datasets/lucasrangelss/saeb-raw-trusted-part-4) · snapshot 2026-10-02 · 38 tables · 5,526,123 rows
 
 **Source:** Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (INEP), [https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/saeb](https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/saeb)
 
@@ -1832,7 +1832,7 @@ Microdados SAEB por escola — questionnaire + resultados agregados por escola. 
 | Column | Type | Description |
 |---|---|---|
 | `ano` | INTEGER | Ano de referência da edição do SAEB em que os dados foram coletados. |
-| `tabela_origem` | STRING | Nome da tabela raw de origem no BigQuery (raw_zone.inep_saeb_microdados_csv_*). |
+| `tabela_origem` | STRING | Nome da tabela raw de origem no BigQuery (raw/inep_saeb_microdados_csv_*). |
 | `id_saeb` | INTEGER | Código numérico da edição do SAEB. Identifica unicamente cada ciclo de avaliação. |
 | `id_regiao` | STRING | Código da região geográfica brasileira: 1=Norte, 2=Nordeste, 3=Sudeste, 4=Sul, 5=Centro-Oeste. |
 | `id_uf` | STRING | Código da Unidade Federativa (estado). Segue a codificação IBGE de 2 dígitos. |
@@ -1857,7 +1857,7 @@ Microdados SAEB por escola — questionnaire + resultados agregados por escola. 
 | `taxa_participacao_9ef` | FLOAT | Taxa de participação na prova do 9º ano do EF: proporção entre presentes e matriculados (%). |
 | `media_9ef_lp` | FLOAT | Média de proficiência em Língua Portuguesa dos alunos do 9º ano do EF da escola, na Escala SAEB. |
 | `media_9ef_mt` | FLOAT | Média de proficiência em Matemática dos alunos do 9º ano do EF da escola, na Escala SAEB. |
-| `dados_json` | STRING | Respostas do questionário contextual SAEB preservadas em JSON. Cada chave é um código de questão (ex: TX_RESP_Q001, TX_Q003) e o valor é a alternativa marcada (A, B, C...). O significado de cada questão varia por edição — consulte o dicionário em trusted_zone.inep_saeb_resultados_planilhas_linhas para decodificar. |
+| `dados_json` | STRING | Respostas do questionário contextual SAEB preservadas em JSON. Cada chave é um código de questão (ex: TX_RESP_Q001, TX_Q003) e o valor é a alternativa marcada (A, B, C...). O significado de cada questão varia por edição — consulte o dicionário em trusted/inep_saeb_resultados_planilhas_linhas para decodificar. |
 | `dt_ingestao_lake` | TIMESTAMP | Data e hora de carregamento do registro no Data Lake (formato YYYY-MM-DD HH:MM:SS). — descrição gerada por IA. |
 
 ## trusted · inep_saeb_microdados_item
@@ -1871,7 +1871,7 @@ Catálogo de itens (questões) das provas SAEB por edição. Anos 2011-2023. Fon
 | Column | Type | Description |
 |---|---|---|
 | `ano` | INTEGER | Ano de referência da edição do SAEB em que os dados foram coletados. |
-| `tabela_origem` | STRING | Nome da tabela raw de origem no BigQuery (raw_zone.inep_saeb_microdados_csv_*). |
+| `tabela_origem` | STRING | Nome da tabela raw de origem no BigQuery (raw/inep_saeb_microdados_csv_*). |
 | `a` | STRING | Parâmetro 'a' do modelo TRI: discriminação do item (capacidade de distinguir alunos proficientes dos não proficientes). Valores maiores = item mais discriminativo. |
 | `b` | STRING | Parâmetro 'b' do modelo TRI: dificuldade do item (ponto da escala onde o aluno tem 50% de chance de acerto). Valores maiores = item mais difícil. |
 | `b1` | STRING | Parâmetro de limiar 'b1' do Modelo de Resposta Graduada (item politômico): transição do nível 0 para o nível 1 de resposta. |

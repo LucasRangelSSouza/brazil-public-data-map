@@ -31,7 +31,7 @@ The full interactive map (lineage, joins, search) is at [https://rangeltech.net/
 
 File `semantic__obt_inep_taxa_distorcao_brasil_ano.parquet` · 90 rows · 20 columns
 
-Taxa de Distorcao Idade-Serie (TDI) nacional por ano e dependencia. Grao: (ano, rede). Filtro: tipo_unidade=brasil, no_categoria=Total. Origem: trusted_zone.inep_taxa_distorcao_brasil_regioes_ufs. INEP 2006-2025.
+Taxa de Distorcao Idade-Serie (TDI) nacional por ano e dependencia. Grao: (ano, rede). Filtro: tipo_unidade=brasil, no_categoria=Total. Origem: trusted/inep_taxa_distorcao_brasil_regioes_ufs. INEP 2006-2025.
 
 **Built from:** `trusted/inep_taxa_distorcao_brasil_regioes_ufs`
 
@@ -56,13 +56,13 @@ Taxa de Distorcao Idade-Serie (TDI) nacional por ano e dependencia. Grao: (ano, 
 | `taxa_distorcao_em_2serie` | FLOAT | TDI EM 2a serie. Percentual. |
 | `taxa_distorcao_em_3serie` | FLOAT | TDI EM 3a serie. Percentual. |
 | `taxa_distorcao_em_4serie` | FLOAT | TDI EM 4a serie (EM integrado/profissionalizante). Percentual. |
-| `data_carga_semantica` | TIMESTAMP | Timestamp UTC de geracao da tabela na semantic_zone. |
+| `data_carga_semantica` | TIMESTAMP | Timestamp UTC de geracao da tabela na semantic/ |
 
 ## semantic · obt_inep_taxa_distorcao_escola_ano
 
 File `semantic__obt_inep_taxa_distorcao_escola_ano.parquet` · 2,148,183 rows · 31 columns
 
-Taxa de Distorcao Idade-Serie (TDI) por escola e ano. Grao: (codigo_escola, ano). 1 linha por escola/ano. Origem: trusted_zone.inep_taxa_distorcao_escolas. INEP 2006-2025. FK: codigo_escola = obt_inep_censo_escola_ano.codigo_escola. FK: codigo_municipio -> obt_ibge_municipio.
+Taxa de Distorcao Idade-Serie (TDI) por escola e ano. Grao: (codigo_escola, ano). 1 linha por escola/ano. Origem: trusted/inep_taxa_distorcao_escolas. INEP 2006-2025. FK: codigo_escola = obt_inep_censo_escola_ano.codigo_escola. FK: codigo_municipio -> obt_ibge_municipio.
 
 **Built from:** `trusted/inep_taxa_distorcao_escolas`
 
@@ -98,13 +98,13 @@ Taxa de Distorcao Idade-Serie (TDI) por escola e ano. Grao: (codigo_escola, ano)
 | `taxa_distorcao_em_2serie` | FLOAT | TDI EM 2a serie. Percentual. |
 | `taxa_distorcao_em_3serie` | FLOAT | TDI EM 3a serie. Percentual. |
 | `taxa_distorcao_em_4serie` | FLOAT | TDI EM 4a serie (EM integrado/profissionalizante). Percentual. |
-| `data_carga_semantica` | TIMESTAMP | Timestamp UTC de geracao da tabela na semantic_zone. |
+| `data_carga_semantica` | TIMESTAMP | Timestamp UTC de geracao da tabela na semantic/ |
 
 ## semantic · obt_inep_taxa_distorcao_municipio_ano
 
 File `semantic__obt_inep_taxa_distorcao_municipio_ano.parquet` · 81,730 rows · 26 columns
 
-Taxa de Distorcao Idade-Serie (TDI) por municipio e ano. Grao: (codigo_municipio, ano). Filtro: Total/Total. Origem: trusted_zone.inep_taxa_distorcao_municipios. INEP 2006-2025. FK: codigo_municipio -> obt_ibge_municipio.
+Taxa de Distorcao Idade-Serie (TDI) por municipio e ano. Grao: (codigo_municipio, ano). Filtro: Total/Total. Origem: trusted/inep_taxa_distorcao_municipios. INEP 2006-2025. FK: codigo_municipio -> obt_ibge_municipio.
 
 **Built from:** `trusted/inep_taxa_distorcao_municipios`
 
@@ -135,13 +135,13 @@ Taxa de Distorcao Idade-Serie (TDI) por municipio e ano. Grao: (codigo_municipio
 | `taxa_distorcao_em_2serie` | FLOAT | TDI EM 2a serie. Percentual. |
 | `taxa_distorcao_em_3serie` | FLOAT | TDI EM 3a serie. Percentual. |
 | `taxa_distorcao_em_4serie` | FLOAT | TDI EM 4a serie (EM integrado/profissionalizante). Percentual. |
-| `data_carga_semantica` | TIMESTAMP | Timestamp UTC de geracao da tabela na semantic_zone. |
+| `data_carga_semantica` | TIMESTAMP | Timestamp UTC de geracao da tabela na semantic/ |
 
 ## semantic · obt_inep_taxa_distorcao_regiao_ano
 
 File `semantic__obt_inep_taxa_distorcao_regiao_ano.parquet` · 300 rows · 22 columns
 
-Taxa de Distorcao Idade-Serie (TDI) por regiao e ano. Grao: (regiao, ano, rede). Filtro: tipo_unidade=regiao, no_categoria=Total. Origem: trusted_zone.inep_taxa_distorcao_brasil_regioes_ufs. INEP 2006-2025. Regioes: Norte / Nordeste / Sudeste / Sul / Centro-Oeste.
+Taxa de Distorcao Idade-Serie (TDI) por regiao e ano. Grao: (regiao, ano, rede). Filtro: tipo_unidade=regiao, no_categoria=Total. Origem: trusted/inep_taxa_distorcao_brasil_regioes_ufs. INEP 2006-2025. Regioes: Norte / Nordeste / Sudeste / Sul / Centro-Oeste.
 
 **Built from:** `trusted/inep_taxa_distorcao_brasil_regioes_ufs`
 
@@ -168,13 +168,13 @@ Taxa de Distorcao Idade-Serie (TDI) por regiao e ano. Grao: (regiao, ano, rede).
 | `taxa_distorcao_em_2serie` | FLOAT | TDI EM 2a serie. Percentual. |
 | `taxa_distorcao_em_3serie` | FLOAT | TDI EM 3a serie. Percentual. |
 | `taxa_distorcao_em_4serie` | FLOAT | TDI EM 4a serie (EM integrado/profissionalizante). Percentual. |
-| `data_carga_semantica` | TIMESTAMP | Timestamp UTC de geracao da tabela na semantic_zone. |
+| `data_carga_semantica` | TIMESTAMP | Timestamp UTC de geracao da tabela na semantic/ |
 
 ## semantic · obt_inep_taxa_distorcao_uf_ano
 
 File `semantic__obt_inep_taxa_distorcao_uf_ano.parquet` · 3,332 rows · 23 columns
 
-Taxa de Distorcao Idade-Serie (TDI) por UF e ano. Grao: (sg_uf, ano, rede). Filtro: tipo_unidade=uf, no_categoria=Total. Origem: trusted_zone.inep_taxa_distorcao_brasil_regioes_ufs. INEP 2006-2025.
+Taxa de Distorcao Idade-Serie (TDI) por UF e ano. Grao: (sg_uf, ano, rede). Filtro: tipo_unidade=uf, no_categoria=Total. Origem: trusted/inep_taxa_distorcao_brasil_regioes_ufs. INEP 2006-2025.
 
 **Built from:** `trusted/inep_taxa_distorcao_brasil_regioes_ufs`
 
@@ -202,13 +202,13 @@ Taxa de Distorcao Idade-Serie (TDI) por UF e ano. Grao: (sg_uf, ano, rede). Filt
 | `taxa_distorcao_em_2serie` | FLOAT | TDI EM 2a serie. Percentual. |
 | `taxa_distorcao_em_3serie` | FLOAT | TDI EM 3a serie. Percentual. |
 | `taxa_distorcao_em_4serie` | FLOAT | TDI EM 4a serie (EM integrado/profissionalizante). Percentual. |
-| `data_carga_semantica` | TIMESTAMP | Timestamp UTC de geracao da tabela na semantic_zone. |
+| `data_carga_semantica` | TIMESTAMP | Timestamp UTC de geracao da tabela na semantic/ |
 
 ## semantic · obt_inep_taxa_rendimento_brasil_ano
 
 File `semantic__obt_inep_taxa_rendimento_brasil_ano.parquet` · 342 rows · 16 columns
 
-Taxas de rendimento escolar no nivel Brasil. Grao: 1 linha por (ano, dependencia_administrativa, localizacao). Inclui todas as combinacoes de rede (Total, Federal, Estadual, Municipal, Privada, Publica) e localizacao (Total, Urbana, Rural). Cobre aprovacao, reprovacao e abandono para EF anos iniciais, EF anos finais, EF total e EM total. Serie historica 2007-2025. Origem: trusted_zone.inep_taxas_rendimento_escolar nivel=brasil_regioes_ufs unidade=Brasil.
+Taxas de rendimento escolar no nivel Brasil. Grao: 1 linha por (ano, dependencia_administrativa, localizacao). Inclui todas as combinacoes de rede (Total, Federal, Estadual, Municipal, Privada, Publica) e localizacao (Total, Urbana, Rural). Cobre aprovacao, reprovacao e abandono para EF anos iniciais, EF anos finais, EF total e EM total. Serie historica 2007-2025. Origem: trusted/inep_taxas_rendimento_escolar nivel=brasil_regioes_ufs unidade=Brasil.
 
 **Built from:** `trusted/inep_taxas_rendimento_escolar`
 
@@ -235,7 +235,7 @@ Taxas de rendimento escolar no nivel Brasil. Grao: 1 linha por (ano, dependencia
 
 File `semantic__obt_inep_taxa_rendimento_escola_ano.parquet` · 2,652,720 rows · 25 columns
 
-Taxas de rendimento escolar (aprovacao, reprovacao e abandono) por escola e ano. Grao: 1 linha por (co_entidade, ano_censo). Publicadas pelo INEP anualmente. Cobertura: EF anos iniciais, EF anos finais, EF total, Ensino Medio. Apenas escolas com ao menos 1 taxa nao nula. FK: codigo_municipio para obt_ibge_municipio. Origem: trusted_zone.inep_taxas_rendimento_escolar. INEP 2007-2024.
+Taxas de rendimento escolar (aprovacao, reprovacao e abandono) por escola e ano. Grao: 1 linha por (co_entidade, ano_censo). Publicadas pelo INEP anualmente. Cobertura: EF anos iniciais, EF anos finais, EF total, Ensino Medio. Apenas escolas com ao menos 1 taxa nao nula. FK: codigo_municipio para obt_ibge_municipio. Origem: trusted/inep_taxas_rendimento_escolar. INEP 2007-2024.
 
 **Built from:** `trusted/inep_taxas_rendimento_escolar`
 
@@ -271,7 +271,7 @@ Taxas de rendimento escolar (aprovacao, reprovacao e abandono) por escola e ano.
 
 File `semantic__obt_inep_taxa_rendimento_municipio_ano.parquet` · 105,799 rows · 21 columns
 
-Taxas de rendimento escolar por municipio e ano. Grao: 1 linha por (co_municipio, ano_censo). Agrega aprovacao, reprovacao e abandono por etapa (EF AI, EF AF, EF total, EM) para rede total. FK: codigo_municipio para obt_ibge_municipio. Origem: trusted_zone.inep_taxas_rendimento_escolar. INEP 2007-2024.
+Taxas de rendimento escolar por municipio e ano. Grao: 1 linha por (co_municipio, ano_censo). Agrega aprovacao, reprovacao e abandono por etapa (EF AI, EF AF, EF total, EM) para rede total. FK: codigo_municipio para obt_ibge_municipio. Origem: trusted/inep_taxas_rendimento_escolar. INEP 2007-2024.
 
 **Built from:** `trusted/inep_taxas_rendimento_escolar`
 
@@ -303,7 +303,7 @@ Taxas de rendimento escolar por municipio e ano. Grao: 1 linha por (co_municipio
 
 File `semantic__obt_inep_taxa_rendimento_regiao_ano.parquet` · 1,710 rows · 18 columns
 
-Taxas de rendimento escolar por regiao geografica e ano. Grao: 1 linha por (regiao, ano, dependencia_administrativa, localizacao). Regioes: Norte, Nordeste, Sudeste, Sul, Centro-Oeste. Inclui todas as combinacoes de rede (Total, Federal, Estadual, Municipal, Privada, Publica) e localizacao (Total, Urbana, Rural). Cobre aprovacao, reprovacao e abandono para EF anos iniciais, EF anos finais, EF total e EM total. Serie historica 2007-2025. Origem: trusted_zone.inep_taxas_rendimento_escolar nivel=brasil_regioes_ufs.
+Taxas de rendimento escolar por regiao geografica e ano. Grao: 1 linha por (regiao, ano, dependencia_administrativa, localizacao). Regioes: Norte, Nordeste, Sudeste, Sul, Centro-Oeste. Inclui todas as combinacoes de rede (Total, Federal, Estadual, Municipal, Privada, Publica) e localizacao (Total, Urbana, Rural). Cobre aprovacao, reprovacao e abandono para EF anos iniciais, EF anos finais, EF total e EM total. Serie historica 2007-2025. Origem: trusted/inep_taxas_rendimento_escolar nivel=brasil_regioes_ufs.
 
 **Built from:** `trusted/inep_taxas_rendimento_escolar`
 
@@ -332,7 +332,7 @@ Taxas de rendimento escolar por regiao geografica e ano. Grao: 1 linha por (regi
 
 File `semantic__obt_inep_taxa_rendimento_uf_ano.parquet` · 9,042 rows · 19 columns
 
-Taxas de rendimento escolar por UF e ano. Grao: 1 linha por (sg_uf, ano, dependencia_administrativa, localizacao). 27 UFs. Inclui todas as combinacoes de rede (Total, Federal, Estadual, Municipal, Privada, Publica) e localizacao (Total, Urbana, Rural). Cobre aprovacao, reprovacao e abandono para EF anos iniciais, EF anos finais, EF total e EM total. Serie historica completa 2007-2025. Origem: trusted_zone.inep_taxas_rendimento_escolar nivel_agregacao=brasil_regioes_ufs.
+Taxas de rendimento escolar por UF e ano. Grao: 1 linha por (sg_uf, ano, dependencia_administrativa, localizacao). 27 UFs. Inclui todas as combinacoes de rede (Total, Federal, Estadual, Municipal, Privada, Publica) e localizacao (Total, Urbana, Rural). Cobre aprovacao, reprovacao e abandono para EF anos iniciais, EF anos finais, EF total e EM total. Serie historica completa 2007-2025. Origem: trusted/inep_taxas_rendimento_escolar nivel_agregacao=brasil_regioes_ufs.
 
 **Built from:** `trusted/inep_taxas_rendimento_escolar`
 

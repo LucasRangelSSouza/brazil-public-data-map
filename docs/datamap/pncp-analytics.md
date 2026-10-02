@@ -190,7 +190,7 @@ PNCP Contratos/empenhos por ente. Grao: numero_controle_pncp. Enriquecido com ge
 
 File `semantic__obt_pncp_editais_semantico.parquet` · 1,248,539 rows · 29 columns
 
-PNCP EDITAIS (tipo_instrumento_convocatorio_codigo IN 1,4) vetorizados para BUSCA SEMANTICA. Grao: 1 linha por edital com embedding. Achata obt_pncp_contratacoes (geografia ja enriquecida) + trusted_zone.pncp_editais_embeddings. Traz objeto_normalizado (minusculo sem acento), categoria_area (heuristica de palavra-chave; categoria PRINCIPAL por ordem de prioridade - um edital pode se encaixar em mais de uma area, aqui rotulamos so a primeira correspondencia) e o vetor 768-dim. Fonte do dashboard Metabase de busca semantica. Recarga: CREATE OR REPLACE na DAG ingestion_pncp_delta (6/6h), apos pncp_semantic e pncp_embeddings.
+PNCP EDITAIS (tipo_instrumento_convocatorio_codigo IN 1,4) vetorizados para BUSCA SEMANTICA. Grao: 1 linha por edital com embedding. Achata obt_pncp_contratacoes (geografia ja enriquecida) + trusted/pncp_editais_embeddings. Traz objeto_normalizado (minusculo sem acento), categoria_area (heuristica de palavra-chave; categoria PRINCIPAL por ordem de prioridade - um edital pode se encaixar em mais de uma area, aqui rotulamos so a primeira correspondencia) e o vetor 768-dim. Fonte do dashboard Metabase de busca semantica. Recarga: CREATE OR REPLACE na DAG ingestion_pncp_delta (6/6h), apos pncp_semantic e pncp_embeddings.
 
 **Built from:** `semantic/obt_pncp_contratacoes`, `trusted/pncp_editais_embeddings`
 

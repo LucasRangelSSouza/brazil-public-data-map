@@ -1,6 +1,6 @@
 # SIOPE education finance: Analytics
 
-16 tables, 365,591,796 rows, snapshot 2026-10-01. Education revenue, expenditure and indicators reported by municipalities and states, from the SIOPE open-data API (Olinda), the FNDE SIOPE exports, and the budget execution report (RREO) PDFs parsed into tables.
+16 tables, 365,591,796 rows, snapshot 2026-10-02. Education revenue, expenditure and indicators reported by municipalities and states, from the SIOPE open-data API (Olinda), the FNDE SIOPE exports, and the budget execution report (RREO) PDFs parsed into tables.
 
 ## Where the data comes from
 

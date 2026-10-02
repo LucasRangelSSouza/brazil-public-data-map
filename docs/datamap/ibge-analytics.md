@@ -1,6 +1,6 @@
 # IBGE geography: Analytics
 
-Dataset: [lucasrangelss/ibge-analytics](https://www.kaggle.com/datasets/lucasrangelss/ibge-analytics) · snapshot 2026-09-30 · 2 tables · 5,598 rows
+Dataset: [lucasrangelss/ibge-analytics](https://www.kaggle.com/datasets/lucasrangelss/ibge-analytics) · snapshot 2026-10-01 · 2 tables · 5,598 rows
 
 **Source:** Instituto Brasileiro de Geografia e Estatística (IBGE), [https://servicodados.ibge.gov.br/api/docs/localidades](https://servicodados.ibge.gov.br/api/docs/localidades)
 
@@ -23,7 +23,7 @@ The full interactive map (lineage, joins, search) is at [https://rangeltech.net/
 
 File `semantic__obt_ibge_municipio.parquet` · 5,571 rows · 13 columns
 
-Cadastro de municípios brasileiros do IBGE. Grão: 1 linha/município (codigo_municipio INT64, 7 dígitos). ~5.570 linhas. FK universal de geografia para todos os OBTs single-domain do datalake educacional: use LEFT JOIN obt_ibge_municipio USING(codigo_municipio) para enriquecer com nome/UF/região. Não contém métricas educacionais. Origem: trusted_zone.ibge_municipios. Fonte: IBGE API de Localidades (servicodados.ibge.gov.br/api/v1/localidades/municipios).
+Cadastro de municípios brasileiros do IBGE. Grão: 1 linha/município (codigo_municipio INT64, 7 dígitos). ~5.570 linhas. FK universal de geografia para todos os OBTs single-domain do datalake educacional: use LEFT JOIN obt_ibge_municipio USING(codigo_municipio) para enriquecer com nome/UF/região. Não contém métricas educacionais. Origem: trusted/ibge_municipios. Fonte: IBGE API de Localidades (servicodados.ibge.gov.br/api/v1/localidades/municipios).
 
 **Built from:** `trusted/ibge_municipios`
 
@@ -49,7 +49,7 @@ Cadastro de municípios brasileiros do IBGE. Grão: 1 linha/município (codigo_m
 
 File `semantic__obt_ibge_uf.parquet` · 27 rows · 7 columns
 
-Cadastro de UFs (estados) brasileiros do IBGE. Grão: 1 linha/UF (codigo_uf INT64, 2 dígitos). 27 linhas. FK universal de UF para OBTs de grão UF/região/brasil no datalake educacional: use LEFT JOIN obt_ibge_uf USING(codigo_uf) para enriquecer com sigla/nome. Origem: trusted_zone.ibge_estados. Fonte: IBGE API de Localidades (servicodados.ibge.gov.br/api/v1/localidades/estados).
+Cadastro de UFs (estados) brasileiros do IBGE. Grão: 1 linha/UF (codigo_uf INT64, 2 dígitos). 27 linhas. FK universal de UF para OBTs de grão UF/região/brasil no datalake educacional: use LEFT JOIN obt_ibge_uf USING(codigo_uf) para enriquecer com sigla/nome. Origem: trusted/ibge_estados. Fonte: IBGE API de Localidades (servicodados.ibge.gov.br/api/v1/localidades/estados).
 
 **Built from:** `trusted/ibge_estados`
 

@@ -23,7 +23,7 @@ The full interactive map (lineage, joins, search) is at [https://rangeltech.net/
 
 File `semantic__obt_fnde_salario_educacao_distribuido_municipio_mes.parquet` · 338,835 rows · 16 columns
 
-Salario-Educacao (FNDE) - OBT da distribuicao efetiva das quotas por ente federado. Grao: 1 linha por ente x ano x mes de competencia; cada linha carrega tambem o consolidado do exercicio em vl_salario_educacao_distribuido_ano. Exercicios 2020-2021 entram com mes_competencia nulo (a fonte so publicou o total anual) e ate 2019 so ha agregado por UF x esfera, sem municipio. Fonte: trusted_zone.fnde_salario_educacao_distribuido_mensal.
+Salario-Educacao (FNDE) - OBT da distribuicao efetiva das quotas por ente federado. Grao: 1 linha por ente x ano x mes de competencia; cada linha carrega tambem o consolidado do exercicio em vl_salario_educacao_distribuido_ano. Exercicios 2020-2021 entram com mes_competencia nulo (a fonte so publicou o total anual) e ate 2019 so ha agregado por UF x esfera, sem municipio. Fonte: trusted/fnde_salario_educacao_distribuido_mensal.
 
 **Built from:** `semantic/obt_ibge_municipio`, `trusted/fnde_salario_educacao_distribuido_mensal`
 
@@ -52,7 +52,7 @@ Salario-Educacao (FNDE) - OBT da distribuicao efetiva das quotas por ente federa
 
 File `semantic__obt_fnde_salario_educacao_previsto_municipio_ano.parquet` · 94,727 rows · 14 columns
 
-Salario-Educacao (FNDE) - OBT do previsto/estimativa das quotas por ente federado. Grao: 1 linha por ente x ano. Valor ANUAL: a fonte nao publica abertura mensal da estimativa. Fonte: trusted_zone.fnde_salario_educacao_previsto.
+Salario-Educacao (FNDE) - OBT do previsto/estimativa das quotas por ente federado. Grao: 1 linha por ente x ano. Valor ANUAL: a fonte nao publica abertura mensal da estimativa. Fonte: trusted/fnde_salario_educacao_previsto.
 
 **Built from:** `semantic/obt_ibge_municipio`, `trusted/fnde_salario_educacao_previsto`
 

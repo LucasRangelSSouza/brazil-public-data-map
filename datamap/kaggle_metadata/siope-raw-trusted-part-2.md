@@ -1,6 +1,6 @@
 # SIOPE education finance: Raw and Trusted
 
-13 tables, 519,024,963 rows, snapshot 2026-10-01. Education revenue, expenditure and indicators reported by municipalities and states, from the SIOPE open-data API (Olinda), the FNDE SIOPE exports, and the budget execution report (RREO) PDFs parsed into tables.
+13 tables, 530,094,262 rows, snapshot 2026-10-02. Education revenue, expenditure and indicators reported by municipalities and states, from the SIOPE open-data API (Olinda), the FNDE SIOPE exports, and the budget execution report (RREO) PDFs parsed into tables.
 
 ## Where the data comes from
 
@@ -26,12 +26,12 @@ Column descriptions come from the source lake's catalogue, in Portuguese; a shar
 
 | Layer | Table | Rows | Columns |
 |---|---|---:|---:|
-| raw | `api_olinda_siope_despesas_funcao_educacao` | 4,932,267 | 26 |
-| raw | `api_olinda_siope_indicadores` | 21,043,711 | 27 |
-| raw | `api_olinda_siope_informacoes_complementares` | 19,463,493 | 24 |
-| raw | `api_olinda_siope_receita` | 241,352,286 | 28 |
-| raw | `api_olinda_siope_remuneracao` | 60,981,399 | 28 |
-| raw | `api_olinda_siope_responsaveis` | 1,708,067 | 49 |
+| raw | `api_olinda_siope_despesas_funcao_educacao` | 4,982,070 | 26 |
+| raw | `api_olinda_siope_indicadores` | 21,195,152 | 27 |
+| raw | `api_olinda_siope_informacoes_complementares` | 19,789,405 | 24 |
+| raw | `api_olinda_siope_receita` | 244,805,525 | 28 |
+| raw | `api_olinda_siope_remuneracao` | 68,046,053 | 28 |
+| raw | `api_olinda_siope_responsaveis` | 1,732,317 | 49 |
 | raw | `fnde_siope_dados_gerais` | 166,452 | 53 |
 | raw | `fnde_siope_despesa_total_educacao` | 139,046,717 | 21 |
 | raw | `fnde_siope_despesas_funcao_educacao` | 1,199,526 | 12 |

@@ -5,18 +5,18 @@
   "group": "raw-trusted",
   "part": 3,
   "parts": 4,
-  "snapshot_date": "2026-10-01",
+  "snapshot_date": "2026-10-02",
   "tables": [
     {
       "table_id": "rreo_siope_municipio",
       "layer": "raw",
-      "rows": 354435,
+      "rows": 354781,
       "parquet": "raw__rreo_siope_municipio.parquet"
     },
     {
       "table_id": "rreo_siope_uf",
       "layer": "raw",
-      "rows": 1685,
+      "rows": 1687,
       "parquet": "raw__rreo_siope_uf.parquet"
     },
     {
@@ -28,7 +28,7 @@
     {
       "table_id": "api_olinda_siope_dados_gerais",
       "layer": "trusted",
-      "rows": 382669,
+      "rows": 384692,
       "parquet": "trusted__api_olinda_siope_dados_gerais.parquet"
     },
     {
@@ -40,88 +40,98 @@
     {
       "table_id": "api_olinda_siope_despesas_funcao_educacao",
       "layer": "trusted",
-      "rows": 3060656,
+      "rows": 3060708,
       "parquet": "trusted__api_olinda_siope_despesas_funcao_educacao.parquet"
     },
     {
       "table_id": "api_olinda_siope_indicadores",
       "layer": "trusted",
-      "rows": 14993255,
+      "rows": 15058952,
       "parquet": "trusted__api_olinda_siope_indicadores.parquet"
     },
     {
       "table_id": "api_olinda_siope_informacoes_complementares",
       "layer": "trusted",
-      "rows": 13795325,
+      "rows": 13890101,
       "parquet": "trusted__api_olinda_siope_informacoes_complementares.parquet"
     }
   ],
-  "kaggle_metadata_sha256": "1813f230402eaa076eeb1524557e12aafe838991bbb5e8a6e7387d2b60cd56b6",
+  "kaggle_metadata_sha256": "0fd7229bda8cec58b83827756396721ae75c5acd94ec66cbd8ee1bbf31580948",
   "files": [
+    {
+      "path": "00_source_ingestion_siope.ipynb",
+      "bytes": 23662,
+      "sha256": "aab7d8f94e90028a7dd4ec4f547d02f1cd70db913b7d8111577ce9f37a4d49c2"
+    },
     {
       "path": "01_ingestion_siope.ipynb",
       "bytes": 3489,
-      "sha256": "a12a119e71a82bc025a1e71403f30bc6a3fa09cf6c8fff327b0e80bd75fd0f51"
+      "sha256": "a8ce588da577b21e0fc3650b71043907a83ec9d14ba79e39bd06030174112a09"
     },
     {
       "path": "02_transform_to_trusted_siope.ipynb",
       "bytes": 3934,
-      "sha256": "a3f4150ed0600865b5677960e4cb36857b6c88a1c9ea04a5e05d6918881ebfd0"
+      "sha256": "f406705f23e2052f19672ab66328ea7cf1c501d5719e618df4c887639e5866ad"
+    },
+    {
+      "path": "DATA_DICTIONARY.md",
+      "bytes": 20709,
+      "sha256": "f0b5c164176844657fa139ef492b1518d1c2a920bbb0e9a92cddadf76f5523d2"
     },
     {
       "path": "README.md",
       "bytes": 728,
-      "sha256": "7268c3be4b83dd2fda0f188e7c72c765d073f34d3545b0737268bf6b79d6c6b4"
+      "sha256": "28c71456592dec3063d1feb9ec361b6d898237c3fb8443b11251bd95f84c74de"
     },
     {
       "path": "audit.json",
-      "bytes": 4905,
-      "sha256": "a0744c6cfe5e737dc6412bbb4580fa3ff6f5bc9e5fcc5f59807e2da961cf6601"
+      "bytes": 4851,
+      "sha256": "31620dee0f19cef75667c700330733b71ec8f546daee23be43d1c2eff2ab1835"
     },
     {
       "path": "raw__rreo_siope_municipio.parquet",
-      "bytes": 1136591828,
-      "sha256": "2aa351b63835a541f316579f25e7a8767f9c8c155b7d97ae229c50dd57e8f20b"
+      "bytes": 1128004977,
+      "sha256": "d62b99d4ff0c3607eba71a3bad56f76032736f0fdafd4d19dfbea818f52e12ca"
     },
     {
       "path": "raw__rreo_siope_uf.parquet",
-      "bytes": 5098387,
-      "sha256": "98e01b53db0a9b73e7540e578f1af8ea99b6ce59159594cf7dfef0af5d4e4a82"
+      "bytes": 5031286,
+      "sha256": "a5d3411a5eaf4add6f2c1e56f278d5e648ab8eb7e892c6f917f893d913a2eaf2"
     },
     {
       "path": "raw__siope_data.parquet",
-      "bytes": 312793530,
-      "sha256": "c8cd7fe3ea982238851e95c845280a26e8a1489f2fe10f20242ac5199acc934b"
+      "bytes": 310884130,
+      "sha256": "ffbbdab45d144b2f12e6a761fefe344a7f69c0a91240e20e092efb297010cc4b"
     },
     {
       "path": "schemas.json",
-      "bytes": 24672,
-      "sha256": "153474c54e8a214c4f08e95a768e73036761cf0986d64d67da900202f0e6f566"
+      "bytes": 24282,
+      "sha256": "ccb7133b6372fd41252aa0c6a65cfa0938b5770e8f5b72f9b4b1fc8d8c958c68"
     },
     {
       "path": "trusted__api_olinda_siope_dados_gerais.parquet",
-      "bytes": 71803948,
-      "sha256": "5beec84fec27ba76cae93ac4ac51608e6b1dbf68416c51f67d1830ee9c364045"
+      "bytes": 46698088,
+      "sha256": "3ce6d6c6dd8125030968d47dc6020023d3acfd9d06613129e57c1552797ccc70"
     },
     {
       "path": "trusted__api_olinda_siope_despesas.parquet",
-      "bytes": 10368707483,
-      "sha256": "6709292e60c25aa708deb1b5f1bd6d8a38e23a8aacacd53a900445f2f4a4af5c"
+      "bytes": 6454199473,
+      "sha256": "8b5464034b171471789628a113ea4971518335eb82e425a7c1466afad97a5614"
     },
     {
       "path": "trusted__api_olinda_siope_despesas_funcao_educacao.parquet",
-      "bytes": 129250977,
-      "sha256": "6f3e0cb16a5fc6b5f1a91c4b852502b4f03986925a3412a5048ef36bb1e8b2cd"
+      "bytes": 80443530,
+      "sha256": "8fae01dd2134af302f83597731ff64de52ab40d3a4e507a4138348bcb63cccd0"
     },
     {
       "path": "trusted__api_olinda_siope_indicadores.parquet",
-      "bytes": 440325456,
-      "sha256": "a5bb2d0f1e1ab51f690e0f88db81340006b8d79fc3bce2d1740159ecae44fa6c"
+      "bytes": 178569443,
+      "sha256": "d86c22df5f1f494a2775201202a55e1a651bb44780bf66a369ea726e7bdda3f0"
     },
     {
       "path": "trusted__api_olinda_siope_informacoes_complementares.parquet",
-      "bytes": 280445883,
-      "sha256": "748d995cfe3b37ca0907050f62a951c7a8796f7b07fd97acaa89d68cea9535bc"
+      "bytes": 170120109,
+      "sha256": "ee7e6ade102892afeb9424eb29a488dca8fe434c56e355bc429ac52670fc4a61"
     }
   ]
 }

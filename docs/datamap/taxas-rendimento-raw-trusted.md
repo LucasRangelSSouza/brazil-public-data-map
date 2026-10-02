@@ -1,6 +1,6 @@
 # School flow and distortion rates (INEP): Raw and Trusted
 
-Dataset: [lucasrangelss/taxas-rendimento-raw-trusted](https://www.kaggle.com/datasets/lucasrangelss/taxas-rendimento-raw-trusted) · snapshot 2026-10-01 · 11 tables · 218,331,656 rows
+Dataset: [lucasrangelss/taxas-rendimento-raw-trusted](https://www.kaggle.com/datasets/lucasrangelss/taxas-rendimento-raw-trusted) · snapshot 2026-10-02 · 11 tables · 218,331,656 rows
 
 **Source:** Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (INEP), [https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/indicadores-educacionais](https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/indicadores-educacionais)
 

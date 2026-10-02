@@ -1563,7 +1563,7 @@ Tabela histórica consolidada do IDEB (Índice de Desenvolvimento da Educação 
 
 File `trusted__inep_ideb_brasil.parquet` · 154 rows · 13 columns
 
-IDEB nivel Brasil — uma linha por (nivel, ano, rede). EF Anos Iniciais e Anos Finais: 2005-2023 (bienal). Ensino Medio: 2005-2023. Inclui nota SAEB (matematica, portugues, media), IDEB observado e meta projetada. Fonte: raw_zone.inep_ideb_brasil_anos_iniciais, _anos_finais, _ensino_medio.
+IDEB nivel Brasil — uma linha por (nivel, ano, rede). EF Anos Iniciais e Anos Finais: 2005-2023 (bienal). Ensino Medio: 2005-2023. Inclui nota SAEB (matematica, portugues, media), IDEB observado e meta projetada. Fonte: raw/inep_ideb_brasil_anos_iniciais, _anos_finais, _ensino_medio.
 
 **Built from:** `raw/inep_ideb_brasil_anos_finais`, `raw/inep_ideb_brasil_anos_iniciais`, `raw/inep_ideb_brasil_ensino_medio`
 
@@ -1655,7 +1655,7 @@ IDEB por municipio. EF: 2005-2025. EM: 2017-2025.
 
 File `trusted__inep_ideb_regioes_ufs.parquet` · 3,872 rows · 15 columns
 
-IDEB por regiao geografica e Unidade da Federacao — uma linha por (unidade_geografica, nivel, ano, rede). Inclui 5 regioes (Norte, Nordeste, Sudeste, Sul, Centro-Oeste) e 27 UFs. EF Anos Iniciais, Anos Finais e Ensino Medio: 2005-2023 bienal. Fonte: raw_zone.inep_ideb_regioes_ufs_anos_iniciais, _anos_finais, _ensino_medio.
+IDEB por regiao geografica e Unidade da Federacao — uma linha por (unidade_geografica, nivel, ano, rede). Inclui 5 regioes (Norte, Nordeste, Sudeste, Sul, Centro-Oeste) e 27 UFs. EF Anos Iniciais, Anos Finais e Ensino Medio: 2005-2023 bienal. Fonte: raw/inep_ideb_regioes_ufs_anos_iniciais, _anos_finais, _ensino_medio.
 
 **Built from:** `raw/inep_ideb_regioes_ufs_anos_finais`, `raw/inep_ideb_regioes_ufs_anos_iniciais`, `raw/inep_ideb_regioes_ufs_ensino_medio`
 

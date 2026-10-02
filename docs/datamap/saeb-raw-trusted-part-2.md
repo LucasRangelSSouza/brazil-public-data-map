@@ -1,6 +1,6 @@
 # SAEB assessment (INEP): Raw and Trusted
 
-Dataset: [lucasrangelss/saeb-raw-trusted-part-2](https://www.kaggle.com/datasets/lucasrangelss/saeb-raw-trusted-part-2) · snapshot 2026-10-01 · 40 tables · 24,401,699 rows
+Dataset: [lucasrangelss/saeb-raw-trusted-part-2](https://www.kaggle.com/datasets/lucasrangelss/saeb-raw-trusted-part-2) · snapshot 2026-10-02 · 40 tables · 24,401,699 rows
 
 **Source:** Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (INEP), [https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/saeb](https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/saeb)
 

@@ -51,7 +51,7 @@ Percentual de criancas matriculadas na Educacao Infantil por municipio e ano, se
 
 | Column | Type | Description |
 |---|---|---|
-| `codigo_municipio` | STRING | Codigo IBGE do municipio (7 digitos). FK -> semantic_zone.obt_ibge_municipio. |
+| `codigo_municipio` | STRING | Codigo IBGE do municipio (7 digitos). FK -> semantic/obt_ibge_municipio. |
 | `municipio` | STRING | Nome do municipio. |
 | `uf` | STRING | Sigla da UF. |
 | `faixa_etaria` | STRING | Faixa etaria da educacao infantil: creche (0 a 3 anos) ou pre-escola (4 a 5 anos). |
@@ -71,7 +71,7 @@ Perfil de formacao e vinculo dos professores de Educacao Infantil por municipio,
 
 | Column | Type | Description |
 |---|---|---|
-| `codigo_municipio` | STRING | Codigo IBGE do municipio (7 digitos). FK -> semantic_zone.obt_ibge_municipio. |
+| `codigo_municipio` | STRING | Codigo IBGE do municipio (7 digitos). FK -> semantic/obt_ibge_municipio. |
 | `municipio` | STRING | Nome do municipio. |
 | `uf` | STRING | Sigla da UF. |
 | `perc_docentes_licenciatura` | FLOAT | Percentual de docentes da educacao infantil com licenciatura (%). |
@@ -100,7 +100,7 @@ Percentual de unidades de Educacao Infantil (rede publica) com cada item de infr
 
 | Column | Type | Description |
 |---|---|---|
-| `codigo_municipio` | STRING | Codigo IBGE do municipio (7 digitos). FK -> semantic_zone.obt_ibge_municipio. |
+| `codigo_municipio` | STRING | Codigo IBGE do municipio (7 digitos). FK -> semantic/obt_ibge_municipio. |
 | `municipio` | STRING | Nome do municipio. |
 | `uf` | STRING | Sigla da UF. |
 | `perc_energia_rede_publica` | FLOAT | Percentual de unidades de educacao infantil com energia da rede publica (%). |
@@ -135,7 +135,7 @@ Politicas municipais de Educacao Infantil declaradas pelas Secretarias de Educac
 
 | Column | Type | Description |
 |---|---|---|
-| `codigo_municipio` | STRING | Codigo IBGE do municipio (7 digitos). FK -> semantic_zone.obt_ibge_municipio. |
+| `codigo_municipio` | STRING | Codigo IBGE do municipio (7 digitos). FK -> semantic/obt_ibge_municipio. |
 | `municipio` | STRING | Nome do municipio. |
 | `uf` | STRING | Sigla da UF. |
 | `tem_formacao_professores` | INTEGER | Municipio declara politica de formacao de professores da educacao infantil (100=Sim, 0=Nao, NULL=sem resposta). |

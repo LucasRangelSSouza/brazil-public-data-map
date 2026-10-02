@@ -1,6 +1,6 @@
 # SIOPE education finance: Raw and Trusted
 
-Dataset: [lucasrangelss/siope-raw-trusted-part-3](https://www.kaggle.com/datasets/lucasrangelss/siope-raw-trusted-part-3) · snapshot 2026-10-01 · 8 tables · 338,297,208 rows
+Dataset: [lucasrangelss/siope-raw-trusted-part-3](https://www.kaggle.com/datasets/lucasrangelss/siope-raw-trusted-part-3) · snapshot 2026-10-02 · 8 tables · 338,460,104 rows
 
 **Source:** Fundo Nacional de Desenvolvimento da Educação (FNDE), [https://www.fnde.gov.br/siope/](https://www.fnde.gov.br/siope/)
 
@@ -16,18 +16,18 @@ The full interactive map (lineage, joins, search) is at [https://rangeltech.net/
 
 | Layer | Table | Rows | Columns | Described | Upstream |
 |---|---|---:|---:|---:|---|
-| raw | [`rreo_siope_municipio`](#raw-rreo-siope-municipio) | 354,435 | 9 | 9 | source |
-| raw | [`rreo_siope_uf`](#raw-rreo-siope-uf) | 1,685 | 10 | 10 | source |
+| raw | [`rreo_siope_municipio`](#raw-rreo-siope-municipio) | 354,781 | 9 | 9 | source |
+| raw | [`rreo_siope_uf`](#raw-rreo-siope-uf) | 1,687 | 10 | 10 | source |
 | raw | [`siope_data`](#raw-siope-data) | 190,229 | 6 | 6 | source |
-| trusted | [`api_olinda_siope_dados_gerais`](#trusted-api-olinda-siope-dados-gerais) | 382,669 | 63 | 63 | `api_olinda_siope_dados_gerais` |
+| trusted | [`api_olinda_siope_dados_gerais`](#trusted-api-olinda-siope-dados-gerais) | 384,692 | 63 | 63 | `api_olinda_siope_dados_gerais` |
 | trusted | [`api_olinda_siope_despesas`](#trusted-api-olinda-siope-despesas) | 305,518,954 | 32 | 32 | `api_olinda_siope_despesas` |
-| trusted | [`api_olinda_siope_despesas_funcao_educacao`](#trusted-api-olinda-siope-despesas-funcao-educacao) | 3,060,656 | 23 | 23 | `api_olinda_siope_despesas_funcao_educacao` |
-| trusted | [`api_olinda_siope_indicadores`](#trusted-api-olinda-siope-indicadores) | 14,993,255 | 24 | 24 | `api_olinda_siope_indicadores` |
-| trusted | [`api_olinda_siope_informacoes_complementares`](#trusted-api-olinda-siope-informacoes-complementares) | 13,795,325 | 21 | 21 | `api_olinda_siope_informacoes_complementares` |
+| trusted | [`api_olinda_siope_despesas_funcao_educacao`](#trusted-api-olinda-siope-despesas-funcao-educacao) | 3,060,708 | 23 | 23 | `api_olinda_siope_despesas_funcao_educacao` |
+| trusted | [`api_olinda_siope_indicadores`](#trusted-api-olinda-siope-indicadores) | 15,058,952 | 24 | 24 | `api_olinda_siope_indicadores` |
+| trusted | [`api_olinda_siope_informacoes_complementares`](#trusted-api-olinda-siope-informacoes-complementares) | 13,890,101 | 21 | 21 | `api_olinda_siope_informacoes_complementares` |
 
 ## raw · rreo_siope_municipio
 
-File `raw__rreo_siope_municipio.parquet` · 354,435 rows · 9 columns
+File `raw__rreo_siope_municipio.parquet` · 354,781 rows · 9 columns
 
 Tabela contendo dados extraídos e estruturados dos Relatórios Resumidos da Execução Orçamentária (RREO) do SIOPE, utilizados para monitorar receitas e despesas públicas em educação de municípios e estados.
 
@@ -47,7 +47,7 @@ Tabela contendo dados extraídos e estruturados dos Relatórios Resumidos da Exe
 
 ## raw · rreo_siope_uf
 
-File `raw__rreo_siope_uf.parquet` · 1,685 rows · 10 columns
+File `raw__rreo_siope_uf.parquet` · 1,687 rows · 10 columns
 
 Tabela que armazena dados extraídos dos relatórios RREO (Relatório Resumido da Execução Orçamentária) do SIOPE, contendo metadados dos PDFs originais e os dados financeiros estruturados em JSON para análise de investimentos em educação.
 
@@ -83,7 +83,7 @@ Tabela contendo dados extraídos dos relatórios RREO (Relatório Resumido da Ex
 
 ## trusted · api_olinda_siope_dados_gerais
 
-File `trusted__api_olinda_siope_dados_gerais.parquet` · 382,669 rows · 63 columns
+File `trusted__api_olinda_siope_dados_gerais.parquet` · 384,692 rows · 63 columns
 
 SIOPE Olinda — Dados Gerais (manifesto da declaração). Grão: 1 linha por ente/ano/bimestre. Totais macro de receita/despesa + despesa em educação (VL_*_EDU) + auditoria (recibo, data, retificação, notas). Origem: API OData pública FNDE (DADOS_ABERTOS_SIOPE). Complementa fnde_siope_* (Antonieta) e rreo_siope_*.
 
@@ -200,7 +200,7 @@ SIOPE Olinda — Despesa declarada por pasta/rubrica. Grão: ente/ano/bimestre/p
 
 ## trusted · api_olinda_siope_despesas_funcao_educacao
 
-File `trusted__api_olinda_siope_despesas_funcao_educacao.parquet` · 3,060,656 rows · 23 columns
+File `trusted__api_olinda_siope_despesas_funcao_educacao.parquet` · 3,060,708 rows · 23 columns
 
 SIOPE Olinda — Despesa da função Educação por subfunção. Grão: ente/ano/bimestre/subfunção. Empenhada/liquidada/paga (R$). Origem: API OData FNDE.
 
@@ -234,7 +234,7 @@ SIOPE Olinda — Despesa da função Educação por subfunção. Grão: ente/ano
 
 ## trusted · api_olinda_siope_indicadores
 
-File `trusted__api_olinda_siope_indicadores.parquet` · 14,993,255 rows · 24 columns
+File `trusted__api_olinda_siope_indicadores.parquet` · 15,058,952 rows · 24 columns
 
 SIOPE Olinda — Indicadores calculados pelo FNDE (% aplicação MDE/Fundeb, investimento por aluno, etc.). Grão: ente/ano/bimestre/indicador. Origem: API OData FNDE.
 
@@ -271,7 +271,7 @@ SIOPE Olinda — Indicadores calculados pelo FNDE (% aplicação MDE/Fundeb, inv
 
 ## trusted · api_olinda_siope_informacoes_complementares
 
-File `trusted__api_olinda_siope_informacoes_complementares.parquet` · 13,795,325 rows · 21 columns
+File `trusted__api_olinda_siope_informacoes_complementares.parquet` · 13,890,101 rows · 21 columns
 
 SIOPE Olinda — Informações Complementares (saldos, superávit, restos a pagar, rendimentos). Grão: ente/ano/bimestre/código+posição. ATENÇÃO: COD_EXIB duplicado = previsão+realizado, distinguível só por record_index (ordem do payload). Origem: API OData FNDE.
 

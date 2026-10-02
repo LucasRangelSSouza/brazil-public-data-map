@@ -1,6 +1,6 @@
 # School flow and distortion rates (INEP): Raw and Trusted
 
-11 tables, 218,331,656 rows, snapshot 2026-10-01. Approval, failure and dropout rates and the age-grade distortion rate by school, municipality, state, region and Brazil, per year.
+11 tables, 218,331,656 rows, snapshot 2026-10-02. Approval, failure and dropout rates and the age-grade distortion rate by school, municipality, state, region and Brazil, per year.
 
 ## Where the data comes from
 

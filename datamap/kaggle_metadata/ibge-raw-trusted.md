@@ -1,6 +1,6 @@
 # IBGE geography: Raw and Trusted
 
-4 tables, 11,196 rows, snapshot 2026-09-30. States and municipalities with their IBGE codes: the key that joins almost every education table.
+4 tables, 11,196 rows, snapshot 2026-10-01. States and municipalities with their IBGE codes: the key that joins almost every education table.
 
 ## Where the data comes from
 

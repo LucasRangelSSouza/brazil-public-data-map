@@ -5,7 +5,7 @@
   "group": "analytics",
   "part": 1,
   "parts": 1,
-  "snapshot_date": "2026-09-30",
+  "snapshot_date": "2026-10-01",
   "tables": [
     {
       "table_id": "obt_ibge_municipio",
@@ -20,37 +20,37 @@
       "parquet": "semantic__obt_ibge_uf.parquet"
     }
   ],
-  "kaggle_metadata_sha256": "141219d93afd849f4b5308fcc38542a92f4ffe2ca98e883cab06c7bb3e1ba8ef",
+  "kaggle_metadata_sha256": "a78dc09fe2819fc1a482da516100354cad74e683ef25ac28bd4ea7d30b868275",
   "files": [
     {
       "path": "03_semantic_ibge.ipynb",
-      "bytes": 3283,
-      "sha256": "9d201d102428bc053364f826129c70354194d537cb413ad89742037e59782d1e"
-    },
-    {
-      "path": "README.md",
-      "bytes": 667,
-      "sha256": "7eb01f2a958d9ca169203a54d8c5ca12bfd57a7cb7fff20e221616943c8399f4"
+      "bytes": 3390,
+      "sha256": "19a8fc41d68a58b8d75c2787109cc6d07fb800b637fd700759a743f650ec252b"
     },
     {
       "path": "audit.json",
-      "bytes": 751,
-      "sha256": "72108a12c5151a03ac19327df0c3251a6d9bb1fec4f58f35aef3adbbbe3103d6"
+      "bytes": 788,
+      "sha256": "de218ed5b08abc53c2574d60a7b1757ee740b1c9f4baedd60bc07dd0798ce165"
+    },
+    {
+      "path": "README.md",
+      "bytes": 674,
+      "sha256": "7494844f55c5282327294767e07484b1c603ed4052eb05b480915032db8fb9f4"
     },
     {
       "path": "schemas.json",
-      "bytes": 2426,
-      "sha256": "bffd49852d5cc62703d74fe3949c174e54a6efee4f75de4388bb5740a694cba7"
+      "bytes": 2521,
+      "sha256": "85389f2c4cd859b82643f25bf0194596bb90d09e07683947888e8ad5df879111"
     },
     {
       "path": "semantic__obt_ibge_municipio.parquet",
-      "bytes": 90724,
-      "sha256": "9fb99ba2cda2af454923fb5b4e85f548457000ff97b38d7d183f37c84344dccf"
+      "bytes": 85674,
+      "sha256": "06b1db5fd4859c86892ed312be63c8203f5bd98e73d68c59fa4b90033468da62"
     },
     {
       "path": "semantic__obt_ibge_uf.parquet",
-      "bytes": 2409,
-      "sha256": "fecb9d49155eeb82d8866666426ddca4c6b64615944fb2e35035b4121cf483a4"
+      "bytes": 2486,
+      "sha256": "35f64864054e1467ddfd87cefaf2f7724d1634beb971964c57708e92d75f616e"
     }
   ]
 }

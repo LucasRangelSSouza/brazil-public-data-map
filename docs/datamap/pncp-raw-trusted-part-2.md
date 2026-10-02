@@ -22,7 +22,7 @@ The full interactive map (lineage, joins, search) is at [https://rangeltech.net/
 
 File `trusted__pncp_pca_itens.parquet` · 817,211 rows · 23 columns
 
-PNCP — Itens do Plano de Contratacoes Anual (explodido do array itens). Grao: id_pca_pncp + numero_item. Fonte: raw_zone.pncp_pca_atualizacao.
+PNCP — Itens do Plano de Contratacoes Anual (explodido do array itens). Grao: id_pca_pncp + numero_item. Fonte: raw/pncp_pca_atualizacao.
 
 **Built from:** `raw/pncp_pca_atualizacao`
 

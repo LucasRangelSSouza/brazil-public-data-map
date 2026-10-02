@@ -305,7 +305,7 @@ Tabela de ingestão de dados brutos (raw) do data lake, contendo payloads pagina
 
 File `trusted__pncp_atas.parquet` · 1,078,249 rows · 25 columns
 
-PNCP — Atas de registro de preco. Grao: 1 linha por numero_controle_pncp_ata (versao mais recente). Fonte: raw_zone.pncp_atas_atualizacao.
+PNCP — Atas de registro de preco. Grao: 1 linha por numero_controle_pncp_ata (versao mais recente). Fonte: raw/pncp_atas_atualizacao.
 
 **Built from:** `raw/pncp_atas_atualizacao`
 
@@ -343,7 +343,7 @@ PNCP — Atas de registro de preco. Grao: 1 linha por numero_controle_pncp_ata (
 
 File `trusted__pncp_contratacoes.parquet` · 3,768,885 rows · 43 columns
 
-PNCP — Contratacoes/editais (eixo /atualizacao). Grao: 1 linha por numero_controle_pncp (versao mais recente por dataAtualizacaoGlobal). Fonte: raw_zone.pncp_contratacoes_atualizacao.
+PNCP — Contratacoes/editais (eixo /atualizacao). Grao: 1 linha por numero_controle_pncp (versao mais recente por dataAtualizacaoGlobal). Fonte: raw/pncp_contratacoes_atualizacao.
 
 **Built from:** `raw/pncp_contratacoes_atualizacao`
 
@@ -512,7 +512,7 @@ PNCP — CONTRATACOES COM PROPOSTA ABERTA (snapshot). Foto do que esta com o pra
 
 File `trusted__pncp_contratos.parquet` · 3,435,513 rows · 50 columns
 
-PNCP — Contratos/empenhos. Grao: 1 linha por numero_controle_pncp (versao mais recente). Fonte: raw_zone.pncp_contratos_atualizacao.
+PNCP — Contratos/empenhos. Grao: 1 linha por numero_controle_pncp (versao mais recente). Fonte: raw/pncp_contratos_atualizacao.
 
 **Built from:** `raw/pncp_contratos_atualizacao`
 
@@ -819,7 +819,7 @@ Embeddings (busca semantica) dos EDITAIS do PNCP (tipo_instrumento 1/4). Tabela 
 
 | Column | Type | Description |
 |---|---|---|
-| `numero_controle_pncp` | STRING | Chave natural do edital (PNCP). Join com trusted_zone.pncp_contratacoes / semantic_zone.obt_pncp_contratacoes. |
+| `numero_controle_pncp` | STRING | Chave natural do edital (PNCP). Join com trusted/pncp_contratacoes / semantic/obt_pncp_contratacoes. |
 | `ano_compra` | INTEGER | Ano da compra/edital. |
 | `texto_base` | STRING | Texto vetorizado (objeto_compra, truncado). |
 | `texto_hash` | STRING | Hash do texto_base — re-embute so se o objeto mudar. |
@@ -886,7 +886,7 @@ File `trusted__pncp_orgaos_unidades.parquet` · 154,097 rows · 9 columns
 
 File `trusted__pncp_pca.parquet` · 7,534 rows · 9 columns
 
-PNCP — Plano de Contratacoes Anual (cabecalho). Grao: 1 linha por id_pca_pncp. Itens em pncp_pca_itens. Fonte: raw_zone.pncp_pca_atualizacao.
+PNCP — Plano de Contratacoes Anual (cabecalho). Grao: 1 linha por id_pca_pncp. Itens em pncp_pca_itens. Fonte: raw/pncp_pca_atualizacao.
 
 **Built from:** `raw/pncp_pca_atualizacao`
 

@@ -1,6 +1,6 @@
 # FNDE education contribution: Raw and Trusted
 
-40 tables, 112,836 rows, snapshot 2026-09-30. Collection and distribution of the education contribution (salário-educação) published by FNDE.
+40 tables, 112,836 rows, snapshot 2026-10-02. Collection and distribution of the education contribution (salário-educação) published by FNDE.
 
 ## Where the data comes from
 

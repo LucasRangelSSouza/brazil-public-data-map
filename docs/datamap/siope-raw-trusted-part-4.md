@@ -1,6 +1,6 @@
 # SIOPE education finance: Raw and Trusted
 
-Dataset: [lucasrangelss/siope-raw-trusted-part-4](https://www.kaggle.com/datasets/lucasrangelss/siope-raw-trusted-part-4) · snapshot 2026-10-01 · 10 tables · 448,537,682 rows
+Dataset: [lucasrangelss/siope-raw-trusted-part-4](https://www.kaggle.com/datasets/lucasrangelss/siope-raw-trusted-part-4) · snapshot 2026-10-02 · 10 tables · 448,707,902 rows
 
 **Source:** Fundo Nacional de Desenvolvimento da Educação (FNDE), [https://www.fnde.gov.br/siope/](https://www.fnde.gov.br/siope/)
 
@@ -17,15 +17,15 @@ The full interactive map (lineage, joins, search) is at [https://rangeltech.net/
 | Layer | Table | Rows | Columns | Described | Upstream |
 |---|---|---:|---:|---:|---|
 | trusted | [`api_olinda_siope_receita`](#trusted-api-olinda-siope-receita) | 122,659,262 | 25 | 25 | `api_olinda_siope_receita` |
-| trusted | [`api_olinda_siope_responsaveis`](#trusted-api-olinda-siope-responsaveis) | 1,476,352 | 46 | 46 | `api_olinda_siope_responsaveis` |
+| trusted | [`api_olinda_siope_responsaveis`](#trusted-api-olinda-siope-responsaveis) | 1,495,180 | 46 | 46 | `api_olinda_siope_responsaveis` |
 | trusted | [`fnde_siope_dados_gerais`](#trusted-fnde-siope-dados-gerais) | 166,452 | 53 | 53 | `fnde_siope_dados_gerais` |
 | trusted | [`fnde_siope_despesa_total_educacao`](#trusted-fnde-siope-despesa-total-educacao) | 139,046,717 | 22 | 22 | `fnde_siope_despesa_total_educacao` |
 | trusted | [`fnde_siope_despesas_funcao_educacao`](#trusted-fnde-siope-despesas-funcao-educacao) | 1,199,526 | 13 | 13 | `fnde_siope_despesas_funcao_educacao` |
 | trusted | [`fnde_siope_indicadores`](#trusted-fnde-siope-indicadores) | 6,441,160 | 15 | 15 | `fnde_siope_indicadores` |
 | trusted | [`fnde_siope_informacoes_complementares`](#trusted-fnde-siope-informacoes-complementares) | 8,378,339 | 11 | 11 | `fnde_siope_informacoes_complementares` |
 | trusted | [`fnde_siope_receita_total`](#trusted-fnde-siope-receita-total) | 14,311,287 | 14 | 14 | `fnde_siope_receita_total` |
-| trusted | [`rreo_siope_municipio`](#trusted-rreo-siope-municipio) | 154,132,717 | 15 | 15 | `rreo_siope_municipio` |
-| trusted | [`rreo_siope_uf`](#trusted-rreo-siope-uf) | 725,870 | 16 | 16 | `rreo_siope_uf` |
+| trusted | [`rreo_siope_municipio`](#trusted-rreo-siope-municipio) | 154,283,183 | 15 | 15 | `rreo_siope_municipio` |
+| trusted | [`rreo_siope_uf`](#trusted-rreo-siope-uf) | 726,796 | 16 | 16 | `rreo_siope_uf` |
 
 ## trusted · api_olinda_siope_receita
 
@@ -67,7 +67,7 @@ SIOPE Olinda — Receita declarada por rubrica. Grão: ente/ano/bimestre/rubrica
 
 ## trusted · api_olinda_siope_responsaveis
 
-File `trusted__api_olinda_siope_responsaveis.parquet` · 1,476,352 rows · 46 columns
+File `trusted__api_olinda_siope_responsaveis.parquet` · 1,495,180 rows · 46 columns
 
 SIOPE Olinda — Responsáveis pela declaração. Grão: ente/ano/bimestre/tipo de responsável. CONTÉM PII (nome, e-mail, telefone, endereço). Origem: API OData FNDE (consulta por município — UF retorna 500).
 
@@ -126,7 +126,7 @@ SIOPE Olinda — Responsáveis pela declaração. Grão: ente/ano/bimestre/tipo 
 
 File `trusted__fnde_siope_dados_gerais.parquet` · 166,452 rows · 53 columns
 
-SIOPE FNDE Dados Gerais tipado. Grao: (tipo/esfera, num_ano, num_peri, cod_muni). Totais de receita/despesa/despesa-educacao + FPM/ICMS/FUNDEB/PIB/populacao + campos declaratorios. Origem: raw_zone.fnde_siope_dados_gerais (reprocessado com parse por ancora).
+SIOPE FNDE Dados Gerais tipado. Grao: (tipo/esfera, num_ano, num_peri, cod_muni). Totais de receita/despesa/despesa-educacao + FPM/ICMS/FUNDEB/PIB/populacao + campos declaratorios. Origem: raw/fnde_siope_dados_gerais (reprocessado com parse por ancora).
 
 **Built from:** `raw/fnde_siope_dados_gerais`
 
@@ -330,9 +330,9 @@ SIOPE - Receita total por conta contabil. Historico desde 2005. Grao: ente x ano
 
 ## trusted · rreo_siope_municipio
 
-File `trusted__rreo_siope_municipio.parquet` · 154,132,717 rows · 15 columns
+File `trusted__rreo_siope_municipio.parquet` · 154,283,183 rows · 15 columns
 
-RREO SIOPE Municipio formato LONG/tidy. Grao: 1 linha por (ente, ano, bimestre, codigo, posicao). Arvore hierarquica achatada (todas granularidades). coluna=header (NULL=posicional); juntar com rreo_siope_coluna por (tipo_ente, secao, posicao). Robusto a mudanca de estrutura. Origem: raw_zone.rreo_siope_municipio.
+RREO SIOPE Municipio formato LONG/tidy. Grao: 1 linha por (ente, ano, bimestre, codigo, posicao). Arvore hierarquica achatada (todas granularidades). coluna=header (NULL=posicional); juntar com rreo_siope_coluna por (tipo_ente, secao, posicao). Robusto a mudanca de estrutura. Origem: raw/rreo_siope_municipio.
 
 **Built from:** `raw/rreo_siope_municipio`
 
@@ -340,7 +340,7 @@ RREO SIOPE Municipio formato LONG/tidy. Grao: 1 linha por (ente, ano, bimestre, 
 
 | Column | Type | Description |
 |---|---|---|
-| `codigo_ibge` | INTEGER | Codigo IBGE do municipio (7 digitos). FK -> semantic_zone.obt_ibge_municipio. |
+| `codigo_ibge` | INTEGER | Codigo IBGE do municipio (7 digitos). FK -> semantic/obt_ibge_municipio. |
 | `ano` | INTEGER | Ano de exercicio do RREO. |
 | `bimestre` | INTEGER | Bimestre do RREO (1 a 6). A semantica usa o ultimo bimestre disponivel (acumulado do ano). |
 | `secao` | INTEGER | Secao raiz do RREO (inteiro 1..~52) que agrupa o assunto: receitas, deducoes, FUNDEB, despesas MDE, restos a pagar, disponibilidade financeira. |
@@ -358,9 +358,9 @@ RREO SIOPE Municipio formato LONG/tidy. Grao: 1 linha por (ente, ano, bimestre, 
 
 ## trusted · rreo_siope_uf
 
-File `trusted__rreo_siope_uf.parquet` · 725,870 rows · 16 columns
+File `trusted__rreo_siope_uf.parquet` · 726,796 rows · 16 columns
 
-RREO SIOPE UF/Estado formato LONG/tidy. Grao: 1 linha por (ente, ano, bimestre, codigo, posicao). Arvore hierarquica achatada (todas granularidades). coluna=header (NULL=posicional); juntar com rreo_siope_coluna por (tipo_ente, secao, posicao). Robusto a mudanca de estrutura. Origem: raw_zone.rreo_siope_uf.
+RREO SIOPE UF/Estado formato LONG/tidy. Grao: 1 linha por (ente, ano, bimestre, codigo, posicao). Arvore hierarquica achatada (todas granularidades). coluna=header (NULL=posicional); juntar com rreo_siope_coluna por (tipo_ente, secao, posicao). Robusto a mudanca de estrutura. Origem: raw/rreo_siope_uf.
 
 **Built from:** `raw/rreo_siope_uf`
 

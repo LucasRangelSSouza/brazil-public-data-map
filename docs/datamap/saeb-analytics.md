@@ -29,7 +29,7 @@ The full interactive map (lineage, joins, search) is at [https://rangeltech.net/
 
 File `semantic__obt_api_saeb_boletim.parquet` · 603,449 rows · 69 columns
 
-Boletim SAEB por escola/edicao/serie. Grao: 1 linha por (co_entidade, ano, id_serie). Consolida proficiencias medias de LP e Matematica, distribuicao por niveis (0-10) e benchmark de escolas similares para todas as edicoes (2011-2023, anos impares). ~511k registros. Campo profic_similares exclusivo desta API. FK: codigo_municipio (codigo IBGE 7 digitos) obtido do Censo Escolar por (codigo_escola=co_entidade, ano). Origem: trusted_zone.api_saeb_boletim_desempenho + api_saeb_boletim_escola_edicao + semantic_zone.obt_inep_censo_escola_ano. API SAEB INEP.
+Boletim SAEB por escola/edicao/serie. Grao: 1 linha por (co_entidade, ano, id_serie). Consolida proficiencias medias de LP e Matematica, distribuicao por niveis (0-10) e benchmark de escolas similares para todas as edicoes (2011-2023, anos impares). ~511k registros. Campo profic_similares exclusivo desta API. FK: codigo_municipio (codigo IBGE 7 digitos) obtido do Censo Escolar por (codigo_escola=co_entidade, ano). Origem: trusted/api_saeb_boletim_desempenho + api_saeb_boletim_escola_edicao + semantic/obt_inep_censo_escola_ano. API SAEB INEP.
 
 **Built from:** `semantic/obt_ibge_municipio`, `semantic/obt_inep_censo_escola_ano`, `trusted/api_saeb_boletim_desempenho`, `trusted/api_saeb_boletim_escola_edicao`
 
@@ -109,7 +109,7 @@ Boletim SAEB por escola/edicao/serie. Grao: 1 linha por (co_entidade, ano, id_se
 
 File `semantic__obt_inep_saeb_indicadores_brasil_ano.parquet` · 453 rows · 176 columns
 
-SAEB Planilha de Resultados INEP — indicadores nacionais (Brasil) por ano. Grão: 1 linha por (ano_saeb, id_agregacao, dependencia_administrativa, localizacao). Médias de proficiência e distribuição por nível em LP, MT, CH, CN para 2º EF, 5º EF, 9º EF e Ensino Médio. Edições: 2007, 2009, 2011, 2013, 2015, 2017, 2019, 2021, 2023. Origem: trusted_zone.inep_saeb_indicadores_brasil. Fonte: INEP — https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/saeb/resultados
+SAEB Planilha de Resultados INEP — indicadores nacionais (Brasil) por ano. Grão: 1 linha por (ano_saeb, id_agregacao, dependencia_administrativa, localizacao). Médias de proficiência e distribuição por nível em LP, MT, CH, CN para 2º EF, 5º EF, 9º EF e Ensino Médio. Edições: 2007, 2009, 2011, 2013, 2015, 2017, 2019, 2021, 2023. Origem: trusted/inep_saeb_indicadores_brasil. Fonte: INEP — https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/saeb/resultados
 
 **Built from:** `trusted/inep_saeb_indicadores_brasil`
 
@@ -296,7 +296,7 @@ SAEB Planilha de Resultados INEP — indicadores nacionais (Brasil) por ano. Gr�
 
 File `semantic__obt_inep_saeb_indicadores_estado_ano.parquet` · 9,917 rows · 180 columns
 
-SAEB Planilha de Resultados INEP — indicadores por estado (UF) e ano. Grão: 1 linha por (ano_saeb, codigo_uf, dependencia_administrativa, localizacao). Médias de proficiência e distribuição por nível em LP, MT, CH, CN para 2º EF, 5º EF, 9º EF e Ensino Médio. Edições: 2007, 2009, 2011, 2013, 2015, 2017, 2019, 2021, 2023. Origem: trusted_zone.inep_saeb_indicadores_estados. Fonte: INEP — https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/saeb/resultados
+SAEB Planilha de Resultados INEP — indicadores por estado (UF) e ano. Grão: 1 linha por (ano_saeb, codigo_uf, dependencia_administrativa, localizacao). Médias de proficiência e distribuição por nível em LP, MT, CH, CN para 2º EF, 5º EF, 9º EF e Ensino Médio. Edições: 2007, 2009, 2011, 2013, 2015, 2017, 2019, 2021, 2023. Origem: trusted/inep_saeb_indicadores_estados. Fonte: INEP — https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/saeb/resultados
 
 **Built from:** `semantic/obt_ibge_uf`, `trusted/inep_saeb_indicadores_estados`
 
@@ -487,7 +487,7 @@ SAEB Planilha de Resultados INEP — indicadores por estado (UF) e ano. Grão: 1
 
 File `semantic__obt_inep_saeb_indicadores_historico_brasil_ano.parquet` · 24 rows · 80 columns
 
-SAEB Planilha de Resultados INEP — série histórica NACIONAL (Brasil), formato antigo 1995-2005. Grão: 1 linha por (ano_saeb, dependencia_administrativa). Distribuição percentual de alunos por nível de proficiência (0 a 13) em MT e LP para 5º EF, 9º EF e Ensino Médio. Edições: 1995, 1997, 1999, 2001, 2003, 2005. ATENÇÃO: formato diferente das edições atuais (2007+) — até 14 níveis de proficiência vs máx 11 nas edições atuais; sem disciplinas CH/CN; sem campo media_*. Origem: trusted_zone.inep_saeb_indicadores_historico_brasil. Fonte: INEP — https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/saeb/resultados
+SAEB Planilha de Resultados INEP — série histórica NACIONAL (Brasil), formato antigo 1995-2005. Grão: 1 linha por (ano_saeb, dependencia_administrativa). Distribuição percentual de alunos por nível de proficiência (0 a 13) em MT e LP para 5º EF, 9º EF e Ensino Médio. Edições: 1995, 1997, 1999, 2001, 2003, 2005. ATENÇÃO: formato diferente das edições atuais (2007+) — até 14 níveis de proficiência vs máx 11 nas edições atuais; sem disciplinas CH/CN; sem campo media_*. Origem: trusted/inep_saeb_indicadores_historico_brasil. Fonte: INEP — https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/saeb/resultados
 
 **Built from:** `trusted/inep_saeb_indicadores_historico_brasil`
 
@@ -578,7 +578,7 @@ SAEB Planilha de Resultados INEP — série histórica NACIONAL (Brasil), format
 
 File `semantic__obt_inep_saeb_indicadores_historico_estado_ano.parquet` · 714 rows · 85 columns
 
-SAEB Planilha de Resultados INEP — série histórica por ESTADO (UF), formato antigo 1995-2005. Grão: 1 linha por (ano_saeb, codigo_uf, dependencia_administrativa). ~714 linhas total. Distribuição percentual de alunos por nível de proficiência (0 a 13) em MT e LP para 5º EF, 9º EF e Ensino Médio. Edições: 1995, 1997, 1999, 2001, 2003, 2005. ATENÇÃO: formato diferente das edições atuais (2007+) — até 14 níveis vs máx 11; sem CH/CN; sem media_*. Origem: trusted_zone.inep_saeb_indicadores_historico_estados. Fonte: INEP — https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/saeb/resultados
+SAEB Planilha de Resultados INEP — série histórica por ESTADO (UF), formato antigo 1995-2005. Grão: 1 linha por (ano_saeb, codigo_uf, dependencia_administrativa). ~714 linhas total. Distribuição percentual de alunos por nível de proficiência (0 a 13) em MT e LP para 5º EF, 9º EF e Ensino Médio. Edições: 1995, 1997, 1999, 2001, 2003, 2005. ATENÇÃO: formato diferente das edições atuais (2007+) — até 14 níveis vs máx 11; sem CH/CN; sem media_*. Origem: trusted/inep_saeb_indicadores_historico_estados. Fonte: INEP — https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/saeb/resultados
 
 **Built from:** `semantic/obt_ibge_uf`, `trusted/inep_saeb_indicadores_historico_estados`
 
@@ -801,7 +801,7 @@ SAEB Planilha de Resultados INEP — indicadores por município e ano. Grão: 1 
 
 File `semantic__obt_inep_saeb_micro_escola_ano.parquet` · 461,283 rows · 23 columns
 
-SAEB microdados contextuais por escola e edicao. Grao: 1 linha por (codigo_escola, ano). id_municipio_saeb preserva o identificador municipal interno do SAEB; codigo_municipio/nome_municipio so sao preenchidos quando o identificador bate com IBGE. UF e regiao sao enriquecidas por ID_UF/obt_ibge_uf. Dependencia administrativa e marcada como Nao disponivel na origem quando os arquivos raw nao trazem a dimensao. Fonte: trusted_zone.inep_saeb_escola. INEP 2013-2023 bienal.
+SAEB microdados contextuais por escola e edicao. Grao: 1 linha por (codigo_escola, ano). id_municipio_saeb preserva o identificador municipal interno do SAEB; codigo_municipio/nome_municipio so sao preenchidos quando o identificador bate com IBGE. UF e regiao sao enriquecidas por ID_UF/obt_ibge_uf. Dependencia administrativa e marcada como Nao disponivel na origem quando os arquivos raw nao trazem a dimensao. Fonte: trusted/inep_saeb_escola. INEP 2013-2023 bienal.
 
 **Built from:** `semantic/obt_ibge_municipio`, `semantic/obt_ibge_uf`, `semantic/obt_inep_censo_escola_ano`, `trusted/inep_saeb_escola`, `trusted/inep_saeb_microdados_escola`
 
@@ -835,7 +835,7 @@ SAEB microdados contextuais por escola e edicao. Grao: 1 linha por (codigo_escol
 
 File `semantic__obt_inep_saeb_micro_municipio_ano.parquet` · 65,442 rows · 21 columns
 
-SAEB microdados agregados por municipio SAEB interno, edicao, dependencia administrativa e localizacao. Grao: (id_municipio_saeb/codigo_municipio quando disponivel, ano, dependencia_administrativa, localizacao). Municipio IBGE vem por ponte real com Censo/IBGE. Fonte: trusted_zone.inep_saeb_escola + trusted_zone.inep_saeb_microdados_escola.
+SAEB microdados agregados por municipio SAEB interno, edicao, dependencia administrativa e localizacao. Grao: (id_municipio_saeb/codigo_municipio quando disponivel, ano, dependencia_administrativa, localizacao). Municipio IBGE vem por ponte real com Censo/IBGE. Fonte: trusted/inep_saeb_escola + trusted/inep_saeb_microdados_escola.
 
 **Built from:** `semantic/obt_ibge_municipio`, `semantic/obt_ibge_uf`, `semantic/obt_inep_censo_escola_ano`, `trusted/inep_saeb_escola`, `trusted/inep_saeb_microdados_escola`
 

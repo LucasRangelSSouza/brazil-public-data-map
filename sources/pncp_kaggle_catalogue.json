@@ -1,0 +1,321 @@
+{
+  "schema_version": "2.0",
+  "generated_from": "kaggle datasets list --mine --csv + export-host ledgers + STATE.md overrides",
+  "datasets": 31,
+  "published": 31,
+  "missing": 0,
+  "rows_published_known": 1956930421,
+  "rows_unknown_count": 3,
+  "entries": [
+    {
+      "subject": "ibge",
+      "dataset": "lucasrangelss/ibge-raw-trusted",
+      "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/ibge-raw-trusted",
+      "state": "published",
+      "size_bytes": 185309,
+      "last_updated": "2026-09-30T14:27:15Z",
+      "row_count": 11196,
+      "row_count_source": "ledger"
+    },
+    {
+      "subject": "ibge",
+      "dataset": "lucasrangelss/ibge-analytics",
+      "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/ibge-analytics",
+      "state": "published",
+      "size_bytes": 88111,
+      "last_updated": "2026-09-30T14:28:23Z",
+      "row_count": 5598,
+      "row_count_source": "ledger"
+    },
+    {
+      "subject": "ica",
+      "dataset": "lucasrangelss/ica-raw-trusted",
+      "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/ica-raw-trusted",
+      "state": "published",
+      "size_bytes": 214431,
+      "last_updated": "2026-09-30T14:29:56Z",
+      "row_count": 11026,
+      "row_count_source": "ledger"
+    },
+    {
+      "subject": "ica",
+      "dataset": "lucasrangelss/ica-analytics",
+      "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/ica-analytics",
+      "state": "published",
+      "size_bytes": 612882,
+      "last_updated": "2026-09-30T14:31:16Z",
+      "row_count": 43908,
+      "row_count_source": "ledger"
+    },
+    {
+      "subject": "qedu",
+      "dataset": "lucasrangelss/qedu-raw-trusted",
+      "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/qedu-raw-trusted",
+      "state": "published",
+      "size_bytes": 1314238,
+      "last_updated": "2026-09-30T14:33:18Z",
+      "row_count": 33296,
+      "row_count_source": "ledger"
+    },
+    {
+      "subject": "ideb",
+      "dataset": "lucasrangelss/ideb-raw-trusted",
+      "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/ideb-raw-trusted",
+      "state": "published",
+      "size_bytes": 101019822,
+      "last_updated": "2026-09-30T14:39:28Z",
+      "row_count": 1925765,
+      "row_count_source": "ledger"
+    },
+    {
+      "subject": "ideb",
+      "dataset": "lucasrangelss/ideb-analytics",
+      "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/ideb-analytics",
+      "state": "published",
+      "size_bytes": 41100207,
+      "last_updated": "2026-09-30T14:43:20Z",
+      "row_count": 981919,
+      "row_count_source": "ledger"
+    },
+    {
+      "subject": "fundeb",
+      "dataset": "lucasrangelss/fundeb-raw-trusted",
+      "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/fundeb-raw-trusted",
+      "state": "published",
+      "size_bytes": 86256482,
+      "last_updated": "2026-09-30T14:55:40Z",
+      "row_count": 10107275,
+      "row_count_source": "ledger"
+    },
+    {
+      "subject": "fundeb",
+      "dataset": "lucasrangelss/fundeb-analytics",
+      "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/fundeb-analytics",
+      "state": "published",
+      "size_bytes": 45564574,
+      "last_updated": "2026-09-30T14:59:44Z",
+      "row_count": 4105508,
+      "row_count_source": "ledger"
+    },
+    {
+      "subject": "fnde-salario-educacao",
+      "dataset": "lucasrangelss/fnde-salario-educacao-raw-trusted-part-1",
+      "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/fnde-salario-educacao-raw-trusted-part-1",
+      "state": "published",
+      "size_bytes": 3130211,
+      "last_updated": "2026-09-30T22:50:00Z",
+      "row_count": 112836,
+      "row_count_source": "ledger"
+    },
+    {
+      "subject": "fnde-salario-educacao",
+      "dataset": "lucasrangelss/fnde-salario-educacao-raw-trusted-part-2",
+      "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/fnde-salario-educacao-raw-trusted-part-2",
+      "state": "published",
+      "size_bytes": 5759998,
+      "last_updated": "2026-10-01T02:18:00Z",
+      "row_count": 455943,
+      "row_count_source": "ledger"
+    },
+    {
+      "subject": "fnde-salario-educacao",
+      "dataset": "lucasrangelss/fnde-salario-educacao-analytics",
+      "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/fnde-salario-educacao-analytics",
+      "state": "published",
+      "size_bytes": 6371763,
+      "last_updated": "2026-09-30T22:05:05Z",
+      "row_count": 433562,
+      "row_count_source": "ledger"
+    },
+    {
+      "subject": "pncp",
+      "dataset": "lucasrangelss/pncp-raw-trusted-part-1",
+      "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/pncp-raw-trusted-part-1",
+      "state": "published",
+      "size_bytes": 24520994192,
+      "last_updated": "2026-10-01T09:48:54Z",
+      "row_count": 213700826,
+      "row_count_source": "ledger"
+    },
+    {
+      "subject": "pncp",
+      "dataset": "lucasrangelss/pncp-raw-trusted-part-2",
+      "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/pncp-raw-trusted-part-2",
+      "state": "published",
+      "size_bytes": 94785921,
+      "last_updated": "2026-10-01 17:32:21.793000",
+      "row_count": 817211,
+      "row_count_source": "state_md"
+    },
+    {
+      "subject": "pncp",
+      "dataset": "lucasrangelss/pncp-analytics",
+      "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/pncp-analytics",
+      "state": "published",
+      "size_bytes": 6206551221,
+      "last_updated": "2026-10-01T11:20:22Z",
+      "row_count": 10341852,
+      "row_count_source": "ledger"
+    },
+    {
+      "subject": "taxas-rendimento",
+      "dataset": "lucasrangelss/taxas-rendimento-raw-trusted",
+      "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/taxas-rendimento-raw-trusted",
+      "state": "published",
+      "size_bytes": 0,
+      "last_updated": "2026-10-01T14:28:15Z",
+      "row_count": 218331656,
+      "row_count_source": "ledger"
+    },
+    {
+      "subject": "taxas-rendimento",
+      "dataset": "lucasrangelss/taxas-rendimento-analytics",
+      "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/taxas-rendimento-analytics",
+      "state": "published",
+      "size_bytes": 173057995,
+      "last_updated": "2026-10-01T14:30:29Z",
+      "row_count": 5003248,
+      "row_count_source": "ledger"
+    },
+    {
+      "subject": "saeb",
+      "dataset": "lucasrangelss/saeb-raw-trusted-part-1",
+      "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/saeb-raw-trusted-part-1",
+      "state": "published",
+      "size_bytes": 6716563860,
+      "last_updated": "2026-10-01T18:13:55Z",
+      "row_count": 61355678,
+      "row_count_source": "ledger"
+    },
+    {
+      "subject": "saeb",
+      "dataset": "lucasrangelss/saeb-raw-trusted-part-2",
+      "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/saeb-raw-trusted-part-2",
+      "state": "published",
+      "size_bytes": 2362740992,
+      "last_updated": "2026-10-01T18:35:06Z",
+      "row_count": 24401699,
+      "row_count_source": "ledger"
+    },
+    {
+      "subject": "saeb",
+      "dataset": "lucasrangelss/saeb-raw-trusted-part-3",
+      "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/saeb-raw-trusted-part-3",
+      "state": "published",
+      "size_bytes": 57218492,
+      "last_updated": "2026-10-01T18:37:34Z",
+      "row_count": 812794,
+      "row_count_source": "ledger"
+    },
+    {
+      "subject": "saeb",
+      "dataset": "lucasrangelss/saeb-raw-trusted-part-4",
+      "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/saeb-raw-trusted-part-4",
+      "state": "published",
+      "size_bytes": 408827688,
+      "last_updated": "2026-10-01T18:41:56Z",
+      "row_count": 5526123,
+      "row_count_source": "ledger"
+    },
+    {
+      "subject": "saeb",
+      "dataset": "lucasrangelss/saeb-analytics",
+      "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/saeb-analytics",
+      "state": "published",
+      "size_bytes": 153932205,
+      "last_updated": "2026-10-01T13:57:31Z",
+      "row_count": 1682209,
+      "row_count_source": "ledger"
+    },
+    {
+      "subject": "siope",
+      "dataset": "lucasrangelss/siope-raw-trusted-part-1",
+      "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/siope-raw-trusted-part-1",
+      "state": "published",
+      "size_bytes": 0,
+      "last_updated": "2026-10-01 20:56:17.580000",
+      "row_count": null,
+      "row_count_source": "unknown"
+    },
+    {
+      "subject": "siope",
+      "dataset": "lucasrangelss/siope-raw-trusted-part-2",
+      "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/siope-raw-trusted-part-2",
+      "state": "published",
+      "size_bytes": 8456417899,
+      "last_updated": "2026-10-01 18:19:39.337000",
+      "row_count": 519024963,
+      "row_count_source": "state_md"
+    },
+    {
+      "subject": "siope",
+      "dataset": "lucasrangelss/siope-raw-trusted-part-3",
+      "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/siope-raw-trusted-part-3",
+      "state": "published",
+      "size_bytes": 0,
+      "last_updated": "2026-10-01 19:04:00.227000",
+      "row_count": null,
+      "row_count_source": "unknown"
+    },
+    {
+      "subject": "siope",
+      "dataset": "lucasrangelss/siope-raw-trusted-part-4",
+      "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/siope-raw-trusted-part-4",
+      "state": "published",
+      "size_bytes": 5780773824,
+      "last_updated": "2026-10-01 19:41:53.007000",
+      "row_count": 448537682,
+      "row_count_source": "state_md"
+    },
+    {
+      "subject": "siope",
+      "dataset": "lucasrangelss/siope-analytics",
+      "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/siope-analytics",
+      "state": "published",
+      "size_bytes": 3666786251,
+      "last_updated": "2026-10-01T14:28:01Z",
+      "row_count": 365591796,
+      "row_count_source": "ledger"
+    },
+    {
+      "subject": "censo-escolar",
+      "dataset": "lucasrangelss/censo-escolar-raw-trusted-part-1",
+      "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/censo-escolar-raw-trusted-part-1",
+      "state": "published",
+      "size_bytes": 597528913,
+      "last_updated": "2026-10-01 21:07:36.700000",
+      "row_count": 3103787,
+      "row_count_source": "state_md"
+    },
+    {
+      "subject": "censo-escolar",
+      "dataset": "lucasrangelss/censo-escolar-raw-trusted-part-2",
+      "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/censo-escolar-raw-trusted-part-2",
+      "state": "published",
+      "size_bytes": 0,
+      "last_updated": "2026-10-01 22:02:01.407000",
+      "row_count": 4831642,
+      "row_count_source": "state_md"
+    },
+    {
+      "subject": "censo-escolar",
+      "dataset": "lucasrangelss/censo-escolar-raw-trusted-part-3",
+      "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/censo-escolar-raw-trusted-part-3",
+      "state": "published",
+      "size_bytes": 1545482257,
+      "last_updated": "2026-10-01 23:20:57.293000",
+      "row_count": 55639423,
+      "row_count_source": "state_md"
+    },
+    {
+      "subject": "censo-escolar",
+      "dataset": "lucasrangelss/censo-escolar-analytics",
+      "dataset_url": "https://www.kaggle.com/datasets/lucasrangelss/censo-escolar-analytics",
+      "state": "published",
+      "size_bytes": 1570213518,
+      "last_updated": "2026-10-01 20:48:05.997000",
+      "row_count": null,
+      "row_count_source": "unknown"
+    }
+  ]
+}

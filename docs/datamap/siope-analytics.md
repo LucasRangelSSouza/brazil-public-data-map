@@ -1,6 +1,6 @@
 # SIOPE education finance: Analytics
 
-Dataset: [lucasrangelss/siope-analytics](https://www.kaggle.com/datasets/lucasrangelss/siope-analytics) · snapshot 2026-10-01 · 16 tables · 365,591,796 rows
+Dataset: [lucasrangelss/siope-analytics](https://www.kaggle.com/datasets/lucasrangelss/siope-analytics) · snapshot 2026-10-02 · 16 tables · 365,591,796 rows
 
 **Source:** Fundo Nacional de Desenvolvimento da Educação (FNDE), [https://www.fnde.gov.br/siope/](https://www.fnde.gov.br/siope/)
 
@@ -571,7 +571,7 @@ SIOPE - indicadores financeiros da educacao por UNIDADE FEDERATIVA x ANO x BIMES
 
 File `semantic__obt_fnde_siope_dados_gerais_municipio_ano.parquet` · 166,293 rows · 29 columns
 
-SIOPE FNDE Dados Gerais (resumo) por municipio x ano x bimestre. WIDE: conjunto fixo de metricas (receita/despesa totais, despesa com educacao, PIB, populacao, FPM/ICMS/FUNDEB). Dedup pela declaracao mais recente. FK codigo_municipio -> obt_ibge_municipio. Origem: trusted_zone.fnde_siope_dados_gerais.
+SIOPE FNDE Dados Gerais (resumo) por municipio x ano x bimestre. WIDE: conjunto fixo de metricas (receita/despesa totais, despesa com educacao, PIB, populacao, FPM/ICMS/FUNDEB). Dedup pela declaracao mais recente. FK codigo_municipio -> obt_ibge_municipio. Origem: trusted/fnde_siope_dados_gerais.
 
 **Built from:** `semantic/obt_ibge_municipio`, `trusted/fnde_siope_dados_gerais`
 
@@ -611,7 +611,7 @@ SIOPE FNDE Dados Gerais (resumo) por municipio x ano x bimestre. WIDE: conjunto 
 
 File `semantic__obt_fnde_siope_despesa_educacao_municipio_ano.parquet` · 135,140,891 rows · 18 columns
 
-FNDE SIOPE Despesa com Educacao detalhada — LONG hierarquico (pasta/subfuncao/item/fonte x fase). Grao inclui coluna_valor (Dotacao/Empenhada/Liquidada/Paga). 2021-2025. Ruido de coluna numerica filtrado. Origem: trusted_zone.fnde_siope_despesa_total_educacao + IBGE.
+FNDE SIOPE Despesa com Educacao detalhada — LONG hierarquico (pasta/subfuncao/item/fonte x fase). Grao inclui coluna_valor (Dotacao/Empenhada/Liquidada/Paga). 2021-2025. Ruido de coluna numerica filtrado. Origem: trusted/fnde_siope_despesa_total_educacao + IBGE.
 
 **Built from:** `semantic/obt_ibge_municipio`, `trusted/fnde_siope_despesa_total_educacao`
 
@@ -640,7 +640,7 @@ FNDE SIOPE Despesa com Educacao detalhada — LONG hierarquico (pasta/subfuncao/
 
 File `semantic__obt_fnde_siope_despesa_funcao_municipio_ano.parquet` · 1,191,974 rows · 13 columns
 
-FNDE SIOPE Despesa por Subfuncao da Educacao — LONG. Grao: (codigo_municipio, ano, num_periodo, esfera, subfuncao). empenhada/liquidada/paga. 2021-2025. Origem: trusted_zone.fnde_siope_despesas_funcao_educacao + IBGE.
+FNDE SIOPE Despesa por Subfuncao da Educacao — LONG. Grao: (codigo_municipio, ano, num_periodo, esfera, subfuncao). empenhada/liquidada/paga. 2021-2025. Origem: trusted/fnde_siope_despesas_funcao_educacao + IBGE.
 
 **Built from:** `semantic/obt_ibge_municipio`, `trusted/fnde_siope_despesas_funcao_educacao`
 
@@ -664,7 +664,7 @@ FNDE SIOPE Despesa por Subfuncao da Educacao — LONG. Grao: (codigo_municipio, 
 
 File `semantic__obt_fnde_siope_indicador_municipio_ano.parquet` · 6,411,059 rows · 12 columns
 
-FNDE SIOPE Indicadores — LONG. Grao: (codigo_municipio, ano, num_periodo, esfera, indicador). Colunas de grupo descartadas (corrompidas no raw). 2021-2025. Origem: trusted_zone.fnde_siope_indicadores + IBGE.
+FNDE SIOPE Indicadores — LONG. Grao: (codigo_municipio, ano, num_periodo, esfera, indicador). Colunas de grupo descartadas (corrompidas no raw). 2021-2025. Origem: trusted/fnde_siope_indicadores + IBGE.
 
 **Built from:** `semantic/obt_ibge_municipio`, `trusted/fnde_siope_indicadores`
 
@@ -687,7 +687,7 @@ FNDE SIOPE Indicadores — LONG. Grao: (codigo_municipio, ano, num_periodo, esfe
 
 File `semantic__obt_fnde_siope_info_complementar_municipio_ano.parquet` · 8,322,693 rows · 11 columns
 
-FNDE SIOPE Informacoes Complementares — LONG. Grao: (codigo_municipio, ano, num_periodo, item). item -> valor_texto/valor_numerico. 2007-2025. Origem: trusted_zone.fnde_siope_informacoes_complementares + IBGE.
+FNDE SIOPE Informacoes Complementares — LONG. Grao: (codigo_municipio, ano, num_periodo, item). item -> valor_texto/valor_numerico. 2007-2025. Origem: trusted/fnde_siope_informacoes_complementares + IBGE.
 
 **Built from:** `semantic/obt_ibge_municipio`, `trusted/fnde_siope_informacoes_complementares`
 
@@ -709,7 +709,7 @@ FNDE SIOPE Informacoes Complementares — LONG. Grao: (codigo_municipio, ano, nu
 
 File `semantic__obt_fnde_siope_receita_municipio_ano.parquet` · 14,236,762 rows · 14 columns
 
-FNDE SIOPE Receita por conta contabil — LONG. Grao: (codigo_municipio, ano, tipo_periodo, num_periodo, esfera, conta_contabil). 2005-2019. Origem: trusted_zone.fnde_siope_receita_total + IBGE.
+FNDE SIOPE Receita por conta contabil — LONG. Grao: (codigo_municipio, ano, tipo_periodo, num_periodo, esfera, conta_contabil). 2005-2019. Origem: trusted/fnde_siope_receita_total + IBGE.
 
 **Built from:** `semantic/obt_ibge_municipio`, `trusted/fnde_siope_receita_total`
 
@@ -734,7 +734,7 @@ FNDE SIOPE Receita por conta contabil — LONG. Grao: (codigo_municipio, ano, ti
 
 File `semantic__obt_rreo_siope_municipio_ano.parquet` · 42,649,158 rows · 16 columns
 
-RREO SIOPE Municipio — formato LONG/tidy, snapshot ANUAL (ultimo bimestre disponivel de cada ano, que e acumulado ate o bimestre). Grao: 1 linha por (codigo_municipio, ano, codigo, posicao). Cada linha e um par (rubrica x metrica) da arvore do RREO. FORMATO LONG porque o RREO e uma arvore hierarquica viva: os codigos (1, 1.1, 1.1.1 ... ate ~52) entram e saem entre anos (ex: VAAT/VAAR so apos a nova lei do FUNDEB 2021), entao uma tabela WIDE quebraria a cada mudanca de layout. LONG absorve: nova rubrica = nova linha, sem mudar schema. Use nome_metrica para a metrica e descricao/codigo para a rubrica. Enriquecido com geografia IBGE. url_download_pdf aponta para o PDF-fonte no GCS. Origem: trusted_zone.rreo_siope_municipio.
+RREO SIOPE Municipio — formato LONG/tidy, snapshot ANUAL (ultimo bimestre disponivel de cada ano, que e acumulado ate o bimestre). Grao: 1 linha por (codigo_municipio, ano, codigo, posicao). Cada linha e um par (rubrica x metrica) da arvore do RREO. FORMATO LONG porque o RREO e uma arvore hierarquica viva: os codigos (1, 1.1, 1.1.1 ... ate ~52) entram e saem entre anos (ex: VAAT/VAAR so apos a nova lei do FUNDEB 2021), entao uma tabela WIDE quebraria a cada mudanca de layout. LONG absorve: nova rubrica = nova linha, sem mudar schema. Use nome_metrica para a metrica e descricao/codigo para a rubrica. Enriquecido com geografia IBGE. Origem: trusted/rreo_siope_municipio.
 
 **Built from:** `semantic/obt_ibge_municipio`, `trusted/rreo_siope_municipio`
 
@@ -761,7 +761,7 @@ RREO SIOPE Municipio — formato LONG/tidy, snapshot ANUAL (ultimo bimestre disp
 
 File `semantic__obt_rreo_siope_municipio_bimestre.parquet` · 154,132,717 rows · 17 columns
 
-RREO SIOPE Municipio BIMESTRAL (LONG) — 1 linha por (codigo_municipio, ano, bimestre, codigo, posicao). TODOS os bimestres (2017-2025 completos; 2010-2016 so 1/ano na origem FNDE). Valores acumulados ate o bimestre (permite a curva de execucao intra-ano). is_fechamento=TRUE marca o ultimo bimestre do ano (= snapshot da obt_..._ano). Origem: trusted_zone.rreo_siope_municipio. Complementa obt_rreo_siope_municipio_ano (anual). Base p/ previsao (Produto 2).
+RREO SIOPE Municipio BIMESTRAL (LONG) — 1 linha por (codigo_municipio, ano, bimestre, codigo, posicao). TODOS os bimestres (2017-2025 completos; 2010-2016 so 1/ano na origem FNDE). Valores acumulados ate o bimestre (permite a curva de execucao intra-ano). is_fechamento=TRUE marca o ultimo bimestre do ano (= snapshot da obt_..._ano). Origem: trusted/rreo_siope_municipio. Complementa obt_rreo_siope_municipio_ano (anual). Base p/ previsao (Produto 2).
 
 **Built from:** `semantic/obt_ibge_municipio`, `trusted/rreo_siope_municipio`
 
@@ -791,7 +791,7 @@ RREO SIOPE Municipio BIMESTRAL (LONG) — 1 linha por (codigo_municipio, ano, bi
 
 File `semantic__obt_rreo_siope_uf_ano.parquet` · 197,542 rows · 16 columns
 
-RREO SIOPE UF/Estado — formato LONG/tidy, snapshot ANUAL (ultimo bimestre disponivel de cada ano, que e acumulado ate o bimestre). Grao: 1 linha por (codigo_uf, ano, codigo, posicao). Cada linha e um par (rubrica x metrica) da arvore do RREO. FORMATO LONG porque o RREO e uma arvore hierarquica viva: os codigos (1, 1.1, 1.1.1 ... ate ~52) entram e saem entre anos (ex: VAAT/VAAR so apos a nova lei do FUNDEB 2021), entao uma tabela WIDE quebraria a cada mudanca de layout. LONG absorve: nova rubrica = nova linha, sem mudar schema. Use nome_metrica para a metrica e descricao/codigo para a rubrica. Enriquecido com geografia IBGE. url_download_pdf aponta para o PDF-fonte no GCS. Origem: trusted_zone.rreo_siope_uf.
+RREO SIOPE UF/Estado — formato LONG/tidy, snapshot ANUAL (ultimo bimestre disponivel de cada ano, que e acumulado ate o bimestre). Grao: 1 linha por (codigo_uf, ano, codigo, posicao). Cada linha e um par (rubrica x metrica) da arvore do RREO. FORMATO LONG porque o RREO e uma arvore hierarquica viva: os codigos (1, 1.1, 1.1.1 ... ate ~52) entram e saem entre anos (ex: VAAT/VAAR so apos a nova lei do FUNDEB 2021), entao uma tabela WIDE quebraria a cada mudanca de layout. LONG absorve: nova rubrica = nova linha, sem mudar schema. Use nome_metrica para a metrica e descricao/codigo para a rubrica. Enriquecido com geografia IBGE. Origem: trusted/rreo_siope_uf.
 
 **Built from:** `semantic/obt_ibge_uf`, `trusted/rreo_siope_uf`
 
@@ -818,7 +818,7 @@ RREO SIOPE UF/Estado — formato LONG/tidy, snapshot ANUAL (ultimo bimestre disp
 
 File `semantic__obt_rreo_siope_uf_bimestre.parquet` · 725,870 rows · 17 columns
 
-RREO SIOPE UF/Estado BIMESTRAL (LONG) - 1 linha por (codigo_uf, ano, bimestre, codigo, posicao). TODOS os bimestres, 27 UFs, 2010 em diante. Valores ACUMULADOS ate o bimestre, como o relatorio publica: permite a curva de execucao intra-ano e NAO deve ser somado entre bimestres. is_fechamento=TRUE marca o ultimo bimestre do ano (= snapshot da obt_rreo_siope_uf_ano). Origem: trusted_zone.rreo_siope_uf, com join por co_uf - a coluna sg_uf da trusted e nula em ~98% das linhas. Alimenta a tabela de entrega do RREO na aba de UF do dashboard 113 e a conferencia documental dos indicadores estaduais. ATENCAO: o RREO renumera secoes e desloca colunas entre exercicios, entao qualquer leitura de linha especifica deve ancorar pelo TEXTO da descricao, nunca pelo numero da secao ou pela letra da coluna.
+RREO SIOPE UF/Estado BIMESTRAL (LONG) - 1 linha por (codigo_uf, ano, bimestre, codigo, posicao). TODOS os bimestres, 27 UFs, 2010 em diante. Valores ACUMULADOS ate o bimestre, como o relatorio publica: permite a curva de execucao intra-ano e NAO deve ser somado entre bimestres. is_fechamento=TRUE marca o ultimo bimestre do ano (= snapshot da obt_rreo_siope_uf_ano). Origem: trusted/rreo_siope_uf, com join por co_uf - a coluna sg_uf da trusted e nula em ~98% das linhas. Alimenta a tabela de entrega do RREO na aba de UF do dashboard 113 e a conferencia documental dos indicadores estaduais. ATENCAO: o RREO renumera secoes e desloca colunas entre exercicios, entao qualquer leitura de linha especifica deve ancorar pelo TEXTO da descricao, nunca pelo numero da secao ou pela letra da coluna.
 
 **Built from:** `semantic/obt_ibge_uf`, `trusted/rreo_siope_uf`
 

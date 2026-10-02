@@ -5,7 +5,7 @@
   "group": "raw-trusted",
   "part": 1,
   "parts": 1,
-  "snapshot_date": "2026-10-01",
+  "snapshot_date": "2026-10-02",
   "tables": [
     {
       "table_id": "inep_taxa_distorcao_brasil_regioes_ufs",
@@ -74,8 +74,13 @@
       "parquet": "trusted__inep_taxas_rendimento_escolar_qualidade.parquet"
     }
   ],
-  "kaggle_metadata_sha256": "3ba1375ad2855c4a52ccfa8378af17a8c705e69241f13d0021322d5fa2576431",
+  "kaggle_metadata_sha256": "9a1faef70a9170e455ba9db0c7ec421cda3b9f67ceb82790dc19fc5dd8c5abe7",
   "files": [
+    {
+      "path": "00_source_ingestion_taxas-rendimento.ipynb",
+      "bytes": 6035,
+      "sha256": "11c4e7089814bba21f2d5ad54c6c6ebe9c9b057b2922fdf99117ec62e7141f3c"
+    },
     {
       "path": "01_ingestion_taxas-rendimento.ipynb",
       "bytes": 3748,
@@ -87,69 +92,74 @@
       "sha256": "43af74b18cfcf142e995f67ec29bc0c54f27a12c51a2dd23f9c8db13c4e6b6fc"
     },
     {
+      "path": "DATA_DICTIONARY.md",
+      "bytes": 46808,
+      "sha256": "4bc81f989da7abf13957f7148cc8ae9713582436b85d6987d952452428429cf3"
+    },
+    {
       "path": "README.md",
       "bytes": 768,
-      "sha256": "6e7e18295037e9f481b5e9cdd6151d405967ba139437fe33d50c210a26f61e0e"
+      "sha256": "36cc0603509bccde1aa2378884173fefd432420dc8c22f6df0dc19cc0c3f44f5"
     },
     {
       "path": "audit.json",
-      "bytes": 11314,
-      "sha256": "e7353e87386a47a80ea899ab4aef0491eb60925e14f1ed7715c792fda319580e"
+      "bytes": 11294,
+      "sha256": "8be0b392bc6fb994e79d87a2eb8aec00e1c58ca0c03f21fc75043959d5aaa8a5"
     },
     {
       "path": "raw__inep_taxa_distorcao_brasil_regioes_ufs.parquet",
-      "bytes": 353282,
-      "sha256": "1826cd8c3620da1dec1066118111dfaee459093049525280bb7859dccd22c80e"
+      "bytes": 203181,
+      "sha256": "9c2c1c43a990cfbc197ad2f8a56cde9cf84b60cf2f2bec0634dd7ec01fd8b422"
     },
     {
       "path": "raw__inep_taxa_distorcao_escolas.parquet",
-      "bytes": 101903339,
-      "sha256": "7b019493d4cbd9829bb880419d2ac6328fa5122a564ad777bbd2890534e9e8a4"
+      "bytes": 53843005,
+      "sha256": "8142193788396e6cc109aa4b0fa7c3f9296d65e898283609ebc0dd245a6d2239"
     },
     {
       "path": "raw__inep_taxa_distorcao_municipios.parquet",
-      "bytes": 36104383,
-      "sha256": "473ba31240e1d1399b822bb61f655898abb33857c267e8c8d7862abdb9858c2a"
+      "bytes": 17935558,
+      "sha256": "c419b47f41d791e7bf243dd222d865cfdb4d660ede9f9e4153b56463b2989927"
     },
     {
       "path": "raw__inep_taxas_rendimento_escolar.parquet",
-      "bytes": 429139458,
-      "sha256": "8ae258597cfa190c96283f5dce5ccf4112521dce5a5265bff0d94481d1727b63"
+      "bytes": 170806348,
+      "sha256": "aa99d26223aba1c1d81b654c4e7c1b2463597dcd2cb380efb311d38ac71acbc4"
     },
     {
       "path": "raw__inep_taxas_rendimento_escolar_arquivos.parquet",
-      "bytes": 10376,
-      "sha256": "fef03b3f3606613412304fcf2f125c13b85e1dc127d2da01f4e3986e5995d0a2"
+      "bytes": 8821,
+      "sha256": "290ceb10ab9a644015703ac972da9fb249fcdf5b739ebdc3f5c754162f128435"
     },
     {
       "path": "schemas.json",
-      "bytes": 55113,
-      "sha256": "c96c03d7804a9c739f9d8638d0de606b306837781e2d1eb578252881348f9bad"
+      "bytes": 54981,
+      "sha256": "7dc08889a7f6c7246a8350bfc7034803d3b3fa50ec68b7e54adc12987b853236"
     },
     {
       "path": "trusted__inep_taxa_distorcao_brasil_regioes_ufs.parquet",
-      "bytes": 405677,
-      "sha256": "17ac82409b945493c028ba9d4ba61ca97b7663f81114846ba9357183dbbbc90e"
+      "bytes": 185745,
+      "sha256": "3ff14b496c0562037a68389b363b9c5f2dbe9515417f67d17d71fed370105e92"
     },
     {
       "path": "trusted__inep_taxa_distorcao_escolas.parquet",
-      "bytes": 89750179,
-      "sha256": "a2fb256282a6324713a0243cd4987bcbaa342164b7c6f1b27da32514bef86491"
+      "bytes": 56070996,
+      "sha256": "77de42e601c929023f7a160982f381ee0c5feaf6541beb419b469c5c6d51dbe9"
     },
     {
       "path": "trusted__inep_taxa_distorcao_municipios.parquet",
-      "bytes": 29249900,
-      "sha256": "84332f092a6bef7a8112e3d328abee5e15772c976c037954ba60f3dee8dfdf68"
+      "bytes": 19129208,
+      "sha256": "ae138dc4c4232cea77abbebf99371923e8423cc6609cd810a3142ca1a7980949"
     },
     {
       "path": "trusted__inep_taxas_rendimento_escolar.parquet",
-      "bytes": 458239647,
-      "sha256": "4915d20e01dd384d62e26498576a1d4ae89aaf7e73f4f0257c61b6847ff884bf"
+      "bytes": 174414334,
+      "sha256": "5855567aba6875e289c44c8d30f6d70b91ed65f0948af9806de33226290deb73"
     },
     {
       "path": "trusted__inep_taxas_rendimento_escolar_long.parquet",
-      "bytes": 5247931271,
-      "sha256": "de00ae04df797260cc957b4463b647d440bad19d996f50122e9b87070c83c6a5"
+      "bytes": 3048147899,
+      "sha256": "5ac89857b9ee7f6c1198ee5b4f9426967f41346fec4387a271f00315b44c5f5f"
     },
     {
       "path": "trusted__inep_taxas_rendimento_escolar_qualidade.parquet",

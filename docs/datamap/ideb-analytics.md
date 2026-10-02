@@ -25,7 +25,7 @@ The full interactive map (lineage, joins, search) is at [https://rangeltech.net/
 
 File `semantic__obt_inep_ideb_brasil_ano.parquet` · 55 rows · 21 columns
 
-IDEB do Brasil por ano e rede, com AI, AF e EM pivotados em colunas. Grao: 1 linha por (ano, rede). Origem: trusted_zone.inep_ideb_brasil.
+IDEB do Brasil por ano e rede, com AI, AF e EM pivotados em colunas. Grao: 1 linha por (ano, rede). Origem: trusted/inep_ideb_brasil.
 
 **Built from:** `trusted/inep_ideb_brasil`
 
@@ -57,7 +57,7 @@ IDEB do Brasil por ano e rede, com AI, AF e EM pivotados em colunas. Grao: 1 lin
 
 File `semantic__obt_inep_ideb_escola_ano.parquet` · 798,779 rows · 24 columns
 
-IDEB por escola, nivel educacional e ano. Grao: 1 linha por (id_escola, nivel, ano, rede). EF: 2005-2023 bienal. EM: 2017-2023. FK: codigo_municipio para obt_ibge_municipio. Origem: trusted_zone.inep_ideb_escola. INEP.
+IDEB por escola, nivel educacional e ano. Grao: 1 linha por (id_escola, nivel, ano, rede). EF: 2005-2023 bienal. EM: 2017-2023. FK: codigo_municipio para obt_ibge_municipio. Origem: trusted/inep_ideb_escola. INEP.
 
 **Built from:** `semantic/obt_ibge_municipio`, `trusted/inep_ideb_escola`
 
@@ -92,7 +92,7 @@ IDEB por escola, nivel educacional e ano. Grao: 1 linha por (id_escola, nivel, a
 
 File `semantic__obt_inep_ideb_municipio_ano.parquet` · 181,677 rows · 31 columns
 
-IDEB por municipio, rede e ano, com AI, AF e EM pivotados em colunas. Grao: 1 linha por (codigo_municipio, ano, rede). Redes no nivel municipal: Publica, Municipal, Estadual e Federal (o INEP nao publica Privada/Total por municipio). Mantem formato wide historico da OBT. FK: codigo_municipio para obt_ibge_municipio. Origem: trusted_zone.inep_ideb_municipio. INEP.
+IDEB por municipio, rede e ano, com AI, AF e EM pivotados em colunas. Grao: 1 linha por (codigo_municipio, ano, rede). Redes no nivel municipal: Publica, Municipal, Estadual e Federal (o INEP nao publica Privada/Total por municipio). Mantem formato wide historico da OBT. FK: codigo_municipio para obt_ibge_municipio. Origem: trusted/inep_ideb_municipio. INEP.
 
 **Built from:** `semantic/obt_ibge_municipio`, `trusted/inep_ideb_municipio`
 
@@ -134,7 +134,7 @@ IDEB por municipio, rede e ano, com AI, AF e EM pivotados em colunas. Grao: 1 li
 
 File `semantic__obt_inep_ideb_regiao_ano.parquet` · 1,408 rows · 29 columns
 
-IDEB por regiao geografica e Unidade da Federacao, ano e rede, com AI, AF e EM pivotados em colunas. Grao: 1 linha por (tipo_unidade, codigo_regiao/codigo_uf, ano, rede). Origem: trusted_zone.inep_ideb_regioes_ufs.
+IDEB por regiao geografica e Unidade da Federacao, ano e rede, com AI, AF e EM pivotados em colunas. Grao: 1 linha por (tipo_unidade, codigo_regiao/codigo_uf, ano, rede). Origem: trusted/inep_ideb_regioes_ufs.
 
 **Built from:** `semantic/obt_ibge_uf`, `trusted/inep_ideb_regioes_ufs`
 

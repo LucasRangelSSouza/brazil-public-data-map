@@ -1,6 +1,6 @@
 # SIOPE education finance: Raw and Trusted
 
-Dataset: [lucasrangelss/siope-raw-trusted-part-2](https://www.kaggle.com/datasets/lucasrangelss/siope-raw-trusted-part-2) · snapshot 2026-10-01 · 13 tables · 519,024,963 rows
+Dataset: [lucasrangelss/siope-raw-trusted-part-2](https://www.kaggle.com/datasets/lucasrangelss/siope-raw-trusted-part-2) · snapshot 2026-10-02 · 13 tables · 530,094,262 rows
 
 **Source:** Fundo Nacional de Desenvolvimento da Educação (FNDE), [https://www.fnde.gov.br/siope/](https://www.fnde.gov.br/siope/)
 
@@ -16,12 +16,12 @@ The full interactive map (lineage, joins, search) is at [https://rangeltech.net/
 
 | Layer | Table | Rows | Columns | Described | Upstream |
 |---|---|---:|---:|---:|---|
-| raw | [`api_olinda_siope_despesas_funcao_educacao`](#raw-api-olinda-siope-despesas-funcao-educacao) | 4,932,267 | 26 | 26 | source |
-| raw | [`api_olinda_siope_indicadores`](#raw-api-olinda-siope-indicadores) | 21,043,711 | 27 | 27 | source |
-| raw | [`api_olinda_siope_informacoes_complementares`](#raw-api-olinda-siope-informacoes-complementares) | 19,463,493 | 24 | 24 | source |
-| raw | [`api_olinda_siope_receita`](#raw-api-olinda-siope-receita) | 241,352,286 | 28 | 28 | source |
-| raw | [`api_olinda_siope_remuneracao`](#raw-api-olinda-siope-remuneracao) | 60,981,399 | 28 | 28 | source |
-| raw | [`api_olinda_siope_responsaveis`](#raw-api-olinda-siope-responsaveis) | 1,708,067 | 49 | 1 | source |
+| raw | [`api_olinda_siope_despesas_funcao_educacao`](#raw-api-olinda-siope-despesas-funcao-educacao) | 4,982,070 | 26 | 26 | source |
+| raw | [`api_olinda_siope_indicadores`](#raw-api-olinda-siope-indicadores) | 21,195,152 | 27 | 27 | source |
+| raw | [`api_olinda_siope_informacoes_complementares`](#raw-api-olinda-siope-informacoes-complementares) | 19,789,405 | 24 | 24 | source |
+| raw | [`api_olinda_siope_receita`](#raw-api-olinda-siope-receita) | 244,805,525 | 28 | 28 | source |
+| raw | [`api_olinda_siope_remuneracao`](#raw-api-olinda-siope-remuneracao) | 68,046,053 | 28 | 28 | source |
+| raw | [`api_olinda_siope_responsaveis`](#raw-api-olinda-siope-responsaveis) | 1,732,317 | 49 | 1 | source |
 | raw | [`fnde_siope_dados_gerais`](#raw-fnde-siope-dados-gerais) | 166,452 | 53 | 53 | source |
 | raw | [`fnde_siope_despesa_total_educacao`](#raw-fnde-siope-despesa-total-educacao) | 139,046,717 | 21 | 21 | source |
 | raw | [`fnde_siope_despesas_funcao_educacao`](#raw-fnde-siope-despesas-funcao-educacao) | 1,199,526 | 12 | 12 | source |
@@ -32,7 +32,7 @@ The full interactive map (lineage, joins, search) is at [https://rangeltech.net/
 
 ## raw · api_olinda_siope_despesas_funcao_educacao
 
-File `raw__api_olinda_siope_despesas_funcao_educacao.parquet` · 4,932,267 rows · 26 columns
+File `raw__api_olinda_siope_despesas_funcao_educacao.parquet` · 4,982,070 rows · 26 columns
 
 Tabela de despesas públicas com educação por subfunção, originada do SIOPE (Sistema de Informações sobre Orçamentos Públicos em Educação), detalhando valores empenhados, liquidados e pagos por município e período.
 
@@ -69,7 +69,7 @@ Tabela de despesas públicas com educação por subfunção, originada do SIOPE 
 
 ## raw · api_olinda_siope_indicadores
 
-File `raw__api_olinda_siope_indicadores.parquet` · 21,043,711 rows · 27 columns
+File `raw__api_olinda_siope_indicadores.parquet` · 21,195,152 rows · 27 columns
 
 Tabela de indicadores financeiros e orçamentários da educação pública municipal e estadual, originados do SIOPE (Sistema de Informações sobre Orçamentos Públicos em Educação), utilizada para monitoramento de despesas com pessoal, FUNDEB e manutenção do ensino.
 
@@ -107,7 +107,7 @@ Tabela de indicadores financeiros e orçamentários da educação pública munic
 
 ## raw · api_olinda_siope_informacoes_complementares
 
-File `raw__api_olinda_siope_informacoes_complementares.parquet` · 19,463,493 rows · 24 columns
+File `raw__api_olinda_siope_informacoes_complementares.parquet` · 19,789,405 rows · 24 columns
 
 Tabela de informações complementares do SIOPE (Sistema de Informações sobre Orçamentos Públicos em Educação) contendo dados declarados de receitas, despesas e saldos de entes municipais e estaduais, utilizada para análise de financiamento da educação pública.
 
@@ -142,7 +142,7 @@ Tabela de informações complementares do SIOPE (Sistema de Informações sobre 
 
 ## raw · api_olinda_siope_receita
 
-File `raw__api_olinda_siope_receita.parquet` · 241,352,286 rows · 28 columns
+File `raw__api_olinda_siope_receita.parquet` · 244,805,525 rows · 28 columns
 
 Tabela contendo dados de receitas declaradas no SIOPE (Sistema de Informações sobre Orçamentos Públicos em Educação) por municípios, utilizada para monitoramento de recursos e investimentos em educação pública.
 
@@ -181,7 +181,7 @@ Tabela contendo dados de receitas declaradas no SIOPE (Sistema de Informações 
 
 ## raw · api_olinda_siope_remuneracao
 
-File `raw__api_olinda_siope_remuneracao.parquet` · 60,981,399 rows · 28 columns
+File `raw__api_olinda_siope_remuneracao.parquet` · 68,046,053 rows · 28 columns
 
 Tabela com dados de remuneração de profissionais da educação básica pública, extraídos do SIOPE (Sistema de Informações sobre Orçamentos Públicos em Educação), detalhando salários, carga horária e fontes de recursos (FUNDEB).
 
@@ -218,7 +218,7 @@ Tabela com dados de remuneração de profissionais da educação básica públic
 
 ## raw · api_olinda_siope_responsaveis
 
-File `raw__api_olinda_siope_responsaveis.parquet` · 1,708,067 rows · 49 columns
+File `raw__api_olinda_siope_responsaveis.parquet` · 1,732,317 rows · 49 columns
 
 **Feeds:** `trusted/api_olinda_siope_responsaveis`
 
