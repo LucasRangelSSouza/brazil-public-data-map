@@ -13,7 +13,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 OWNER = "lucasrangelss"
-MAP = "https://rangeltech.net/datamap/"
+MAP = "https://lucas.rangeltech.net/datamap/"
 REPO = "https://github.com/LucasRangelSSouza/brazil-public-data-map"
 
 

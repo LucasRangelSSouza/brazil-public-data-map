@@ -15,7 +15,7 @@ Every table is one Parquet file at the dataset root, named `<layer>__<table>.par
 
 ## Documentation, field by field
 
-- Interactive data map (search, lineage, joins): https://rangeltech.net/datamap/#/dataset/saeb-raw-trusted-part-1
+- Interactive data map (search, lineage, joins): https://lucas.rangeltech.net/datamap/#/dataset/saeb-raw-trusted-part-1
 - Data dictionary of this dataset, every column: https://github.com/LucasRangelSSouza/brazil-public-data-map/blob/main/docs/datamap/saeb-raw-trusted-part-1.md
 - How the raw layer is obtained from the official source (notebook): https://github.com/LucasRangelSSouza/brazil-public-data-map/blob/main/notebooks/sources/saeb.ipynb
 - Code and release contracts: https://github.com/LucasRangelSSouza/brazil-public-data-map
@@ -77,4 +77,4 @@ df = pd.read_parquet(path)
 
 Values are published as held in the snapshot, without masking. Source terms apply; credit the original publisher.
 
-My portfolio: https://rangeltech.net
+My portfolio: https://lucas.rangeltech.net

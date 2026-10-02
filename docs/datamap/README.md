@@ -2,7 +2,7 @@
 
 31 datasets, 428 tables, 4,002,911,253 rows, every field documented where the source lake carries a description. Each dictionary also ships inside its Kaggle dataset as `DATA_DICTIONARY.md` and `data_dictionary.json`.
 
-Interactive map: https://rangeltech.net/datamap/
+Interactive map: https://lucas.rangeltech.net/datamap/
 
 | Source | Dataset | Tables | Rows |
 |---|---|---:|---:|

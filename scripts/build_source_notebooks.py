@@ -16,7 +16,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "notebooks" / "sources"
 CATALOG = ROOT / "datamap" / "data" / "catalog.json"
-MAP = "https://rangeltech.net/datamap/"
+MAP = "https://lucas.rangeltech.net/datamap/"
 REPO = "https://github.com/LucasRangelSSouza/brazil-public-data-map"
 
 

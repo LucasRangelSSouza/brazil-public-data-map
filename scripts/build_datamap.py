@@ -268,7 +268,7 @@ def kaggle_description(ds: dict, catalog: dict) -> str:
     lines += ["", "## Read a table", "", "```python", "import kagglehub, pandas as pd",
               f"path = kagglehub.dataset_download(\"{ds['owner']}/{ds['slug']}\", path=\"{ds['tables'][0]['file']}\")", "df = pd.read_parquet(path)", "```", "",
               "Values are published as held in the snapshot, without masking. Source terms apply; credit the original publisher.", "",
-              "My portfolio: https://rangeltech.net", ""]
+              "My portfolio: https://lucas.rangeltech.net", ""]
     return "\n".join(lines)
 
 
