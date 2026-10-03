@@ -113,3 +113,14 @@ The current PNCP version is a one-day, modality-6 item-grain sample. Earlier Kag
 ## License
 
 [Apache-2.0](LICENSE).
+
+<!-- articles:start -->
+## Articles
+
+- [Vertex AI vs open-source embeddings: which finds more?](https://lucas.rangeltech.net/articles/b1-vertex-vs-open-source-embeddings/)
+- [How to build a RAG agent over your own data](https://lucas.rangeltech.net/articles/b2-rag-agent-over-your-own-data/)
+- [How to build a free data catalog with lineage](https://lucas.rangeltech.net/articles/c2-free-data-catalog-with-lineage/)
+- [Why your data drift check missed a bad batch](https://lucas.rangeltech.net/articles/f1-data-drift-check-missed-a-bad-batch/)
+- [How to evaluate a ranking model without leakage](https://lucas.rangeltech.net/articles/f2-evaluate-ranking-model-without-leakage/)
+- [How to pseudonymize personal data and test it in CI](https://lucas.rangeltech.net/articles/f3-pseudonymize-personal-data-test-in-ci/)
+<!-- articles:end -->
